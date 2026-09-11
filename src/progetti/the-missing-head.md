@@ -10,6 +10,7 @@ tema: jet
 immagine: the-missing-head.jpg
 video:
   - youtube: BoqfuaYlqRo
+    durata: 140
     titolo: The Missing Head - Promo
 ---
 Primi anni Duemila: David Hanson e Andrew Olney costruiscono la prima replica umana con intelligenza artificiale, una testa androide con le fattezze dello scrittore Philip K. Dick. "Android Phil" gira gli Stati Uniti, incanta il Comic-Con del 2005 accanto a Richard Linklater, poi sparisce misteriosamente e con lei si spezza il sodalizio dei suoi creatori.

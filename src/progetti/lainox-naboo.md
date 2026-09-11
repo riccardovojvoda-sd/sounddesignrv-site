@@ -10,6 +10,7 @@ tema: flax
 immagine: lainox-naboo.jpg
 video:
   - youtube: f52RMVsDQ2M
+    durata: 125
     titolo: Lainox Naboo 5.0 - L'evoluzione della specie
 ---
 Di notte, in una foresta, Alessandro Ossola sfreccia tra lupi e cervi con la sua protesi bionica. Una metafora: la tecnologia che ridefinisce i limiti della specie, siano quelli di un atleta paralimpico o di un forno professionale.

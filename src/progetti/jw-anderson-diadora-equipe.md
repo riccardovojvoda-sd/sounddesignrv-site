@@ -10,6 +10,7 @@ tema: flax
 immagine: jw-anderson-diadora-equipe.png
 video:
   - youtube: TCBNfjFkW5E
+    durata: 110
     titolo: JW Anderson x Diadora - The Equipe
 ---
 The Equipe, la scarpa che Diadora crea nel 1975 per gli atleti d'élite, dalla pista alla strada, torna reinterpretata da Jonathan W. Anderson: la stessa silhouette da competizione, riletta nei materiali e nella palette della moda contemporanea.

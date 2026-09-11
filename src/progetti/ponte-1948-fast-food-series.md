@@ -10,16 +10,19 @@ tema: apricot
 immagine: ponte-1948-burger.jpg
 video:
   - youtube: 3wxuSC9qT0I
+    durata: 35
     titolo: Burger
     immagine: ponte-1948-burger.jpg
     descrizione: "Ketchup, hamburger e un calice di prosecco: l'abbinamento che nessuno si aspetta ma tutti condividono."
     ruolo: "Selezione musicale - sound design - mix stereo - texture sonore americane, spumeggiante e leggero."
   - youtube: PtT8Dj443Qw
+    durata: 35
     titolo: Sushi
     immagine: ponte-1948-sushi.jpg
     descrizione: "Un prosecco rosé Ponte tra bacchette e nigiri: l'abbinamento improbabile che diventa il più naturale del mondo."
     ruolo: "Selezione musicale - sound design - mix stereo - emblema sonoro nipponico, tono ironico e leggero."
   - youtube: n71-kRCkvXs
+    durata: 33
     titolo: Pizza
     immagine: ponte-1948-pizza.jpg
     descrizione: "La bollicina che non snobba il cartone della pizza: Ponte 1948 a tavola, senza pretese."

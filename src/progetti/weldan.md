@@ -10,6 +10,7 @@ tema: apricot
 immagine: weldan.jpg
 video:
   - youtube: GnMLkB1S8dQ
+    durata: 291
     titolo: Weldan - Vinaioli del Friuli
 ---
 La filosofia di una famiglia friulana: vigna biodinamica, tecnologie IoT al servizio della terra, vendemmia notturna, cura totale del prodotto, raccontata direttamente da chi lavora la vigna.

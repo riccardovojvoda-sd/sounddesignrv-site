@@ -17,7 +17,7 @@ classeBody: home
       </div>
     </div>
     <div class="eroe-reel">
-      {% set v = { youtube: sito.showreel.youtube, titolo: "Showreel 2026 - Sound Design RV" } %}
+      {% set v = { youtube: sito.showreel.youtube, titolo: "Showreel 2026 - Sound Design RV", durata: sito.showreel.durata } %}
       {% set poster = sito.showreel.poster %}
       {% set eager = true %}
       {% include "parti/video.njk" %}

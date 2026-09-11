@@ -10,6 +10,7 @@ tema: jet
 immagine: sottopelle.png
 video:
   - youtube: jWW38jlqG7Q
+    durata: 86
     titolo: Sottopelle - Estratto
 ---
 Alice, una donna che dopo un'aggressione sceglie di portare avanti la gravidanza, scivola in un territorio in cui trauma e paranoia confondono i confini della realtà.

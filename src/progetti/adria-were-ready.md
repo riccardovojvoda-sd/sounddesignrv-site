@@ -10,6 +10,7 @@ tema: verdigris
 immagine: adria-were-ready.png
 video:
   - youtube: qpQI3z_0pG8
+    durata: 39
     titolo: Adria - We're ready
 ---
 Un invito a partire: paesaggi aperti, orizzonte libero, il viaggio come stato mentale.

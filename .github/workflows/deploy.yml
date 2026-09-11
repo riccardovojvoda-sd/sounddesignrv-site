@@ -28,6 +28,7 @@ jobs:
         run: |
           ! grep -rl "@gmail.com" _site --include=*.html
           ! grep -rl "squarespace" _site --include=*.html
+          for f in _site/progetti/*/index.html; do grep -q 'class="video' "$f" || { echo "Scheda senza video: $f"; exit 1; }; done
           test -f _site/index.html && test -f _site/.htaccess
       - name: Installa lftp
         run: sudo apt-get update && sudo apt-get install -y lftp

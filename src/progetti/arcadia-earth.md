@@ -10,6 +10,7 @@ tema: verdigris
 immagine: arcadia-earth.jpg
 video:
   - file: arcadia-earth-a-vision-for-tomorrow.mp4
+    durata: 69
     titolo: Arcadia Earth - A Vision For Tomorrow (estratto)
 ---
 Un viaggio CGI in 360° attraverso foreste, aria, acqua e suolo, dove la coscienza ecologica incontra le nuove tecnologie energetiche.

@@ -9,6 +9,7 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
     <span>Ascolta</span>
   </button>
+  {%- if v.durata %}<span class="video-durata" aria-label="Durata {{ v.durata | tempo }}">{{ v.durata | tempo }}</span>{% endif %}
   <noscript><a href="https://www.youtube.com/watch?v={{ v.youtube }}">Ascolta su YouTube: {{ v.titolo }}</a></noscript>
 </div>
 {%- elif v.file -%}
@@ -16,5 +17,6 @@
   <video controls preload="none" playsinline poster="{% imgUrl posterPath, 1200 %}" title="{{ v.titolo }}">
     <source src="/assets/video/{{ v.file }}" type="video/mp4">
   </video>
+  {%- if v.durata %}<span class="video-durata video-durata-locale">{{ v.durata | tempo }}</span>{% endif %}
 </div>
 {%- endif -%}

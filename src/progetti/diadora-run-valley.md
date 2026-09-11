@@ -10,6 +10,7 @@ tema: apricot
 immagine: diadora-run-valley.jpg
 video:
   - youtube: cka3FztVJYA
+    durata: 90
     titolo: Diadora - Run Valley
 ---
 Dal cuore della Valley di Montebelluna, dove l'artigianato della scarpa sportiva e l'innovazione tecnologica si incontrano.

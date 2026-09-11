@@ -16,10 +16,11 @@ og_type: article
   <div class="contenitore scheda-corpo{% if multi %} scheda-corpo-serie{% endif %}">
     {%- if not multi %}
     <div class="scheda-media">
-      {%- set v = video[0] %}
       {%- set poster = "progetti/" + immagine %}
       {%- set eager = true %}
+      {%- asyncEach v in [video[0]] %}
       {% include "parti/video.njk" %}
+      {%- endeach %}
     </div>
     {%- endif %}
     <div class="scheda-testo">

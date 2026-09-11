@@ -10,6 +10,7 @@ tema: jet
 immagine: alfa-romeo-quadrifoglio.jpg
 video:
   - youtube: LyuZhPoEFcQ
+    durata: 55
     titolo: Alfa Romeo - Il quadrifoglio
 ---
 Dal 1923, il Quadrifoglio distingue le Alfa da competizione. Il video segue la produzione artigianale dell'emblema, intercalata da immagini storiche delle gare, con i suoni ricreati, e dalla Stelvio in pista e su strada.

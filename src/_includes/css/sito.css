@@ -77,6 +77,9 @@ p{margin:0 0 1em}
 .video-play svg{width:1.5rem;height:1.5rem;fill:currentColor}
 .video:hover .video-play{transform:scale(1.05);background:var(--snow)}
 .video-attivo .video-play{display:none}
+.video-durata{position:absolute;right:.6rem;bottom:.6rem;padding:.2em .5em;border-radius:.3rem;background:rgba(45,45,42,.85);color:var(--snow);font-size:.78rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.2;pointer-events:none}
+.video-attivo .video-durata{display:none}
+.video-durata-locale{bottom:3.4rem}
 /* Capitoli dello showreel */
 .capitoli{margin-top:1rem}
 .capitoli-titolo{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:0 0 .6rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.8}
