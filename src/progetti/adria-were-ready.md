@@ -3,7 +3,7 @@ ordine: 6
 brand: ADRIA
 titolo: We're ready
 frase: Il silenzio, la quiete, lasciano spazio ai pensieri e ai desideri.
-crediti: "Adria - We're ready | Spot pubblicitario | Camper Adria di alta gamma"
+crediti: "Spot pubblicitario | Camper Adria di alta gamma"
 categoria: Spot pubblicitario / ADV
 ruolo: "Voice over AI · scelta musicale · sound editing · mix web"
 tema: verdigris

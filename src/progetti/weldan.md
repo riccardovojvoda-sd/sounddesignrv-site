@@ -3,7 +3,7 @@ ordine: 13
 brand: WELDAN
 titolo: Vinaioli del Friuli
 frase: L'aria fresca che fruscia tra le foglie di vite. La terra che freme.
-crediti: "Weldan - Vinaioli del Friuli | Video corporate | Produzione: CROMO"
+crediti: "Video corporate | Produzione: CROMO"
 categoria: Video corporate
 ruolo: "Presa diretta - dialog editing - sound design stereo - mix web - le voci della famiglia come filo conduttore."
 tema: apricot

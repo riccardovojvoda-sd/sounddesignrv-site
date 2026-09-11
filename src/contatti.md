@@ -9,7 +9,7 @@ sottotitolo: Scrivimi se il tuo progetto ha bisogno di cura sonora. Rispondo di 
 tema: verdigris
 nascondiContatto: true
 ---
-<p class="contatto-mail"><a href="mailto:{{ sito.email }}">{{ sito.email }}</a></p>
+<p class="contatto-mail"><a class="evidenzia" href="mailto:{{ sito.email }}">{{ sito.email }}</a></p>
 <p class="contatto-tel"><a href="tel:{{ sito.telefonoHref }}">{{ sito.telefono }}</a></p>
 
 Mi chiamo Riccardo Vojvoda, sound designer, post-producer e fonico per film, documentari, branded content e installazioni immersive. Sono disponibile da remoto o in presenza, in italiano, inglese e francese.

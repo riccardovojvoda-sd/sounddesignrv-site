@@ -3,7 +3,7 @@ ordine: 4
 brand: JW Anderson x DIADORA
 titolo: Equipe
 frase: "ASMR artigianale: il 1975 torna a correre."
-crediti: "Diadora x JW Anderson - The Equipe | Fashion film branded | Produzione: CROMO"
+crediti: "Fashion film branded | Produzione: CROMO"
 categoria: Branded content / Fashion film
 ruolo: "Sound design e foley costruiti da zero · sfx · selezione musicale d'archivio · mix web - immagini mute sonorizzate interamente in post, dal passo alla texture del materiale."
 tema: flax

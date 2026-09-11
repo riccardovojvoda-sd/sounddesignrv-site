@@ -3,7 +3,7 @@ ordine: 11
 brand: ALFA ROMEO
 titolo: Il quadrifoglio
 frase: Il tintinnio degli utensili. Il ruggire dell'Alfa.
-crediti: "Alfa Romeo - Il quadrifoglio | Video branded"
+crediti: "Video branded"
 categoria: Branded content
 ruolo: "Composizione musicale - sound design - mix web - dalle corse del passato al rombo contemporaneo."
 tema: jet

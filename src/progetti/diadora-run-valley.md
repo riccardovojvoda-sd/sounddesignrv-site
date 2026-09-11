@@ -3,7 +3,7 @@ ordine: 3
 brand: DIADORA
 titolo: Run Valley
 frase: Risuona l'eco dei passi dalla Valle di Montebelluna.
-crediti: "Diadora - Run Valley | Serie branded | Produzione: CROMO Visual Storytelling"
+crediti: "Serie branded | Produzione: CROMO Visual Storytelling"
 categoria: Branded content
 ruolo: "Scelta musicale · sound design · foley editing · mix web - identità sonora coerente lungo tutta la serie."
 tema: apricot

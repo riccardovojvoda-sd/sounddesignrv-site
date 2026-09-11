@@ -82,9 +82,10 @@
     box.setAttribute("data-yt", b.getAttribute("data-episodio"));
     box.setAttribute("data-titolo", b.getAttribute("data-titolo") || "");
     box.classList.remove("video-attivo");
-    var desc = document.getElementById(lista.getAttribute("data-descrizione"));
-    if (desc && b.getAttribute("data-testo")) desc.textContent = b.getAttribute("data-testo");
+    var corrente = document.getElementById(lista.getAttribute("data-corrente"));
+    if (corrente) corrente.textContent = b.getAttribute("data-titolo") || "";
     avvia(box);
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 })();
 

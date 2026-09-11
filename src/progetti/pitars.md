@@ -3,7 +3,7 @@ ordine: 9
 brand: PITARS
 titolo: Semplicemente straordinario
 frase: Lo scroscio del fiume. Il gorgoglìo di un calice di bianco.
-crediti: "Pitars - Semplicemente straordinario | Corporate - Cantina Pitars, Friuli | Produzione: CROMO / D&Co"
+crediti: "Corporate - Cantina Pitars, Friuli | Produzione: CROMO / D&Co"
 categoria: Video corporate
 ruolo: "Sound design - composizione musicale - mix web - la spina dorsale sonora di un racconto senza voce."
 tema: flax

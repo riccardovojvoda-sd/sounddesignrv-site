@@ -3,7 +3,7 @@ ordine: 5
 brand: MASERATI
 titolo: MC20. How It's Made
 frase: Il ticchettio degli ingranaggi, il rombo del motore.
-crediti: "Maserati - MC20. How It's Made | Video branded | Produzione: CROMO Visual Storytelling"
+crediti: "Video branded | Produzione: CROMO Visual Storytelling"
 categoria: Branded content
 ruolo: "Sound design - composizione musicale - mix web - il suono come narrazione."
 tema: snow

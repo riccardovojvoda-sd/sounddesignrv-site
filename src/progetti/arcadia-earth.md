@@ -3,7 +3,7 @@ ordine: 2
 brand: ARCADIA EARTH
 titolo: A Vision For Tomorrow
 frase: The sound of tomorrow. Learn and wonder!
-crediti: "Arcadia Earth - A Vision For Tomorrow · Film immersivo per planetari | Regia: Valentino Vettori | Animazione: Izhar Coletti & Elisa Lorenzini per Invrsion | Distribuito nei planetari di USA e Cina"
+crediti: "Film immersivo per planetari | Regia: Valentino Vettori | Animazione: Izhar Coletti & Elisa Lorenzini per Invrsion | Distribuito nei planetari di USA e Cina"
 categoria: Installazione immersiva / Planetario
 ruolo: "Selezione musicale, voice over AI, sound design 5.1, mix 5.1 e 7.1 - dalla narrazione alla spazializzazione immersiva."
 tema: verdigris

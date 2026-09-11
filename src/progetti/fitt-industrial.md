@@ -3,7 +3,7 @@ ordine: 12
 brand: FITT INDUSTRIAL
 titolo: Materia in movimento
 frase: Il sibilo dell'estruso, il calore, la tensione della bobina.
-crediti: "FITT Industrial - Materia in movimento | Video corporate | Produzione: CROMO"
+crediti: "Video corporate | Produzione: CROMO"
 categoria: Video corporate
 ruolo: "Sound design - foley - sfx - mix stereo - ogni passaggio di lavorazione sottolineato suono per suono, con una dinamica da grande schermo su un racconto industriale."
 tema: verdigris

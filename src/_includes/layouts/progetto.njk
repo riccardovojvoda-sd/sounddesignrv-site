@@ -24,15 +24,7 @@ og_type: article
         {% img poster, "Anteprima video: " + video[0].titolo, "(min-width: 60em) 66vw, 100vw", "eager", "video-poster" %}
         <button class="video-play" type="button" aria-label="Guarda: {{ video[0].titolo }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Guarda</span></button>
       </div>
-      <div class="episodi" role="group" aria-label="Episodi" data-video="video-serie" data-descrizione="episodio-descrizione">
-        {%- asyncEach ep in video %}
-        <button type="button" data-episodio="{{ ep.youtube }}" data-titolo="{{ ep.titolo }}" data-testo="{{ ep.descrizione or '' }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
-          {% img "progetti/" + ep.immagine, "", "20vw" %}
-          <span>{{ ep.titolo }}</span>
-        </button>
-        {%- endeach %}
-      </div>
-      <p class="episodio-descrizione" id="episodio-descrizione">{{ video[0].descrizione }}</p>
+      <p class="episodio-corrente">In riproduzione: <strong id="episodio-corrente">{{ video[0].titolo }}</strong></p>
       {%- else %}
       {% include "parti/video.njk" %}
       {%- endif %}
@@ -44,26 +36,33 @@ og_type: article
         <div><dt>Categoria</dt><dd>{{ categoria }}</dd></div>
         <div><dt>Ruolo</dt><dd>{{ ruolo }}</dd></div>
       </dl>
-      {%- if multi %}
-      <section class="scheda-episodi-testo">
-        <h2>Gli episodi</h2>
-        {%- for ep in video %}
-        <h3>{{ ep.titolo }}</h3>
-        {%- if ep.crediti %}<p class="scheda-crediti">{{ ep.crediti }}</p>{% endif %}
-        {%- if ep.descrizione %}<p>{{ ep.descrizione }}</p>{% endif %}
-        {%- if ep.ruolo %}<p class="scheda-ruolo-ep">Ruolo: {{ ep.ruolo }}</p>{% endif %}
-        {%- endfor %}
-      </section>
-      {%- endif %}
     </div>
   </div>
+  {%- if multi %}
+  <section class="episodi contenitore" aria-labelledby="episodi-titolo" data-video="video-serie" data-corrente="episodio-corrente">
+    <h2 id="episodi-titolo" class="etichetta">Gli episodi</h2>
+    <div class="episodi-lista">
+      {%- asyncEach ep in video %}
+      <article class="episodio">
+        <button type="button" data-episodio="{{ ep.youtube }}" data-titolo="{{ ep.titolo }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" aria-label="Guarda: {{ ep.titolo }}">
+          {% img "progetti/" + ep.immagine, "", "(min-width: 48em) 33vw, 100vw" %}
+          <span class="episodio-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>{{ ep.titolo }}</h3>
+        {%- if ep.descrizione %}<p>{{ ep.descrizione }}</p>{% endif %}
+        {%- if ep.ruolo %}<p class="scheda-ruolo-ep">{{ ep.ruolo }}</p>{% endif %}
+      </article>
+      {%- endeach %}
+    </div>
+  </section>
+  {%- endif %}
   {%- set lista = collections.progetti %}
   {%- for p in lista %}{% if p.url == page.url %}{% set idx = loop.index0 %}
     {%- set prec = lista[idx - 1] if idx > 0 else lista[lista.length - 1] %}
     {%- set succ = lista[idx + 1] if idx < lista.length - 1 else lista[0] %}
   <nav class="scheda-nav contenitore" aria-label="Altri progetti">
     <a rel="prev" href="{{ prec.url }}"><small>Precedente</small> {{ prec.data.brand }}</a>
-    <a href="/#progetti">Tutti i progetti</a>
+    <a class="scheda-nav-tutti" href="/#progetti">Tutti i progetti</a>
     <a rel="next" href="{{ succ.url }}"><small>Successivo</small> {{ succ.data.brand }}</a>
   </nav>
   {%- endif %}{% endfor %}
