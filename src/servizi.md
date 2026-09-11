@@ -7,6 +7,7 @@ descrizione_seo: Sound design, dialogue editing e mixaggio stereo e surround per
 occhiello: Servizi
 sottotitolo: Un flusso di lavoro completo e scalabile, adatto a film, documentari, branded content, podcast e installazioni immersive. Da remoto o in presenza, con comunicazione fluida e tempi di consegna precisi.
 tema: snow
+testaTema: apricot
 ---
 ## Cosa faccio
 

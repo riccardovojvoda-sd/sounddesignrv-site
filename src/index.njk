@@ -21,7 +21,14 @@ classeBody: home
       {% set poster = sito.showreel.poster %}
       {% set eager = true %}
       {% include "parti/video.njk" %}
-      <p class="didascalia">Showreel 2026, 6 min 32. Il suono si giustifica nel tempo: guardalo intero, in cuffia se puoi.</p>
+      <nav class="capitoli" aria-label="Capitoli dello showreel" data-video-capitoli>
+        <p class="capitoli-titolo"><span>Nel reel</span> <small>Scegli un capitolo o parti dall'inizio</small></p>
+        <ol class="capitoli-lista">
+          {%- for c in sito.showreel.capitoli %}
+          <li><button type="button" data-capitolo="{{ c.t }}" aria-label="{{ c.titolo }}, dal minuto {{ c.t | tempo }}"><span class="capitoli-nome">{{ c.titolo }}</span><span class="capitoli-tempo">{{ c.t | tempo }}</span></button></li>
+          {%- endfor %}
+        </ol>
+      </nav>
     </div>
   </div>
 </section>

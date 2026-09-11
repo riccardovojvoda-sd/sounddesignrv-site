@@ -7,10 +7,11 @@ descrizione_seo: Sound designer con 20 anni di esperienza, specializzato in post
 occhiello: Profilo
 sottotitolo: Sound designer, post-producer e fonico dal 2006. Formato al Conservatorio di Trieste, al SAE Institute di Milano e a Parigi. Da remoto o in presenza, in italiano, inglese e francese.
 tema: snow
+testaTema: flax
 immagine_og: riccardo-vojvoda-ritratto.jpg
+ritratto: riccardo-vojvoda-ritratto.jpg
+ritrattoAlt: "Riccardo Vojvoda, sound designer"
 ---
-{% img "riccardo-vojvoda-ritratto.jpg", "Riccardo Vojvoda, sound designer", "(min-width: 48em) 16rem, 100vw", "eager", "ritratto" %}
-
 Diplomato in Musica e Nuove Tecnologie al Conservatorio di Trieste, ho iniziato a occuparmi di fonica e post-produzione nel 2006, dopo anni di esperienza come produttore e mixer musicale.
 
 Nel 2010 ho proseguito la formazione al SAE Institute di Milano e poi a Parigi, dove ho lavorato per quattro anni nella post-produzione di cortometraggi e documentari, maturando quella cura per il dettaglio sonoro tipica della scuola del cinema francese.

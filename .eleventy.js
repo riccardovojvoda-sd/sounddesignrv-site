@@ -66,6 +66,7 @@ module.exports = function (eleventyConfig) {
     String(html || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
   );
   eleventyConfig.addFilter("slugTema", (tema) => `tema-${tema || "snow"}`);
+  eleventyConfig.addFilter("tempo", (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`);
   eleventyConfig.addFilter("anno", () => new Date().getFullYear());
   eleventyConfig.addFilter("dataIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString().slice(0, 10));
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
