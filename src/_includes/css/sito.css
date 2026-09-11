@@ -204,7 +204,8 @@ p{margin:0 0 1em}
 .prosa details[open] summary::after{content:"\2212"}
 .prosa details>*:not(summary){margin-top:.75rem}
 .pagina-testa-ritratto{display:grid;grid-template-columns:1fr auto;gap:2rem 3rem;align-items:end}
-.ritratto{width:min(60vw,18rem);height:auto;border-radius:var(--raggio);box-shadow:.75rem .75rem 0 var(--verdigris);margin:0 .75rem calc(-1*clamp(2rem,5vw,4rem) - 4rem) 0}
+.ritratto{width:min(60vw,26rem);height:auto;border-radius:var(--raggio);box-shadow:.75rem .75rem 0 var(--verdigris);margin:0 .75rem calc(-1*clamp(2rem,5vw,4rem) - 6rem) 0}
+.prosa strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(237,210,134,.7) 62%)}
 .pagina-testa-ritratto+.pagina-corpo,.pagina:has(.pagina-testa-ritratto) .pagina-corpo{padding-top:1rem}
-@media(max-width:48em){.pagina-testa-ritratto{grid-template-columns:1fr}.ritratto{margin:0 .75rem 0 0;width:min(70vw,16rem)}}
+@media(max-width:48em){.pagina-testa-ritratto{grid-template-columns:1fr}.ritratto{margin:0 .75rem 0 0;width:min(75vw,20rem)}}
 .elenco-clienti{font-size:.92rem;opacity:.85;columns:2;column-gap:2rem;border-left:5px solid var(--apricot);padding-left:1.25rem}
