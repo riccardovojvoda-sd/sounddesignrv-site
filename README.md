@@ -27,8 +27,10 @@ Sito personale di Riccardo Vojvoda, sounddesignrv.com. Statico, generato con Ele
 
 ## Lingue
 
-- Italiano alla radice (`src/`), inglese in `src/en/` con URL propri (`/en/`, `/en/services/`, `/en/about/`, `/en/contact/`, `/en/faq/`, `/en/projects/<slug>/`). Stessi slug per i progetti.
-- Ogni pagina ha una `chiave` (stessa nelle due lingue): da lì nascono i tag `hreflang`, il selettore IT/EN e le alternative in sitemap. Per i progetti la chiave e' calcolata dallo slug.
-- Testi d'interfaccia (menu, bottoni, etichette) in `src/_data/testi.js`; FAQ in `faq.js` (it) e `faq-en.js` (en).
-- Il server manda `/` a `/en/` solo se il browser preferisce l'inglese e non si arriva da una pagina del sito (`.htaccess`, 302). Le pagine interne non vengono mai reindirizzate.
-- Quando si aggiunge una lingua: cartella `src/<lang>/`, blocco in `testi.js`, codice in `ORDINE_LINGUE` (.eleventy.js) e nel ciclo di `parti/lingue.njk`.
+- Italiano alla radice (`src/`), inglese in `src/en/` (`/en/`, `/en/services/`, `/en/about/`, `/en/contact/`, `/en/faq/`, `/en/projects/<slug>/`), francese in `src/fr/` (`/fr/`, `/fr/services/`, `/fr/a-propos/`, `/fr/contact/`, `/fr/faq/`, `/fr/projets/<slug>/`). Stessi slug per i progetti in tutte le lingue.
+- Ogni pagina ha una `chiave` (stessa in tutte le lingue): da li' nascono i tag `hreflang`, il selettore lingua e le alternative in sitemap. Per i progetti la chiave e' calcolata dallo slug.
+- Testi d'interfaccia (menu, bottoni, etichette) in `src/_data/testi.js`; FAQ in `faq.js` (it), `faq-en.js`, `faq-fr.js`.
+- Selettore: tendina in testata (`details`, sigla corrente + elenco lingue, chiusa da un clic fuori o Esc) e riga di sigle nel pie'. Entrambi in `parti/lingue.njk`, che cicla sulle lingue definite in `testi.js`.
+- Il server manda `/` a `/en/` o `/fr/` solo se il browser preferisce quella lingua e non si arriva da una pagina del sito (`.htaccess`, 302). Le pagine interne non vengono mai reindirizzate.
+- Tipografia francese: spazio insecabile (U+00A0) prima di `? ! : ;` e dentro le virgolette « ». I file francesi lo contengono gia'.
+- Quando si aggiunge una lingua: cartella `src/<lang>/` con `<lang>.json` (`{ "lang": "<lang>" }`), `progetti.json` con tag `progetti_<lang>` (la collezione nasce da sola in `.eleventy.js`), blocco in `testi.js`, `faq-<lang>.js` agganciato in `faq.js`, riga in `llms.njk` e redirect in `.htaccess`. `ORDINE_LINGUE` in `.eleventy.js` prevede gia' it, en, fr, es.

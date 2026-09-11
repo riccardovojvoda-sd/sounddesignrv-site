@@ -81,3 +81,11 @@ document.addEventListener("toggle", function (e) {
   // Chiudendo quella prima, il contenuto si sposta: si riallinea la domanda appena aperta in cima allo schermo
   requestAnimationFrame(function () { d.scrollIntoView({ behavior: "smooth", block: "start" }); });
 }, true);
+
+// Tendina lingua: si chiude cliccando fuori o con Esc
+document.addEventListener("click", function (e) {
+  document.querySelectorAll(".lingue-tendina[open]").forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
+});
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") document.querySelectorAll(".lingue-tendina[open]").forEach(function (d) { d.open = false; });
+});

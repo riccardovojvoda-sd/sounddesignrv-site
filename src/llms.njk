@@ -27,7 +27,7 @@ eleventyExcludeFromCollections: true
 {%- endfor %}
 
 ## English version
-Every page also exists in English, same structure, with hreflang links between the two versions.
+Every page also exists in English, same structure, with hreflang links between the language versions.
 - [Home and portfolio]({{ sito.url }}/en/)
 - [Services]({{ sito.url }}/en/services/)
 - [About]({{ sito.url }}/en/about/)
@@ -35,6 +35,17 @@ Every page also exists in English, same structure, with hreflang links between t
 - [Contact]({{ sito.url }}/en/contact/)
 {%- for p in collections.progetti_en %}
 - [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria }}. Role: {{ p.data.ruolo }}
+{%- endfor %}
+
+## Version française
+Chaque page existe aussi en français, même structure, avec des liens hreflang entre les versions.
+- [Accueil et portfolio]({{ sito.url }}/fr/)
+- [Services]({{ sito.url }}/fr/services/)
+- [À propos]({{ sito.url }}/fr/a-propos/)
+- [FAQ]({{ sito.url }}/fr/faq/) : ce que comprend la post-production audio, quoi livrer (AAF, poignées, rapport son), délais par format, corrections, formats, devis, voix off, voix IA
+- [Contact]({{ sito.url }}/fr/contact/)
+{%- for p in collections.progetti_fr %}
+- [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}) : {{ p.data.categoria }}. Rôle : {{ p.data.ruolo }}
 {%- endfor %}
 
 ## Clienti

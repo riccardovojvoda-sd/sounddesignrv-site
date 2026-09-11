@@ -1,8 +1,23 @@
-{#- Selettore lingua: porta alla stessa pagina nell'altra lingua, o alla home di quella lingua se non esiste -#}
+{#- Selettore lingua. Ogni voce porta alla stessa pagina nell'altra lingua, o alla home di quella lingua se non esiste.
+    Con `lingueTendina` (testata) e' un menu a discesa che mostra la sigla corrente; altrimenti (pie') una riga di link. -#}
+{%- set codiceCorrente = lang or "it" %}
+{%- if lingueTendina %}
+<details class="lingue-tendina">
+  <summary aria-label="{{ t.menu.lingua }}: {{ t.nome }}">{{ t.sigla }}<svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></summary>
+  <ul class="lingue-lista" aria-label="{{ t.menu.lingua }}">
+  {%- for codice, tl in testi %}
+    {%- set trovata = false %}
+    {%- for a in alternative %}{% if a.lang == codice %}{% set trovata = a.url %}{% endif %}{% endfor %}
+    <li><a href="{{ trovata or tl.url.home }}" lang="{{ codice }}" hreflang="{{ codice }}"{% if codice == codiceCorrente %} aria-current="true"{% endif %}>{{ tl.nome }}</a></li>
+  {%- endfor %}
+  </ul>
+</details>
+{%- else %}
 <nav class="lingue" aria-label="{{ t.menu.lingua }}">
-  {%- for codice in ["it", "en"] %}
+  {%- for codice, tl in testi %}
   {%- set trovata = false %}
   {%- for a in alternative %}{% if a.lang == codice %}{% set trovata = a.url %}{% endif %}{% endfor %}
-  <a href="{{ trovata or testi[codice].url.home }}" lang="{{ codice }}" hreflang="{{ codice }}"{% if codice == (lang or "it") %} aria-current="true"{% endif %} title="{{ testi[codice].nome }}">{{ testi[codice].sigla }}</a>
+  <a href="{{ trovata or tl.url.home }}" lang="{{ codice }}" hreflang="{{ codice }}"{% if codice == codiceCorrente %} aria-current="true"{% endif %} title="{{ tl.nome }}">{{ tl.sigla }}</a>
   {%- endfor %}
 </nav>
+{%- endif %}

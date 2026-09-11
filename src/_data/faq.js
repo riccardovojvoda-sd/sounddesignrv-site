@@ -92,4 +92,4 @@ const it = [
   }
 ];
 
-module.exports = { it, en: require("./faq-en.js") };
+module.exports = { it, en: require("./faq-en.js"), fr: require("./faq-fr.js") };

@@ -21,7 +21,7 @@ module.exports = function (eleventyConfig) {
   const perOrdine = (a, b) => a.data.ordine - b.data.ordine;
   eleventyConfig.addCollection("progetti", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
   eleventyConfig.addCollection("progetti_it", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
-  eleventyConfig.addCollection("progetti_en", (api) => api.getFilteredByTag("progetti_en").sort(perOrdine));
+  for (const l of ["en", "fr", "es"]) eleventyConfig.addCollection("progetti_" + l, (api) => api.getFilteredByTag("progetti_" + l).sort(perOrdine));
 
   // Shortcode immagine responsive: {% img "progetti/pitars.jpg", "alt", "(min-width: 60em) 50vw, 100vw", "lazy" %}
   eleventyConfig.addAsyncShortcode("img", async function (src, alt, sizes = "100vw", loading = "lazy", classe = "") {

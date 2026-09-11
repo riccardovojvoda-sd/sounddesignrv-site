@@ -10,5 +10,5 @@
     <a href="{{ t.url.chiSono }}"{% if page.url == t.url.chiSono %} aria-current="page"{% endif %}>{{ t.menu.chiSono }}</a>
     <a class="menu-cta" href="{{ t.url.contatti }}"{% if page.url == t.url.contatti %} aria-current="page"{% endif %}>{{ t.menu.contatti }}</a>
   </nav>
-  {% include "parti/lingue.njk" %}
+  {% set lingueTendina = true %}{% include "parti/lingue.njk" %}{% set lingueTendina = false %}
 </header>

@@ -6,12 +6,16 @@ RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.sounddesignrv.com%{REQUEST_URI} [R=301,L]
 
-# Lingua: solo la home, solo se il browser preferisce l'inglese e non si arriva da una pagina del sito
-# (cosi' il selettore IT/EN funziona sempre). 302 e non 301: dipende da chi chiede, non e' permanente.
+# Lingua: solo la home, solo se il browser preferisce l'inglese o il francese e non si arriva da una pagina del sito
+# (cosi' il selettore lingua funziona sempre). 302 e non 301: dipende da chi chiede, non e' permanente.
 RewriteCond %{REQUEST_URI} ^/$
 RewriteCond %{HTTP:Accept-Language} ^en [NC]
 RewriteCond %{HTTP_REFERER} !sounddesignrv\.com [NC]
 RewriteRule ^$ /en/ [R=302,L]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+RewriteCond %{HTTP_REFERER} !sounddesignrv\.com [NC]
+RewriteRule ^$ /fr/ [R=302,L]
 <If "%{REQUEST_URI} == '/'">
   Header append Vary Accept-Language
 </If>

@@ -41,7 +41,7 @@ p{margin:0 0 1em}
 .bottone-secondario:hover{background:var(--jet);color:var(--snow)}
 .tema-jet .bottone{background:var(--snow);color:var(--jet);border-color:var(--snow)}
 
-/* Selettore lingua */
+/* Selettore lingua: riga di sigle nel pie', tendina nella testata */
 .lingue{display:flex;gap:.15rem;font-size:.78rem;font-weight:600;letter-spacing:.06em}
 .lingue a{text-decoration:none;padding:.3em .5em;border-radius:.3rem;opacity:.6}
 .lingue a:hover{opacity:1}
@@ -49,7 +49,16 @@ p{margin:0 0 1em}
 .pie .lingue{margin-top:.5rem}
 .pie .lingue a{opacity:.7}
 .pie .lingue a[aria-current=true]{background:var(--snow);color:var(--jet)}
-@media(max-width:40em){.testata .lingue a[aria-current=true]{display:none}.testata .lingue a{opacity:1;border:1px solid var(--jet-15);padding:.35em .55em}.testata .lingue{margin-left:-.3rem}}
+.lingue-tendina{position:relative;flex-shrink:0;font-size:.78rem;font-weight:600;letter-spacing:.06em}
+.lingue-tendina summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.3em;padding:.35em .55em;border:1px solid var(--jet-15);border-radius:.3rem;user-select:none}
+.lingue-tendina summary::-webkit-details-marker{display:none}
+.lingue-tendina summary svg{width:.6em;height:.4em;transition:transform .15s}
+.lingue-tendina[open] summary{background:var(--jet);color:var(--snow);border-color:var(--jet)}
+.lingue-tendina[open] summary svg{transform:rotate(180deg)}
+.lingue-lista{position:absolute;right:0;top:calc(100% + .4rem);z-index:60;margin:0;padding:.3rem;list-style:none;min-width:9rem;background:var(--snow);border:1px solid var(--jet-15);border-radius:.5rem;box-shadow:0 .5rem 1.5rem rgba(45,45,42,.15);letter-spacing:0;font-weight:500;font-size:.9rem}
+.lingue-lista a{display:block;padding:.45em .8em;border-radius:.35rem;text-decoration:none;white-space:nowrap}
+.lingue-lista a:hover{background:var(--flax)}
+.lingue-lista a[aria-current=true]{background:var(--jet);color:var(--snow)}
 
 /* Testata */
 .testata{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem var(--gutter);background:rgba(255,251,250,.85);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--jet-15)}
@@ -63,7 +72,7 @@ p{margin:0 0 1em}
 .menu-cta{padding:.45em 1em!important;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
 @media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.4em .85em!important}}
-@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.testata{padding:.6rem var(--gutter);gap:.6rem}.menu{gap:.5rem}.menu a{font-size:.8rem}.testata .lingue{font-size:.72rem}}
+@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.testata{padding:.6rem var(--gutter);gap:.5rem}.menu{gap:.4rem}.menu a{font-size:.78rem}.lingue-tendina{font-size:.72rem}.lingue-tendina summary{padding:.3em .45em}.lingue-tendina summary svg{display:none}}
 
 /* Eroe */
 .eroe{padding-block:clamp(2.5rem,7vw,6rem) clamp(2rem,5vw,4rem)}

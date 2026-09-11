@@ -1,4 +1,4 @@
-// Testi d'interfaccia per lingua. I contenuti delle pagine stanno nei rispettivi file (src/ per l'italiano, src/en/ per l'inglese).
+// Testi d'interfaccia per lingua. I contenuti delle pagine stanno nei rispettivi file (src/ per l'italiano, src/en/ per l'inglese, src/fr/ per il francese).
 module.exports = {
   it: {
     codice: "it", locale: "it_IT", nome: "Italiano", sigla: "IT",
@@ -33,5 +33,22 @@ module.exports = {
       pdf: "Download the profile (PDF)"
     },
     pie: { piva: "VAT" }
+  },
+  fr: {
+    codice: "fr", locale: "fr_FR", nome: "Français", sigla: "FR",
+    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/" },
+    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
+    salta: "Aller au contenu",
+    marchioRuolo: "Sound Design | Audio Post",
+    video: { ascolta: "Écouter", anteprima: "Aperçu vidéo", suYoutube: "Écouter sur YouTube", durata: "Durée" },
+    scheda: { portfolio: "Portfolio", categoria: "Catégorie", ruolo: "Rôle", episodi: "Les épisodes", precedente: "Précédent", successivo: "Suivant", tutti: "Tous les projets", altri: "Autres projets", serie: "vidéos dans cette série", apri: "Fiche du projet" },
+    contatto: {
+      titolo: "Écrivez-moi si votre projet a besoin d'un son soigné.",
+      testo: "Je suis Riccardo Vojvoda, sound designer, monteur-mixeur son et ingénieur du son de plateau pour le cinéma, le documentaire, le branded content, l'animation, le jeu vidéo, la radio et les installations immersives. Disponible à distance ou sur place, en français, en anglais et en italien.",
+      nota: "Je réponds en général sous 24 à 48 heures. Des questions sur le processus ou sur les éléments à livrer ?",
+      faq: "Consulter la FAQ",
+      pdf: "Télécharger le profil (PDF)"
+    },
+    pie: { piva: "TVA" }
   }
 };

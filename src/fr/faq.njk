@@ -1,0 +1,26 @@
+---
+layout: layouts/pagina.njk
+permalink: /fr/faq/
+titolo: Questions fréquentes
+titolo_seo: FAQ - Post-Production Audio | Riccardo Vojvoda Sound Designer
+descrizione_seo: Questions fréquentes sur le sound design, la post-production audio, le mixage stéréo et multicanal, les éléments à livrer, l'AAF et les poignées, les corrections, la voix off et la prise de son. Des réponses directes de Riccardo Vojvoda.
+occhiello: Avant de m'écrire
+sottotitolo: Comment se passe une collaboration avec moi en sound design et en post-production audio, du premier brief à la livraison finale, en passant par les workflows, les éléments, les corrections et la voix off. Chaque projet est différent, mais certaines questions reviennent souvent.
+chiave: faq
+tema: snow
+---
+<p>Pour toute autre question, ou pour définir ensemble ce dont votre projet a besoin, écrivez à <a href="mailto:{{ sito.email }}">{{ sito.email }}</a> : je réponds en général sous 24 à 48 heures.</p>
+<div class="faq-elenco">
+{%- for f in faq.fr %}
+<details name="faq" id="faq-{{ loop.index }}"{% if loop.first %} open{% endif %}>
+  <summary><h2 style="font:inherit;margin:0">{{ f.domanda }}</h2></summary>
+  {{ f.risposta | safe }}
+</details>
+{%- endfor %}
+</div>
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "fr",
+  "mainEntity": faq.fr | faqSchema
+} | json | safe }}</script>
