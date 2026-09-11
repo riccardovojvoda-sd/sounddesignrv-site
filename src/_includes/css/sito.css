@@ -102,6 +102,7 @@ p{margin:0 0 1em}
 @media(min-width:60em){
   .progetto-griglia{grid-template-columns:11fr 9fr}
   .progetto:nth-of-type(even) .progetto-media{order:2}
+  .progetto:nth-of-type(even) .progetto-griglia{grid-template-columns:9fr 11fr}
 }
 .progetto-frase{font-size:1.05rem;font-style:italic;opacity:.85;margin-bottom:.75em}
 .progetto-brand{font-size:clamp(2rem,5vw,3.5rem);font-weight:700;letter-spacing:.02em;margin:0}

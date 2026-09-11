@@ -12,7 +12,7 @@ nascondiContatto: true
 <p class="contatto-mail"><a class="evidenzia" href="mailto:{{ sito.email }}">{{ sito.email }}</a></p>
 <p class="contatto-tel"><a href="tel:{{ sito.telefonoHref }}">{{ sito.telefono }}</a></p>
 
-Mi chiamo Riccardo Vojvoda, sound designer, post-producer e fonico per film, documentari, branded content e installazioni immersive. Sono disponibile da remoto o in presenza, in italiano, inglese e francese.
+Mi chiamo Riccardo Vojvoda, sound designer, post-producer e fonico per film, documentari, branded content, animazione, videogiochi, radio e installazioni immersive. Sono disponibile da remoto o in presenza, in italiano, inglese e francese.
 
 Per un preventivo servono il materiale (o un'anteprima), un brief e, se ci sono, qualche riferimento estetico. Nelle [FAQ](/faq/) trovi cosa consegnare e come funziona il processo.
 
