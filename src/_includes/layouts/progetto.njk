@@ -4,10 +4,12 @@ og_type: article
 ---
 {%- set descrizioneBreve = content | testoPiano %}
 {%- set multi = video.length > 1 %}
+{%- set t = testi[lang or "it"] %}
+{%- set lista = collections["progetti_" + (lang or "it")] %}
 <article class="scheda {{ tema | slugTema }}">
   <header class="scheda-testa">
     <div class="contenitore">
-      <p class="briciole"><a href="/#progetti">Portfolio</a> / {{ categoria }}</p>
+      <p class="briciole"><a href="{{ t.url.portfolio }}">{{ t.scheda.portfolio }}</a> / {{ categoria }}</p>
       <h1 class="scheda-brand">{{ brand }}</h1>
       <p class="scheda-titolo">{{ titolo }}</p>
       <p class="scheda-frase">{{ frase }}</p>
@@ -27,14 +29,14 @@ og_type: article
       <p class="scheda-crediti">{{ crediti }}</p>
       <div class="scheda-descrizione">{{ content | safe }}</div>
       <dl class="scheda-meta">
-        <div><dt>Categoria</dt><dd>{{ categoria }}</dd></div>
-        <div><dt>Ruolo</dt><dd>{{ ruolo }}</dd></div>
+        <div><dt>{{ t.scheda.categoria }}</dt><dd>{{ categoria }}</dd></div>
+        <div><dt>{{ t.scheda.ruolo }}</dt><dd>{{ ruolo }}</dd></div>
       </dl>
     </div>
   </div>
   {%- if multi %}
   <section class="episodi contenitore" aria-labelledby="episodi-titolo">
-    <h2 id="episodi-titolo" class="etichetta">Gli episodi</h2>
+    <h2 id="episodi-titolo" class="etichetta">{{ t.scheda.episodi }}</h2>
     <div class="episodi-lista">
       {%- asyncEach ep in video %}
       <article class="episodio">
@@ -49,14 +51,13 @@ og_type: article
     </div>
   </section>
   {%- endif %}
-  {%- set lista = collections.progetti %}
   {%- for p in lista %}{% if p.url == page.url %}{% set idx = loop.index0 %}
     {%- set prec = lista[idx - 1] if idx > 0 else lista[lista.length - 1] %}
     {%- set succ = lista[idx + 1] if idx < lista.length - 1 else lista[0] %}
-  <nav class="scheda-nav contenitore" aria-label="Altri progetti">
-    <a rel="prev" href="{{ prec.url }}"><small>Precedente</small> {{ prec.data.brand }}</a>
-    <a class="scheda-nav-tutti" href="/#progetti">Tutti i progetti</a>
-    <a rel="next" href="{{ succ.url }}"><small>Successivo</small> {{ succ.data.brand }}</a>
+  <nav class="scheda-nav contenitore" aria-label="{{ t.scheda.altri }}">
+    <a rel="prev" href="{{ prec.url }}"><small>{{ t.scheda.precedente }}</small> {{ prec.data.brand }}</a>
+    <a class="scheda-nav-tutti" href="{{ t.url.portfolio }}">{{ t.scheda.tutti }}</a>
+    <a rel="next" href="{{ succ.url }}"><small>{{ t.scheda.successivo }}</small> {{ succ.data.brand }}</a>
   </nav>
   {%- endif %}{% endfor %}
 </article>
@@ -70,7 +71,7 @@ og_type: article
   "embedUrl": ("https://www.youtube-nocookie.com/embed/" + video[0].youtube) if video[0].youtube else (sito.url + "/assets/video/" + video[0].file),
   "contentUrl": ("https://www.youtube.com/watch?v=" + video[0].youtube) if video[0].youtube else (sito.url + "/assets/video/" + video[0].file),
   "genre": categoria,
-  "inLanguage": "it",
+  "inLanguage": lang or "it",
   "contributor": { "@type": "Person", "name": sito.titolare, "jobTitle": "Sound Designer", "url": sito.url },
   "about": ruolo
 } | json | safe }}</script>

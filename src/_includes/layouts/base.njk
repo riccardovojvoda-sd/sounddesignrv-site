@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="it">
+{%- set t = testi[lang or "it"] %}
+{%- set alternative = collections.all | traduzioni(chiave) %}
+<html lang="{{ lang or "it" }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +12,18 @@
 <meta name="description" content="{{ descPagina }}">
 {%- if noindex %}<meta name="robots" content="noindex">{% endif %}
 <link rel="canonical" href="{{ urlPagina }}">
+{%- for a in alternative %}
+<link rel="alternate" hreflang="{{ a.lang }}" href="{{ sito.url }}{{ a.url }}">
+{%- endfor %}
+{%- if alternative.length > 1 %}
+<link rel="alternate" hreflang="x-default" href="{{ sito.url }}{{ alternative[0].url }}">
+{%- endif %}
 <meta property="og:type" content="{{ og_type or 'website' }}">
 <meta property="og:site_name" content="{{ sito.nome }}">
 <meta property="og:title" content="{{ titoloPagina }}">
 <meta property="og:description" content="{{ descPagina }}">
 <meta property="og:url" content="{{ urlPagina }}">
-<meta property="og:locale" content="it_IT">
+<meta property="og:locale" content="{{ t.locale }}">
 {%- set ogImg = immagine_og or "showreel-2026-cover.png" %}
 <meta property="og:image" content="{{ sito.url }}{% imgUrl ogImg, 1200 %}">
 <meta name="twitter:card" content="summary_large_image">
@@ -45,7 +53,7 @@
 } | json | safe }}</script>
 </head>
 <body class="{{ classeBody or '' }}">
-<a class="salta" href="#contenuto">Vai al contenuto</a>
+<a class="salta" href="#contenuto">{{ t.salta }}</a>
 {% include "parti/testata.njk" %}
 <main id="contenuto">
 {{ content | safe }}

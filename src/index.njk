@@ -3,6 +3,7 @@ layout: layouts/base.njk
 titolo_seo: Riccardo Vojvoda - Sound Designer e Audio Post | Italia
 descrizione_seo: Sound design e post-produzione audio per cinema, documentari, branded content, animazione, videogiochi e installazioni immersive. Portfolio con Maserati, Alfa Romeo, Diadora, The North Face e altri brand internazionali.
 classeBody: home
+chiave: home
 ---
 <section class="eroe">
   <div class="contenitore eroe-griglia">
@@ -46,7 +47,7 @@ classeBody: home
 
 <section id="progetti" class="progetti" aria-label="Portfolio">
   <h2 class="visivamente-nascosto">Portfolio</h2>
-  {%- asyncEach p in collections.progetti %}
+  {%- asyncEach p in collections["progetti_" + (lang or "it")] %}
   <article class="progetto {{ p.data.tema | slugTema }}" id="{{ p.fileSlug }}">
     <div class="contenitore progetto-griglia">
       <div class="progetto-media">
@@ -55,7 +56,7 @@ classeBody: home
         {% set eager = false %}
         {% include "parti/video.njk" %}
         {%- if p.data.video.length > 1 %}
-        <p class="progetto-altri"><a href="{{ p.url }}">{{ p.data.video.length }} video in questa serie</a></p>
+        <p class="progetto-altri"><a href="{{ p.url }}">{{ p.data.video.length }} {{ testi[lang].scheda.serie }}</a></p>
         {%- endif %}
       </div>
       <div class="progetto-testo">
@@ -64,8 +65,8 @@ classeBody: home
         <p class="progetto-titolo">{{ p.data.titolo }}</p>
         <p class="progetto-crediti">{{ p.data.crediti }}</p>
         <div class="progetto-descrizione">{{ p.rawInput | md | safe }}</div>
-        <p class="progetto-meta"><span>Categoria: {{ p.data.categoria }}</span> <span>Ruolo: {{ p.data.ruolo }}</span></p>
-        <a class="progetto-link" href="{{ p.url }}">Scheda del progetto</a>
+        <p class="progetto-meta"><span>{{ testi[lang].scheda.categoria }}: {{ p.data.categoria }}</span> <span>{{ testi[lang].scheda.ruolo }}: {{ p.data.ruolo }}</span></p>
+        <a class="progetto-link" href="{{ p.url }}">{{ testi[lang].scheda.apri }}</a>
       </div>
     </div>
   </article>

@@ -18,9 +18,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/css");
 
   // Collezione progetti ordinata per campo "ordine"
-  eleventyConfig.addCollection("progetti", (api) =>
-    api.getFilteredByTag("progetti").sort((a, b) => a.data.ordine - b.data.ordine)
-  );
+  const perOrdine = (a, b) => a.data.ordine - b.data.ordine;
+  eleventyConfig.addCollection("progetti", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
+  eleventyConfig.addCollection("progetti_it", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
+  eleventyConfig.addCollection("progetti_en", (api) => api.getFilteredByTag("progetti_en").sort(perOrdine));
 
   // Shortcode immagine responsive: {% img "progetti/pitars.jpg", "alt", "(min-width: 60em) 50vw, 100vw", "lazy" %}
   eleventyConfig.addAsyncShortcode("img", async function (src, alt, sizes = "100vw", loading = "lazy", classe = "") {
@@ -70,6 +71,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("anno", () => new Date().getFullYear());
   eleventyConfig.addFilter("dataIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString().slice(0, 10));
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
+  // Versioni della stessa pagina nelle altre lingue: pagine con la stessa "chiave", italiano per primo
+  const ORDINE_LINGUE = ["it", "en", "fr", "es"];
+  eleventyConfig.addFilter("traduzioni", (tutte, chiave) => {
+    if (!chiave) return [];
+    return tutte
+      .filter((p) => p.data.chiave === chiave && p.url)
+      .map((p) => ({ lang: p.data.lang || "it", url: p.url }))
+      .sort((a, b) => ORDINE_LINGUE.indexOf(a.lang) - ORDINE_LINGUE.indexOf(b.lang));
+  });
   eleventyConfig.addFilter("faqSchema", (faq) =>
     faq.map((f) => ({
       "@type": "Question",
@@ -80,7 +90,7 @@ module.exports = function (eleventyConfig) {
 
   // HTML minificato in produzione
   eleventyConfig.addTransform("minifica", async function (contenuto) {
-    if (process.env.ELEVENTY_RUN_MODE !== "build") return contenuto;
+    if (process.env.ELEVENTY_RUN_MODE !== "build" || process.env.NO_MINIFY) return contenuto;
     if (!(this.page.outputPath || "").endsWith(".html")) return contenuto;
     return minify(contenuto, {
       collapseWhitespace: true,

@@ -26,6 +26,17 @@ eleventyExcludeFromCollections: true
 - [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria }}. Ruolo: {{ p.data.ruolo }}
 {%- endfor %}
 
+## English version
+Every page also exists in English, same structure, with hreflang links between the two versions.
+- [Home and portfolio]({{ sito.url }}/en/)
+- [Services]({{ sito.url }}/en/services/)
+- [About]({{ sito.url }}/en/about/)
+- [FAQ]({{ sito.url }}/en/faq/): what audio post-production includes, what to deliver (AAF, handles, sound report), turnaround by format, revisions, formats, quotes, voice over, AI voices
+- [Contact]({{ sito.url }}/en/contact/)
+{%- for p in collections.progetti_en %}
+- [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria }}. Role: {{ p.data.ruolo }}
+{%- endfor %}
+
 ## Clienti
 {{ sito.clienti }}.
 

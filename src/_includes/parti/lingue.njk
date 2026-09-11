@@ -1,0 +1,8 @@
+{#- Selettore lingua: porta alla stessa pagina nell'altra lingua, o alla home di quella lingua se non esiste -#}
+<nav class="lingue" aria-label="{{ t.menu.lingua }}">
+  {%- for codice in ["it", "en"] %}
+  {%- set trovata = false %}
+  {%- for a in alternative %}{% if a.lang == codice %}{% set trovata = a.url %}{% endif %}{% endfor %}
+  <a href="{{ trovata or testi[codice].url.home }}" lang="{{ codice }}" hreflang="{{ codice }}"{% if codice == (lang or "it") %} aria-current="true"{% endif %} title="{{ testi[codice].nome }}">{{ testi[codice].sigla }}</a>
+  {%- endfor %}
+</nav>

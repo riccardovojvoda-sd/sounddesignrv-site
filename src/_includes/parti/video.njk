@@ -2,15 +2,16 @@
     Parametri: v = { youtube | file, titolo, immagine }, poster = percorso immagine sotto assets/img, eager = bool -#}
 {%- if v.immagine %}{% set posterPath = "progetti/" + v.immagine %}{% else %}{% set posterPath = poster %}{% endif -%}
 {%- set caricamento = "eager" if eager else "lazy" -%}
+{%- set tv = testi[lang or "it"].video -%}
 {%- if v.youtube -%}
 <div class="video" data-yt="{{ v.youtube }}" data-titolo="{{ v.titolo }}">
-  {% img posterPath, "Anteprima video: " + v.titolo, "(min-width: 60em) 55vw, 100vw", caricamento, "video-poster" %}
-  <button class="video-play" type="button" aria-label="Ascolta: {{ v.titolo }}">
+  {% img posterPath, tv.anteprima + ": " + v.titolo, "(min-width: 60em) 55vw, 100vw", caricamento, "video-poster" %}
+  <button class="video-play" type="button" aria-label="{{ tv.ascolta }}: {{ v.titolo }}">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-    <span>Ascolta</span>
+    <span>{{ tv.ascolta }}</span>
   </button>
-  {%- if v.durata %}<span class="video-durata" aria-label="Durata {{ v.durata | tempo }}">{{ v.durata | tempo }}</span>{% endif %}
-  <noscript><a href="https://www.youtube.com/watch?v={{ v.youtube }}">Ascolta su YouTube: {{ v.titolo }}</a></noscript>
+  {%- if v.durata %}<span class="video-durata" aria-label="{{ tv.durata }} {{ v.durata | tempo }}">{{ v.durata | tempo }}</span>{% endif %}
+  <noscript><a href="https://www.youtube.com/watch?v={{ v.youtube }}">{{ tv.suYoutube }}: {{ v.titolo }}</a></noscript>
 </div>
 {%- elif v.file -%}
 <div class="video video-locale">

@@ -6,6 +6,7 @@ titolo_seo: Chi sono - Riccardo Vojvoda, Sound Designer | Italia
 descrizione_seo: Sound designer con 20 anni di esperienza, specializzato in post-produzione audio per film, documentari, branded content e installazioni immersive. Formato a Trieste, Milano e Parigi. Insegna post-produzione audio a H-Farm College e IUAV.
 occhiello: Profilo
 sottotitolo: Sound designer, post-producer e fonico dal 2006. Formato al Conservatorio di Trieste, al SAE Institute di Milano e a Parigi. Da remoto o in presenza, in italiano, inglese e francese.
+chiave: chi-sono
 tema: snow
 testaTema: flax
 immagine_og: riccardo-vojvoda-ritratto.jpg

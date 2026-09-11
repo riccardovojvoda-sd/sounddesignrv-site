@@ -6,6 +6,7 @@ titolo_seo: Servizi di Sound Design e Post-Produzione Audio | Riccardo Vojvoda
 descrizione_seo: Sound design, dialogue editing e mixaggio stereo e surround per cinema, documentari, branded content, corporate, animazione, videogiochi, radio e installazioni immersive. Fonica di presa diretta con kit completo, voice over e voci AI. Da remoto o in presenza.
 occhiello: Servizi
 sottotitolo: Un flusso di lavoro completo e scalabile, adatto a film, documentari, branded content, animazione e motion graphics, videogiochi, spot radio, podcast e installazioni immersive. Da remoto o in presenza, con comunicazione fluida e tempi di consegna precisi.
+chiave: servizi
 tema: snow
 testaTema: apricot
 ---

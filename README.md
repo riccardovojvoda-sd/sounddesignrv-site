@@ -24,3 +24,11 @@ Sito personale di Riccardo Vojvoda, sounddesignrv.com. Statico, generato con Ele
 - I video YouTube si caricano solo al clic (dominio `youtube-nocookie.com`), con copertina locale.
 - Nei testi rivolti agli utenti niente trattini lunghi.
 - La mail e' `info@sounddesignrv.com` ovunque; la gmail personale non deve comparire (il workflow lo verifica).
+
+## Lingue
+
+- Italiano alla radice (`src/`), inglese in `src/en/` con URL propri (`/en/`, `/en/services/`, `/en/about/`, `/en/contact/`, `/en/faq/`, `/en/projects/<slug>/`). Stessi slug per i progetti.
+- Ogni pagina ha una `chiave` (stessa nelle due lingue): da lì nascono i tag `hreflang`, il selettore IT/EN e le alternative in sitemap. Per i progetti la chiave e' calcolata dallo slug.
+- Testi d'interfaccia (menu, bottoni, etichette) in `src/_data/testi.js`; FAQ in `faq.js` (it) e `faq-en.js` (en).
+- Il server manda `/` a `/en/` solo se il browser preferisce l'inglese e non si arriva da una pagina del sito (`.htaccess`, 302). Le pagine interne non vengono mai reindirizzate.
+- Quando si aggiunge una lingua: cartella `src/<lang>/`, blocco in `testi.js`, codice in `ORDINE_LINGUE` (.eleventy.js) e nel ciclo di `parti/lingue.njk`.

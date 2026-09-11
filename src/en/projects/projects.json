@@ -1,6 +1,6 @@
 {
   "layout": "layouts/progetto.njk",
-  "tags": ["progetti"],
-  "permalink": "/progetti/{{ page.fileSlug }}/",
+  "tags": ["progetti_en"],
+  "permalink": "/en/projects/{{ page.fileSlug }}/",
   "eleventyComputed": { "chiave": "progetto-{{ page.fileSlug }}" }
 }

@@ -1,5 +1,5 @@
 // Domande frequenti: unica fonte per la pagina /faq/ e per i dati strutturati FAQPage.
-module.exports = [
+const it = [
   {
     domanda: "Cosa include la post-produzione audio?",
     risposta: `<p>La post-produzione audio può comprendere:</p>
@@ -91,3 +91,5 @@ module.exports = [
     risposta: `<p>Sì. Oltre alla post-produzione, è disponibile il servizio di fonica di presa diretta per documentari, interviste, branded content, spot e corporate. Il kit include fino a 6 canali wireless simultanei (Sennheiser EW100 G3), microfoni boom Sennheiser MKH 416 e Rode NTG3, lavalier DPA 4060, e soluzioni per plant mic in posizioni difficili. Per i dettagli completi del kit e le disponibilità, consulta la pagina <a href="/servizi/">Servizi</a>.</p>`
   }
 ];
+
+module.exports = { it, en: require("./faq-en.js") };

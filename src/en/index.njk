@@ -1,0 +1,87 @@
+---
+layout: layouts/base.njk
+titolo_seo: Riccardo Vojvoda - Sound Designer and Audio Post-Producer | Italy
+descrizione_seo: Sound design and audio post-production for film, documentary, branded content, animation, video games and immersive installations. Portfolio with Maserati, Alfa Romeo, Diadora, The North Face and other international brands.
+classeBody: home
+chiave: home
+permalink: /en/
+---
+<section class="eroe">
+  <div class="contenitore eroe-griglia">
+    <div class="eroe-testo">
+      <h1>RICCARDO VOJVODA</h1>
+      <p class="eroe-ruolo">Sound Designer | Audio Post-Producer</p>
+      <p class="eroe-intro">Production sound and audio post-production for video productions, communication agencies, filmmakers, directors and artists. Film, documentary, branded content, corporate and institutional video, animation and motion graphics, video games, radio spots: layered sound design, stereo and surround mixing, music selection and composition, synthetic voice direction, ADR and location sound with a full kit.</p>
+      <p class="eroe-nota">Remote work in English, French and Italian.<br>For shoots, on location in Italy and abroad.</p>
+      <div class="eroe-azioni">
+        <a class="bottone" href="#projects">See the projects</a>
+        <a class="bottone bottone-secondario" href="/en/contact/">Get in touch</a>
+      </div>
+    </div>
+    <div class="eroe-reel">
+      {% set v = { youtube: sito.showreel.youtube, titolo: "Showreel 2026 - Sound Design RV", durata: sito.showreel.durata } %}
+      {% set poster = sito.showreel.poster %}
+      {% set eager = true %}
+      {% include "parti/video.njk" %}
+      <nav class="capitoli" aria-label="Showreel chapters" data-video-capitoli>
+        <p class="capitoli-titolo"><span>In the reel</span> <small>Pick a chapter or start from the top</small></p>
+        <ol class="capitoli-lista">
+          {%- for c in sito.showreel.capitoli %}
+          <li><button type="button" data-capitolo="{{ c.t }}" aria-label="{{ c.titolo }}, from {{ c.t | tempo }}"><span class="capitoli-nome">{{ c.titolo }}</span><span class="capitoli-tempo">{{ c.t | tempo }}</span></button></li>
+          {%- endfor %}
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class="clienti" aria-labelledby="clienti-titolo">
+  <div class="contenitore">
+    <h2 id="clienti-titolo" class="etichetta">Brands and productions</h2>
+    <ul class="loghi">
+      {%- for l in sito.loghi %}
+      <li><img src="/assets/img/loghi/{{ l[0] }}" alt="{{ l[1] }}" loading="lazy" decoding="async" width="150" height="75"></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="progetti" aria-label="Portfolio">
+  <h2 class="visivamente-nascosto">Portfolio</h2>
+  {%- asyncEach p in collections.progetti_en %}
+  <article class="progetto {{ p.data.tema | slugTema }}" id="{{ p.fileSlug }}">
+    <div class="contenitore progetto-griglia">
+      <div class="progetto-media">
+        {% set v = p.data.video[0] %}
+        {% set poster = "progetti/" + p.data.immagine %}
+        {% set eager = false %}
+        {% include "parti/video.njk" %}
+        {%- if p.data.video.length > 1 %}
+        <p class="progetto-altri"><a href="{{ p.url }}">{{ p.data.video.length }} videos in this series</a></p>
+        {%- endif %}
+      </div>
+      <div class="progetto-testo">
+        <p class="progetto-frase">{{ p.data.frase }}</p>
+        <h3 class="progetto-brand"><a href="{{ p.url }}">{{ p.data.brand }}</a></h3>
+        <p class="progetto-titolo">{{ p.data.titolo }}</p>
+        <p class="progetto-crediti">{{ p.data.crediti }}</p>
+        <div class="progetto-descrizione">{{ p.rawInput | md | safe }}</div>
+        <p class="progetto-meta"><span>Category: {{ p.data.categoria }}</span> <span>Role: {{ p.data.ruolo }}</span></p>
+        <a class="progetto-link" href="{{ p.url }}">Project page</a>
+      </div>
+    </div>
+  </article>
+  {%- endeach %}
+</section>
+
+<section class="dietro tema-jet" aria-labelledby="dietro-titolo">
+  <div class="contenitore">
+    <h2 id="dietro-titolo">BEHIND THE SOUND DESIGN</h2>
+    <p>A look behind the scenes: sessions, stems and before/after comparisons, headphones on. On Instagram, <a href="{{ sito.social.instagram }}" rel="me noopener">@sound_design_rv</a>.</p>
+  </div>
+  <ul class="dietro-strip" aria-label="Behind the sound design reel covers">
+    {%- asyncEach i in range(1, 13) %}
+    <li>{% img "behind/earbuds-on-" + ("0" + i if i < 10 else i) + ".jpg", "Behind the sound design reel, cover " + i, "(min-width: 60em) 12vw, 40vw" %}</li>
+    {%- endeach %}
+  </ul>
+</section>
