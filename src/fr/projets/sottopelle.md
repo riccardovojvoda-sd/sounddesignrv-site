@@ -1,9 +1,9 @@
 ---
 ordine: 1
-brand: SOTTOPELLE
+brand: SUBDERMAL
 titolo: "Tout finit par remonter à la surface"
 frase: "Tension, fragilité et impacts qui vibrent sous la peau."
-crediti: "Thriller psychologique | Réalisation : Francesco Roder | Meilleur long métrage thriller - VIFF Veneto International Film Festival 2025"
+crediti: "Thriller psychologique (titre original : Sottopelle) | Réalisation : Francesco Roder | Meilleur long métrage thriller - VIFF Veneto International Film Festival 2025"
 categoria: "Long métrage / Fiction"
 ruolo: "Prise de son, montage des dialogues, montage et design sonore, enregistrement ADR, bruitages - du plateau à la construction narrative de la post-production."
 tema: jet
@@ -14,3 +14,5 @@ video:
     titolo: "Sottopelle - Estratto"
 ---
 Alice, une femme qui choisit de poursuivre sa grossesse après une agression, glisse dans un territoire où le traumatisme et la paranoïa brouillent les contours du réel.
+
+[Sur IMDb](https://www.imdb.com/title/tt8962670/)

@@ -5,7 +5,7 @@ titolo: À propos
 titolo_seo: À propos - Riccardo Vojvoda, Sound Designer | Italie
 descrizione_seo: Sound designer avec 20 ans d'expérience en post-production audio pour le cinéma, le documentaire, le branded content et les installations immersives. Formé à Trieste, Milan et Paris. Enseigne la post-production audio à H-Farm College et à l'IUAV de Venise.
 occhiello: Profil
-sottotitolo: Sound designer, monteur-mixeur son et ingénieur du son de plateau depuis 2006. Formé au Conservatoire de Trieste, au SAE Institute de Milan et à Paris. À distance ou sur place, en français, en anglais et en italien.
+sottotitolo: Sound designer, monteur-mixeur son et ingénieur du son de plateau depuis 2006. Formé au Conservatoire de Trieste, au SAE Institute de Milan et à Paris. À distance ou sur place, en italien, en anglais et en français.
 chiave: chi-sono
 tema: snow
 testaTema: flax
@@ -25,7 +25,7 @@ Au fil des années, j'ai pris en charge le son de nombreux documentaires et cour
 
 Je tiens mon workflow à jour en adoptant des outils d'IA pour fluidifier la restauration sonore, le montage et le mixage, tout en respectant les standards de qualité et de livraison du cinéma, de la télévision, du streaming et de l'industrie du disque.
 
-Je travaille à distance ou sur place avec des studios, des sociétés de production et des artistes en Italie et à l'étranger. **Je parle français, anglais et italien** et je comprends l'espagnol.
+Je travaille à distance ou sur place avec des studios, des sociétés de production et des artistes en Italie et à l'étranger. **Je parle italien, anglais et français** et je comprends l'espagnol.
 
 ## En bref
 

@@ -27,7 +27,7 @@ testaTema: apricot
 </div>
 <div class="scheda-box">
 <h3>Voice: narration, voice over, AI voices</h3>
-<p>A scratch voice on the approved script, casting among 3-4 profiles with a quote, recording, editing and mixing of the final voice. Voice design and prompting of synthetic voices where it makes sense: corporate, e-learning, institutional. English, French and Italian with full command of the text.</p>
+<p>A scratch voice on the approved script, casting among 3-4 profiles with a quote, recording, editing and mixing of the final voice. Voice design and prompting of synthetic voices where it makes sense: corporate, e-learning, institutional. Italian, English and French with full command of the text.</p>
 </div>
 </div>
 
@@ -35,7 +35,7 @@ testaTema: apricot
 
 I work alongside directors, video production companies, communication agencies and filmmakers who already have their footage, or are shooting it, and need a sound designer for audio post-production.
 
-You bring the pictures. I bring the ear, the craft and the workflow. Remote or on site, in English, French and Italian.
+You bring the pictures. I bring the ear, the craft and the workflow. Remote or on site, in Italian, English and French.
 
 ## Skills
 

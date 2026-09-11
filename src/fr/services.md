@@ -27,7 +27,7 @@ testaTema: apricot
 </div>
 <div class="scheda-box">
 <h3>Voix : narration, voix off, voix IA</h3>
-<p>Une voix témoin sur le texte approuvé, un casting parmi 3 à 4 profils avec devis, enregistrement, montage et mixage de la voix définitive. Voice design et prompting de voix de synthèse quand cela a du sens : corporate, e-learning, institutionnel. Français, anglais et italien avec une maîtrise totale du texte.</p>
+<p>Une voix témoin sur le texte approuvé, un casting parmi 3 à 4 profils avec devis, enregistrement, montage et mixage de la voix définitive. Voice design et prompting de voix de synthèse quand cela a du sens : corporate, e-learning, institutionnel. Italien, anglais et français avec une maîtrise totale du texte.</p>
 </div>
 </div>
 
@@ -35,7 +35,7 @@ testaTema: apricot
 
 Je travaille aux côtés de réalisateurs, de sociétés de production vidéo, d'agences de communication et de vidéastes qui ont déjà leurs images, ou sont en train de les tourner, et qui ont besoin d'un sound designer pour la post-production audio.
 
-Vous apportez les images. J'apporte l'oreille, le métier et le workflow. À distance ou sur place, en français, en anglais et en italien.
+Vous apportez les images. J'apporte l'oreille, le métier et le workflow. À distance ou sur place, en italien, en anglais et en français.
 
 ## Compétences
 

@@ -77,7 +77,7 @@ module.exports = [
     risposta: `<p>Quand un projet a besoin d'une voix off (voix hors champ, narrateur), le processus se déroule en deux temps.</p>
 <p>Avant l'enregistrement définitif, j'enregistre une voix témoin sur le texte approuvé. Elle sert à juger le rythme, le ton et la durée par rapport au montage, et à confirmer que le texte fonctionne avant de faire appel à un comédien voix professionnel.</p>
 <p>En parallèle, je m'occupe du casting : je sélectionne une shortlist de profils adaptés au projet par le ton, le style et la langue, et je propose un choix de 3 à 4 options avec devis. Une fois la voix confirmée, je gère l'enregistrement, le montage et le mixage de la voix définitive sur la vidéo et je la livre pour validation.</p>
-<p>Le service est disponible dans toutes les langues. Je peux garantir la justesse et la pleine compréhension du texte et de l'intonation en français, en anglais et en italien.</p>`
+<p>Le service est disponible dans toutes les langues. Je peux garantir la justesse et la pleine compréhension du texte et de l'intonation en italien, en anglais et en français.</p>`
   },
   {
     domanda: "Une voix IA peut-elle servir de voix off définitive ?",

@@ -27,7 +27,7 @@ module.exports = {
     scheda: { portfolio: "Portfolio", categoria: "Category", ruolo: "Role", episodi: "The episodes", precedente: "Previous", successivo: "Next", tutti: "All projects", altri: "More projects", serie: "videos in this series", apri: "Project page" },
     contatto: {
       titolo: "Get in touch if your project needs careful sound.",
-      testo: "I'm Riccardo Vojvoda, sound designer, audio post-producer and production sound mixer for film, documentary, branded content, animation, video games, radio and immersive installations. Available remotely or on site, in English, French and Italian.",
+      testo: "I'm Riccardo Vojvoda, sound designer, audio post-producer and production sound mixer for film, documentary, branded content, animation, video games, radio and immersive installations. Available remotely or on site, in Italian, English and French.",
       nota: "I usually reply within 24-48 hours. Questions about the process or the materials to deliver?",
       faq: "Read the FAQ",
       pdf: "Download the profile (PDF)"
@@ -44,7 +44,7 @@ module.exports = {
     scheda: { portfolio: "Portfolio", categoria: "Catégorie", ruolo: "Rôle", episodi: "Les épisodes", precedente: "Précédent", successivo: "Suivant", tutti: "Tous les projets", altri: "Autres projets", serie: "vidéos dans cette série", apri: "Fiche du projet" },
     contatto: {
       titolo: "Écrivez-moi si votre projet a besoin d'un son soigné.",
-      testo: "Je suis Riccardo Vojvoda, sound designer, monteur-mixeur son et ingénieur du son de plateau pour le cinéma, le documentaire, le branded content, l'animation, le jeu vidéo, la radio et les installations immersives. Disponible à distance ou sur place, en français, en anglais et en italien.",
+      testo: "Je suis Riccardo Vojvoda, sound designer, monteur-mixeur son et ingénieur du son de plateau pour le cinéma, le documentaire, le branded content, l'animation, le jeu vidéo, la radio et les installations immersives. Disponible à distance ou sur place, en italien, en anglais et en français.",
       nota: "Je réponds en général sous 24 à 48 heures. Des questions sur le processus ou sur les éléments à livrer ?",
       faq: "Consulter la FAQ",
       pdf: "Télécharger le profil (PDF)"

@@ -14,3 +14,5 @@ video:
     titolo: Sottopelle - Estratto
 ---
 Alice, una donna che dopo un'aggressione sceglie di portare avanti la gravidanza, scivola in un territorio in cui trauma e paranoia confondono i confini della realtà.
+
+[Scheda su IMDb](https://www.imdb.com/it/title/tt8962670/)

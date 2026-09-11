@@ -77,7 +77,7 @@ module.exports = [
     risposta: `<p>When a project needs a voice over (off-screen voice, narrator) the process runs in two stages.</p>
 <p>Before the final recording, I record a scratch voice on the approved script. It is used to judge pace, tone and length against the cut, and to confirm the text works before bringing in a professional voice actor.</p>
 <p>Meanwhile I handle the casting: I select a shortlist of profiles that suit the project in tone, style and language, and propose a choice of 3 to 4 options with a quote. Once the voice is confirmed, I manage the recording, editing and mixing of the final voice on the video and deliver it for review.</p>
-<p>The service is available in any language. I can guarantee accuracy and full understanding of text and intonation in English, French and Italian.</p>`
+<p>The service is available in any language. I can guarantee accuracy and full understanding of text and intonation in Italian, English and French.</p>`
   },
   {
     domanda: "Can an AI voice be used as the final voice over?",
