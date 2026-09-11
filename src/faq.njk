@@ -11,7 +11,7 @@ tema: snow
 <p>Per qualsiasi altra domanda, o per capire insieme di cosa ha bisogno il tuo progetto, scrivi a <a href="mailto:{{ sito.email }}">{{ sito.email }}</a>: di norma rispondo entro 24-48 ore.</p>
 <div class="faq-elenco">
 {%- for f in faq %}
-<details id="faq-{{ loop.index }}"{% if loop.first %} open{% endif %}>
+<details name="faq" id="faq-{{ loop.index }}"{% if loop.first %} open{% endif %}>
   <summary><h2 style="font:inherit;margin:0">{{ f.domanda }}</h2></summary>
   {{ f.risposta | safe }}
 </details>

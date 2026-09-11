@@ -87,3 +87,10 @@
     avvia(box);
   });
 })();
+
+// FAQ: una sola aperta alla volta (l'attributo name lo fa nativamente; questo copre i browser vecchi)
+document.addEventListener("toggle", function (e) {
+  var d = e.target;
+  if (!d.matches || !d.matches("details[name]") || !d.open) return;
+  document.querySelectorAll('details[name="' + d.getAttribute("name") + '"][open]').forEach(function (x) { if (x !== d) x.open = false; });
+}, true);
