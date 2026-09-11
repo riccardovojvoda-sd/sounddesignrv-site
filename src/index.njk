@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+titolo_seo: Riccardo Vojvoda - Sound Designer e Audio Post | Italia
+descrizione_seo: Sound design e post-produzione audio per cinema, documentari, branded content e installazioni immersive. Portfolio con Maserati, Alfa Romeo, Diadora, The North Face e altri brand internazionali.
+classeBody: home
+---
+<section class="eroe">
+  <div class="contenitore eroe-griglia">
+    <div class="eroe-testo">
+      <h1>RICCARDO VOJVODA</h1>
+      <p class="eroe-ruolo">Sound Designer | Audio Post-Producer</p>
+      <p class="eroe-intro">Fonica e post-produzione audio per produzioni video, agenzie di comunicazione, video maker, registi e artisti. Film, documentari, branded content, video corporate e istituzionali: sound design stratificato, mix stereo e surround, selezione musicale e composizione, gestione di voci generate, ADR e presa diretta con kit completo.</p>
+      <p class="eroe-nota">Disponibile da remoto in italiano, inglese e francese. Per le riprese, mi sposto dove serve.</p>
+      <div class="eroe-azioni">
+        <a class="bottone" href="#progetti">Guarda i progetti</a>
+        <a class="bottone bottone-secondario" href="/contatti/">Scrivimi</a>
+      </div>
+    </div>
+    <div class="eroe-reel">
+      {% set v = { youtube: sito.showreel.youtube, titolo: "Showreel 2026 - Sound Design RV" } %}
+      {% set poster = sito.showreel.poster %}
+      {% set eager = true %}
+      {% include "parti/video.njk" %}
+      <p class="didascalia">Showreel 2026, 6 min 32. Il suono si giustifica nel tempo: guardalo intero, in cuffia se puoi.</p>
+    </div>
+  </div>
+</section>
+
+<section class="clienti" aria-labelledby="clienti-titolo">
+  <div class="contenitore">
+    <h2 id="clienti-titolo" class="etichetta">Brand e produzioni</h2>
+    <ul class="loghi">
+      {%- for l in sito.loghi %}
+      <li><img src="/assets/img/loghi/{{ l[0] }}" alt="{{ l[1] }}" loading="lazy" decoding="async" width="150" height="75"></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="progetti" class="progetti" aria-label="Portfolio">
+  <h2 class="visivamente-nascosto">Portfolio</h2>
+  {%- asyncEach p in collections.progetti %}
+  <article class="progetto {{ p.data.tema | slugTema }}" id="{{ p.fileSlug }}">
+    <div class="contenitore progetto-griglia">
+      <div class="progetto-media">
+        {% set v = p.data.video[0] %}
+        {% set poster = "progetti/" + p.data.immagine %}
+        {% set eager = false %}
+        {% include "parti/video.njk" %}
+        {%- if p.data.video.length > 1 %}
+        <p class="progetto-altri"><a href="{{ p.url }}">{{ p.data.video.length }} video in questa serie</a></p>
+        {%- endif %}
+      </div>
+      <div class="progetto-testo">
+        <p class="progetto-frase">{{ p.data.frase }}</p>
+        <h3 class="progetto-brand"><a href="{{ p.url }}">{{ p.data.brand }}</a></h3>
+        <p class="progetto-titolo">{{ p.data.titolo }}</p>
+        <p class="progetto-crediti">{{ p.data.crediti }}</p>
+        <div class="progetto-descrizione">{{ p.rawInput | md | safe }}</div>
+        <p class="progetto-meta"><span>Categoria: {{ p.data.categoria }}</span> <span>Ruolo: {{ p.data.ruolo }}</span></p>
+        <a class="progetto-link" href="{{ p.url }}">Scheda del progetto</a>
+      </div>
+    </div>
+  </article>
+  {%- endeach %}
+</section>
+
+<section class="dietro tema-jet" aria-labelledby="dietro-titolo">
+  <div class="contenitore">
+    <h2 id="dietro-titolo">BEHIND THE SOUND DESIGN</h2>
+    <p>Sbircia dietro le quinte: sessioni, stem e confronti prima/dopo, in cuffia. Su Instagram, <a href="{{ sito.social.instagram }}" rel="me noopener">@sound_design_rv</a>.</p>
+  </div>
+  <ul class="dietro-strip" aria-label="Copertine dei reel Behind the sound design">
+    {%- asyncEach i in range(1, 13) %}
+    <li>{% img "behind/earbuds-on-" + ("0" + i if i < 10 else i) + ".jpg", "Reel Behind the sound design, copertina " + i, "(min-width: 60em) 12vw, 40vw" %}</li>
+    {%- endeach %}
+  </ul>
+</section>

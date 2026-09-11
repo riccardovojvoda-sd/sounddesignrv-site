@@ -1,0 +1,24 @@
+{
+  "nome": "Sound Design RV",
+  "titolare": "Riccardo Vojvoda",
+  "ruolo": "Sound Designer | Audio Post-Producer",
+  "url": "https://www.sounddesignrv.com",
+  "email": "info@sounddesignrv.com",
+  "telefono": "+39 349 511 2571",
+  "telefonoHref": "+393495112571",
+  "piva": "01772000939",
+  "lingua": "it",
+  "descrizione": "Sound design e post-produzione audio per cinema, documentari, branded content e installazioni immersive. Portfolio con Maserati, Alfa Romeo, Diadora, The North Face e altri brand internazionali.",
+  "profiloPdf": "/assets/Riccardo-Vojvoda-Sound-Designer-Profile_2026_ITA.pdf",
+  "showreel": { "youtube": "Ft9g02UJ6RY", "durata": "PT6M32S", "poster": "showreel-2026-cover.png" },
+  "social": {
+    "instagram": "https://www.instagram.com/sound_design_rv/",
+    "linkedin": "https://www.linkedin.com/in/riccardo-vojvoda-sound-designer/",
+    "imdb": "https://www.imdb.com/name/nm5092564/",
+    "cromo": "https://cromostudio.it/"
+  },
+  "clienti": "Alfa Romeo, Maserati, Fiat, Lancia, Abarth, Azimut Yachts, Renault Trucks, Diadora, The North Face, Everli, CMP, Ballantyne, Lane Rossi, Calligaris, Connubia, Valcucine, Nero Cucine, Arrital, Copat Life, Laufen, Oasis, Pulkra, Varaschin, Lainox, Friulinox, Fitt Industrial, Casagrande, Savio, Goriziane, Benincà, Alpi Woods, Federlegno, Roxa, Zilo, Hausbrandt, Ponte 1948, Pitars, LaMarca, Fantini Wines, Sacchetto Vini, Weldan, Moroder, Mr.Bio, Arcadia Earth, H-Farm, IUAV, University of Chichester, SOS Chirurgia (RealTime), SIGEP, HOST",
+  "loghi": [
+    ["alfa-romeo.png","Alfa Romeo"],["maserati.png","Maserati"],["diadora.png","Diadora"],["the-north-face.png","The North Face"],["fiat.png","Fiat"],["lancia.png","Lancia"],["abarth.png","Abarth"],["everli.png","Everli"],["cmp.png","CMP"],["arcadia-earth.png","Arcadia Earth"],["lainox.webp","Lainox"],["fitt-industrial.webp","FITT Industrial"],["alpi-wood.png","Alpi Wood"],["valcucine.png","Valcucine"],["arrital.png","Arrital"],["copatlife.png","Copat Life"],["dvo-sitland.webp","DVO Sitland"],["oasis.png","Oasis"],["savio.png","Savio"],["goriziane.png","Goriziane"],["beninca.png","Benincà"],["biasi.png","Biasi"],["gefran.png","Gefran"],["federlegno.png","Federlegno"],["roxa.webp","Roxa"],["hausbrandt.png","Hausbrandt"],["ponte.webp","Ponte 1948"],["pitars.webp","Pitars"],["lamarca.png","LaMarca"],["sacchetto.webp","Sacchetto Vini"],["weldan.png","Weldan"],["farnese.png","Farnese"],["mr-bio.png","Mr.Bio"],["carinzia.png","Carinzia"],["mediaprofili.png","Mediaprofili"],["hfarm.png","H-Farm"],["iuav.png","IUAV"],["cromo.png","CROMO"]
+  ]
+}

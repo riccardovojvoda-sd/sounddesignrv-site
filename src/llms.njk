@@ -1,0 +1,36 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# Sound Design RV - Riccardo Vojvoda
+
+> Sound designer, audio post-producer e fonico di presa diretta, Italia (Pordenone / Friuli Venezia Giulia). Dal 2006 lavora su film, documentari, branded content, video corporate, spot e installazioni immersive (planetari, fulldome). Mix stereo, 5.1 e 7.1. Da remoto o in presenza, in italiano, inglese e francese. Contatto: {{ sito.email }}, {{ sito.telefono }}.
+
+## Servizi
+- Post-produzione audio completa: dialogue editing, sound design, foley, ADR, mix stereo / 5.1 / 7.1, loudness per broadcast e streaming
+- Fonica di presa diretta con kit completo (Sound Devices MixPre-6 II, Sennheiser MKH 416, DPA 4060, 6 canali wireless)
+- Sound design per installazioni immersive, musei e planetari
+- Speakeraggio e voice over: voce provvisoria, casting, registrazione, mix; voci AI dove ha senso
+- Strumenti: Pro Tools, DaVinci Resolve/Fairlight, iZotope RX, monitoring calibrato SoundID Reference Multichannel
+
+## Pagine
+- [Home e portfolio]({{ sito.url }}/): showreel 2026 e 14 progetti con video
+- [Servizi]({{ sito.url }}/servizi/)
+- [Chi sono]({{ sito.url }}/chi-sono/)
+- [FAQ]({{ sito.url }}/faq/): cosa include la post-produzione audio, cosa consegnare (AAF, handles, bollettino sonoro), tempi per formato, revisioni, formati, preventivo, voice over, voci AI
+- [Approfondimenti]({{ sito.url }}/approfondimenti/)
+- [Contatti]({{ sito.url }}/contatti/)
+- [Profilo in PDF]({{ sito.url }}{{ sito.profiloPdf }})
+
+## Progetti
+{%- for p in collections.progetti %}
+- [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria }}. Ruolo: {{ p.data.ruolo }}
+{%- endfor %}
+
+## Clienti
+{{ sito.clienti }}.
+
+## Profili
+- Instagram: {{ sito.social.instagram }}
+- LinkedIn: {{ sito.social.linkedin }}
+- IMDb: {{ sito.social.imdb }}

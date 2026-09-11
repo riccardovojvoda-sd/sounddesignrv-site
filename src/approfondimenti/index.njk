@@ -1,0 +1,21 @@
+---
+layout: layouts/pagina.njk
+permalink: /approfondimenti/
+titolo: Approfondimenti
+titolo_seo: Approfondimenti sul sound design e la post-produzione audio | Riccardo Vojvoda
+descrizione_seo: Guide pratiche di Riccardo Vojvoda su sound design per planetari e installazioni immersive, bollettino sonoro, AAF e handles, materiali da consegnare al sound designer.
+occhiello: Approfondimenti
+sottotitolo: "Guide pratiche per chi produce video e vuole capire come si lavora sul suono. Senza date: valgono finché il mestiere non cambia."
+tema: snow
+tags: []
+---
+{%- set lista = collections.approfondimenti %}
+{%- if lista.length %}
+<ul class="elenco-approfondimenti">
+{%- for a in lista %}
+<li><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br>{{ a.data.descrizione_seo }}</li>
+{%- endfor %}
+</ul>
+{%- else %}
+<p>I primi tre approfondimenti sono in preparazione: sound design per planetari, fulldome e installazioni immersive; il bollettino sonoro e perché il fonico di presa diretta deve consegnarlo; cosa consegnare al sound designer (AAF, handles, presa diretta). Nel frattempo, le <a href="/faq/">FAQ</a> rispondono alle domande più comuni.</p>
+{%- endif %}

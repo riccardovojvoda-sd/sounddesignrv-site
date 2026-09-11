@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+og_type: article
+---
+{%- set descrizioneBreve = content | testoPiano %}
+{%- set multi = video.length > 1 %}
+<article class="scheda {{ tema | slugTema }}">
+  <header class="scheda-testa">
+    <div class="contenitore">
+      <p class="briciole"><a href="/#progetti">Portfolio</a> / {{ categoria }}</p>
+      <h1 class="scheda-brand">{{ brand }}</h1>
+      <p class="scheda-titolo">{{ titolo }}</p>
+      <p class="scheda-frase">{{ frase }}</p>
+    </div>
+  </header>
+  <div class="contenitore scheda-corpo">
+    <div class="scheda-media">
+      {%- set v = video[0] %}
+      {%- set poster = "progetti/" + immagine %}
+      {%- set eager = true %}
+      {%- if multi %}
+      {%- set v = { youtube: video[0].youtube, titolo: video[0].titolo } %}
+      <div class="video" id="video-serie" data-yt="{{ video[0].youtube }}" data-titolo="{{ video[0].titolo }}">
+        {% img poster, "Anteprima video: " + video[0].titolo, "(min-width: 60em) 66vw, 100vw", "eager", "video-poster" %}
+        <button class="video-play" type="button" aria-label="Guarda: {{ video[0].titolo }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Guarda</span></button>
+      </div>
+      <div class="episodi" role="group" aria-label="Episodi" data-video="video-serie" data-descrizione="episodio-descrizione">
+        {%- asyncEach ep in video %}
+        <button type="button" data-episodio="{{ ep.youtube }}" data-titolo="{{ ep.titolo }}" data-testo="{{ ep.descrizione or '' }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
+          {% img "progetti/" + ep.immagine, "", "20vw" %}
+          <span>{{ ep.titolo }}</span>
+        </button>
+        {%- endeach %}
+      </div>
+      <p class="episodio-descrizione" id="episodio-descrizione">{{ video[0].descrizione }}</p>
+      {%- else %}
+      {% include "parti/video.njk" %}
+      {%- endif %}
+    </div>
+    <div class="scheda-testo">
+      <p class="scheda-crediti">{{ crediti }}</p>
+      <div class="scheda-descrizione">{{ content | safe }}</div>
+      <dl class="scheda-meta">
+        <div><dt>Categoria</dt><dd>{{ categoria }}</dd></div>
+        <div><dt>Ruolo</dt><dd>{{ ruolo }}</dd></div>
+      </dl>
+      {%- if multi %}
+      <section class="scheda-episodi-testo">
+        <h2>Gli episodi</h2>
+        {%- for ep in video %}
+        <h3>{{ ep.titolo }}</h3>
+        {%- if ep.crediti %}<p class="scheda-crediti">{{ ep.crediti }}</p>{% endif %}
+        {%- if ep.descrizione %}<p>{{ ep.descrizione }}</p>{% endif %}
+        {%- if ep.ruolo %}<p class="scheda-ruolo-ep">Ruolo: {{ ep.ruolo }}</p>{% endif %}
+        {%- endfor %}
+      </section>
+      {%- endif %}
+    </div>
+  </div>
+  {%- set lista = collections.progetti %}
+  {%- for p in lista %}{% if p.url == page.url %}{% set idx = loop.index0 %}
+    {%- set prec = lista[idx - 1] if idx > 0 else lista[lista.length - 1] %}
+    {%- set succ = lista[idx + 1] if idx < lista.length - 1 else lista[0] %}
+  <nav class="scheda-nav contenitore" aria-label="Altri progetti">
+    <a rel="prev" href="{{ prec.url }}"><small>Precedente</small> {{ prec.data.brand }}</a>
+    <a href="/#progetti">Tutti i progetti</a>
+    <a rel="next" href="{{ succ.url }}"><small>Successivo</small> {{ succ.data.brand }}</a>
+  </nav>
+  {%- endif %}{% endfor %}
+</article>
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": brand + " - " + titolo,
+  "description": descrizioneBreve,
+  "thumbnailUrl": sito.url + "/assets/img/progetti/" + immagine,
+  "uploadDate": page.date | dataIso,
+  "embedUrl": ("https://www.youtube-nocookie.com/embed/" + video[0].youtube) if video[0].youtube else (sito.url + "/assets/video/" + video[0].file),
+  "contentUrl": ("https://www.youtube.com/watch?v=" + video[0].youtube) if video[0].youtube else (sito.url + "/assets/video/" + video[0].file),
+  "genre": categoria,
+  "inLanguage": "it",
+  "contributor": { "@type": "Person", "name": sito.titolare, "jobTitle": "Sound Designer", "url": sito.url },
+  "about": ruolo
+} | json | safe }}</script>
