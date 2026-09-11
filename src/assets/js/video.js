@@ -71,22 +71,6 @@
     });
   });
 
-  // Selettore episodi nelle schede con piu' video
-  document.addEventListener("click", function (e) {
-    var b = e.target.closest && e.target.closest("[data-episodio]");
-    if (!b) return;
-    var lista = b.closest(".episodi");
-    var box = document.getElementById(lista.getAttribute("data-video"));
-    if (!box) return;
-    lista.querySelectorAll("[data-episodio]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-    box.setAttribute("data-yt", b.getAttribute("data-episodio"));
-    box.setAttribute("data-titolo", b.getAttribute("data-titolo") || "");
-    box.classList.remove("video-attivo");
-    var corrente = document.getElementById(lista.getAttribute("data-corrente"));
-    if (corrente) corrente.textContent = b.getAttribute("data-titolo") || "";
-    avvia(box);
-    box.scrollIntoView({ behavior: "smooth", block: "center" });
-  });
 })();
 
 // FAQ: una sola aperta alla volta (l'attributo name lo fa nativamente; questo copre i browser vecchi)
@@ -94,4 +78,6 @@ document.addEventListener("toggle", function (e) {
   var d = e.target;
   if (!d.matches || !d.matches("details[name]") || !d.open) return;
   document.querySelectorAll('details[name="' + d.getAttribute("name") + '"][open]').forEach(function (x) { if (x !== d) x.open = false; });
+  // Chiudendo quella prima, il contenuto si sposta: si riallinea la domanda appena aperta in cima allo schermo
+  requestAnimationFrame(function () { d.scrollIntoView({ behavior: "smooth", block: "start" }); });
 }, true);

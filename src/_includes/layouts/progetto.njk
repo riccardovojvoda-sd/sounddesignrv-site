@@ -13,22 +13,15 @@ og_type: article
       <p class="scheda-frase">{{ frase }}</p>
     </div>
   </header>
-  <div class="contenitore scheda-corpo">
+  <div class="contenitore scheda-corpo{% if multi %} scheda-corpo-serie{% endif %}">
+    {%- if not multi %}
     <div class="scheda-media">
       {%- set v = video[0] %}
       {%- set poster = "progetti/" + immagine %}
       {%- set eager = true %}
-      {%- if multi %}
-      {%- set v = { youtube: video[0].youtube, titolo: video[0].titolo } %}
-      <div class="video" id="video-serie" data-yt="{{ video[0].youtube }}" data-titolo="{{ video[0].titolo }}">
-        {% img poster, "Anteprima video: " + video[0].titolo, "(min-width: 60em) 66vw, 100vw", "eager", "video-poster" %}
-        <button class="video-play" type="button" aria-label="Guarda: {{ video[0].titolo }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Guarda</span></button>
-      </div>
-      <p class="episodio-corrente">In riproduzione: <strong id="episodio-corrente">{{ video[0].titolo }}</strong></p>
-      {%- else %}
       {% include "parti/video.njk" %}
-      {%- endif %}
     </div>
+    {%- endif %}
     <div class="scheda-testo">
       <p class="scheda-crediti">{{ crediti }}</p>
       <div class="scheda-descrizione">{{ content | safe }}</div>
@@ -39,15 +32,14 @@ og_type: article
     </div>
   </div>
   {%- if multi %}
-  <section class="episodi contenitore" aria-labelledby="episodi-titolo" data-video="video-serie" data-corrente="episodio-corrente">
+  <section class="episodi contenitore" aria-labelledby="episodi-titolo">
     <h2 id="episodi-titolo" class="etichetta">Gli episodi</h2>
     <div class="episodi-lista">
       {%- asyncEach ep in video %}
       <article class="episodio">
-        <button type="button" data-episodio="{{ ep.youtube }}" data-titolo="{{ ep.titolo }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" aria-label="Guarda: {{ ep.titolo }}">
-          {% img "progetti/" + ep.immagine, "", "(min-width: 48em) 33vw, 100vw" %}
-          <span class="episodio-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
+        {%- set v = ep %}
+        {%- set eager = loop.first %}
+        {% include "parti/video.njk" %}
         <h3>{{ ep.titolo }}</h3>
         {%- if ep.descrizione %}<p>{{ ep.descrizione }}</p>{% endif %}
         {%- if ep.ruolo %}<p class="scheda-ruolo-ep">{{ ep.ruolo }}</p>{% endif %}

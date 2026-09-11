@@ -5,11 +5,11 @@
 {%- if v.youtube -%}
 <div class="video" data-yt="{{ v.youtube }}" data-titolo="{{ v.titolo }}">
   {% img posterPath, "Anteprima video: " + v.titolo, "(min-width: 60em) 55vw, 100vw", caricamento, "video-poster" %}
-  <button class="video-play" type="button" aria-label="Guarda: {{ v.titolo }}">
+  <button class="video-play" type="button" aria-label="Ascolta: {{ v.titolo }}">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-    <span>Guarda</span>
+    <span>Ascolta</span>
   </button>
-  <noscript><a href="https://www.youtube.com/watch?v={{ v.youtube }}">Guarda su YouTube: {{ v.titolo }}</a></noscript>
+  <noscript><a href="https://www.youtube.com/watch?v={{ v.youtube }}">Ascolta su YouTube: {{ v.titolo }}</a></noscript>
 </div>
 {%- elif v.file -%}
 <div class="video video-locale">

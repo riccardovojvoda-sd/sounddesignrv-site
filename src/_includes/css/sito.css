@@ -160,22 +160,16 @@ p{margin:0 0 1em}
 .scheda-meta{margin:1.5rem 0;display:grid;gap:.75rem;font-size:.92rem}
 .scheda-meta dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.7}
 .scheda-meta dd{margin:0}
-.episodio-corrente{margin-top:.75rem;font-size:.92rem;opacity:.85}
+.scheda-corpo-serie{grid-template-columns:1fr}
+.scheda-corpo-serie .scheda-testo{max-width:44rem}
 .episodi{padding-bottom:clamp(2.5rem,6vw,5rem)}
-.episodi-lista{display:grid;gap:1.5rem 1.75rem;grid-template-columns:repeat(3,1fr)}
-@media(max-width:48em){.episodi-lista{grid-template-columns:1fr 1fr}}
-@media(max-width:32em){.episodi-lista{grid-template-columns:1fr}}
-.episodio button{position:relative;display:block;width:100%;padding:0;border:3px solid transparent;border-radius:var(--raggio);overflow:hidden;background:var(--jet);cursor:pointer;transition:transform .15s}
-.episodio button img{display:block;width:100%;height:auto;transition:opacity .15s}
-.episodio button:hover{transform:translateY(-2px)}
-.episodio button:hover img{opacity:.85}
-.episodio button[aria-pressed=true]{border-color:var(--accento)}
-.episodio-play{position:absolute;right:.6rem;bottom:.6rem;width:2.4rem;height:2.4rem;border-radius:50%;background:rgba(255,251,250,.92);color:var(--jet);display:grid;place-items:center;box-shadow:0 .25rem .75rem rgba(0,0,0,.3)}
-.episodio-play svg{width:1.2rem;height:1.2rem;fill:currentColor;margin-left:.1rem}
-.episodio button[aria-pressed=true] .episodio-play{background:var(--accento);color:var(--fondo)}
-.episodio h3{font-size:1.05rem;margin:.9rem 0 .35rem}
-.episodio p{font-size:.92rem;margin-bottom:.4em}
-.scheda-ruolo-ep{font-size:.85rem;opacity:.8}
+.episodi-lista{display:grid;gap:2rem 1.75rem;grid-template-columns:1fr}
+@media(min-width:48em){.episodi-lista{grid-template-columns:1fr 1fr}}
+@media(min-width:80em){.episodi-lista{grid-template-columns:repeat(3,1fr)}}
+.episodio .video{box-shadow:var(--ombra)}
+.episodio h3{font-size:1.1rem;margin:1rem 0 .35rem}
+.episodio p{font-size:.95rem;margin-bottom:.4em}
+.scheda-ruolo-ep{font-size:.86rem;opacity:.8}
 .scheda-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;padding-block:1.5rem 3rem;font-weight:600;align-items:center}
 .scheda-nav-tutti{text-align:center;font-weight:500;opacity:.8}
 @media(max-width:36em){.scheda-nav{grid-template-columns:1fr 1fr}.scheda-nav-tutti{grid-column:1/-1;order:3}}
@@ -207,7 +201,7 @@ p{margin:0 0 1em}
 .tema-jet .scheda-box{background:rgba(255,251,250,.06)}
 .scheda-box h3{margin-top:0;font-size:1.05rem}
 .scheda-box p,.scheda-box ul{font-size:.95rem;margin-bottom:0}
-.prosa details{border-top:1px solid var(--jet-15);padding:.9rem 0}
+.prosa details{border-top:1px solid var(--jet-15);padding:.9rem 0;scroll-margin-top:5.5rem}
 .prosa details:last-of-type{border-bottom:1px solid var(--jet-15)}
 .prosa summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem}
 .prosa summary::-webkit-details-marker{display:none}
