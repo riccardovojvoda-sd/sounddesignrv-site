@@ -49,7 +49,7 @@ p{margin:0 0 1em}
 .pie .lingue{margin-top:.5rem}
 .pie .lingue a{opacity:.7}
 .pie .lingue a[aria-current=true]{background:var(--snow);color:var(--jet)}
-@media(max-width:40em){.testata .lingue a[aria-current=true]{display:none}.testata .lingue a{opacity:1;border:1px solid var(--jet-15);padding:.35em .55em}.testata .menu{order:1}}
+@media(max-width:40em){.testata .lingue a[aria-current=true]{display:none}.testata .lingue a{opacity:1;border:1px solid var(--jet-15);padding:.35em .55em}.testata .lingue{margin-left:-.3rem}}
 
 /* Testata */
 .testata{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem var(--gutter);background:rgba(255,251,250,.85);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--jet-15)}
