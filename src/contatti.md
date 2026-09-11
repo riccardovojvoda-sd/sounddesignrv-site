@@ -4,7 +4,7 @@ permalink: /contatti/
 titolo: Contatti
 titolo_seo: Contatti - Riccardo Vojvoda | Sound Designer
 descrizione_seo: Contatta Riccardo Vojvoda per progetti di sound design, post-produzione audio e fonica di presa diretta. Da remoto o in presenza, in italiano, inglese e francese. Risposta entro 24-48 ore.
-occhiello: Contatti
+occhiello: Preventivi e collaborazioni
 sottotitolo: Scrivimi se il tuo progetto ha bisogno di cura sonora. Rispondo di norma entro 24-48 ore.
 tema: verdigris
 nascondiContatto: true
