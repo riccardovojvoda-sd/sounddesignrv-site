@@ -48,11 +48,12 @@ p{margin:0 0 1em}
 .marchio-nome{display:block;font-weight:700;letter-spacing:.06em;font-size:1rem}
 .marchio-ruolo{display:block;font-size:.72rem;letter-spacing:.088em;text-transform:uppercase;opacity:.7}
 .menu{display:flex;gap:clamp(.5rem,2vw,1.5rem);align-items:center;flex-wrap:wrap;justify-content:flex-end}
-.menu a{text-decoration:none;font-weight:500;font-size:.92rem;padding:.35em 0;border-bottom:2px solid transparent}
+.menu a{text-decoration:none;font-weight:500;font-size:.92rem;padding:.35em 0;border-bottom:2px solid transparent;white-space:nowrap}
 .menu a:hover,.menu a[aria-current=page]{border-bottom-color:var(--verdigris)}
 .menu-cta{padding:.45em 1em!important;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
-@media(max-width:40em){.menu a:not(.menu-cta){font-size:.82rem}.marchio-ruolo{display:none}}
+@media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.4em .85em!important}}
+@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto}.testata{padding:.6rem var(--gutter)}.menu{gap:.6rem}.menu a{font-size:.82rem}}
 
 /* Eroe */
 .eroe{padding-block:clamp(2.5rem,7vw,6rem) clamp(2rem,5vw,4rem)}
