@@ -8,6 +8,7 @@
 {%- set urlPagina = sito.url + page.url %}
 <title>{{ titoloPagina }}</title>
 <meta name="description" content="{{ descPagina }}">
+{%- if noindex %}<meta name="robots" content="noindex">{% endif %}
 <link rel="canonical" href="{{ urlPagina }}">
 <meta property="og:type" content="{{ og_type or 'website' }}">
 <meta property="og:site_name" content="{{ sito.nome }}">
