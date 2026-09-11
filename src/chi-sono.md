@@ -12,11 +12,11 @@ immagine_og: riccardo-vojvoda-ritratto.jpg
 ritratto: riccardo-vojvoda-ritratto.jpg
 ritrattoAlt: "Riccardo Vojvoda, sound designer"
 ---
-**Diplomato in Musica e Nuove Tecnologie al Conservatorio di Trieste**, ho iniziato a occuparmi di fonica e post-produzione nel 2006, dopo anni di esperienza come produttore e mixer musicale.
+Diplomato in Musica e Nuove Tecnologie al **Conservatorio di Trieste**, ho iniziato a occuparmi di fonica e post-produzione nel 2006, dopo anni di esperienza come produttore e mixer musicale.
 
-Nel 2010 ho proseguito la formazione al SAE Institute di Milano e poi a Parigi, dove **ho lavorato per quattro anni nella post-produzione di cortometraggi e documentari**, maturando quella cura per il dettaglio sonoro tipica della scuola del cinema francese.
+Nel 2010 ho proseguito la formazione al SAE Institute di Milano e poi a Parigi, dove ho lavorato per quattro anni nella **post-produzione di cortometraggi e documentari**, maturando quella cura per il dettaglio sonoro tipica della scuola del cinema francese.
 
-Rientrato in Italia nel 2015, ho continuato il mio percorso nella fonica e post-produzione audio per il settore corporate e pubblicitario, collaborando con [CROMO]({{ sito.social.cromo }}) e brand come **Maserati, Diadora, Stellantis, Everli, The North Face** e molti altri.
+Rientrato in Italia nel 2015, ho continuato il mio percorso nella fonica e post-produzione audio per il settore corporate e pubblicitario, collaborando con **[CROMO]({{ sito.social.cromo }})** e brand come **Maserati, Diadora, Stellantis, Everli, The North Face** e molti altri.
 
 Negli anni ho curato l'audio di numerosi documentari e cortometraggi indipendenti e, più recentemente, di un **[lungometraggio thriller in 5.1](/progetti/sottopelle/)**, occupandomi di fonica, dialogue editing e sound design. Lavoro anche su **[contenuti immersivi in 5.1 e 7.1](/progetti/arcadia-earth/) destinati a planetari e installazioni surround**, unendo competenza tecnica, sensibilità musicale e un approccio narrativo al suono, sempre al servizio dell'immagine.
 
