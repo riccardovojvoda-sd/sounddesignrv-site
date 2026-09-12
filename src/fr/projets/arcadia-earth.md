@@ -9,7 +9,7 @@ ruolo: "Sélection musicale, voix off IA, sound design 5.1, mixage 5.1 et 7.1 - 
 tema: verdigris
 immagine: arcadia-earth.jpg
 video:
-  - file: arcadia-earth-a-vision-for-tomorrow.mp4
+  - youtube: R7rWQBdXrhY
     durata: 69
     titolo: "Arcadia Earth - A Vision For Tomorrow (extrait)"
 ---

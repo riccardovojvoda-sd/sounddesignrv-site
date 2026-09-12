@@ -10,7 +10,6 @@ module.exports = function (eleventyConfig) {
   // File copiati tali e quali
   eleventyConfig.addPassthroughCopy({ "src/assets/font": "assets/font" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
-  eleventyConfig.addPassthroughCopy({ "src/assets/video": "assets/video" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img/loghi": "assets/img/loghi" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img/logo-sdrv-96.png": "assets/img/logo-sdrv-96.png", "src/assets/img/logo-sdrv.png": "assets/img/logo-sdrv.png" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "assets" });

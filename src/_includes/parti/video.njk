@@ -1,5 +1,5 @@
 {#- Video con copertina locale: l'iframe YouTube (dominio nocookie) si carica solo al clic.
-    Parametri: v = { youtube | file, titolo, immagine }, poster = percorso immagine sotto assets/img, eager = bool -#}
+    Parametri: v = { youtube, titolo, immagine, durata }, poster = percorso immagine sotto assets/img, eager = bool -#}
 {%- if v.immagine %}{% set posterPath = "progetti/" + v.immagine %}{% else %}{% set posterPath = poster %}{% endif -%}
 {%- set caricamento = "eager" if eager else "lazy" -%}
 {%- set tv = testi[lang or "it"].video -%}
@@ -12,12 +12,5 @@
   </button>
   {%- if v.durata %}<span class="video-durata" aria-label="{{ tv.durata }} {{ v.durata | tempo }}">{{ v.durata | tempo }}</span>{% endif %}
   <noscript><a href="https://www.youtube.com/watch?v={{ v.youtube }}">{{ tv.suYoutube }}: {{ v.titolo }}</a></noscript>
-</div>
-{%- elif v.file -%}
-<div class="video video-locale">
-  <video controls preload="none" playsinline poster="{% imgUrl posterPath, 1200 %}" title="{{ v.titolo }}">
-    <source src="/assets/video/{{ v.file }}" type="video/mp4">
-  </video>
-  {%- if v.durata %}<span class="video-durata video-durata-locale">{{ v.durata | tempo }}</span>{% endif %}
 </div>
 {%- endif -%}
