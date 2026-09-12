@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/img/loghi": "assets/img/loghi" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img/logo-sdrv-96.png": "assets/img/logo-sdrv-96.png", "src/assets/img/logo-sdrv.png": "assets/img/logo-sdrv.png" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "s" }); // vecchio percorso Squarespace del profilo PDF
   eleventyConfig.addPassthroughCopy({ "src/radice": "." });
   eleventyConfig.addWatchTarget("src/assets/css");
 

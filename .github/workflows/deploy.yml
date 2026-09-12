@@ -1,21 +1,25 @@
 name: Build e deploy sounddesignrv.com
 
-# Costruisce il sito con Eleventy e lo carica su Infomaniak via FTP.
-# Parte a ogni push su main, o a mano. Il mirror e' completo (con --delete):
-# la web root del hosting e' interamente governata da questo repo.
-#
-# Secret richiesti (gh secret set): FTP_HOST, FTP_USER, FTP_PASS, FTP_DIR
+# Costruisce il sito con Eleventy e lo pubblica su GitHub Pages.
+# Parte a ogni push su main, o a mano. Il dominio custom viene dal file CNAME in _site.
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-    env:
-      FTP_CONFIGURATO: ${{ secrets.FTP_HOST }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,27 +33,18 @@ jobs:
           ! grep -rl "@gmail.com" _site --include=*.html
           ! grep -rl "squarespace" _site --include=*.html
           for f in _site/progetti/*/index.html _site/*/projects/*/index.html _site/*/projets/*/index.html; do grep -q 'class="video' "$f" || { echo "Scheda senza video: $f"; exit 1; }; done
-          test -f _site/index.html && test -f _site/.htaccess
-      - name: Installa lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
-      - name: Upload via FTP
-        if: ${{ env.FTP_CONFIGURATO != '' }}
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_PASS: ${{ secrets.FTP_PASS }}
-          FTP_DIR: ${{ secrets.FTP_DIR }}
-        run: |
-          lftp -c "
-            set ftp:ssl-allow true;
-            set ftp:ssl-protect-data true;
-            set ssl:verify-certificate no;
-            set ftp:passive-mode true;
-            set net:max-retries 2;
-            set net:timeout 15;
-            set net:connection-limit 2;
-            open -u '$FTP_USER','$FTP_PASS' '$FTP_HOST';
-            mirror -R --delete --only-newer --verbose --parallel=2 \
-              --exclude-glob .DS_Store \
-              _site/ '$FTP_DIR'
-          "
+          test -f _site/index.html && test -f _site/404.html && test -f _site/CNAME
+          test -f _site/portfolio/index.html && test -f _site/s/Riccardo-Vojvoda-Sound-Designer-Profile_2026_ITA.pdf
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
