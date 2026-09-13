@@ -69,10 +69,10 @@ p{margin:0 0 1em}
 .menu{display:flex;gap:clamp(.5rem,2vw,1.5rem);align-items:center;flex-wrap:wrap;justify-content:flex-end;margin-left:auto}
 .menu a{text-decoration:none;font-weight:500;font-size:.92rem;padding:.35em 0;border-bottom:2px solid transparent;white-space:nowrap}
 .menu a:hover,.menu a[aria-current=page]{border-bottom-color:var(--verdigris)}
-.menu-cta{padding:.45em 1em!important;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
+.menu-cta{padding:.52em 1em .38em!important;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
-@media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.4em .85em!important}}
-@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.marchio-logo{width:2.2rem;height:2.2rem}.testata{padding:.6rem var(--gutter);gap:.5rem}.menu{gap:.7rem}.menu a{font-size:.78rem}.menu-cta{padding:.4em .7em!important}.lingue-tendina{font-size:.72rem}.lingue-tendina summary{padding:.3em .45em}.lingue-tendina summary svg{display:none}}
+@media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.47em .85em .33em!important}}
+@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.marchio-logo{width:2.2rem;height:2.2rem}.testata{padding:.6rem var(--gutter);gap:.5rem}.menu{gap:.7rem}.menu a{font-size:.78rem}.menu-cta{padding:.47em .7em .33em!important}.lingue-tendina{font-size:.72rem}.lingue-tendina summary{padding:.3em .45em}.lingue-tendina summary svg{display:none}}
 
 /* Eroe */
 .eroe{padding-block:clamp(2.5rem,7vw,6rem) clamp(2rem,5vw,4rem)}
@@ -118,7 +118,8 @@ p{margin:0 0 1em}
 .loghi li:hover img{filter:none;opacity:1}
 
 /* Progetti in home */
-.progetto{padding-block:clamp(3rem,7vw,6rem)}
+.progetto{padding-block:clamp(3rem,7vw,6rem);scroll-margin-top:4.7rem} /* ancora /#slug: atterra sotto la testata fissa */
+@media(max-width:36em){.progetto{scroll-margin-top:3.4rem}}
 .progetto-griglia{display:grid;gap:clamp(1.5rem,4vw,4rem);align-items:center}
 @media(min-width:60em){
   .progetto-griglia{grid-template-columns:11fr 9fr}
