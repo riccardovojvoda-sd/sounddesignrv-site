@@ -108,6 +108,10 @@ Quando l'ordine e' fatto scrivimi "trasferimento avviato". Cosa faccio io in que
    come riferimento se manca qualcosa.
 3. Ruota i codici di backup Squarespace e porta tutto in 1Password (voce gia' aperta nel
    fronte Dropbox).
+4. Domini `sdrvstudio.com` (scade 24/04/2028) e `sdrvstudio.it` (24/04/2027): oggi Squarespace li
+   rimanda con 301 a https://www.sounddesignrv.com/ e restano cosi' finche' stanno li'. Prima
+   della loro scadenza decidere: trasferirli a Infomaniak (rimando web gratuito nel Manager,
+   ~10-14 EUR/anno ciascuno) oppure lasciarli scadere.
 
 ---
 
