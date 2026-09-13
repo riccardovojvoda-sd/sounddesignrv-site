@@ -13,6 +13,4 @@ video:
     durata: 420
     titolo: "Anniversario 50 CDA - Il Viaggio"
 ---
-Un documentaire d'entreprise, une histoire de famille, au son soigné et cinématographique. Le sound design travaille sur les transitions. La prise de son dans l'entreprise et dans la cabine du véhicule nous donne des voix off narratives de haute qualité et des dialogues propres au-dessus du son des véhicules et de la musique émotionnelle taillée sur le récit.
-
-Le matériau : drone, caméra embarquée, images sur site et les voix du fondateur et de ses enfants. Cinquante ans de CDA, du café à 50 lires de 1976 à la société à mission, trente véhicules et 800 000 kilomètres par an.
+Un documentaire d'entreprise, une histoire de famille, au son soigné et cinématographique. Sound design sur les transitions, prise de son dans l'entreprise et dans la cabine du véhicule, voix off narratives et dialogues propres au-dessus du son des véhicules et de la musique émotionnelle taillée sur le récit. Cinquante ans de CDA : drone, caméra embarquée, les voix du fondateur et de ses enfants.

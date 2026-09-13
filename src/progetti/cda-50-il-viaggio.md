@@ -13,6 +13,4 @@ video:
     durata: 420
     titolo: Anniversario 50 CDA - Il Viaggio
 ---
-Un documentario aziendale, di famiglia, dal suono curato e cinematografico. Il sound design lavora sulle transizioni. La presa diretta in azienda e in cabina di guida ci dà VO narrativi di alta qualità e dialoghi puliti sopra il suono dei mezzi e la musica emotional ritagliata sul racconto.
-
-Il materiale: drone, camera car, riprese in sede e le voci del fondatore e dei figli. Cinquant'anni di CDA, dal caffè a 50 lire del 1976 alla Società Benefit, trenta automezzi e 800.000 chilometri l'anno.
+Un documentario aziendale, di famiglia, dal suono curato e cinematografico. Sound design sulle transizioni, presa diretta in azienda e in cabina di guida, VO narrativi e dialoghi puliti sopra il suono dei mezzi e la musica emotional ritagliata sul racconto. Cinquant'anni di CDA: drone, camera car, le voci del fondatore e dei figli.
