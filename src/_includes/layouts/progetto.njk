@@ -26,7 +26,7 @@ og_type: article
     </div>
     {%- endif %}
     <div class="scheda-testo">
-      <p class="scheda-crediti">{{ crediti }}</p>
+      <p class="scheda-crediti">{{ crediti | mdInline | safe }}</p>
       <div class="scheda-descrizione">{{ content | safe }}</div>
       <dl class="scheda-meta">
         <div><dt>{{ t.scheda.categoria }}</dt><dd>{{ categoria }}</dd></div>

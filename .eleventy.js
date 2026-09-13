@@ -63,6 +63,8 @@ module.exports = function (eleventyConfig) {
   // Filtri
   const md = require("markdown-it")({ html: true, typographer: false });
   eleventyConfig.addFilter("md", (testo) => md.render(String(testo || "").trim()));
+  // Markdown senza il <p> intorno: per una riga sola, come i crediti con un link dentro
+  eleventyConfig.addFilter("mdInline", (testo) => md.renderInline(String(testo || "").trim()));
   eleventyConfig.addFilter("testoPiano", (html) =>
     String(html || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
   );

@@ -2,8 +2,8 @@
 ordine: 8
 brand: CDA
 titolo: 50 anni, il viaggio
-frase: Un caffè a 50 lire. Trenta automezzi che escono dal cancello, con la neve o con la pioggia.
-crediti: "Documentario aziendale | Regia: Edoardo Vojvoda | Produzione: Cromo Studio | Soggetto e direzione creativa: PM2"
+frase: "La moneta cade nella fessura. Clunk! A 50 anni dalle 50 lire."
+crediti: "Documentario aziendale | Regia: Edoardo Vojvoda | Produzione: Cromo Studio | Soggetto e direzione creativa: [PM2](https://www.pm2.com/)"
 categoria: Documentario aziendale
 ruolo: "Presa diretta - dialog editing - sound design - mix stereo. Le voci dei protagonisti registrate in azienda e in cabina di guida; sul set anche come focus puller."
 tema: flax
@@ -13,4 +13,6 @@ video:
     durata: 420
     titolo: Anniversario 50 CDA - Il Viaggio
 ---
-Il fondatore che nel 1976 vendeva il caffè a 50 lire, i figli che parlano di complicità generazionale, gli operatori alle 6:30 del mattino, trenta automezzi e 800.000 chilometri l'anno, la trasformazione in Società Benefit. Sette minuti che alternano drone, camera car, riprese in sede e interviste ai protagonisti: materiale eterogeneo, tenuto insieme dal suono. Presa diretta in azienda e sul furgone, dialoghi puliti sopra il rumore dei mezzi, musica emotional d'archivio calibrata sul racconto.
+Un documentario aziendale, di famiglia, dal suono curato e cinematografico. Il sound design lavora sulle transizioni. La presa diretta in azienda e in cabina di guida ci dà VO narrativi di alta qualità e dialoghi puliti sopra il suono dei mezzi e la musica emotional ritagliata sul racconto.
+
+Il materiale: drone, camera car, riprese in sede e le voci del fondatore e dei figli. Cinquant'anni di CDA, dal caffè a 50 lire del 1976 alla Società Benefit, trenta automezzi e 800.000 chilometri l'anno.

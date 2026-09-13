@@ -64,7 +64,7 @@ permalink: /en/
         <p class="progetto-frase">{{ p.data.frase }}</p>
         <h3 class="progetto-brand"><a href="{{ p.url }}">{{ p.data.brand }}</a></h3>
         <p class="progetto-titolo">{{ p.data.titolo }}</p>
-        <p class="progetto-crediti">{{ p.data.crediti }}</p>
+        <p class="progetto-crediti">{{ p.data.crediti | mdInline | safe }}</p>
         <div class="progetto-descrizione">{{ p.rawInput | md | safe }}</div>
         <p class="progetto-meta"><span>Category: {{ p.data.categoria }}</span> <span>Role: {{ p.data.ruolo }}</span></p>
         <a class="progetto-link" href="{{ p.url }}">Project page</a>
