@@ -82,7 +82,7 @@ p{margin:0 0 1em}
 .eroe-ruolo{font-size:clamp(1.05rem,2vw,1.35rem);font-weight:500;color:var(--verdigris);filter:brightness(.8);margin-bottom:1.25em}
 .eroe-intro{font-size:1.02rem;max-width:38rem}
 .eroe-intro-corta{display:none}
-@media(max-width:60em){.eroe-intro-lunga{display:none}.eroe-intro-corta{display:block}}
+@media(max-width:60em){.eroe-intro-lunga{display:none}.eroe-intro-corta{display:block}.a-capo-desktop{display:none}}
 .eroe-nota{font-weight:500;max-width:38rem}
 .eroe-azioni{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem}
 .eroe-reel .video{box-shadow:var(--ombra)}
