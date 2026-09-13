@@ -1,6 +1,6 @@
 // Bottone "torna in alto": compare dopo circa una schermata di scroll, scroll dolce salvo "riduci movimento".
 (function () {
-  var b = document.querySelector(".torna-su");
+  var b = document.querySelector(".in-alto");
   if (!b) return;
   var visibile = false;
   function aggiorna() {
