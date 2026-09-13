@@ -1,5 +1,5 @@
 ---
-ordine: 9
+ordine: 10
 brand: PITARS
 titolo: Semplicemente straordinario
 frase: Lo scroscio del fiume. Il gorgoglìo di un calice di bianco.

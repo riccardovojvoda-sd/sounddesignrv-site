@@ -1,5 +1,5 @@
 ---
-ordine: 13
+ordine: 14
 brand: WELDAN
 titolo: Vinaioli del Friuli
 frase: L'aria fresca che fruscia tra le foglie di vite. La terra che freme.
