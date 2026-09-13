@@ -72,7 +72,7 @@ p{margin:0 0 1em}
 .menu-cta{padding:.52em 1em .38em!important;position:relative;top:-.14em;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
 @media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.47em .85em .33em!important}}
-@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.marchio-logo{width:2.2rem;height:2.2rem}.testata{padding:.6rem var(--gutter);gap:.5rem}.menu{gap:.7rem}.menu a{font-size:.78rem}.menu-cta{padding:.47em .7em .33em!important}.lingue-tendina{font-size:.72rem}.lingue-tendina summary{padding:.3em .45em}.lingue-tendina summary svg{display:none}}
+@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.marchio-logo{width:2.5rem;height:2.5rem}.testata{padding:.6rem var(--gutter);gap:.5rem}.menu{gap:.7rem}.menu a{font-size:.78rem}.menu-cta{padding:.47em .7em .33em!important}.lingue-tendina{font-size:.72rem}.lingue-tendina summary{padding:.3em .45em}.lingue-tendina summary svg{display:none}}
 
 /* Eroe */
 .eroe{padding-block:clamp(2.5rem,7vw,6rem) clamp(2rem,5vw,4rem)}
