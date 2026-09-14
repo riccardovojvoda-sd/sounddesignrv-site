@@ -7,9 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://www.youtube-nocookie.com; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 {%- if chiave == "home" and (lang or "it") == "it" %}
+{#- Ancore del vecchio sito (/#maserati, /#missinghead...): girano ancora nelle mail gia' inviate e nel CRM.
+    Qui non esistono piu': chi arriva con una di quelle va alla pagina del progetto. Deve stare PRIMA del
+    reindirizzo per lingua, che altrimenti butta via l'ancora. #}
+<script>(function(){try{var m={maserati:"maserati-mc20",alfaromeo:"alfa-romeo-quadrifoglio",arcadia:"arcadia-earth",missinghead:"the-missing-head",diadora:"diadora-run-valley",adria:"adria-were-ready",ponte:"ponte-1948-fast-food-series",pitars:"pitars",alpi:"alpi-wood",weldan:"weldan",lainox:"lainox-naboo",fitt:"fitt-industrial"};var h=location.hash.replace("#","").toLowerCase();if(m[h]){window.ancoraVecchia=true;location.replace("/progetti/"+m[h]+"/");}}catch(e){}})();</script>
 {#- Lingua: solo la home italiana, solo se il browser preferisce inglese o francese e non si arriva da una pagina del sito
     (cosi' il selettore lingua funziona sempre). Sostituisce il redirect lato server: GitHub Pages non ne ha. #}
-<script>(function(){try{if(document.referrer.indexOf(location.protocol+"//"+location.host+"/")===0)return;var l=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase();if(l.indexOf("en")===0)location.replace("/en/");else if(l.indexOf("fr")===0)location.replace("/fr/");}catch(e){}})();</script>
+<script>(function(){try{if(window.ancoraVecchia)return;if(document.referrer.indexOf(location.protocol+"//"+location.host+"/")===0)return;var l=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase();if(l.indexOf("en")===0)location.replace("/en/");else if(l.indexOf("fr")===0)location.replace("/fr/");}catch(e){}})();</script>
 {%- endif %}
 {%- set titoloPagina = titolo_seo or titolo or sito.titolare %}
 {%- set descPagina = descrizione_seo or descrizione or sito.descrizione %}
