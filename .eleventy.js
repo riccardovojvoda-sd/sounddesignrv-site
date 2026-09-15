@@ -60,6 +60,18 @@ module.exports = function (eleventyConfig) {
     return metadata.jpeg[0].url;
   });
 
+  // Stessa cosa, sincrona, per usarla dentro un oggetto Nunjucks (JSON-LD): il file lo genera il shortcode img
+  eleventyConfig.addFilter("imgUrlSync", (src, width = 1200) => {
+    const metadata = Image.statsSync(path.join("src/assets/img", src), {
+      widths: [width],
+      formats: ["jpeg"],
+      outputDir: "_site/assets/img/r/",
+      urlPath: "/assets/img/r/",
+      filenameFormat: (id, s, w, format) => `${path.basename(s, path.extname(s))}-${w}.${format}`,
+    });
+    return metadata.jpeg[0].url;
+  });
+
   // Filtri
   const md = require("markdown-it")({ html: true, typographer: false });
   eleventyConfig.addFilter("md", (testo) => md.render(String(testo || "").trim()));
@@ -72,6 +84,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("tempo", (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`);
   eleventyConfig.addFilter("anno", () => new Date().getFullYear());
   eleventyConfig.addFilter("dataIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString().slice(0, 10));
+  // Data e ora complete con fuso orario (schema.org uploadDate): Google le vuole cosi'
+  eleventyConfig.addFilter("dataOraIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString());
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
   // Versioni della stessa pagina nelle altre lingue: pagine con la stessa "chiave", italiano per primo
   const ORDINE_LINGUE = ["it", "en", "fr", "es"];

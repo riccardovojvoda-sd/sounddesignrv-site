@@ -10,6 +10,7 @@ tema: verdigris
 immagine: adria-were-ready.png
 video:
   - youtube: qpQI3z_0pG8
+    pubblicato: 2025-10-31T07:49:56-07:00
     durata: 39
     titolo: Adria - We're ready
 ---

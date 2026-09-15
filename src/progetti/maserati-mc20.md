@@ -10,6 +10,7 @@ tema: snow
 immagine: maserati-mc20.jpg
 video:
   - youtube: F6L3ENf1eAQ
+    pubblicato: 2021-06-29T04:02:37-07:00
     durata: 211
     titolo: Maserati MC20 - How It's Made
 ---

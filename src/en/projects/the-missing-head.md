@@ -10,6 +10,7 @@ tema: jet
 immagine: the-missing-head.jpg
 video:
   - youtube: BoqfuaYlqRo
+    pubblicato: 2026-01-19T05:19:01-08:00
     durata: 140
     titolo: "The Missing Head - Promo"
 ---

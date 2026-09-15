@@ -10,6 +10,7 @@ tema: verdigris
 immagine: arcadia-earth.jpg
 video:
   - youtube: R7rWQBdXrhY
+    pubblicato: 2026-09-12T07:17:23-07:00
     durata: 69
     titolo: "Arcadia Earth - A Vision For Tomorrow (extrait)"
 ---

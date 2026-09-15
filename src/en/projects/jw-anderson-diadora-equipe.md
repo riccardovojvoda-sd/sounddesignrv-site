@@ -10,6 +10,7 @@ tema: flax
 immagine: jw-anderson-diadora-equipe.png
 video:
   - youtube: TCBNfjFkW5E
+    pubblicato: 2026-05-15T02:54:15-07:00
     durata: 110
     titolo: "JW Anderson x Diadora - The Equipe"
 ---

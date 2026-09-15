@@ -10,31 +10,37 @@ tema: snow
 immagine: alpi-wood-4.jpg
 video:
   - youtube: NXdvXloWhTY
+    pubblicato: 2023-10-19T06:54:14-07:00
     durata: 16
     titolo: "Brume du matin"
     immagine: alpi-wood-4-ep.jpg
     descrizione: "Des totems aux géométries irrégulières enveloppés de brume matinale : la matière émerge lentement, avant que le jour ne prenne forme."
   - youtube: 98rdFUTeG1w
+    pubblicato: 2023-10-19T06:53:24-07:00
     durata: 18
     titolo: "Le calme après la tempête"
     immagine: alpi-wood-3-ep.jpg
     descrizione: "La forêt respire, les géométries restent immobiles : le son porte encore l'écho de ce qui vient de passer."
   - youtube: y2-jkZGP1uw
+    pubblicato: 2023-10-19T06:48:52-07:00
     durata: 19
     titolo: "Aube"
     immagine: alpi-wood-5-ep.jpg
     descrizione: "Les totems sortent de l'obscurité tandis que la lumière revient : le son grandit avec l'intensité du jour qui se lève."
   - youtube: FrAt4cuoVLA
+    pubblicato: 2023-10-19T06:50:28-07:00
     durata: 18
     titolo: "Arc-en-ciel"
     immagine: alpi-wood-6-ep.jpg
     descrizione: "Après la pluie, les couleurs éclatent sur les surfaces des totems : des géométries imposantes qui répondent à la lumière comme seul le bois sait le faire."
   - youtube: Q9M22p1Xs_M
+    pubblicato: 2023-10-19T06:51:45-07:00
     durata: 14
     titolo: "Rayon de soleil"
     immagine: alpi-wood-1-ep.jpg
     descrizione: "Une lumière rasante révèle chaque veine, chaque courbe irrégulière : le bois design dévoile toute sa profondeur chromatique."
   - youtube: 8xrrfYYwRHw
+    pubblicato: 2023-10-19T06:52:28-07:00
     durata: 16
     titolo: "Coucher de soleil"
     immagine: alpi-wood-2-ep.jpg

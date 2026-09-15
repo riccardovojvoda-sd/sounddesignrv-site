@@ -10,6 +10,7 @@ tema: flax
 immagine: cda-50-il-viaggio.jpg
 video:
   - youtube: 7Xsh0zwWkVE
+    pubblicato: 2026-06-15T02:33:45-07:00
     durata: 420
     titolo: "Anniversario 50 CDA - Il Viaggio"
 ---

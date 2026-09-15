@@ -10,6 +10,7 @@ tema: apricot
 immagine: weldan.jpg
 video:
   - youtube: GnMLkB1S8dQ
+    pubblicato: 2023-02-01T09:06:05-08:00
     durata: 291
     titolo: "Weldan - Vinaioli del Friuli"
 ---

@@ -10,6 +10,7 @@ tema: verdigris
 immagine: fitt-industrial.png
 video:
   - youtube: Gi_5pw0KxRQ
+    pubblicato: 2025-01-09T03:09:42-08:00
     durata: 178
     titolo: "FITT Industrial - Materia in movimento"
 ---

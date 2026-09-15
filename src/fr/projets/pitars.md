@@ -10,6 +10,7 @@ tema: flax
 immagine: pitars.jpg
 video:
   - youtube: VTm_Z3FZ0NI
+    pubblicato: 2021-03-19T02:53:46-07:00
     durata: 163
     titolo: "Pitars - Semplicemente straordinario"
 ---

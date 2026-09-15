@@ -10,18 +10,21 @@ tema: apricot
 immagine: ponte-1948-burger.jpg
 video:
   - youtube: 3wxuSC9qT0I
+    pubblicato: 2021-04-09T06:57:35-07:00
     durata: 35
     titolo: "Burger"
     immagine: ponte-1948-burger.jpg
     descrizione: "Ketchup, a burger and a glass of prosecco: the pairing nobody expects and everybody shares."
     ruolo: "Music selection - sound design - stereo mix - American sound textures, sparkling and light."
   - youtube: PtT8Dj443Qw
+    pubblicato: 2021-04-09T06:56:20-07:00
     durata: 35
     titolo: "Sushi"
     immagine: ponte-1948-sushi.jpg
     descrizione: "A Ponte rosé prosecco between chopsticks and nigiri: the unlikely pairing that becomes the most natural in the world."
     ruolo: "Music selection - sound design - stereo mix - a Japanese sonic emblem, ironic and light in tone."
   - youtube: n71-kRCkvXs
+    pubblicato: 2021-04-09T06:57:00-07:00
     durata: 33
     titolo: "Pizza"
     immagine: ponte-1948-pizza.jpg

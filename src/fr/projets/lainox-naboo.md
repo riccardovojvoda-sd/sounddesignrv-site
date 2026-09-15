@@ -10,6 +10,7 @@ tema: flax
 immagine: lainox-naboo.jpg
 video:
   - youtube: f52RMVsDQ2M
+    pubblicato: 2023-10-23T04:27:44-07:00
     durata: 125
     titolo: "Lainox Naboo 5.0 - L'evoluzione della specie"
 ---

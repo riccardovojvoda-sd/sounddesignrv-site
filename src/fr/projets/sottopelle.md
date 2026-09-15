@@ -10,6 +10,7 @@ tema: jet
 immagine: sottopelle.png
 video:
   - youtube: jWW38jlqG7Q
+    pubblicato: 2025-11-18T14:01:22-08:00
     durata: 86
     titolo: "Sottopelle - Estratto"
 ---

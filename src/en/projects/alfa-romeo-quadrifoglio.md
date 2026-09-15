@@ -10,6 +10,7 @@ tema: jet
 immagine: alfa-romeo-quadrifoglio.jpg
 video:
   - youtube: LyuZhPoEFcQ
+    pubblicato: 2024-01-10T05:35:55-08:00
     durata: 55
     titolo: "Alfa Romeo - Il quadrifoglio"
 ---

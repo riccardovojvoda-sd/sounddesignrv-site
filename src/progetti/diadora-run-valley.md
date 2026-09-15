@@ -10,6 +10,7 @@ tema: apricot
 immagine: diadora-run-valley.jpg
 video:
   - youtube: cka3FztVJYA
+    pubblicato: 2024-01-09T02:04:21-08:00
     durata: 90
     titolo: Diadora - Run Valley
 ---
