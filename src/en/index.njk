@@ -81,8 +81,8 @@ permalink: /en/
     <p>A look behind the scenes: sessions, stems and before/after comparisons, headphones on. On Instagram, <a href="{{ sito.social.instagram }}" rel="me noopener">@sound_design_rv</a>.</p>
   </div>
   <ul class="dietro-strip" aria-label="Behind the sound design reel covers">
-    {%- asyncEach i in range(1, 13) %}
-    <li>{% img "behind/earbuds-on-" + ("0" + i if i < 10 else i) + ".jpg", "Behind the sound design reel, cover " + i, "(min-width: 60em) 12vw, 40vw" %}</li>
+    {%- asyncEach p in instagram %}
+    <li><a href="{{ p.url }}" rel="noopener">{% img "instagram/" + p.copertina, "Instagram reel: " + p.didascalia, "(min-width: 60em) 12vw, 40vw" %}</a></li>
     {%- endeach %}
   </ul>
 </section>

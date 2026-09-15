@@ -80,8 +80,8 @@ chiave: home
     <p>Sbircia dietro le quinte: sessioni, stem e confronti prima/dopo, in cuffia. Su Instagram, <a href="{{ sito.social.instagram }}" rel="me noopener">@sound_design_rv</a>.</p>
   </div>
   <ul class="dietro-strip" aria-label="Copertine dei reel Behind the sound design">
-    {%- asyncEach i in range(1, 13) %}
-    <li>{% img "behind/earbuds-on-" + ("0" + i if i < 10 else i) + ".jpg", "Reel Behind the sound design, copertina " + i, "(min-width: 60em) 12vw, 40vw" %}</li>
+    {%- asyncEach p in instagram %}
+    <li><a href="{{ p.url }}" rel="noopener">{% img "instagram/" + p.copertina, "Reel su Instagram: " + p.didascalia, "(min-width: 60em) 12vw, 40vw" %}</a></li>
     {%- endeach %}
   </ul>
 </section>
