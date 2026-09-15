@@ -72,7 +72,10 @@ p{margin:0 0 1em}
 .menu-cta{padding:.52em 1em .38em!important;position:relative;top:-.14em;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
 @media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.47em .85em .33em!important}}
-@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.marchio-logo{width:2.5rem;height:2.5rem}.testata{padding:.6rem var(--gutter);gap:.5rem}.menu{gap:.7rem}.menu a{font-size:.78rem}.menu-cta{padding:.47em .7em .33em!important}.lingue-tendina{font-size:.72rem}.lingue-tendina summary{padding:.3em .45em}.lingue-tendina summary svg{display:none}}
+/* Sotto i 48em la testata diventa una barra fissa IN FONDO allo schermo (raggiungibile col pollice), stessa altezza di prima.
+   --testata-h = altezza della barra: serve al pie' (spazio sotto), al torna-in-alto (che sale sopra la barra) e alle ancore. */
+@media(max-width:48em){:root{--testata-h:calc(4rem + 1px + env(safe-area-inset-bottom,0px))}.testata{position:fixed;top:auto;bottom:0;left:0;right:0;border-bottom:0;border-top:1px solid var(--jet-15);padding-bottom:calc(.7rem + env(safe-area-inset-bottom,0px))}.lingue-lista{top:auto;bottom:calc(100% + .4rem)}}
+@media(max-width:36em){.marchio-nome{display:none}.marchio{grid-template-columns:auto;flex-shrink:0}.marchio-logo{width:2.5rem;height:2.5rem}.testata{padding:.6rem var(--gutter) calc(.6rem + env(safe-area-inset-bottom,0px));gap:.5rem}:root{--testata-h:calc(3.7rem + 1px + env(safe-area-inset-bottom,0px))}.menu{gap:.7rem}.menu a{font-size:.78rem}.menu-cta{padding:.47em .7em .33em!important}.lingue-tendina{font-size:.72rem}.lingue-tendina summary{padding:.3em .45em}.lingue-tendina summary svg{display:none}}
 
 /* Eroe */
 .eroe{padding-block:clamp(2.5rem,7vw,6rem) clamp(2rem,5vw,4rem)}
@@ -121,7 +124,7 @@ p{margin:0 0 1em}
 
 /* Progetti in home */
 .progetto{padding-block:clamp(3rem,7vw,6rem);scroll-margin-top:4.7rem} /* ancora /#slug: atterra sotto la testata fissa */
-@media(max-width:36em){.progetto{scroll-margin-top:3.4rem}}
+@media(max-width:48em){.progetto{scroll-margin-top:.5rem}} /* barra in fondo: niente da scavalcare */
 .progetto-griglia{display:grid;gap:clamp(1.5rem,4vw,4rem);align-items:center}
 @media(min-width:60em){
   .progetto-griglia{grid-template-columns:11fr 9fr}
@@ -163,6 +166,7 @@ p{margin:0 0 1em}
 
 /* Pie' di pagina */
 .pie{background:var(--jet);color:var(--snow);padding-block:2.5rem 1.5rem;font-size:.9rem}
+@media(max-width:48em){.pie{padding-block-end:calc(1.5rem + var(--testata-h))}} /* spazio per la barra fissa in fondo */
 .pie-griglia{display:grid;gap:1.5rem}
 @media(min-width:48em){.pie-griglia{grid-template-columns:2fr 1fr 1fr}}
 .pie-blocco{display:flex;flex-direction:column;gap:.35rem;line-height:1.5}
@@ -225,6 +229,7 @@ p{margin:0 0 1em}
 .scheda-box h3{margin-top:0;font-size:1.05rem}
 .scheda-box p,.scheda-box ul{font-size:.95rem;margin-bottom:0}
 .prosa details{border-top:1px solid var(--jet-15);padding:.9rem 0;scroll-margin-top:5.5rem}
+@media(max-width:48em){.prosa details{scroll-margin-top:1rem}}
 .prosa details:last-of-type{border-bottom:1px solid var(--jet-15)}
 .prosa summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem}
 .prosa summary::-webkit-details-marker{display:none}
@@ -243,4 +248,5 @@ p{margin:0 0 1em}
 .in-alto[hidden]{display:flex;pointer-events:none}
 .in-alto.visibile{opacity:1;transform:none;pointer-events:auto}
 .in-alto:hover,.in-alto:focus-visible{background:var(--flax);border-bottom:0}
-@media(max-width:36em){.in-alto{right:.75rem;bottom:.75rem}}
+@media(max-width:48em){.in-alto{bottom:calc(var(--testata-h) + .75rem)}}
+@media(max-width:36em){.in-alto{right:.75rem}}
