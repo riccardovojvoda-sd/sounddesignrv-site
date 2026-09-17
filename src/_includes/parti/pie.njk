@@ -21,5 +21,5 @@
       <a href="{{ sito.social.cromo }}" rel="noopener">CROMO (video)</a>
     </nav>
   </div>
-  <p class="pie-copy contenitore">© {{ "" | anno }} {{ sito.nome }} - {{ sito.titolare }}</p>
+  <p class="pie-copy contenitore">© {{ "" | anno }} {{ sito.nome }} - {{ sito.titolare }}{% if sito.ga4 %} · <a href="#" onclick="return mostraBannerCookie()">{{ t.analytics.link }}</a>{% endif %}</p>
 </footer>

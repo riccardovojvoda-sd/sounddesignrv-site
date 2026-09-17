@@ -1,0 +1,7 @@
+{%- if sito.ga4 %}
+{%- set ta = (testi[lang or "it"]).analytics %}
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie" hidden>
+  <p>{{ ta.testo }}</p>
+  <div class="cookie-bottoni"><button type="button" class="bottone" data-si>{{ ta.si }}</button><button type="button" class="bottone bottone-secondario" data-no>{{ ta.no }}</button></div>
+</div>
+{%- endif %}

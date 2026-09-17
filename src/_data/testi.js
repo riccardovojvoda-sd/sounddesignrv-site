@@ -16,6 +16,7 @@ module.exports = {
       pdf: "Scarica il profilo in PDF"
     },
     articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutti gli approfondimenti", altri: "Da leggere anche", altraLingua: "Read this in English", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
+    analytics: { testo: "Questo sito usa Google Analytics per contare le visite e capire quali pagine vengono lette. Nessuna pubblicità. Accetti?", si: "Accetto", no: "No, grazie", link: "Cookie" },
     pie: { piva: "P.IVA" }
   },
   en: {
@@ -34,6 +35,7 @@ module.exports = {
       pdf: "Download the profile (PDF)"
     },
     articolo: { pubblicato: "Published on", aggiornato: "updated on", tutti: "All insights", altri: "Also worth reading", altraLingua: "Leggi in italiano", minuti: "min read", bozza: "DRAFT: preview page, not published yet" },
+    analytics: { testo: "This site uses Google Analytics to count visits and see which pages get read. No advertising. Do you accept?", si: "Accept", no: "No, thanks", link: "Cookies" },
     pie: { piva: "VAT" }
   },
   fr: {
@@ -51,6 +53,7 @@ module.exports = {
       faq: "Consulter la FAQ",
       pdf: "Télécharger le profil (PDF)"
     },
+    analytics: { testo: "Ce site utilise Google Analytics pour compter les visites et savoir quelles pages sont lues. Aucune publicité. Acceptez-vous ?", si: "J'accepte", no: "Non, merci", link: "Cookies" },
     pie: { piva: "TVA" }
   }
 };
