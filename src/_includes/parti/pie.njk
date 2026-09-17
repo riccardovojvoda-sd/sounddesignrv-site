@@ -11,6 +11,7 @@
       <a href="{{ t.url.servizi }}">{{ t.menu.servizi }}</a>
       <a href="{{ t.url.chiSono }}">{{ t.menu.chiSono }}</a>
       <a href="{{ t.url.faq }}">{{ t.menu.faq }}</a>
+      {%- if t.url.approfondimenti %}<a href="{{ t.url.approfondimenti }}">{{ t.menu.approfondimenti }}</a>{% endif %}
       <a href="{{ t.url.contatti }}">{{ t.menu.contatti }}</a>
     </nav>
     <nav class="pie-blocco" aria-label="{{ t.menu.profili }}">

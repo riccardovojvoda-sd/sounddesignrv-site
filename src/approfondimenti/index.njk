@@ -1,23 +1,23 @@
 ---
 layout: layouts/pagina.njk
 permalink: /approfondimenti/
+chiave: approfondimenti
 titolo: Approfondimenti
 titolo_seo: Approfondimenti sul sound design e la post-produzione audio | Riccardo Vojvoda
-descrizione_seo: Guide pratiche di Riccardo Vojvoda su sound design per planetari e installazioni immersive, bollettino sonoro, AAF e handles, materiali da consegnare al sound designer.
+descrizione_seo: Risposte pratiche per chi produce video e vuole capire come si lavora sul suono. Consegna dei materiali, loudness, musica e diritti, voce, presa diretta, installazioni immersive.
 occhiello: Guide pratiche
-sottotitolo: "Guide pratiche per chi produce video e vuole capire come si lavora sul suono. Senza date: valgono finché il mestiere non cambia."
+sottotitolo: "Risposte pratiche per chi produce video e vuole capire come si lavora sul suono: una domanda precisa, una risposta che si può usare subito. Un articolo nuovo ogni settimana."
 tema: snow
 tags: []
-escludiDaSitemap: true
-noindex: true
+indice: true
 ---
 {%- set lista = collections.approfondimenti %}
 {%- if lista.length %}
-<ul class="elenco-approfondimenti">
+<ul class="elenco-approfondimenti elenco-approfondimenti-tutti">
 {%- for a in lista %}
-<li><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br>{{ a.data.descrizione_seo }}</li>
+<li><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span><br><small><time datetime="{{ a.date | dataIso }}">{{ a.date | dataLunga("it") }}</time></small></li>
 {%- endfor %}
 </ul>
 {%- else %}
-<p>I primi tre approfondimenti sono in preparazione: sound design per planetari, fulldome e installazioni immersive; il bollettino sonoro e perché il fonico di presa diretta deve consegnarlo; cosa consegnare al sound designer (AAF, handles, presa diretta). Nel frattempo, le <a href="/faq/">FAQ</a> rispondono alle domande più comuni.</p>
+<p>I primi approfondimenti sono in preparazione. Nel frattempo, le <a href="/faq/">FAQ</a> rispondono alle domande più comuni.</p>
 {%- endif %}

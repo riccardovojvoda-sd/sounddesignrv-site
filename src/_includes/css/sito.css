@@ -69,6 +69,8 @@ p{margin:0 0 1em}
 .menu{display:flex;gap:clamp(.5rem,2vw,1.5rem);align-items:center;flex-wrap:wrap;justify-content:flex-end;margin-left:auto}
 .menu a{text-decoration:none;font-weight:500;font-size:.92rem;padding:.35em 0;border-bottom:2px solid transparent;white-space:nowrap}
 .menu a:hover,.menu a[aria-current=page]{border-bottom-color:var(--verdigris)}
+.menu-corto{display:none}
+@media(max-width:36em){.menu-lungo{display:none}.menu-corto{display:inline}}
 .menu-cta{padding:.52em 1em .38em!important;position:relative;top:-.14em;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
 @media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.47em .85em .33em!important}}
@@ -254,3 +256,28 @@ p{margin:0 0 1em}
 .in-alto:hover,.in-alto:focus-visible{background:var(--flax);border-bottom:0}
 @media(max-width:48em){.in-alto{bottom:calc(var(--testata-h) + .75rem)}}
 @media(max-width:36em){.in-alto{right:.75rem}}
+
+/* Approfondimenti / Insights */
+.elenco-approfondimenti{list-style:none;padding:0;margin:0 0 1.5rem;max-width:44rem}
+.elenco-approfondimenti li{padding:1rem 0;border-top:1px solid var(--jet-15)}
+.elenco-approfondimenti li:last-child{border-bottom:1px solid var(--jet-15)}
+.elenco-approfondimenti a{text-decoration:none;font-size:1.1rem}
+.elenco-approfondimenti a:hover strong{text-decoration:underline;text-underline-offset:.15em}
+.elenco-approfondimenti span{opacity:.85}
+.elenco-approfondimenti small{opacity:.65}
+.articolo-testa{max-width:52rem}
+.articolo .pagina-testa h1{font-size:clamp(1.8rem,4.2vw,3rem)}
+.articolo-meta{font-size:.9rem;opacity:.8;margin:0}
+.articolo-meta a{font-weight:500}
+.articolo-copertina{margin:0 auto clamp(1.5rem,4vw,3rem)}
+.articolo-copertina img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:var(--raggio);box-shadow:var(--ombra)}
+.articolo-copertina figcaption{font-size:.8rem;opacity:.65;margin-top:.5rem}
+.articolo-corpo p,.articolo-corpo li{font-size:1.05rem}
+.articolo-corpo blockquote{margin:1.5rem 0;padding:.25rem 0 .25rem 1.25rem;border-left:4px solid var(--verdigris);font-weight:500}
+.articolo-corpo table{border-collapse:collapse;width:100%;max-width:44rem;font-size:.95rem;margin:1rem 0 1.5rem}
+.articolo-corpo th,.articolo-corpo td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--jet-15);vertical-align:top}
+.articolo-corpo th{font-weight:600;background:rgba(123,181,178,.14)}
+.articolo-corpo .riquadro{background:rgba(123,181,178,.14);border-left:5px solid var(--verdigris);border-radius:var(--raggio);padding:1rem 1.25rem;margin:1.5rem 0}
+.articolo-corpo .riquadro p:last-child{margin-bottom:0}
+.articolo-altri{padding-bottom:clamp(2.5rem,6vw,5rem)}
+.articolo-bozza{background:var(--flax);color:var(--jet);font-weight:600;padding:.6rem 1rem;border-radius:var(--raggio);margin-top:1rem;text-align:center}

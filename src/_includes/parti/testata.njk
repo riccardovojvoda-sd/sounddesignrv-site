@@ -7,6 +7,7 @@
   <nav class="menu" aria-label="{{ t.menu.principale }}">
     <a href="{{ t.url.portfolio }}"{% if page.url == t.url.home %} aria-current="page"{% endif %}>{{ t.menu.portfolio }}</a>
     <a href="{{ t.url.servizi }}"{% if page.url == t.url.servizi %} aria-current="page"{% endif %}>{{ t.menu.servizi }}</a>
+    {%- if t.url.approfondimenti %}<a href="{{ t.url.approfondimenti }}"{% if page.url and page.url.startsWith(t.url.approfondimenti) %} aria-current="page"{% endif %}><span class="menu-lungo">{{ t.menu.approfondimenti }}</span><span class="menu-corto">{{ t.menu.approfondimentiCorto }}</span></a>{% endif %}
     <a href="{{ t.url.chiSono }}"{% if page.url == t.url.chiSono %} aria-current="page"{% endif %}>{{ t.menu.chiSono }}</a>
     <a class="menu-cta" href="{{ t.url.contatti }}"{% if page.url == t.url.contatti %} aria-current="page"{% endif %}>{{ t.menu.contatti }}</a>
   </nav>

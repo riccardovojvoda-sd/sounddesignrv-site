@@ -2,8 +2,8 @@
 module.exports = {
   it: {
     codice: "it", locale: "it_IT", nome: "Italiano", sigla: "IT",
-    url: { home: "/", portfolio: "/#progetti", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/" },
-    menu: { portfolio: "Portfolio", servizi: "Servizi", chiSono: "Chi sono", contatti: "Contatti", faq: "FAQ", principale: "Principale", pagine: "Pagine", profili: "Profili esterni", lingua: "Lingua" },
+    url: { home: "/", portfolio: "/#progetti", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/", approfondimenti: "/approfondimenti/" },
+    menu: { portfolio: "Portfolio", servizi: "Servizi", chiSono: "Chi sono", contatti: "Contatti", faq: "FAQ", approfondimenti: "Approfondimenti", approfondimentiCorto: "Guide", principale: "Principale", pagine: "Pagine", profili: "Profili esterni", lingua: "Lingua" },
     salta: "Vai al contenuto", tornaSu: "Torna in alto",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Ascolta", anteprima: "Anteprima video", suYoutube: "Ascolta su YouTube", durata: "Durata" },
@@ -15,12 +15,13 @@ module.exports = {
       faq: "Consulta le FAQ",
       pdf: "Scarica il profilo in PDF"
     },
+    articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutti gli approfondimenti", altri: "Da leggere anche", altraLingua: "Read this in English", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
     pie: { piva: "P.IVA" }
   },
   en: {
     codice: "en", locale: "en_GB", nome: "English", sigla: "EN",
-    url: { home: "/en/", portfolio: "/en/#projects", servizi: "/en/services/", chiSono: "/en/about/", faq: "/en/faq/", contatti: "/en/contact/" },
-    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "About", contatti: "Contact", faq: "FAQ", principale: "Main", pagine: "Pages", profili: "External profiles", lingua: "Language" },
+    url: { home: "/en/", portfolio: "/en/#projects", servizi: "/en/services/", chiSono: "/en/about/", faq: "/en/faq/", contatti: "/en/contact/", approfondimenti: "/en/insights/" },
+    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "About", contatti: "Contact", faq: "FAQ", approfondimenti: "Insights", approfondimentiCorto: "Insights", principale: "Main", pagine: "Pages", profili: "External profiles", lingua: "Language" },
     salta: "Skip to content", tornaSu: "Back to top",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Listen", anteprima: "Video preview", suYoutube: "Listen on YouTube", durata: "Duration" },
@@ -32,6 +33,7 @@ module.exports = {
       faq: "Read the FAQ",
       pdf: "Download the profile (PDF)"
     },
+    articolo: { pubblicato: "Published on", aggiornato: "updated on", tutti: "All insights", altri: "Also worth reading", altraLingua: "Leggi in italiano", minuti: "min read", bozza: "DRAFT: preview page, not published yet" },
     pie: { piva: "VAT" }
   },
   fr: {

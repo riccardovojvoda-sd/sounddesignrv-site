@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+---
+{#- Articolo degli Approfondimenti / Insights: copertina, titolo, data, testo, altri articoli.
+    La versione nell'altra lingua si trova con `chiave` (stessa chiave in IT e EN). -#}
+{%- set t = testi[lang or "it"] %}
+{%- set lista = collections["approfondimenti" + ("_en" if lang == "en" else "")] %}
+{%- set minuti = content | minutiLettura %}
+{%- set altra = false %}
+{%- for a in alternative %}{% if a.lang != (lang or "it") %}{% set altra = a %}{% endif %}{% endfor %}
+{%- if bozza %}{% for p in collections.all %}{% if p.data.chiave == chiave and p.url != page.url and p.url %}{% set altra = { url: p.url, lang: p.data.lang or "it" } %}{% endif %}{% endfor %}{% endif %}
+<article class="pagina articolo tema-snow">
+  {%- if bozza %}<p class="articolo-bozza contenitore">{{ t.articolo.bozza }}</p>{% endif %}
+  <header class="pagina-testa">
+    <div class="contenitore articolo-testa">
+      <p class="briciole"><a href="{{ t.url.approfondimenti }}">{{ t.menu.approfondimenti }}</a>{% if categoria %} / {{ categoria }}{% endif %}</p>
+      <h1>{{ titolo }}</h1>
+      {%- if sottotitolo %}<p class="pagina-sottotitolo">{{ sottotitolo }}</p>{% endif %}
+      <p class="articolo-meta">
+        <time datetime="{{ page.date | dataIso }}">{{ t.articolo.pubblicato }} {{ page.date | dataLunga(lang) }}</time>
+        {%- if aggiornato %} · {{ t.articolo.aggiornato }} <time datetime="{{ aggiornato | dataIso }}">{{ aggiornato | dataLunga(lang) }}</time>{% endif %}
+        · {{ minuti }} {{ t.articolo.minuti }}
+        {%- if altra %} · <a href="{{ altra.url }}" hreflang="{{ altra.lang }}" lang="{{ altra.lang }}">{{ t.articolo.altraLingua }}</a>{% endif %}
+      </p>
+    </div>
+  </header>
+  {%- if copertina %}
+  <figure class="articolo-copertina contenitore">
+    {% img "approfondimenti/" + copertina, copertinaAlt or titolo, "(min-width: 80rem) 76rem, 100vw", "eager" %}
+    {%- if copertinaCredito %}<figcaption>{{ copertinaCredito | mdInline | safe }}</figcaption>{% endif %}
+  </figure>
+  {%- endif %}
+  <div class="contenitore pagina-corpo prosa articolo-corpo">
+    {{ content | safe }}
+  </div>
+  {%- set altri = [] %}
+  {%- for p in lista %}{% if p.url != page.url and altri.length < 3 %}{% set altri = (altri.push(p), altri) %}{% endif %}{% endfor %}
+  {%- if altri.length %}
+  <aside class="contenitore articolo-altri" aria-label="{{ t.articolo.altri }}">
+    <h2 class="etichetta">{{ t.articolo.altri }}</h2>
+    <ul class="elenco-approfondimenti">
+      {%- for a in altri %}
+      <li><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span></li>
+      {%- endfor %}
+    </ul>
+    <p><a class="bottone bottone-secondario" href="{{ t.url.approfondimenti }}">{{ t.articolo.tutti }}</a></p>
+  </aside>
+  {%- endif %}
+</article>
+{%- if not bozza %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": titolo,
+  "description": descrizione_seo or descrizione,
+  "inLanguage": lang or "it",
+  "datePublished": page.date | dataIso,
+  "dateModified": (aggiornato or page.date) | dataIso,
+  "image": (sito.url + (("approfondimenti/" + copertina) | imgUrlSync(1200))) if copertina else undefined,
+  "author": { "@type": "Person", "name": sito.titolare, "url": sito.url + t.url.chiSono },
+  "publisher": { "@id": sito.url + "/#riccardo-vojvoda" },
+  "mainEntityOfPage": sito.url + page.url
+} | json | safe }}</script>
+{%- endif %}

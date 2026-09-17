@@ -1,0 +1,23 @@
+---
+layout: layouts/pagina.njk
+permalink: /en/insights/
+chiave: approfondimenti
+titolo: Insights
+titolo_seo: Insights on sound design and audio post-production | Riccardo Vojvoda
+descrizione_seo: Practical answers for people who make video and want to understand how sound work is done. Deliverables, loudness, music and rights, voice, location sound, immersive installations.
+occhiello: Practical guides
+sottotitolo: "Practical answers for people who make video and want to understand how sound work is done: one precise question, one answer you can use right away. A new article every week."
+tema: snow
+tags: []
+indice: true
+---
+{%- set lista = collections.approfondimenti_en %}
+{%- if lista.length %}
+<ul class="elenco-approfondimenti elenco-approfondimenti-tutti">
+{%- for a in lista %}
+<li><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span><br><small><time datetime="{{ a.date | dataIso }}">{{ a.date | dataLunga("en") }}</time></small></li>
+{%- endfor %}
+</ul>
+{%- else %}
+<p>The first insights are on their way. In the meantime, the <a href="/en/faq/">FAQ</a> answers the most common questions.</p>
+{%- endif %}

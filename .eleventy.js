@@ -3,6 +3,7 @@
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
 const { minify } = require("html-minifier-terser");
+const { pubblicato } = require("./lib/articoli");
 
 const LARGHEZZE = [480, 800, 1200, 1600];
 
@@ -16,12 +17,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "s" }); // vecchio percorso Squarespace del profilo PDF
   eleventyConfig.addPassthroughCopy({ "src/radice": "." });
   eleventyConfig.addWatchTarget("src/assets/css");
+  eleventyConfig.addWatchTarget("lib");
 
   // Collezione progetti ordinata per campo "ordine"
   const perOrdine = (a, b) => a.data.ordine - b.data.ordine;
   eleventyConfig.addCollection("progetti", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
   eleventyConfig.addCollection("progetti_it", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
   for (const l of ["en", "fr", "es"]) eleventyConfig.addCollection("progetti_" + l, (api) => api.getFilteredByTag("progetti_" + l).sort(perOrdine));
+  // Approfondimenti (it) e Insights (en), dal piu' recente. Bozze e date future restano fuori: vedi lib/articoli.js
+  const perData = (a, b) => b.date - a.date;
+  eleventyConfig.addCollection("approfondimenti", (api) => api.getFilteredByTag("approfondimenti").filter(pubblicato).sort(perData));
+  eleventyConfig.addCollection("approfondimenti_en", (api) => api.getFilteredByTag("approfondimenti_en").filter(pubblicato).sort(perData));
 
   // Shortcode immagine responsive: {% img "progetti/pitars.jpg", "alt", "(min-width: 60em) 50vw, 100vw", "lazy" %}
   eleventyConfig.addAsyncShortcode("img", async function (src, alt, sizes = "100vw", loading = "lazy", classe = "") {
@@ -87,12 +93,22 @@ module.exports = function (eleventyConfig) {
   // Data e ora complete con fuso orario (schema.org uploadDate): Google le vuole cosi'
   eleventyConfig.addFilter("dataOraIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString());
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
+  // Data per esteso nella lingua della pagina: "22 settembre 2026" / "22 September 2026"
+  const MESI = { it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
+                 en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                 fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"] };
+  // Minuti di lettura (200 parole al minuto, minimo 1)
+  eleventyConfig.addFilter("minutiLettura", (html) => Math.max(1, Math.round(String(html || "").replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length / 200)));
+  eleventyConfig.addFilter("dataLunga", (d, lang = "it") => {
+    const x = d instanceof Date ? d : new Date(d);
+    return `${x.getUTCDate()} ${(MESI[lang] || MESI.it)[x.getUTCMonth()]} ${x.getUTCFullYear()}`;
+  });
   // Versioni della stessa pagina nelle altre lingue: pagine con la stessa "chiave", italiano per primo
   const ORDINE_LINGUE = ["it", "en", "fr", "es"];
   eleventyConfig.addFilter("traduzioni", (tutte, chiave) => {
     if (!chiave) return [];
     return tutte
-      .filter((p) => p.data.chiave === chiave && p.url)
+      .filter((p) => p.data.chiave === chiave && p.url && !p.data.bozza)
       .map((p) => ({ lang: p.data.lang || "it", url: p.url }))
       .sort((a, b) => ORDINE_LINGUE.indexOf(a.lang) - ORDINE_LINGUE.indexOf(b.lang));
   });
