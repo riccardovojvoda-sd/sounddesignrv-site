@@ -24,7 +24,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("progetti", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
   eleventyConfig.addCollection("progetti_it", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
   for (const l of ["en", "fr", "es"]) eleventyConfig.addCollection("progetti_" + l, (api) => api.getFilteredByTag("progetti_" + l).sort(perOrdine));
-  // Approfondimenti (it) e Insights (en), dal piu' recente. Bozze e date future restano fuori: vedi lib/articoli.js
+  // Approfondimenti (it) e Insights (en), dal più recente. Bozze e date future restano fuori: vedi lib/articoli.js
   const perData = (a, b) => b.date - a.date;
   eleventyConfig.addCollection("approfondimenti", (api) => api.getFilteredByTag("approfondimenti").filter(pubblicato).sort(perData));
   eleventyConfig.addCollection("approfondimenti_en", (api) => api.getFilteredByTag("approfondimenti_en").filter(pubblicato).sort(perData));
@@ -53,7 +53,7 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Solo l'URL della versione jpeg piu' grande (per og:image e JSON-LD)
+  // Solo l'URL della versione jpeg più grande (per og:image e JSON-LD)
   eleventyConfig.addAsyncShortcode("imgUrl", async function (src, width = 1200) {
     const metadata = await Image(path.join("src/assets/img", src), {
       widths: [width],
@@ -90,7 +90,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("tempo", (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`);
   eleventyConfig.addFilter("anno", () => new Date().getFullYear());
   eleventyConfig.addFilter("dataIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString().slice(0, 10));
-  // Data e ora complete con fuso orario (schema.org uploadDate): Google le vuole cosi'
+  // Data e ora complete con fuso orario (schema.org uploadDate): Google le vuole così
   eleventyConfig.addFilter("dataOraIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString());
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
   // Data per esteso nella lingua della pagina: "22 settembre 2026" / "22 September 2026"
