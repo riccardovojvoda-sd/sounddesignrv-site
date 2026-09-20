@@ -2,13 +2,13 @@
 layout: layouts/base.njk
 ---
 {#- Articolo degli Approfondimenti / Insights: copertina, titolo, data, testo, altri articoli.
-    La versione nell'altra lingua si trova con `chiave` (stessa chiave in IT e EN). -#}
+    Le versioni nelle altre lingue si trovano con `chiave` (stessa chiave in IT, EN e FR). -#}
 {%- set t = testi[lang or "it"] %}
-{%- set lista = collections["approfondimenti" + ("_en" if lang == "en" else "")] %}
+{%- set lista = collections["approfondimenti" + ("_" + lang if lang and lang != "it" else "")] %}
 {%- set minuti = content | minutiLettura %}
-{%- set altra = false %}
-{%- for a in alternative %}{% if a.lang != (lang or "it") %}{% set altra = a %}{% endif %}{% endfor %}
-{%- if bozza %}{% for p in collections.all %}{% if p.data.chiave == chiave and p.url != page.url and p.url %}{% set altra = { url: p.url, lang: p.data.lang or "it" } %}{% endif %}{% endfor %}{% endif %}
+{%- set altre = [] %}
+{%- for a in alternative %}{% if a.lang != (lang or "it") %}{% set altre = (altre.push(a), altre) %}{% endif %}{% endfor %}
+{%- if bozza %}{% for p in collections.all %}{% if p.data.chiave == chiave and p.url != page.url and p.url %}{% set altre = (altre.push({ url: p.url, lang: p.data.lang or "it" }), altre) %}{% endif %}{% endfor %}{% endif %}
 <article class="pagina articolo tema-snow">
   {%- if bozza %}<p class="articolo-bozza contenitore">{{ t.articolo.bozza }}</p>{% endif %}
   <header class="pagina-testa">
@@ -20,7 +20,7 @@ layout: layouts/base.njk
         <time datetime="{{ page.date | dataIso }}">{{ t.articolo.pubblicato }} {{ page.date | dataLunga(lang) }}</time>
         {%- if aggiornato %} · {{ t.articolo.aggiornato }} <time datetime="{{ aggiornato | dataIso }}">{{ aggiornato | dataLunga(lang) }}</time>{% endif %}
         · {{ minuti }} {{ t.articolo.minuti }}
-        {%- if altra %} · <a href="{{ altra.url }}" hreflang="{{ altra.lang }}" lang="{{ altra.lang }}">{{ t.articolo.altraLingua }}</a>{% endif %}
+        {%- for a in altre %} · <a href="{{ a.url }}" hreflang="{{ a.lang }}" lang="{{ a.lang }}">{{ testi[a.lang].articolo.leggiIn }}</a>{% endfor %}
       </p>
     </div>
   </header>

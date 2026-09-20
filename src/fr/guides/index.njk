@@ -1,0 +1,26 @@
+---
+layout: layouts/pagina.njk
+permalink: /fr/guides/
+chiave: approfondimenti
+titolo: Guides
+titolo_seo: Guides pratiques sur le sound design et la post-production audio | Riccardo Vojvoda
+descrizione_seo: Des réponses pratiques pour ceux qui produisent des vidéos et veulent comprendre comment on travaille le son. Livraison des éléments, loudness, musique et droits, voix, son direct, installations immersives.
+occhiello: Guides pratiques
+sottotitolo: "Des réponses pratiques pour ceux qui produisent des vidéos et veulent comprendre comment on travaille le son : une question précise, une réponse utilisable tout de suite."
+tema: snow
+tags: []
+indice: true
+filtri_articoli: true
+---
+{%- set lista = collections.approfondimenti_fr %}
+{%- if lista.length %}
+{%- set l = "fr" %}
+{% include "parti/filtri.njk" %}
+<ul class="elenco-approfondimenti elenco-approfondimenti-tutti" data-lista>
+{%- for a in lista %}
+<li data-chi="{{ (a.data.per_chi or []) | join(" ") }}" data-argomento="{{ (a.data.argomento or []) | join(" ") }}" data-testo="{{ (a.data.titolo + " " + (a.data.descrizione_seo or a.data.descrizione or "")) | lower }}"><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span><br><small><time datetime="{{ a.date | dataIso }}">{{ a.date | dataLunga("fr") }}</time></small></li>
+{%- endfor %}
+</ul>
+{%- else %}
+<p>Les premiers guides sont en préparation. En attendant, la <a href="/fr/faq/">FAQ</a> répond aux questions les plus fréquentes.</p>
+{%- endif %}

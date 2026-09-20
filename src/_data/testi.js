@@ -15,7 +15,7 @@ module.exports = {
       faq: "Consulta le FAQ",
       pdf: "Scarica il profilo in PDF"
     },
-    articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutte le guide", altri: "Da leggere anche", altraLingua: "Read this in English", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
+    articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutte le guide", altri: "Da leggere anche", leggiIn: "Leggi in italiano", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
     analytics: { testo: "Questo sito usa Google Analytics per contare le visite e capire quali pagine vengono lette. Nessuna pubblicità. Accetti?", si: "Accetto", no: "No, grazie", link: "Cookie" },
     pie: { piva: "P.IVA" }
   },
@@ -34,15 +34,15 @@ module.exports = {
       faq: "Read the FAQ",
       pdf: "Download the profile (PDF)"
     },
-    articolo: { pubblicato: "Published on", aggiornato: "updated on", tutti: "All insights", altri: "Also worth reading", altraLingua: "Leggi in italiano", minuti: "min read", bozza: "DRAFT: preview page, not published yet" },
+    articolo: { pubblicato: "Published on", aggiornato: "updated on", tutti: "All insights", altri: "Also worth reading", leggiIn: "Read in English", minuti: "min read", bozza: "DRAFT: preview page, not published yet" },
     analytics: { testo: "This site uses Google Analytics to count visits and see which pages get read. No advertising. Do you accept?", si: "Accept", no: "No, thanks", link: "Cookies" },
     pie: { piva: "VAT" }
   },
   fr: {
     codice: "fr", locale: "fr_FR", nome: "Français", sigla: "FR",
-    // Guides: le guide esistono solo in italiano e inglese; dal francese si va a quelle inglesi (scelta di Riccardo, 20/09/2026)
-    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/en/insights/" },
+    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/fr/guides/" },
     menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", approfondimenti: "Guides", approfondimentiCorto: "Guides", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
+    articolo: { pubblicato: "Publié le", aggiornato: "mis à jour le", tutti: "Tous les guides", altri: "À lire aussi", leggiIn: "Lire en français", minuti: "min de lecture", bozza: "BROUILLON : page d'aperçu, pas encore publiée" },
     salta: "Aller au contenu", tornaSu: "Retour en haut",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Écouter", anteprima: "Aperçu vidéo", suYoutube: "Écouter sur YouTube", durata: "Durée" },

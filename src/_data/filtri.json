@@ -2,45 +2,55 @@
   "per_chi": {
     "montatore": {
       "it": "Montatori",
-      "en": "Editors"
+      "en": "Editors",
+      "fr": "Monteurs"
     },
     "regista-produzione": {
       "it": "Registi e case di produzione",
-      "en": "Directors and production companies"
+      "en": "Directors and production companies",
+      "fr": "Réalisateurs et sociétés de production"
     },
     "agenzia": {
       "it": "Agenzie e brand",
-      "en": "Agencies and brands"
+      "en": "Agencies and brands",
+      "fr": "Agences et marques"
     }
   },
   "argomento": {
     "consegna-materiali": {
       "it": "Consegna dei materiali",
-      "en": "Deliverables"
+      "en": "Deliverables",
+      "fr": "Livraison des éléments"
     },
     "presa-diretta": {
       "it": "Presa diretta",
-      "en": "Location sound"
+      "en": "Location sound",
+      "fr": "Son direct"
     },
     "mix-loudness": {
       "it": "Mix e loudness",
-      "en": "Mix and loudness"
+      "en": "Mix and loudness",
+      "fr": "Mixage et loudness"
     },
     "musica-diritti": {
       "it": "Musica e diritti",
-      "en": "Music and rights"
+      "en": "Music and rights",
+      "fr": "Musique et droits"
     },
     "voce": {
       "it": "Voce e doppiaggio",
-      "en": "Voice and dubbing"
+      "en": "Voice and dubbing",
+      "fr": "Voix et doublage"
     },
     "effetti-sonori": {
       "it": "Effetti sonori",
-      "en": "Sound effects"
+      "en": "Sound effects",
+      "fr": "Effets sonores"
     },
     "immersivo": {
       "it": "Installazioni e immersivo",
-      "en": "Installations and immersive"
+      "en": "Installations and immersive",
+      "fr": "Installations et immersif"
     }
   },
   "testi": {
@@ -67,6 +77,18 @@
       "conta": "{n} insights",
       "conta1": "1 insight",
       "filtri": "Filters"
+    },
+    "fr": {
+      "cerca": "Rechercher dans les guides",
+      "per_chi": "Pour qui",
+      "argomento": "Sujet",
+      "tutti": "Tous",
+      "tutte": "Tous",
+      "nessuno": "Aucun guide ne correspond à ces filtres.",
+      "azzera": "Effacer les filtres",
+      "conta": "{n} guides",
+      "conta1": "1 guide",
+      "filtri": "Filtres"
     }
   }
 }
