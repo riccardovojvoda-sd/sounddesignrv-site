@@ -13,7 +13,7 @@ copertinaAlt: "Superficie di controllo di uno studio di post-produzione audio"
 copertinaCredito: "Foto: pxhere, CC0"
 tags: ["approfondimenti", "AAF", "OMF", "handles", "presa diretta", "post-produzione audio", "Premiere Pro", "DaVinci Resolve", "Pro Tools", "consegna materiali sound design"]
 ---
-Il montaggio è chiuso, il cliente ha approvato, e ora il video deve andare "in audio". A questo punto arriva sempre la stessa domanda: cosa mando? La risposta breve è: cinque cose. Qui sotto la lista, con il perché di ogni voce e gli errori che fanno perdere più tempo.
+Il montaggio è chiuso, il cliente ha approvato, e ora il video deve andare "in audio". A questo punto arriva sempre la stessa domanda: cosa mando? Qui sotto la lista, con il perché di ogni voce e gli errori che fanno perdere più tempo.
 
 ## 1. Il video di riferimento
 
