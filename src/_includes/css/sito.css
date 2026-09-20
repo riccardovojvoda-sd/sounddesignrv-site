@@ -60,6 +60,10 @@ p{margin:0 0 1em}
 .lingue-lista a:hover{background:var(--flax)}
 .lingue-lista a[aria-current=true]{background:var(--jet);color:var(--snow)}
 
+/* Su mobile (barra in fondo) la tendina lingua sparisce dalla barra e compare come riga di sigle in alto a destra, sopra il contenuto */
+.lingue-alto{display:none}
+@media(max-width:48em){.lingue-alto{display:flex;justify-content:flex-end;padding:.6rem var(--gutter) 0}.testata .lingue-tendina{display:none}}
+
 /* Testata */
 .testata{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem var(--gutter);background:rgba(255,251,250,.85);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--jet-15)}
 .marchio{text-decoration:none;line-height:1.1;display:grid;grid-template-columns:auto 1fr;column-gap:.6rem;align-items:center}

@@ -66,6 +66,8 @@
 <body class="{{ classeBody or '' }}">
 <a class="salta" href="#contenuto">{{ t.salta }}</a>
 {% include "parti/testata.njk" %}
+{#- Su mobile la barra in fondo e' solo navigazione: la lingua sta qui in alto, riga di sigle (scelta del 20/09/2026) -#}
+<div class="lingue-alto">{% include "parti/lingue.njk" %}</div>
 <main id="contenuto">
 {{ content | safe }}
 </main>
