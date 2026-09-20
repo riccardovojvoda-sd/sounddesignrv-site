@@ -40,8 +40,9 @@ module.exports = {
   },
   fr: {
     codice: "fr", locale: "fr_FR", nome: "Français", sigla: "FR",
-    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/" },
-    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
+    // Guides: le guide esistono solo in italiano e inglese; dal francese si va a quelle inglesi (scelta di Riccardo, 20/09/2026)
+    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/en/insights/" },
+    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", approfondimenti: "Guides", approfondimentiCorto: "Guides", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
     salta: "Aller au contenu", tornaSu: "Retour en haut",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Écouter", anteprima: "Aperçu vidéo", suYoutube: "Écouter sur YouTube", durata: "Durée" },
