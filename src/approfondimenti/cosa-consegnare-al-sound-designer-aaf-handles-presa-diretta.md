@@ -52,7 +52,7 @@ Per ogni brano scelto: **il file in qualità piena** (WAV o AIFF, non l'MP3 scar
 
 ## 5. Un brief di tre righe
 
-Non serve un documento. Bastano queste informazioni:
+Bastano queste informazioni:
 
 - **Video di riferimento** estetico, stilistico, tecnico (ads, film, documentari ecc.).
 - **Dove va il video**: TV, cinema, sito, social, fiera. Cambia il formato di consegna e il livello di volume (loudness).
