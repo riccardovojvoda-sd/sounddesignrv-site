@@ -10,12 +10,15 @@ sottotitolo: "Practical answers for people who make video and want to understand
 tema: snow
 tags: []
 indice: true
+filtri_articoli: true
 ---
 {%- set lista = collections.approfondimenti_en %}
 {%- if lista.length %}
-<ul class="elenco-approfondimenti elenco-approfondimenti-tutti">
+{%- set l = "en" %}
+{% include "parti/filtri.njk" %}
+<ul class="elenco-approfondimenti elenco-approfondimenti-tutti" data-lista>
 {%- for a in lista %}
-<li><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span><br><small><time datetime="{{ a.date | dataIso }}">{{ a.date | dataLunga("en") }}</time></small></li>
+<li data-chi="{{ (a.data.per_chi or []) | join(" ") }}" data-argomento="{{ (a.data.argomento or []) | join(" ") }}" data-testo="{{ (a.data.titolo + " " + (a.data.descrizione_seo or a.data.descrizione or "")) | lower }}"><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span><br><small><time datetime="{{ a.date | dataIso }}">{{ a.date | dataLunga("en") }}</time></small></li>
 {%- endfor %}
 </ul>
 {%- else %}

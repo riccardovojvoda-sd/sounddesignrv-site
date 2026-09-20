@@ -6,6 +6,8 @@ date: 2026-09-22
 bozza: true
 chiave: articolo-s01
 categoria: Consegna dei materiali
+per_chi: ["montatore", "regista-produzione"]
+argomento: ["consegna-materiali"]
 copertina: montaggio-timeline-consegna-audio.jpg
 copertinaAlt: "Superficie di controllo di uno studio di post-produzione audio"
 copertinaCredito: "Foto: pxhere, CC0"

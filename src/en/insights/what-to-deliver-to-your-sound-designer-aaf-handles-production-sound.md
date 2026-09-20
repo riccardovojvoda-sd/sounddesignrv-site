@@ -6,6 +6,8 @@ date: 2026-09-22
 bozza: true
 chiave: articolo-s01
 categoria: Deliverables
+per_chi: ["montatore", "regista-produzione"]
+argomento: ["consegna-materiali"]
 copertina: montaggio-timeline-consegna-audio.jpg
 copertinaAlt: "Control surface in an audio post-production studio"
 copertinaCredito: "Photo: pxhere, CC0"
