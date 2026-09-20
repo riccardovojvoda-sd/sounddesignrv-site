@@ -1,20 +1,72 @@
 {
   "per_chi": {
-    "montatore": { "it": "Montatori", "en": "Editors" },
-    "regista-produzione": { "it": "Registi e case di produzione", "en": "Directors and production companies" },
-    "agenzia": { "it": "Agenzie e brand", "en": "Agencies and brands" }
+    "montatore": {
+      "it": "Montatori",
+      "en": "Editors"
+    },
+    "regista-produzione": {
+      "it": "Registi e case di produzione",
+      "en": "Directors and production companies"
+    },
+    "agenzia": {
+      "it": "Agenzie e brand",
+      "en": "Agencies and brands"
+    }
   },
   "argomento": {
-    "consegna-materiali": { "it": "Consegna dei materiali", "en": "Deliverables" },
-    "presa-diretta": { "it": "Presa diretta", "en": "Location sound" },
-    "mix-loudness": { "it": "Mix e loudness", "en": "Mix and loudness" },
-    "musica-diritti": { "it": "Musica e diritti", "en": "Music and rights" },
-    "voce": { "it": "Voce e doppiaggio", "en": "Voice and dubbing" },
-    "effetti-sonori": { "it": "Effetti sonori", "en": "Sound effects" },
-    "immersivo": { "it": "Installazioni e immersivo", "en": "Installations and immersive" }
+    "consegna-materiali": {
+      "it": "Consegna dei materiali",
+      "en": "Deliverables"
+    },
+    "presa-diretta": {
+      "it": "Presa diretta",
+      "en": "Location sound"
+    },
+    "mix-loudness": {
+      "it": "Mix e loudness",
+      "en": "Mix and loudness"
+    },
+    "musica-diritti": {
+      "it": "Musica e diritti",
+      "en": "Music and rights"
+    },
+    "voce": {
+      "it": "Voce e doppiaggio",
+      "en": "Voice and dubbing"
+    },
+    "effetti-sonori": {
+      "it": "Effetti sonori",
+      "en": "Sound effects"
+    },
+    "immersivo": {
+      "it": "Installazioni e immersivo",
+      "en": "Installations and immersive"
+    }
   },
   "testi": {
-    "it": { "cerca": "Cerca negli approfondimenti", "per_chi": "Per chi", "argomento": "Argomento", "tutti": "Tutti", "tutte": "Tutti", "nessuno": "Nessun approfondimento con questi filtri.", "azzera": "Azzera i filtri", "conta": "{n} approfondimenti", "conta1": "1 approfondimento" },
-    "en": { "cerca": "Search the insights", "per_chi": "For whom", "argomento": "Topic", "tutti": "All", "tutte": "All", "nessuno": "No insights match these filters.", "azzera": "Clear filters", "conta": "{n} insights", "conta1": "1 insight" }
+    "it": {
+      "cerca": "Cerca nelle guide",
+      "per_chi": "Per chi",
+      "argomento": "Argomento",
+      "tutti": "Tutti",
+      "tutte": "Tutti",
+      "nessuno": "Nessuna guida con questi filtri.",
+      "azzera": "Azzera i filtri",
+      "conta": "{n} guide",
+      "conta1": "1 guida",
+      "filtri": "Filtri"
+    },
+    "en": {
+      "cerca": "Search the insights",
+      "per_chi": "For whom",
+      "argomento": "Topic",
+      "tutti": "All",
+      "tutte": "All",
+      "nessuno": "No insights match these filters.",
+      "azzera": "Clear filters",
+      "conta": "{n} insights",
+      "conta1": "1 insight",
+      "filtri": "Filters"
+    }
   }
 }

@@ -2,8 +2,8 @@
 module.exports = {
   it: {
     codice: "it", locale: "it_IT", nome: "Italiano", sigla: "IT",
-    url: { home: "/", portfolio: "/#progetti", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/", approfondimenti: "/approfondimenti/" },
-    menu: { portfolio: "Portfolio", servizi: "Servizi", chiSono: "Chi sono", contatti: "Contatti", faq: "FAQ", approfondimenti: "Approfondimenti", approfondimentiCorto: "Guide", principale: "Principale", pagine: "Pagine", profili: "Profili esterni", lingua: "Lingua" },
+    url: { home: "/", portfolio: "/#progetti", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/", approfondimenti: "/guide/" },
+    menu: { portfolio: "Portfolio", servizi: "Servizi", chiSono: "Chi sono", contatti: "Contatti", faq: "FAQ", approfondimenti: "Guide", approfondimentiCorto: "Guide", principale: "Principale", pagine: "Pagine", profili: "Profili esterni", lingua: "Lingua" },
     salta: "Vai al contenuto", tornaSu: "Torna in alto",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Ascolta", anteprima: "Anteprima video", suYoutube: "Ascolta su YouTube", durata: "Durata" },
@@ -15,7 +15,7 @@ module.exports = {
       faq: "Consulta le FAQ",
       pdf: "Scarica il profilo in PDF"
     },
-    articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutti gli approfondimenti", altri: "Da leggere anche", altraLingua: "Read this in English", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
+    articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutte le guide", altri: "Da leggere anche", altraLingua: "Read this in English", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
     analytics: { testo: "Questo sito usa Google Analytics per contare le visite e capire quali pagine vengono lette. Nessuna pubblicità. Accetti?", si: "Accetto", no: "No, grazie", link: "Cookie" },
     pie: { piva: "P.IVA" }
   },
