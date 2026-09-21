@@ -73,9 +73,9 @@ Alternativa gratuita: importare l'XML in DaVinci Resolve e usare il preset Pro T
 
 ## Da consegnare insieme all'AAF
 
-- Il **video di riferimento** con lo stesso frame rate e lo stesso timecode di partenza (H.264 1080p o ProRes Proxy), con l'audio del montaggio dentro e, se possibile, il timecode in sovrimpressione.
+- Il **video di riferimento** con lo stesso frame rate e lo stesso timecode di partenza (H.264 1080p o ProRes Proxy), se possibile, il timecode in sovrimpressione.
 - Un **mix di riferimento** in WAV, cioè l'audio così come si sente in montaggio: serve per capire l'intenzione e per controllare il sincrono all'import.
-- Se c'è, la **presa diretta originale** con il bollettino sonoro: quello che serve al di là dell'AAF sta in [Cosa consegnare al sound designer](/guide/cosa-consegnare-al-sound-designer-aaf-handles-presa-diretta/).
+- Se c'è, la cartella con i file della **presa diretta originale** con il bollettino sonoro: quello che serve al di là dell'AAF sta in [Cosa consegnare al sound designer](/guide/cosa-consegnare-al-sound-designer-aaf-handles-presa-diretta/).
 
 <div class="riquadro">
 
@@ -86,3 +86,7 @@ Alternativa gratuita: importare l'XML in DaVinci Resolve e usare il preset Pro T
 ## Un test prima della consegna vera
 
 Su un progetto lungo, meglio esportare un AAF di 30 secondi qualche giorno prima del picture lock e mandarlo: se c'è un problema di impostazioni si vede subito e si risolve prima, non il giorno della consegna. Scrivimi e lo controllo.
+
+## Fonti
+
+<p class="fonti">Production Expert, "How To Create A Pro Tools Friendly AAF" per Adobe Premiere, DaVinci Resolve e Avid Media Composer (production-expert.com) · Avid Knowledge Base, "Media Composer AAF Audio Export Options for Pro Tools" (kb.avid.com) · Blackmagic Design, DaVinci Resolve Reference Manual, pagina Deliver, preset Pro Tools · Marquis Broadcast, X2Pro Audio Convert, guida alla conversione (x2pro.net) · Adobe, "Export AAF files", guida di Premiere Pro (helpx.adobe.com).</p>

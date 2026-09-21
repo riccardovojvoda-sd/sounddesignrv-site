@@ -281,6 +281,7 @@ p{margin:0 0 1em}
 .articolo-corpo table{border-collapse:collapse;width:100%;max-width:44rem;font-size:.95rem;margin:1rem 0 1.5rem}
 .articolo-corpo th,.articolo-corpo td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--jet-15);vertical-align:top}
 .articolo-corpo th{font-weight:600;background:rgba(123,181,178,.14)}
+.articolo-corpo .fonti{font-size:.85rem;color:var(--jet-70);line-height:1.5}
 .articolo-corpo .riquadro{background:rgba(123,181,178,.14);border-left:5px solid var(--verdigris);border-radius:var(--raggio);padding:1rem 1.25rem;margin:1.5rem 0}
 .articolo-corpo .riquadro p:last-child{margin-bottom:0}
 .articolo-altri{padding-bottom:clamp(2.5rem,6vw,5rem)}

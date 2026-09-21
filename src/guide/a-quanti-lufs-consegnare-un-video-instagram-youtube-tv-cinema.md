@@ -74,3 +74,7 @@ Un mix nato a -14 LUFS non si porta a -23 semplicemente abbassandolo: la compres
 ## Cosa serve per la verifica
 
 Basta il file finale e la lista delle destinazioni. La misura di loudness integrata, true peak e short-term si fa in pochi minuti e restituisce un report per ogni versione. Se il video deve andare in più posti, scrivimi prima del mix finale: si decide il livello di partenza e le versioni escono tutte insieme.
+
+## Fonti
+
+<p class="fonti">EBU R 128 v5.0, "Loudness normalisation and permitted maximum level of audio signals" e supplemento s2 sui contenuti brevi (tech.ebu.ch) · ATSC A/85, "Techniques for Establishing and Maintaining Audio Loudness for Digital Television" · Netflix Partner Help Center, "Sound Mix Specifications and Best Practices" · Amazon Video Central, specifiche audio · Apple Podcasts for Creators, "Audio requirements" · Forasoft, "LUFS targets per platform in 2026" (forasoft.com), per Meta xHE-AAC e TikTok senza normalizzazione · TASA, Trailer Audio Standards (Leq(m) 85) · Dolby, calibrazione della sala a 85 dB SPL.</p>
