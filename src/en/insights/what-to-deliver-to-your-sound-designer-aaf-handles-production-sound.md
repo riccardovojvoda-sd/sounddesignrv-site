@@ -3,14 +3,13 @@ titolo: "What to deliver to your sound designer: video export, AAF and productio
 titolo_seo: "What to deliver to your sound designer: video export, AAF and production sound | Riccardo Vojvoda"
 descrizione_seo: "The list of materials needed to start audio post-production on a video: reference video, AAF with handles, original production sound, music and a three-line brief. With the most common mistakes."
 date: 2026-09-22
-bozza: true
 chiave: articolo-s01
 categoria: Deliverables
 per_chi: ["montatore", "regista-produzione"]
 argomento: ["consegna-materiali"]
 copertina: montaggio-timeline-consegna-audio.jpg
-copertinaAlt: "Control surface in an audio post-production studio"
-copertinaCredito: "Photo: pxhere, CC0"
+copertinaAlt: "Video editing timeline with audio tracks on a monitor"
+copertinaCredito: "Photo: Bas Peperzak, Unsplash"
 tags: ["approfondimenti_en", "AAF", "OMF", "handles", "production sound", "audio post-production", "Premiere Pro", "DaVinci Resolve", "Pro Tools", "deliverables sound design"]
 ---
 The edit is locked, the client has approved, and now the video has to go "to audio". At this point the same question always comes up: what do I send? Below is the list, with the reason behind each item and the mistakes that waste the most time.

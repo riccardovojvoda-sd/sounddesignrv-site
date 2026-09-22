@@ -3,14 +3,13 @@ titolo: "Que livrer au sound designer : export vidéo, AAF et son direct"
 titolo_seo: "Que livrer au sound designer : export vidéo, AAF et son direct | Riccardo Vojvoda"
 descrizione_seo: "La liste des éléments nécessaires pour démarrer la post-production audio d'une vidéo : vidéo de référence, AAF avec poignées, son direct original, musiques et un brief de trois lignes. Avec les erreurs les plus fréquentes."
 date: 2026-09-22
-bozza: true
 chiave: articolo-s01
 categoria: Livraison des éléments
 per_chi: ["montatore", "regista-produzione"]
 argomento: ["consegna-materiali"]
 copertina: montaggio-timeline-consegna-audio.jpg
-copertinaAlt: "Surface de contrôle dans un studio de post-production audio"
-copertinaCredito: "Photo : pxhere, CC0"
+copertinaAlt: "Timeline de montage vidéo avec les pistes audio sur un écran"
+copertinaCredito: "Photo : Bas Peperzak, Unsplash"
 tags: ["approfondimenti_fr", "AAF", "OMF", "poignées", "son direct", "post-production audio", "Premiere Pro", "DaVinci Resolve", "Pro Tools", "livraison éléments sound design"]
 ---
 Le montage est verrouillé, le client a validé, et la vidéo doit maintenant passer « en son ». À ce moment-là, la même question revient toujours : qu'est-ce que j'envoie ? Voici la liste, avec la raison de chaque élément et les erreurs qui font perdre le plus de temps.

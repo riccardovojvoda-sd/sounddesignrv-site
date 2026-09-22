@@ -3,14 +3,13 @@ titolo: "Cosa consegnare al sound designer: esporto video, AAF e presa diretta"
 titolo_seo: "Cosa consegnare al sound designer: esporto video, AAF e presa diretta | Riccardo Vojvoda"
 descrizione_seo: "La lista dei materiali che servono per iniziare la post-produzione audio di un video: video di riferimento, AAF con handles, presa diretta originale, musiche e un brief di tre righe. Con gli errori più comuni."
 date: 2026-09-22
-bozza: true
 chiave: articolo-s01
 categoria: Consegna dei materiali
 per_chi: ["montatore", "regista-produzione"]
 argomento: ["consegna-materiali"]
 copertina: montaggio-timeline-consegna-audio.jpg
-copertinaAlt: "Superficie di controllo di uno studio di post-produzione audio"
-copertinaCredito: "Foto: pxhere, CC0"
+copertinaAlt: "Timeline di montaggio video con le tracce audio sul monitor"
+copertinaCredito: "Foto: Bas Peperzak, Unsplash"
 tags: ["approfondimenti", "AAF", "OMF", "handles", "presa diretta", "post-produzione audio", "Premiere Pro", "DaVinci Resolve", "Pro Tools", "consegna materiali sound design"]
 ---
 Il montaggio è chiuso, il cliente ha approvato, e ora il video deve andare "in audio". A questo punto arriva sempre la stessa domanda: cosa mando? Qui sotto la lista, con il perché di ogni voce e gli errori che fanno perdere più tempo.
