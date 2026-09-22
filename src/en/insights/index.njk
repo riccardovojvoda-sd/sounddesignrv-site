@@ -18,7 +18,7 @@ filtri_articoli: true
 {% include "parti/filtri.njk" %}
 <ul class="elenco-approfondimenti elenco-approfondimenti-tutti" data-lista>
 {%- for a in lista %}
-<li data-chi="{{ (a.data.per_chi or []) | join(" ") }}" data-argomento="{{ (a.data.argomento or []) | join(" ") }}" data-testo="{{ (a.data.titolo + " " + (a.data.descrizione_seo or a.data.descrizione or "")) | lower }}"><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span><br><small><time datetime="{{ a.date | dataIso }}">{{ a.date | dataLunga("en") }}</time></small></li>
+{% include "parti/voce-articolo.njk" %}
 {%- endfor %}
 </ul>
 {%- else %}

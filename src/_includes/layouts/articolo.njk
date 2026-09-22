@@ -39,8 +39,9 @@ layout: layouts/base.njk
   <aside class="contenitore articolo-altri" aria-label="{{ t.articolo.altri }}">
     <h2 class="etichetta">{{ t.articolo.altri }}</h2>
     <ul class="elenco-approfondimenti">
+      {%- set senza_data = true %}
       {%- for a in altri %}
-      <li><a href="{{ a.url }}"><strong>{{ a.data.titolo }}</strong></a><br><span>{{ a.data.descrizione_seo or a.data.descrizione }}</span></li>
+      {% include "parti/voce-articolo.njk" %}
       {%- endfor %}
     </ul>
     <p><a class="bottone bottone-secondario" href="{{ t.url.approfondimenti }}">{{ t.articolo.tutti }}</a></p>
