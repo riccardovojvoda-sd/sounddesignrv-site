@@ -12,6 +12,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/font": "assets/font" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img/loghi": "assets/img/loghi" });
+  // Anteprime delle opzioni di copertina degli articoli, linkate nei Google Doc di revisione (approfondimenti/ non si copia tal quale)
+  eleventyConfig.addPassthroughCopy({ "src/assets/img/opzioni-copertina": "assets/img/opzioni-copertina" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img/logo-sdrv-96.png": "assets/img/logo-sdrv-96.png", "src/assets/img/logo-sdrv.png": "assets/img/logo-sdrv.png" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "s" }); // vecchio percorso Squarespace del profilo PDF
