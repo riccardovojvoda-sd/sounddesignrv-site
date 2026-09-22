@@ -3,7 +3,7 @@
     dentro un include in un ciclo non rende niente. Variabili: a = articolo della collezione, l = lingua ("it"/"en"/"fr"), senza_data = true per l'aside "altri articoli". -#}
 <li data-chi="{{ (a.data.per_chi or []) | join(" ") }}" data-argomento="{{ (a.data.argomento or []) | join(" ") }}" data-testo="{{ (a.data.titolo + " " + (a.data.descrizione_seo or a.data.descrizione or "")) | lower }}">
   <a href="{{ a.url }}" class="voce-articolo">
-    {%- if a.data.copertina %}<span class="voce-articolo-cop"><img src="{{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(480) }}" srcset="{{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(480) }} 480w, {{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(800) }} 800w" sizes="(min-width: 48em) 14rem, 32vw" width="480" height="240" alt="" loading="lazy" decoding="async"></span>{% endif %}
+    {%- if a.data.copertina %}<span class="voce-articolo-cop"><img src="{{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(480) }}" srcset="{{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(480) }} 480w, {{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(800) }} 800w" sizes="(min-width: 48em) 14rem, 32vw" width="480" height="270" alt="" loading="lazy" decoding="async"></span>{% endif %}
     <span class="voce-articolo-testo">
       <strong>{{ a.data.titolo }}</strong>
       <span>{{ a.data.descrizione_seo or a.data.descrizione }}</span>
