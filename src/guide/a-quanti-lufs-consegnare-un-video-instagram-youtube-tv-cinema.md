@@ -3,7 +3,9 @@ titolo: "A quanti LUFS va consegnato un video? Instagram, YouTube, TV e cinema a
 titolo_seo: "A quanti LUFS va consegnato un video? Instagram, YouTube, TV e cinema | Riccardo Vojvoda"
 descrizione_seo: "I livelli di loudness per ogni destinazione di un video: -14 LUFS per YouTube e social, -23 LUFS per la TV (EBU R128), -27 LKFS dialoghi per Netflix, sala calibrata al cinema. Con il true peak e cosa fanno le piattaforme al file."
 date: 2026-10-06
-bozza: true
+copertina: lufs-video-loudness-resolve.jpg
+copertinaAlt: "Loudness meter con il preset YouTube: loudness integrata a -14 LUFS e true peak a -1,7 dBTP"
+copertinaCredito: "Schermata: Fairlight, DaVinci Resolve"
 chiave: articolo-s02
 categoria: Mix e loudness
 per_chi: ["montatore", "regista-produzione", "agenzia"]
