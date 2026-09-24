@@ -2,7 +2,7 @@
 titolo: "Come esportare l'AAF per la post-produzione audio da Premiere Pro, DaVinci Resolve, Avid e Final Cut Pro"
 titolo_seo: "Come esportare l'AAF per la post-produzione audio da Premiere, Resolve, Avid e Final Cut | Riccardo Vojvoda"
 descrizione_seo: "Le impostazioni di esportazione AAF per Pro Tools, programma per programma: audio incorporato, handles, 48 kHz 24 bit, effetti spenti. Premiere Pro, DaVinci Resolve, Avid Media Composer e Final Cut Pro con X2Pro."
-date: 2026-09-29
+date: 2026-09-24
 copertina: export-aaf-resolve-render-settings.jpg
 copertinaAlt: "Impostazioni di render per l'AAF: preset AVID AAF, handles a 125 frame, tracce audio separate"
 copertinaCredito: "Schermata: DaVinci Resolve"
