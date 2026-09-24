@@ -96,6 +96,7 @@ module.exports = function (eleventyConfig) {
   // Data e ora complete con fuso orario (schema.org uploadDate): Google le vuole così
   eleventyConfig.addFilter("dataOraIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString());
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
+  eleventyConfig.addFilter("correlati", require("./lib/correlati").correlati);
   // Data per esteso nella lingua della pagina: "22 settembre 2026" / "22 September 2026"
   const MESI = { it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
                  en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],

@@ -33,8 +33,7 @@ layout: layouts/base.njk
   <div class="contenitore pagina-corpo prosa articolo-corpo">
     {{ content | safe }}
   </div>
-  {%- set altri = [] %}
-  {%- for p in lista %}{% if p.url != page.url and altri.length < 3 %}{% set altri = (altri.push(p), altri) %}{% endif %}{% endfor %}
+  {%- set altri = lista | correlati(page.url, 3, { argomento: argomento, per_chi: per_chi, categoria: categoria }) %}
   {%- if altri.length %}
   <aside class="contenitore articolo-altri" aria-label="{{ t.articolo.altri }}">
     <h2 class="etichetta">{{ t.articolo.altri }}</h2>
