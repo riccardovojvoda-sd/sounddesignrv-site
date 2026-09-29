@@ -3,7 +3,6 @@ titolo: "Musica per un video aziendale: royalty free, libreria o su commissione?
 titolo_seo: "Musica per un video aziendale: royalty free, libreria o su commissione? SIAE e Ads | Riccardo Vojvoda"
 descrizione_seo: "Le tre strade per la musica di un video aziendale: royalty free in abbonamento, musica di libreria, musica composta apposta. Cosa copre la licenza, cosa fa e non fa la SIAE, cosa controllare prima di una campagna sponsorizzata su YouTube e Meta."
 date: 2026-09-29
-bozza: true
 copertina: musica-video-aziendale-archivio-vinili.jpg
 copertinaAlt: "Una mano sfoglia una fila di dischi in vinile in un negozio di musica"
 copertinaCredito: "Foto: Edu Grande, Unsplash"
