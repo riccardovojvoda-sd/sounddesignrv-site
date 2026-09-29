@@ -13,7 +13,7 @@ per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["musica-diritti"]
 tags: ["approfondimenti", "musica per video aziendali", "royalty free", "production music", "musica di libreria", "SIAE", "sincronizzazione", "Epidemic Sound", "Artlist", "Content ID", "sponsorizzate", "post-produzione audio"]
 ---
-Per la musica di un video aziendale le strade sono tre: la musica royalty free in abbonamento, la musica di libreria (production music) e la musica composta apposta. Cambiano il costo, l'esclusività e quello che la licenza copre, soprattutto quando il video diventa una campagna sponsorizzata. Le condizioni riportate qui sotto sono quelle in vigore a settembre 2026.
+Per la musica di un video aziendale le strade sono tre: la musica royalty free in abbonamento, la musica di libreria (production music) e la musica composta su misura. Cambiano il costo, l'esclusività e quello che la licenza copre, soprattutto quando il video diventa una campagna sponsorizzata. Le condizioni riportate qui sotto sono quelle in vigore a settembre 2026.
 
 ## Royalty free in abbonamento
 
@@ -29,7 +29,7 @@ Nella licenza vanno controllati tre punti:
 
 ## Musica di libreria (production music)
 
-Cataloghi di musica scritta per le immagini, gestiti da editori musicali. Il brano si licenzia per il singolo progetto, con una tariffa che dipende dall'uso: web, TV, eventi, durata della campagna, territorio. A differenza di Epidemic Sound, che licenzia direttamente tutti i diritti del suo catalogo, i brani di libreria sono in genere tutelati da una società di gestione collettiva, in Italia la SIAE. Per questo la domanda sulla SIAE si pone soprattutto qui.
+Cataloghi di musica scritta per le immagini, gestiti da editori musicali. Il brano si licenzia per il singolo progetto, con una tariffa che dipende dall'uso: web, TV, eventi, durata della campagna, territorio. A differenza di Epidemic Sound o Artlist, che licenziano direttamente tutti i diritti dei loro cataloghi, i brani di libreria sono in genere tutelati da una società di gestione collettiva, in Italia la SIAE.
 
 ## Musica composta apposta
 
