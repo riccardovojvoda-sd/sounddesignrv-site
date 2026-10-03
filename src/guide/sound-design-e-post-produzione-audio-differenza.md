@@ -1,23 +1,24 @@
 ---
-titolo: "Sound design e post-produzione audio: che differenza c'è e cosa state comprando"
-titolo_seo: "Sound design o post-produzione audio? Differenze e cosa chiedere | Riccardo Vojvoda"
+titolo: "Sound design e post-produzione audio per video: che differenza c'è e cosa state comprando"
+titolo_seo: "Sound design o post-produzione audio per video? Differenze e cosa chiedere | Riccardo Vojvoda"
 descrizione_seo: "Sound design e post-produzione audio spesso si usano come sinonimi. La differenza vera sta tra la parte creativa (effetti, ambienti, foley, transizioni) e quella tecnica (editing, pulizia, mix, loudness, consegna). Cosa comprende ciascuna e cosa chiedere in un brief."
 date: 2026-10-06
-bozza: true
-copertina: sound-design-post-produzione-banco-mix.jpg
-copertinaAlt: "I fader di una superficie di controllo in uno studio di post-produzione audio"
-copertinaCredito: "Foto: Unsplash"
+copertina: sound-design-post-produzione-cuffie-computer.jpg
+copertinaAlt: "Un uomo in cuffia lavora al computer in uno studio buio, con il montaggio del video sul monitor"
+copertinaCredito: "Foto: Mark Cruz, Unsplash"
 chiave: articolo-s03
 categoria: Sound design
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["effetti-sonori", "mix-loudness"]
 tags: ["approfondimenti", "sound design", "post-produzione audio", "audio per video", "foley", "effetti sonori", "dialog editing", "mix audio", "stem", "brief audio", "spot", "video aziendale"]
 ---
-Sound design e post-produzione audio vengono usati spesso come sinonimi, e a volte lo sono: "sound design" suona meglio e incuriosisce di più chi non è del mestiere, "post-produzione audio" è il nome tecnico. Quando invece i due termini indicano cose diverse, la differenza sta tra la parte creativa del suono di un video e la parte tecnica. Capirla aiuta a scrivere un brief e a leggere un preventivo.
+Nel contesto dei video, sound design e post-produzione audio vengono usati spesso come sinonimi, e a volte lo sono: "sound design" suona meglio e incuriosisce di più chi non è del mestiere, "post-produzione audio" è il nome tecnico. Quando invece i due termini indicano cose diverse, la differenza sta tra la parte creativa del suono di un video e la parte tecnica. Capirla aiuta a scrivere un brief e a leggere un preventivo.
+
+Qui "sound design" ha il significato che ha nel video. Non va confuso con l'altro mestiere che porta lo stesso nome: creare suoni da zero o partendo da campioni, con la sintesi e l'elaborazione, per strumenti, videogiochi o librerie di suoni.
 
 ## Il sound design: la parte creativa
 
-Fare sound design vuol dire sonorizzare un video: costruirne il mondo sonoro con effetti, ambienti, foley e musica, con una direzione artistica. Il video non si limita a mostrare le immagini, si sente: il materiale che si piega, la stanza in cui si parla, il passaggio da una scena all'altra.
+Fare sound design vuol dire sonorizzare un video con creatività: costruirne il mondo sonoro con effetti, ambienti, foley e musica, con una direzione artistica. Il video non si limita a mostrare le immagini, si ascolta: il materiale che si piega, la stanza in cui si parla, il passaggio da una scena all'altra.
 
 Gli elementi tipici:
 
@@ -47,7 +48,7 @@ Comprende di solito:
 
 Il confine non è netto. Anche il mix ha una componente creativa e di gusto: decidere quando la musica lascia spazio a un suono, o quanto far sentire un ambiente, è una scelta di racconto oltre che tecnica. La regola pratica: quando le scelte artistiche sul suono le fa chi lavora all'audio, si sta comprando anche sound design; quando si tratta di sistemare e mixare materiale già scelto da altri, è post-produzione.
 
-Nei progetti video conviene non fermarsi a musica e parlato. Effetti sulle transizioni, foley e ambienti fanno vivere il video oltre le immagini, anche in un'intervista: in [Vinaioli del Friuli](/progetti/weldan/) le voci della famiglia sono il filo conduttore, e sotto c'è uno strato di sound design. All'estremo opposto, [Parzialmente soleggiato](/progetti/alpi-wood/) è quasi tutto sound design astratto, costruito in crescendo.
+Nei progetti video conviene non fermarsi a musica e parlato. Effetti sulle transizioni, foley e ambienti fanno vivere il video oltre le immagini, anche in un'intervista: in [Vinaioli del Friuli](/progetti/weldan/) le voci della famiglia sono il filo conduttore, e sotto c'è uno strato di sound design. All'estremo opposto, [L'evoluzione della specie](/progetti/lainox-naboo/) è tutto sound design astratto, costruito in crescendo.
 
 ## Chi fa cosa
 
@@ -61,12 +62,13 @@ Intorno all'audio di un video lavorano spesso più figure, e a volte una sola pe
 
 ## L'equivoco più comune
 
-Quando un'agenzia chiede "il sound design", spesso intende qualcos'altro: la scelta della musica, il mix della voce, o tutto l'audio del video. Per evitare preventivi che non si confrontano tra loro, nel brief conviene descrivere cosa serve invece di usare un'etichetta:
+Quando un'agenzia chiede "il sound design", spesso intende più cose: la scelta della musica, il mix della voce, o tutto l'audio del video. Per evitare preventivi che non si confrontano tra loro, nel brief conviene descrivere cosa serve:
 
 1. quale materiale audio esiste già (presa diretta, voce, musica) e quale va creato;
 2. se servono effetti, ambienti e foley, o solo il mix di voce e musica;
 3. dove uscirà il video (social, YouTube, TV, piattaforme, cinema);
-4. quali file servono alla fine.
+4. quali file servono alla fine;
+5. indicare un prodotto di riferimento, se esiste.
 
 Per i materiali da preparare per chi lavora all'audio c'è la [guida su cosa consegnare al sound designer](/guide/cosa-consegnare-al-sound-designer-aaf-handles-presa-diretta/).
 
