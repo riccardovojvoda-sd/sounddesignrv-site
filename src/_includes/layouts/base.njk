@@ -34,7 +34,8 @@
 <meta property="og:description" content="{{ descPagina }}">
 <meta property="og:url" content="{{ urlPagina }}">
 <meta property="og:locale" content="{{ t.locale }}">
-{%- set ogImg = immagine_og or "showreel-2026-cover.png" %}
+{#- anteprima social: la copertina della guida se c'è, altrimenti l'immagine della pagina o lo showreel -#}
+{%- set ogImg = immagine_og or (("approfondimenti/" + copertina) if copertina else "showreel-2026-cover.png") %}
 <meta property="og:image" content="{{ sito.url }}{% imgUrl ogImg, 1200 %}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFFBFA">
