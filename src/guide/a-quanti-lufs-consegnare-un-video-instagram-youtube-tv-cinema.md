@@ -1,7 +1,7 @@
 ---
 titolo: "A quanti LUFS va consegnato un video? Instagram, YouTube, TV e cinema a confronto"
 titolo_seo: "A quanti LUFS va consegnato un video? Instagram, YouTube, TV e cinema | Riccardo Vojvoda"
-descrizione_seo: "I livelli di loudness per ogni destinazione di un video: -14 LUFS per YouTube e social, -23 LUFS per la TV (EBU R128), -27 LKFS dialoghi per Netflix, sala calibrata al cinema. Con il true peak e cosa fanno le piattaforme al file."
+descrizione_seo: "I livelli di loudness per ogni destinazione di un video: -14 LUFS per YouTube e social, -23 LUFS per la TV europea (EBU R128), -24 LUFS in Italia (AGCOM), -27 LKFS dialoghi per Netflix, sala calibrata al cinema. Con il true peak e cosa fanno le piattaforme al file."
 date: 2026-09-24
 copertina: lufs-video-loudness-resolve.jpg
 copertinaAlt: "Loudness meter con il preset YouTube: loudness integrata a -14 LUFS e true peak a -1,7 dBTP"
@@ -22,6 +22,7 @@ Il LUFS (Loudness Unit Full Scale) misura quanto forte si sente un programma nel
 | Instagram, Facebook, TikTok | -14 LUFS (stima) | -1 dBTP | nessun valore ufficiale |
 | Sito web, fiera, presentazione | -16 / -14 LUFS | -1 dBTP | prassi |
 | TV e spot TV in Europa | -23 LUFS (±0,5 LU) | -1 dBTP | EBU R128 |
+| TV e spot TV in Italia | -24 LUFS (±0,5 LU) | -2 dBTP | AGCOM 219/09/CSP |
 | TV USA | -24 LKFS | -2 dBTP | ATSC A/85 |
 | Netflix | -27 LKFS (±2) sui dialoghi | -2 dBTP | Netflix |
 | Podcast (Apple) | -16 LUFS | -1 dBTP | Apple |
@@ -43,9 +44,11 @@ Il valore difendibile per un reel o uno spot social è **-14 LUFS, picchi a -1 d
 
 Non c'è normalizzazione: il file si sente esattamente come è stato consegnato. -16 LUFS è il livello che funziona sia in cuffia sia da un notebook; -14 se il video vive accanto a contenuti social. Su uno schermo da fiera con casse proprie il volume lo decide l'impianto, e conta di più un mix con la voce davanti che il numero.
 
-## TV e spot TV: EBU R128
+## TV e spot TV: EBU R128 e, in Italia, AGCOM
 
-In Europa, Italia compresa, le emittenti applicano la raccomandazione **EBU R128**: loudness integrata **-23 LUFS**, tolleranza ±0,5 LU (±1 LU per il live), true peak massimo **-1 dBTP**. Per gli spot e i contenuti brevi vale anche il limite della loudness a breve termine (short-term) a **-18 LUFS**, così uno spot non può risultare più forte del programma in cui è inserito. Il file fuori tolleranza viene rifiutato o rinormalizzato dalla messa in onda, e nel secondo caso il risultato non lo controlla nessuno.
+In Europa le emittenti applicano la raccomandazione **EBU R128**: loudness integrata **-23 LUFS**, tolleranza ±0,5 LU (±1 LU per il live), true peak massimo **-1 dBTP**. Per gli spot e i contenuti brevi vale anche il limite della loudness a breve termine (short-term) a **-18 LUFS**, così uno spot non può risultare più forte del programma in cui è inserito. Il file fuori tolleranza viene rifiutato o rinormalizzato dalla messa in onda, e nel secondo caso il risultato non lo controlla nessuno.
+
+**In Italia** vale la delibera **AGCOM 219/09/CSP**, nata proprio per il volume degli spot: stessa misura (ITU-R BS.1770), ma loudness integrata **-24 LUFS**, tolleranza ±0,5 LU, true peak massimo **-2 dBTP**. È il riferimento delle emittenti italiane, RAI compresa: un master per la TV italiana va consegnato a -24, non a -23.
 
 Ogni emittente ha le sue specifiche di consegna (formato, tracce, layout audio): meglio chiederle prima di mixare, non dopo.
 
@@ -69,7 +72,7 @@ Un mix nato a -14 LUFS non si porta a -23 semplicemente abbassandolo: la compres
 
 <div class="riquadro">
 
-**In breve.** YouTube e social -14 LUFS / -1 dBTP · web e fiere -16 / -14 · TV europea -23 LUFS / -1 dBTP con short-term massimo -18 per gli spot · Netflix -27 LKFS sui dialoghi / -2 dBTP · cinema sala calibrata, trailer Leq(m) 85.
+**In breve.** YouTube e social -14 LUFS / -1 dBTP · web e fiere -16 / -14 · TV europea -23 LUFS / -1 dBTP con short-term massimo -18 per gli spot · TV italiana -24 LUFS / -2 dBTP (AGCOM) · Netflix -27 LKFS sui dialoghi / -2 dBTP · cinema sala calibrata, trailer Leq(m) 85.
 
 </div>
 
@@ -79,4 +82,4 @@ Basta il file finale e la lista delle destinazioni. La misura di loudness integr
 
 ## Fonti
 
-<p class="fonti">EBU R 128 v5.0, "Loudness normalisation and permitted maximum level of audio signals" e supplemento s2 sui contenuti brevi (tech.ebu.ch) · ATSC A/85, "Techniques for Establishing and Maintaining Audio Loudness for Digital Television" · Netflix Partner Help Center, "Sound Mix Specifications and Best Practices" · Amazon Video Central, specifiche audio · Apple Podcasts for Creators, "Audio requirements" · Forasoft, "LUFS targets per platform in 2026" (forasoft.com), per Meta xHE-AAC e TikTok senza normalizzazione · TASA, Trailer Audio Standards (Leq(m) 85) · Dolby, calibrazione della sala a 85 dB SPL.</p>
+<p class="fonti">AGCOM, delibera 219/09/CSP (agcom.it) · EBU R 128 v5.0, "Loudness normalisation and permitted maximum level of audio signals" e supplemento s2 sui contenuti brevi (tech.ebu.ch) · ATSC A/85, "Techniques for Establishing and Maintaining Audio Loudness for Digital Television" · Netflix Partner Help Center, "Sound Mix Specifications and Best Practices" · Amazon Video Central, specifiche audio · Apple Podcasts for Creators, "Audio requirements" · Forasoft, "LUFS targets per platform in 2026" (forasoft.com), per Meta xHE-AAC e TikTok senza normalizzazione · TASA, Trailer Audio Standards (Leq(m) 85) · Dolby, calibrazione della sala a 85 dB SPL.</p>
