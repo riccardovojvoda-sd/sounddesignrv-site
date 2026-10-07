@@ -2,7 +2,7 @@
 titolo: "AI voice or a real voice actor for your commercial? When it really pays off (and what the AI Act says)"
 titolo_seo: "AI voice or voice actor for commercials and corporate videos? When it pays off and what the AI Act says | Riccardo Vojvoda"
 descrizione_seo: "A synthetic voice works well for simple scripts, social media and informational videos, especially in English. The more a script calls for interpretation, the more a voice actor pays off. How the work changes, where you hear the difference, licences and AI Act obligations from 2 August 2026."
-date: 2026-10-20
+date: 2026-10-13
 copertina: voce-ai-speaker-microfono.jpg
 copertinaAlt: "Headphones resting on a studio microphone with a pop filter, in front of an acoustic panel"
 copertinaCredito: "Photo: WillSpirit, Unsplash"
