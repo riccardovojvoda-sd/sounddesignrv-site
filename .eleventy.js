@@ -32,6 +32,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("approfondimenti_en", (api) => api.getFilteredByTag("approfondimenti_en").filter(pubblicato).sort(perData));
   eleventyConfig.addCollection("approfondimenti_fr", (api) => api.getFilteredByTag("approfondimenti_fr").filter(pubblicato).sort(perData));
 
+  // Nome delle versioni ridimensionate: nome del file + impronta del contenuto, così se una foto
+  // viene corretta cambia l'URL e browser e cache non mostrano più la vecchia
+  const impronte = {};
+  const nomeVersione = (s, w, format) => {
+    impronte[s] ??= require("crypto").createHash("md5").update(require("fs").readFileSync(s)).digest("hex").slice(0, 6);
+    return `${path.basename(s, path.extname(s))}-${impronte[s]}-${w}.${format}`;
+  };
+
   // Shortcode immagine responsive: {% img "progetti/pitars.jpg", "alt", "(min-width: 60em) 50vw, 100vw", "lazy" %}
   eleventyConfig.addAsyncShortcode("img", async function (src, alt, sizes = "100vw", loading = "lazy", classe = "") {
     const sorgente = path.join("src/assets/img", src);
@@ -40,8 +48,7 @@ module.exports = function (eleventyConfig) {
       formats: ["avif", "webp", "jpeg"],
       outputDir: "_site/assets/img/r/",
       urlPath: "/assets/img/r/",
-      filenameFormat: (id, s, width, format) =>
-        `${path.basename(s, path.extname(s))}-${width}.${format}`,
+      filenameFormat: (id, s, width, format) => nomeVersione(s, width, format),
       sharpJpegOptions: { quality: 78, mozjpeg: true },
       sharpWebpOptions: { quality: 76 },
       sharpAvifOptions: { quality: 52 },
@@ -63,7 +70,7 @@ module.exports = function (eleventyConfig) {
       formats: ["jpeg"],
       outputDir: "_site/assets/img/r/",
       urlPath: "/assets/img/r/",
-      filenameFormat: (id, s, w, format) => `${path.basename(s, path.extname(s))}-${w}.${format}`,
+      filenameFormat: (id, s, w, format) => nomeVersione(s, w, format),
       sharpJpegOptions: { quality: 80, mozjpeg: true },
     });
     return metadata.jpeg[0].url;
@@ -76,7 +83,7 @@ module.exports = function (eleventyConfig) {
       formats: ["jpeg"],
       outputDir: "_site/assets/img/r/",
       urlPath: "/assets/img/r/",
-      filenameFormat: (id, s, w, format) => `${path.basename(s, path.extname(s))}-${w}.${format}`,
+      filenameFormat: (id, s, w, format) => nomeVersione(s, w, format),
     });
     return metadata.jpeg[0].url;
   });
