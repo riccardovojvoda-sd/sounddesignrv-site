@@ -340,30 +340,65 @@ p{margin:0 0 1em}
 .modulo-tally{display:block;border:0;margin:1rem 0 0;min-height:600px}
 .modulo-nota{font-size:.85rem;opacity:.8}
 
-/* Guide e articoli (body.lettura): sfondo Carta invece di Snow, meno abbagliante (scelta dell'8/10/2026).
-   Con html.lettura-scura (pulsante luna, vedi assets/js/lettura.js) la lettura passa allo scuro morbido. */
+/* Guide e articoli (body.lettura): sfondo Carta invece di Snow, meno abbagliante (scelta dell'8/10/2026). */
 .lettura,.lettura .tema-snow{--fondo:var(--carta)}
 .lettura .contatto{background:var(--carta)}
 @media(min-width:48.01em){.lettura .testata{background:rgba(238,233,225,.88)}}
-.lettura-scura .lettura,.lettura-scura .lettura .tema-snow{--fondo:#2F302C;--testo:#E6E2DC;--accento:var(--flax);--jet-15:rgba(230,226,220,.16);--jet-70:rgba(230,226,220,.72)}
-.lettura-scura .lettura .contatto{background:#2F302C;color:var(--testo)}
-.lettura-scura .lettura .bottone{background:var(--testo);color:var(--jet);border-color:var(--testo)}
-.lettura-scura .lettura .bottone-secondario{background:transparent;color:var(--testo)}
-.lettura-scura .lettura .bottone-secondario:hover{background:var(--testo);color:var(--jet)}
-.lettura-scura .lettura .chip.attivo{background:var(--testo);border-color:var(--testo);color:var(--jet)}
-.lettura-scura .lettura .lingue-lista{color:var(--jet)}
+
+/* Tema scuro su tutto il sito, variante "Bande tinte" (decisa l'8/10/2026).
+   html.scuro la mette lo script in testa a base.njk: segue il sistema, o la scelta fatta col pulsante luna (assets/js/tema.js).
+   Fondo scuro morbido #2F302C, testo crema #E6E2DC; le bande colorate diventano la versione scura del loro colore
+   e il colore pieno passa ai titoli. */
+html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,226,220,.16);--jet-70:rgba(230,226,220,.72)}
+.scuro .tema-snow,.scuro .lettura,.scuro .lettura .tema-snow{--fondo:#2F302C;--testo:#E6E2DC;--accento:var(--verdigris);--jet-15:rgba(230,226,220,.16)}
+.scuro .lettura,.scuro .lettura .tema-snow{--accento:var(--flax)}
+.scuro .tema-jet{--fondo:#1F201D}
+.scuro .tema-verdigris{--fondo:#2A3B3A;--testo:#E6E2DC;--accento:var(--verdigris);--jet-15:rgba(230,226,220,.16)}
+.scuro .tema-apricot{--fondo:#44352C;--testo:#E6E2DC;--accento:var(--apricot);--jet-15:rgba(230,226,220,.16)}
+.scuro .tema-flax{--fondo:#403926;--testo:#E6E2DC;--accento:var(--flax);--jet-15:rgba(230,226,220,.16)}
+.scuro :is(.tema-verdigris,.tema-apricot,.tema-flax) :is(h1,h2,.progetto-brand){color:var(--accento)}
+.scuro .eroe-ruolo{filter:none}
+.scuro .bottone{background:var(--testo);color:var(--jet);border-color:var(--testo)}
+.scuro .bottone:hover{background:#fff}
+.scuro .bottone-secondario{background:transparent;color:var(--testo)}
+.scuro .bottone-secondario:hover{background:var(--testo);color:var(--jet)}
+.scuro .contatto{background:#2F302C;color:var(--testo)}
+.scuro .pie{background:#1F201D}
+.scuro .lingue a[aria-current=true],.scuro .chip.attivo,.scuro .capitoli-lista button[aria-current=true]{background:var(--testo);border-color:var(--testo);color:var(--jet)}
+.scuro .lingue-lista{background:#3A3B36;color:var(--testo)}
+.scuro .lingue-lista a{color:var(--testo)}
+.scuro .lingue-lista a:hover{background:var(--flax);color:var(--jet)}
+.scuro .lingue-lista a[aria-current=true]{background:var(--testo);color:var(--jet)}
 @media(min-width:48.01em){
-  .lettura-scura .lettura .testata{background:rgba(47,48,44,.9);color:var(--testo)}
-  .lettura-scura .lettura .menu-cta{background:var(--verdigris);color:var(--jet)}
-  .lettura-scura .lettura .menu-cta:hover{background:var(--flax)}
+  .scuro .testata{background:rgba(47,48,44,.9);color:var(--testo)}
+  .scuro .menu-cta{background:var(--verdigris);color:var(--jet)}
+  .scuro .menu-cta:hover{background:var(--flax)}
+  .scuro .lingue-tendina[open] summary{background:var(--testo);color:var(--jet);border-color:var(--testo)}
 }
-/* Pulsante lettura scura: sempre visibile, sopra il "torna in alto", stesso aspetto */
-.lettura-bottone{position:fixed;right:1.75rem;bottom:4.6rem;z-index:90;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:var(--jet);color:var(--carta);box-shadow:0 2px 10px rgba(45,45,42,.28);cursor:pointer;transition:background .2s,color .2s}
-.lettura-bottone:hover,.lettura-bottone:focus-visible{background:var(--flax);color:var(--jet)}
-.lettura-bottone .icona-sole,.lettura-scura .lettura-bottone .icona-luna{display:none}
-.lettura-scura .lettura-bottone .icona-sole{display:block}
-.lettura-scura .lettura-bottone{background:var(--carta);color:var(--jet)}
-@media(max-width:48em){.lettura-bottone{bottom:calc(var(--testata-h) + 4.1rem)}}
-@media(max-width:36em){.lettura-bottone{right:.75rem}}
-html.lettura-scura{color-scheme:dark}
-.lettura-scura .lettura .prosa strong,.lettura-scura .lettura .evidenzia{background:linear-gradient(transparent 62%,rgba(237,210,134,.28) 62%)}
+.scuro .scheda-box{background:rgba(123,181,178,.10)}
+.scuro .griglia-schede>.scheda-box:nth-child(4n+2){background:rgba(246,201,172,.08)}
+.scuro .griglia-schede>.scheda-box:nth-child(4n+3){background:rgba(237,210,134,.08)}
+.scuro .griglia-schede>.scheda-box:nth-child(4n+4){background:rgba(230,226,220,.05);border-top-color:var(--testo)}
+.scuro .prosa h2:nth-of-type(4n+4)::before{background:var(--testo)}
+.scuro .prosa strong,.scuro .evidenzia,.scuro .tema-verdigris .evidenzia{background:linear-gradient(transparent 62%,rgba(237,210,134,.28) 62%)}
+.scuro .capitoli-lista button{background:rgba(230,226,220,.06)}
+.scuro .cookie-banner{background:#1F201D}
+.scuro .cookie-banner .bottone{background:var(--verdigris);border-color:var(--verdigris);color:var(--jet)}
+.scuro .cookie-banner .bottone-secondario{background:transparent;color:var(--snow);border-color:var(--snow-20)}
+/* Loghi clienti: invertiti e attenuati; quelli col tratto sottile un po' più accesi; H-Farm ha una versione apposta */
+.scuro .loghi img{filter:grayscale(1) invert(1) contrast(1.1);opacity:.55}
+.scuro .loghi li:hover img{filter:grayscale(1) invert(1);opacity:.9}
+.scuro .loghi img:is([src$="/oasis.png"],[src$="/iuav.png"],[src$="/goriziane.png"],[src$="/weldan.png"]){opacity:.75}
+.logo-per-scuro,.scuro .logo-per-chiaro{display:none}
+.scuro .logo-per-scuro{display:block}
+/* Il modulo Tally ha il testo scuro: nello scuro resta su un riquadro chiaro */
+.scuro .modulo-tally{background:var(--snow);border-radius:var(--raggio);padding:1rem}
+
+/* Pulsante luna: alterna chiaro e scuro, su tutte le pagine, sopra il "torna in alto", stesso aspetto */
+.interruttore-scuro{position:fixed;right:1.75rem;bottom:4.6rem;z-index:90;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:var(--jet);color:var(--carta);box-shadow:0 2px 10px rgba(45,45,42,.28);cursor:pointer;transition:background .2s,color .2s}
+.interruttore-scuro:hover,.interruttore-scuro:focus-visible{background:var(--flax);color:var(--jet)}
+.interruttore-scuro .icona-sole,.scuro .interruttore-scuro .icona-luna{display:none}
+.scuro .interruttore-scuro .icona-sole{display:block}
+.scuro .interruttore-scuro{background:var(--carta);color:var(--jet)}
+@media(max-width:48em){.interruttore-scuro{bottom:calc(var(--testata-h) + 4.1rem)}}
+@media(max-width:36em){.interruttore-scuro{right:.75rem}}
