@@ -44,6 +44,9 @@
 <link rel="preload" href="/assets/font/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/font/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>{% include "css/sito.css" %}</style>
+{%- if classeBody == "lettura" %}
+<script>try{if(localStorage.getItem("lettura")==="scura")document.documentElement.classList.add("lettura-scura")}catch(e){}</script>
+{%- endif %}
 {% block head %}{% endblock %}
 {% include "parti/analytics.njk" %}
 <script type="application/ld+json">{{ {
@@ -76,6 +79,10 @@
 {% include "parti/pie.njk" %}
 {% include "parti/cookie-banner.njk" %}
 <a class="in-alto" href="#" aria-label="{{ t.tornaSu }}" title="{{ t.tornaSu }}" hidden><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+{%- if classeBody == "lettura" %}
+<button type="button" class="lettura-bottone" aria-pressed="false" aria-label="{{ t.letturaScura }}" title="{{ t.letturaScura }}"><svg class="icona-luna" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="icona-sole" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+<script src="/assets/js/lettura.js" defer></script>
+{%- endif %}
 <script src="/assets/js/video.js" defer></script>
 <script src="/assets/js/in-alto.js" defer></script>
 {%- if filtri_articoli %}<script src="/assets/js/filtri.js" defer></script>{% endif %}
