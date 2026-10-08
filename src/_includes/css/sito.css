@@ -82,6 +82,8 @@ p{margin:0 0 1em}
 .menu a{text-decoration:none;font-weight:500;font-size:.92rem;padding:.35em 0;border-bottom:2px solid transparent;white-space:nowrap}
 .menu a:hover,.menu a[aria-current=page]{border-bottom-color:var(--verdigris)}
 .menu-corto{display:none}
+/* Voci solo desktop: sotto i 60em non entrano nel menu in alto (e sotto i 48em c'è la barra in basso) */
+@media(max-width:60em){.menu-solo-desktop{display:none}}
 @media(max-width:36em){.menu-lungo{display:none}.menu-corto{display:inline}}
 .menu-cta{padding:.52em 1em .38em!important;position:relative;top:-.14em;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
