@@ -338,7 +338,7 @@ p{margin:0 0 1em}
 .scheda-partner p+p{margin-top:.6rem}
 .scheda-partner .partner-dove{font-size:.85rem;opacity:.8}
 /* Tally: riquadro scuro fisso (tema del modulo impostato su Tally con gli stessi colori), regge nel chiaro e nello scuro. color-scheme light: senza, nello scuro il browser mette un fondo bianco dietro il modulo */
-.modulo-tally{display:block;border:0;margin:1rem 0 0;min-height:600px;color-scheme:light;background:#1F201D;border-radius:var(--raggio);padding:1.25rem}
+.modulo-tally{display:block;border:0;margin:1rem 0 0;min-height:600px;color-scheme:light;background:#45463F;border-radius:var(--raggio);padding:1.25rem}
 .modulo-nota{font-size:.85rem;opacity:.8}
 
 /* Guide e articoli (body.lettura): sfondo Carta invece di Snow, meno abbagliante (scelta dell'8/10/2026). */
