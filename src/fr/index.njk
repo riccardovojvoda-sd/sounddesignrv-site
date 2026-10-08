@@ -41,7 +41,7 @@ permalink: /fr/
     <h2 id="clienti-titolo" class="etichetta">Marques et productions</h2>
     <ul class="loghi">
       {%- for l in sito.loghi %}
-      <li><img src="/assets/img/loghi/{{ l[0] }}" alt="{{ l[1] }}" loading="lazy" decoding="async" width="150" height="75"></li>
+      <li><img {% if l[2] %}class="logo-per-chiaro" {% endif %}src="/assets/img/loghi/{{ l[0] }}" alt="{{ l[1] }}" loading="lazy" decoding="async" width="150" height="75">{% if l[2] %}<img class="logo-per-scuro" src="/assets/img/loghi/{{ l[2] }}" alt="{{ l[1] }}" loading="lazy" decoding="async" width="150" height="75">{% endif %}</li>
       {%- endfor %}
     </ul>
   </div>
