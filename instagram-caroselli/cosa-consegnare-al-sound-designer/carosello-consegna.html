@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><title>Carosello consegna sound designer</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../../src/assets/font/poppins-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:500;src:url(../../src/assets/font/poppins-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;src:url(../../src/assets/font/poppins-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:700;src:url(../../src/assets/font/poppins-latin-700-normal.woff2) format("woff2")}
+:root{--jet:#2D2D2A;--verdigris:#7BB5B2;--apricot:#F6C9AC;--flax:#EDD286;--snow:#FFFBFA;--carta:#EEE9E1}
+html,body{margin:0;background:#000}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;box-sizing:border-box;font-family:Poppins,sans-serif;display:none}
+.slide.attiva{display:block} body.tutte .slide{display:block;margin:0 auto 40px}
+.pad{position:absolute;inset:110px 96px 170px 96px;display:flex;flex-direction:column;justify-content:center}
+.etichetta{font-size:30px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0 0 30px}
+h1,h2{font-weight:600;letter-spacing:-.01em;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:104px} h2{font-size:84px;margin-bottom:52px}
+p{font-size:50px;line-height:1.38;margin:0 0 30px}
+b{font-weight:600}
+.piede{position:absolute;left:96px;right:96px;bottom:64px;display:flex;align-items:center;gap:22px;font-size:26px;font-weight:500}
+.piede img{height:64px;width:64px;border-radius:12px}
+.piede span:last-child{margin-left:auto}
+/* chiare */
+.chiara{background:var(--snow);color:var(--jet)}
+.chiara .num{font-size:150px;font-weight:700;line-height:1;color:var(--verdigris);margin:0 0 26px}
+.chiara b{background:linear-gradient(transparent 62%,var(--flax) 62%)}
+.chiara .muto{color:rgba(45,45,42,.68)}
+.chiara .piede{color:rgba(45,45,42,.7)}
+/* copertina */
+.cop{background:var(--jet);color:var(--snow)}
+.cop .sfondo,.cop .sfocato{position:absolute;inset:0;background:url(../../src/assets/img/approfondimenti/montaggio-timeline-consegna-audio.jpg) 30% 50%/auto 100% no-repeat}
+.cop .sfocato{filter:blur(12px);transform:scale(1.06);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0.350) 20.0%,rgba(0,0,0,0.360) 24.8%,rgba(0,0,0,0.417) 29.5%,rgba(0,0,0,0.529) 34.2%,rgba(0,0,0,0.675) 39.0%,rgba(0,0,0,0.821) 43.8%,rgba(0,0,0,0.933) 48.5%,rgba(0,0,0,0.990) 53.2%,rgba(0,0,0,1.000) 58.0%,#000 100%);mask-image:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0.350) 20.0%,rgba(0,0,0,0.360) 24.8%,rgba(0,0,0,0.417) 29.5%,rgba(0,0,0,0.529) 34.2%,rgba(0,0,0,0.675) 39.0%,rgba(0,0,0,0.821) 43.8%,rgba(0,0,0,0.933) 48.5%,rgba(0,0,0,0.990) 53.2%,rgba(0,0,0,1.000) 58.0%,#000 100%)}
+.cop .velo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,45,42,.38) 0%,rgba(45,45,42,0.380) 22.0%,rgba(45,45,42,0.389) 28.0%,rgba(45,45,42,0.441) 34.0%,rgba(45,45,42,0.542) 40.0%,rgba(45,45,42,0.675) 46.0%,rgba(45,45,42,0.808) 52.0%,rgba(45,45,42,0.909) 58.0%,rgba(45,45,42,0.961) 64.0%,rgba(45,45,42,0.970) 70.0%,rgba(45,45,42,.97) 100%)}
+.cop .pad{justify-content:flex-end;padding-bottom:20px}
+.cop .etichetta{color:var(--flax)}
+.cop .piede{color:var(--snow)} .cop .piede span:last-child{color:var(--flax)}
+/* cta */
+.cta{background:var(--flax);color:var(--jet)}
+.cta .etichetta{opacity:.75}
+.cta h2{font-size:88px}
+.cta .url{font-size:46px;font-weight:600;background:var(--jet);color:var(--snow);padding:20px 30px;border-radius:12px;align-self:flex-start;margin:6px 0 44px}
+.cta p{font-size:46px}
+</style></head><body>
+<section class="slide cop" id="s1"><div class="sfondo"></div><div class="sfocato"></div><div class="velo"></div>
+ <div class="pad"><p class="etichetta">Guide · Post-produzione audio</p><h1>Cosa consegnare al sound designer</h1></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>Scorri →</span></div></section>
+<section class="slide chiara" id="s2"><div class="pad">
+ <div class="num">01</div><h2>Il video di riferimento</h2>
+ <p>Esattamente il montaggio approvato, con lo <b>stesso frame rate</b> del progetto.</p><p class="muto">H.264 a 1080p o ProRes Proxy, con l'audio del montaggio dentro. Il master 4K non serve.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>2/9</span></div></section>
+<section class="slide chiara" id="s3"><div class="pad">
+ <div class="num">02</div><h2>AAF, non OMF</h2>
+ <p>Meglio con <b>audio incorporato</b>, a <b>48 kHz e 24 bit</b>.</p><p class="muto">L'OMF è il formato vecchio: limite di 2 GB e perde informazioni.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>3/9</span></div></section>
+<section class="slide chiara" id="s4"><div class="pad">
+ <div class="num">03</div><h2>Handles di 5 secondi</h2>
+ <p>Il margine prima e dopo ogni taglio: <b>120 fotogrammi a 24 fps, 125 a 25</b>.</p><p class="muto">Senza, una porzione tagliata male va risincronizzata a mano.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>4/9</span></div></section>
+<section class="slide chiara" id="s5"><div class="pad">
+ <div class="num">04</div><h2>Niente effetti stampati</h2>
+ <p>Lascia spenta l'opzione che <b>renderizza gli effetti</b> dentro i file audio.</p><p class="muto">Il riduttore di rumore del montaggio, una volta stampato, non si toglie più.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>5/9</span></div></section>
+<section class="slide chiara" id="s6"><div class="pad">
+ <div class="num">05</div><h2>La presa diretta originale</h2>
+ <p>Le <b>cartelle del registratore</b>, non solo l'audio dentro l'AAF.</p><p class="muto">E il <b>bollettino sonoro</b> con le note del fonico.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>6/9</span></div></section>
+<section class="slide chiara" id="s7"><div class="pad">
+ <div class="num">06</div><h2>Musiche in WAV, con licenza</h2>
+ <p>Il file in <b>qualità piena</b>, non l'MP3 scaricato per la prova.</p><p class="muto">Con la licenza o il riferimento del catalogo.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>7/9</span></div></section>
+<section class="slide chiara" id="s8"><div class="pad">
+ <div class="num">07</div><h2>Un brief di tre righe</h2>
+ <p><b>Dove va</b> il video, in che <b>formato</b> va consegnato, la <b>deadline</b>.</p><p class="muto">E un video di riferimento per lo stile.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>8/9</span></div></section>
+<section class="slide cta" id="s9"><div class="pad">
+ <p class="etichetta">La guida completa</p>
+ <h2>Impostazioni, perché di ogni voce ed errori da evitare</h2>
+ <div class="url">sounddesignrv.com/consegna</div>
+ <p>Dubbi su come esportare? Scrivimi prima: si esporta una volta sola.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>Salva il post</span></div></section>
+<script>const h=location.hash.slice(1);if(h){document.getElementById(h).classList.add('attiva')}else{document.body.classList.add('tutte')}</script>
+</body></html>
