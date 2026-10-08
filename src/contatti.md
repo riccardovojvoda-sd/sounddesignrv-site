@@ -17,6 +17,8 @@ Mi chiamo Riccardo Vojvoda, sound designer, post-producer e fonico per film, doc
 
 Per un preventivo servono il materiale (o un'anteprima), un brief e, se ci sono, qualche riferimento estetico. Nelle [FAQ](/faq/) trovi cosa consegnare e come funziona il processo.
 
+Sei uno studio, un'agenzia o una casa di produzione e vuoi proporre una collaborazione continuativa? Passa dal [Network](/network/#proponi).
+
 <p><a class="bottone" href="{{ sito.profiloPdf }}" download>Scarica il profilo in PDF</a></p>
 
 **Profili:** [Instagram]({{ sito.social.instagram }}) · [LinkedIn]({{ sito.social.linkedin }}) · [IMDb]({{ sito.social.imdb }}) · [CROMO (video)]({{ sito.social.cromo }})

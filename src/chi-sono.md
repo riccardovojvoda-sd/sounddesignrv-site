@@ -46,4 +46,6 @@ Lavoro in modo collaborativo con registi, editor e content creator, ma sono anch
 
 <p class="elenco-clienti">{{ sito.clienti }} e altri.</p>
 
+Le case di produzione e le agenzie con cui collaboro più spesso, con i lavori fatti insieme, sono nel [Network](/network/).
+
 Il profilo completo è [scaricabile in PDF]({{ sito.profiloPdf }}).

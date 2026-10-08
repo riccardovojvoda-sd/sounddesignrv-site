@@ -2,8 +2,8 @@
 module.exports = {
   it: {
     codice: "it", locale: "it_IT", nome: "Italiano", sigla: "IT",
-    url: { home: "/", portfolio: "/#progetti", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/", approfondimenti: "/guide/" },
-    menu: { portfolio: "Portfolio", servizi: "Servizi", chiSono: "Chi sono", contatti: "Contatti", faq: "FAQ", approfondimenti: "Guide", approfondimentiCorto: "Guide", principale: "Principale", pagine: "Pagine", profili: "Profili esterni", lingua: "Lingua" },
+    url: { home: "/", portfolio: "/#progetti", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/", approfondimenti: "/guide/", network: "/network/" },
+    menu: { portfolio: "Portfolio", servizi: "Servizi", chiSono: "Chi sono", contatti: "Contatti", faq: "FAQ", approfondimenti: "Guide", approfondimentiCorto: "Guide", network: "Network", principale: "Principale", pagine: "Pagine", profili: "Profili esterni", lingua: "Lingua" },
     salta: "Vai al contenuto", tornaSu: "Torna in alto",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Ascolta", anteprima: "Anteprima video", suYoutube: "Ascolta su YouTube", durata: "Durata" },
