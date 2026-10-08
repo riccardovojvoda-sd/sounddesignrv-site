@@ -15,6 +15,7 @@ Sito personale di Riccardo Vojvoda, sounddesignrv.com. Statico, generato con Ele
 - `src/_includes/layouts/` base, progetto, pagina. `src/_includes/parti/` testata, video, contatto, pie'.
 - `src/_includes/css/sito.css` unico foglio di stile, inserito inline in ogni pagina.
 - `src/assets/img/progetti/` copertine (le versioni responsive avif/webp/jpeg le genera la build in `_site/assets/img/r/`).
+- `src/assets/img/approfondimenti/` copertine delle guide. Regola: tutte con la stessa curva di contrasto, neri veri e bianchi pieni, niente bande nere ai bordi, così reggono anche nel tema scuro. Ogni nuova copertina passa da `python3 scripts/copertine-contrasto.py` (controllo) e, se è fuori, da `--correggi file.jpg` (corregge solo la luminosità, i colori restano). Gli screenshot di programmi sono esclusi. Dopo una correzione, in locale cancellare le sue versioni in `_site/assets/img/r/`: la build non le rifà se il nome non cambia.
 - `src/radice/` file copiati nella root del sito: `CNAME` (dominio per GitHub Pages), icone, `robots.txt`.
 - `src/reindirizzi.njk` + `src/_data/reindirizzi.json`: pagine di redirect (meta refresh + noindex) dai vecchi URL Squarespace. GitHub Pages non ha `.htaccess`: niente redirect lato server, niente intestazioni personalizzate (la Content-Security-Policy sta in un `<meta>` nel layout base). Il profilo PDF viene copiato anche al vecchio percorso `/s/`.
 - `src/llms.njk` genera `/llms.txt`, `src/sitemap.njk` la sitemap.
