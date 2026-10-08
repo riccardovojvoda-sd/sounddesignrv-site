@@ -66,58 +66,7 @@ nascondiContatto: true
 
 <p>Sei una casa di produzione, un'agenzia o uno studio e vuoi lavorare insieme? Raccontami la tua idea: rispondo di norma entro 24-48 ore.</p>
 
-<form class="modulo" id="modulo-network" action="mailto:{{ sito.email }}" method="post" enctype="text/plain">
-  <div class="modulo-coppia">
-    <label>Nome e cognome *<input type="text" name="Nome e cognome" autocomplete="name" required></label>
-    <label>Azienda *<input type="text" name="Azienda" autocomplete="organization" required></label>
-  </div>
-  <div class="modulo-coppia">
-    <label>Email *<input type="email" name="Email" autocomplete="email" required></label>
-    <label>Telefono<input type="tel" name="Telefono" autocomplete="tel"></label>
-  </div>
-  <label>Che collaborazione vorresti proporre? *<input type="text" name="Collaborazione proposta" required></label>
-  <div class="modulo-coppia">
-    <label>Come mi hai trovato? *
-      <select name="Come mi hai trovato" id="modulo-provenienza" required>
-        <option value="">Scegli</option>
-        <option>LinkedIn</option>
-        <option>Instagram</option>
-        <option>Ricerca su Google</option>
-        <option>Assistente AI (ChatGPT, Claude...)</option>
-        <option>Me ne ha parlato un collega</option>
-        <option>Ho visto un tuo lavoro</option>
-        <option>Ho ricevuto una tua mail</option>
-        <option>Altro</option>
-      </select>
-    </label>
-    <label id="modulo-altro" hidden>Specifica *<input type="text" name="Specifica"></label>
-  </div>
-  <label>Messaggio<textarea name="Messaggio" rows="6"></textarea></label>
-  <p><button class="bottone" type="submit">Invia la proposta</button></p>
-  <p class="modulo-nota">Il pulsante apre il tuo programma di posta con il messaggio già compilato. Se non si apre, scrivimi a <a href="mailto:{{ sito.email }}">{{ sito.email }}</a>. Uso i tuoi dati solo per risponderti.</p>
-</form>
+<iframe class="modulo-tally" data-tally-src="https://tally.so/embed/810X1o?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" src="https://tally.so/embed/810X1o?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="1300" title="Proponi una collaborazione"></iframe>
+<script src="https://tally.so/widgets/embed.js" async></script>
 
-<script>
-(function () {
-  var f = document.getElementById("modulo-network");
-  var sel = document.getElementById("modulo-provenienza");
-  var altro = document.getElementById("modulo-altro");
-  var altroInput = altro.querySelector("input");
-  sel.addEventListener("change", function () {
-    var si = sel.value === "Altro";
-    altro.hidden = !si;
-    altroInput.required = si;
-    if (si) altroInput.focus();
-  });
-  f.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var righe = [];
-    Array.prototype.forEach.call(f.elements, function (el) {
-      if (!el.name || !el.value || (el === altroInput && altro.hidden)) return;
-      righe.push(el.name + ": " + el.value);
-    });
-    var oggetto = "Proposta di collaborazione - " + f.elements["Azienda"].value;
-    location.href = "mailto:{{ sito.email }}?subject=" + encodeURIComponent(oggetto) + "&body=" + encodeURIComponent(righe.join("\n\n"));
-  });
-})();
-</script>
+<p class="modulo-nota">Il modulo è gestito da Tally, servizio europeo con sede in Belgio. Uso i tuoi dati solo per risponderti. Se preferisci, scrivimi a <a href="mailto:{{ sito.email }}">{{ sito.email }}</a>.</p>
