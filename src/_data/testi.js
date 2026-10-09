@@ -21,8 +21,8 @@ module.exports = {
   },
   en: {
     codice: "en", locale: "en_GB", nome: "English", sigla: "EN",
-    url: { home: "/en/", portfolio: "/en/#projects", servizi: "/en/services/", chiSono: "/en/about/", faq: "/en/faq/", contatti: "/en/contact/", approfondimenti: "/en/insights/" },
-    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "About", contatti: "Contact", faq: "FAQ", approfondimenti: "Insights", approfondimentiCorto: "Insights", principale: "Main", pagine: "Pages", profili: "External profiles", lingua: "Language" },
+    url: { home: "/en/", portfolio: "/en/#projects", servizi: "/en/services/", chiSono: "/en/about/", faq: "/en/faq/", contatti: "/en/contact/", approfondimenti: "/en/insights/", network: "/en/network/" },
+    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "About", contatti: "Contact", faq: "FAQ", approfondimenti: "Insights", approfondimentiCorto: "Insights", network: "Network", principale: "Main", pagine: "Pages", profili: "External profiles", lingua: "Language" },
     salta: "Skip to content", tornaSu: "Back to top", temaScuro: "Dark mode",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Listen", anteprima: "Video preview", suYoutube: "Listen on YouTube", durata: "Duration" },
@@ -40,8 +40,8 @@ module.exports = {
   },
   fr: {
     codice: "fr", locale: "fr_FR", nome: "Français", sigla: "FR",
-    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/fr/guides/" },
-    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", approfondimenti: "Guides", approfondimentiCorto: "Guides", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
+    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/fr/guides/", network: "/fr/network/" },
+    menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", approfondimenti: "Guides", approfondimentiCorto: "Guides", network: "Network", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
     articolo: { pubblicato: "Publié le", aggiornato: "mis à jour le", tutti: "Tous les guides", altri: "À lire aussi", leggiIn: "Lire en français", minuti: "min de lecture", bozza: "BROUILLON : page d'aperçu, pas encore publiée" },
     salta: "Aller au contenu", tornaSu: "Retour en haut", temaScuro: "Mode sombre",
     marchioRuolo: "Sound Design | Audio Post",

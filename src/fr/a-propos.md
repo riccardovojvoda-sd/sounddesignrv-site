@@ -46,4 +46,6 @@ Je travaille de façon collaborative avec les réalisateurs, les monteurs et les
 
 <p class="elenco-clienti">{{ sito.clienti }} et d'autres.</p>
 
+Les sociétés de production et les agences avec qui je collabore le plus souvent, et les projets réalisés ensemble, sont dans le [Network](/fr/network/).
+
 Le profil complet est [disponible en PDF]({{ sito.profiloPdf }}).

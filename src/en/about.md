@@ -46,4 +46,6 @@ I work collaboratively with directors, editors and content creators, but I am al
 
 <p class="elenco-clienti">{{ sito.clienti }} and others.</p>
 
+The production companies and agencies I work with most often, and the work we did together, are in the [Network](/en/network/).
+
 The full profile is [available as a PDF]({{ sito.profiloPdf }}).

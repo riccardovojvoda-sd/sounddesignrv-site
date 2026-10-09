@@ -17,6 +17,8 @@ I'm Riccardo Vojvoda, sound designer, audio post-producer and production sound m
 
 For a quote I need the material (or a preview), a brief and, if you have them, a few aesthetic references. The [FAQ](/en/faq/) explains what to deliver and how the process works.
 
+Are you a studio, an agency or a production company looking for an ongoing collaboration? Head to the [Network](/en/network/#proponi).
+
 <p><a class="bottone" href="{{ sito.profiloPdf }}" download>Download the profile (PDF)</a></p>
 
 **Profiles:** [Instagram]({{ sito.social.instagram }}) · [LinkedIn]({{ sito.social.linkedin }}) · [IMDb]({{ sito.social.imdb }}) · [CROMO (video)]({{ sito.social.cromo }})
