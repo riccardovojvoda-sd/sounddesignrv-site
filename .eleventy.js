@@ -137,6 +137,21 @@ module.exports = function (eleventyConfig) {
     }))
   );
 
+  // Regola di Riccardo: ogni link che esce dal sito si apre in un'altra scheda
+  eleventyConfig.addTransform("link-esterni-nuova-scheda", function (contenuto) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return contenuto;
+    return contenuto.replace(/<a\s[^>]*href="https?:\/\/[^"]+"[^>]*>/gi, (tag) => {
+      const href = tag.match(/href="([^"]+)"/i)[1];
+      if (/^https?:\/\/(www\.)?sounddesignrv\.com(\/|$)/i.test(href)) return tag;
+      let nuovo = tag;
+      if (!/\starget=/i.test(nuovo)) nuovo = nuovo.replace(/>$/, ' target="_blank">');
+      if (/\srel="/i.test(nuovo)) {
+        if (!/\srel="[^"]*noopener/i.test(nuovo)) nuovo = nuovo.replace(/\srel="/i, ' rel="noopener ');
+      } else nuovo = nuovo.replace(/>$/, ' rel="noopener">');
+      return nuovo;
+    });
+  });
+
   // HTML minificato in produzione
   eleventyConfig.addTransform("minifica", async function (contenuto) {
     if (process.env.ELEVENTY_RUN_MODE !== "build" || process.env.NO_MINIFY) return contenuto;

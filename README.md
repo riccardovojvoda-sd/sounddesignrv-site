@@ -26,8 +26,9 @@ Sito personale di Riccardo Vojvoda, sounddesignrv.com. Statico, generato con Ele
 
 - Palette: Jet `#2D2D2A`, Verdigris `#7BB5B2`, Apricot `#F6C9AC`, Flax `#EDD286`, Snow `#FFFBFA`. Carattere Poppins, servito dal sito.
 - I video YouTube si caricano solo al clic (dominio `youtube-nocookie.com`), con copertina locale.
+- Ogni link verso altri siti si apre in una nuova scheda: lo aggiunge da solo il transform `link-esterni-nuova-scheda` in `.eleventy.js` (`target="_blank"` + `rel="noopener"`), non serve scriverlo a mano.
 - Nei testi rivolti agli utenti niente trattini lunghi.
-- La mail e' `info@sounddesignrv.com` ovunque; la gmail personale non deve comparire (il workflow lo verifica).
+- La mail è `info@sounddesignrv.com` ovunque; la gmail personale non deve comparire (il workflow lo verifica).
 
 ## Lingue
 
