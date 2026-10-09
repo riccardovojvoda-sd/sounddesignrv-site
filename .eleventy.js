@@ -1,7 +1,7 @@
 // Configurazione Eleventy per sounddesignrv.com
 // Sorgenti in src/, output in _site/. Immagini responsive con @11ty/eleventy-img.
 const path = require("path");
-const Image = require("@11ty/eleventy-img");
+const Image = require("@11ty/eleventy-img").default; // dalla 7 è un modulo ES: la funzione sta in .default
 const { minify } = require("html-minifier-terser");
 const { pubblicato } = require("./lib/articoli");
 
@@ -77,15 +77,21 @@ module.exports = function (eleventyConfig) {
   });
 
   // Stessa cosa, sincrona, per usarla dentro un oggetto Nunjucks (JSON-LD): il file lo genera il shortcode img
+  // eleventy-img 7 non ha più statsSync: le larghezze originali si leggono prima della build (async) e qui si fa il conto
+  // come faceva lui, cioè la larghezza chiesta ma mai più grande dell'originale
+  const larghezzeOriginali = {};
+  eleventyConfig.on("eleventy.before", async () => {
+    const sharp = require("sharp");
+    const cartella = "src/assets/img";
+    for (const f of require("fs").readdirSync(cartella, { recursive: true })) {
+      if (!/\.(jpe?g|png|webp)$/i.test(f)) continue;
+      const m = await sharp(path.join(cartella, f)).metadata();
+      larghezzeOriginali[path.join(cartella, f)] = m.orientation >= 5 ? m.height : m.width;
+    }
+  });
   eleventyConfig.addFilter("imgUrlSync", (src, width = 1200) => {
-    const metadata = Image.statsSync(path.join("src/assets/img", src), {
-      widths: [width],
-      formats: ["jpeg"],
-      outputDir: "_site/assets/img/r/",
-      urlPath: "/assets/img/r/",
-      filenameFormat: (id, s, w, format) => nomeVersione(s, w, format),
-    });
-    return metadata.jpeg[0].url;
+    const sorgente = path.join("src/assets/img", src);
+    return "/assets/img/r/" + nomeVersione(sorgente, Math.min(width, larghezzeOriginali[sorgente] ?? width), "jpeg");
   });
 
   // Filtri
