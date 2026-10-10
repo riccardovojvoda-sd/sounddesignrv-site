@@ -3,7 +3,6 @@ titolo: "Il brief per il sound design: le 10 cose da dire prima di iniziare"
 titolo_seo: "Brief per il sound design di uno spot o di un video: le 10 cose da scrivere | Riccardo Vojvoda"
 descrizione_seo: "Cosa scrivere nel brief audio di uno spot o di un video aziendale: stile, destinazioni, riferimenti, montato finale, musica, voce, versioni, file da consegnare, tempi e revisioni. Con un modello da copiare."
 date: 2026-10-20
-bozza: true
 copertina: brief-sound-design-cuffie-scrivania.jpg
 copertinaAlt: "Un foglio di brief per il sound design compilato a mano, appoggiato su una scrivania accanto a cuffie da studio e a un taccuino"
 copertinaCredito: "Foto: Jens Kreuter, Unsplash (fotomontaggio)"
