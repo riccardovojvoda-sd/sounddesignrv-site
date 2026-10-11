@@ -18,7 +18,7 @@ Le LUFS (Loudness Unit Full Scale) mesure le niveau sonore perçu d'un programme
 
 | Destination | Loudness intégrée | True peak | Qui le dit |
 |---|---|---|---|
-| YouTube | -14 LUFS | -1 dBTP | YouTube |
+| YouTube | -14 LUFS | -1 dBTP | Statistiques avancées de YouTube |
 | Instagram, Facebook, TikTok | -14 LUFS (estimation) | -1 dBTP | aucune valeur officielle |
 | Site web, salon, présentation | -16 / -14 LUFS | -1 dBTP | usage courant |
 | TV et spots TV en Europe | -23 LUFS (±0,5 LU) | -1 dBTP | EBU R128 |
@@ -32,11 +32,11 @@ LUFS et LKFS sont la même unité sous deux noms (européen et américain). Le d
 
 ## YouTube : -14 LUFS, et il ne fait que baisser
 
-YouTube normalise à environ -14 LUFS. Une vidéo plus forte est baissée ; une vidéo plus faible n'est **pas** montée. Donc un mix à -20 LUFS sonne plus bas que tous les autres sur YouTube, et un mix à -9 LUFS est ramené à -14 avec pour seul résultat d'avoir perdu de la dynamique. Le niveau utile est -14 avec les pics à -1 dBTP. La valeur appliquée se lit dans le lecteur, clic droit > "Statistiques avancées", à la ligne "Volume / Normalized".
+YouTube normalise à environ -14 LUFS. Une vidéo plus forte est baissée ; une vidéo plus faible n'est **pas** montée. Donc un mix à -20 LUFS sonne plus bas que tous les autres sur YouTube, et un mix à -9 LUFS est ramené à -14 avec pour seul résultat d'avoir perdu de la dynamique. Le niveau utile est -14 avec les pics à -1 dBTP. La valeur appliquée se lit dans le lecteur, clic droit > "Statistiques avancées", à la ligne "Volume / Normalized", avec la "content loudness" : l'écart en dB entre la vidéo et la référence de YouTube, qui correspond à environ -14 LUFS. YouTube n'écrit pas cette valeur dans un document officiel : on la déduit de là.
 
 ## Instagram, Facebook, TikTok : aucun chiffre officiel
 
-Meta et TikTok ne publient pas de cible. Meta réencode l'audio en xHE-AAC avec une gestion adaptative du volume, qui change selon le contexte de lecture ; les mesures faites par ceux qui y travaillent se regroupent autour de -14 LUFS. TikTok ne normalise pas dans le fil, en juillet 2026 : un fichier plus fort sonne vraiment plus fort, avec la compression que cela implique.
+Meta et TikTok ne publient pas de cible. Meta réencode l'audio en xHE-AAC avec une gestion adaptative du volume, qui change selon le contexte de lecture ; les mesures faites par ceux qui y travaillent se regroupent autour de -14 LUFS. Sur TikTok les mesures ne concordent pas : certains relèvent une normalisation autour de -14 LUFS, d'autres aucune. Mieux vaut ne pas compter sur la plateforme pour baisser un fichier trop fort.
 
 La valeur défendable pour un reel ou un spot social est **-14 LUFS, pics à -1 dBTP**. Si un brief demande "plus fort", on peut monter à -12 en sachant qu'on renonce à de la dynamique, pas qu'on respecte une spécification. À garder en tête : la plateforme recompresse de toute façon le fichier (AAC à bas débit) ; les pics à -1 dBTP servent à ne pas saturer à cette étape.
 
@@ -82,4 +82,4 @@ Le fichier final et la liste des destinations suffisent. La mesure de la loudnes
 
 ## Sources
 
-<p class="fonti">AGCOM, délibération 219/09/CSP (agcom.it) · EBU R 128 v5.0, "Loudness normalisation and permitted maximum level of audio signals" et supplément s2 sur les contenus courts (tech.ebu.ch) · ATSC A/85, "Techniques for Establishing and Maintaining Audio Loudness for Digital Television" · Netflix Partner Help Center, "Sound Mix Specifications and Best Practices" · Amazon Video Central, spécifications audio · Apple Podcasts for Creators, "Audio requirements" · Forasoft, "LUFS targets per platform in 2026" (forasoft.com), pour Meta xHE-AAC et TikTok sans normalisation · TASA, Trailer Audio Standards (Leq(m) 85) · Dolby, calibration de la salle à 85 dB SPL.</p>
+<p class="fonti">AGCOM, délibération 219/09/CSP (agcom.it) · EBU R 128 v5.0, "Loudness normalisation and permitted maximum level of audio signals" et supplément s2 sur les contenus courts (tech.ebu.ch) · ATSC A/85, "Techniques for Establishing and Maintaining Audio Loudness for Digital Television" · Netflix Partner Help Center, "Sound Mix Specifications and Best Practices" · Amazon Video Central, spécifications audio · Apple Podcasts for Creators, "Audio requirements" · Forasoft, "LUFS targets per platform in 2026" (forasoft.com), pour Meta xHE-AAC · YouTube, Statistiques avancées (content loudness) · TASA, Trailer Audio Standards (Leq(m) 85) · Dolby, calibration de la salle à 85 dB SPL.</p>
