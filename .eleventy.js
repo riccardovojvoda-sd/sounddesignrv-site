@@ -18,6 +18,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "s" }); // vecchio percorso Squarespace del profilo PDF
   eleventyConfig.addPassthroughCopy({ "src/radice": "." });
+  // Pagine di ascolto per i clienti (casting, vetrine, player), generate da tool-personali/casting-vo/pagina.py: noindex, fuori da sitemap e menu
+  eleventyConfig.addPassthroughCopy({ "ascolto": "ascolto" });
   eleventyConfig.addWatchTarget("src/assets/css");
   eleventyConfig.addWatchTarget("lib");
 
