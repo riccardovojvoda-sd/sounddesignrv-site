@@ -5,7 +5,7 @@ descrizione_seo: "Molti abbonamenti di musica royalty free non coprono la radio.
 date: 2026-10-27
 bozza: true
 copertina: musica-spot-radio-autoradio.jpg
-copertinaAlt: "Una mano tocca lo schermo dell'autoradio, fuori dal parabrezza una strada di campagna in una giornata di sole d'autunno"
+copertinaAlt: "Il cruscotto di un'auto con il touchscreen dell'autoradio acceso, fuori dal parabrezza una strada di campagna in una giornata di sole d'autunno"
 copertinaCredito: "Immagine generata con l'AI"
 chiave: articolo-s42
 categoria: Musica e diritti
