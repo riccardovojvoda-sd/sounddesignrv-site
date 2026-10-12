@@ -4,8 +4,8 @@ titolo_seo: "Musica per uno spot radio: le licenze di Artlist, Epidemic Sound e 
 descrizione_seo: "Molti abbonamenti di musica royalty free non coprono la radio. Servizio per servizio: Artlist, Epidemic Sound, PremiumBeat, AudioJungle, Envato Elements, Soundstripe, Pond5, Motion Array, Uppbeat. E perché tagliare il brano non toglie l'obbligo della licenza."
 date: 2026-10-27
 bozza: true
-copertina: musica-spot-radio-autoradio.jpg
-copertinaAlt: "Il cruscotto di un'auto con il touchscreen dell'autoradio acceso, fuori dal parabrezza una strada di campagna in una giornata di sole d'autunno"
+copertina: musica-spot-radio-manopola.jpg
+copertinaAlt: "Una mano gira la manopola del volume sotto lo schermo dell'autoradio con una forma d'onda blu, dietro il finestrino gli alberi d'autunno"
 copertinaCredito: "Immagine generata con l'AI"
 chiave: articolo-s42
 categoria: Musica e diritti
