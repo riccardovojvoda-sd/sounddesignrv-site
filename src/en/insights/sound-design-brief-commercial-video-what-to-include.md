@@ -1,5 +1,6 @@
 ---
 titolo: "The sound design brief: 10 things to tell your sound designer before starting"
+parola_evidenziata: "sound design brief"
 titolo_seo: "Sound design brief for a commercial or video: the 10 things to include | Riccardo Vojvoda"
 descrizione_seo: "What to put in the audio brief for a commercial or a corporate video: style, destinations, references, final edit, music, voice, versions, deliverables, timing and revisions. With a template to copy."
 date: 2026-10-20

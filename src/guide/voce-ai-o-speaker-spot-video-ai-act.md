@@ -1,5 +1,6 @@
 ---
 titolo: "Voce AI o speaker vero per lo spot? Quando conviene davvero (e cosa dice l'AI Act)"
+parola_evidenziata: "Voce AI"
 titolo_seo: "Voce AI o speaker per spot e video aziendali? Quando conviene e cosa dice l'AI Act | Riccardo Vojvoda"
 descrizione_seo: "Una voce sintetica funziona bene per testi semplici, social e video informativi, soprattutto in inglese. Più il testo chiede interpretazione, più conviene uno speaker. Cosa cambia nel lavoro, dove si sente la differenza, licenze e obblighi dell'AI Act dal 2 agosto 2026."
 date: 2026-10-13

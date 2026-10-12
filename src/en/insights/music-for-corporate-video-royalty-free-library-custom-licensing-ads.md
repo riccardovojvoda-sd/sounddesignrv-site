@@ -1,5 +1,6 @@
 ---
 titolo: "Music for a corporate video: royalty free, library or custom? What changes for licensing and ads"
+parola_evidenziata: "royalty free"
 titolo_seo: "Music for a corporate video: royalty free, library or custom? Licensing and ads | Riccardo Vojvoda"
 descrizione_seo: "The three routes to music for a corporate video: royalty free by subscription, library music, custom music. What the licence covers, what a collecting society does and does not do, what to check before a paid campaign on YouTube and Meta."
 date: 2026-09-29

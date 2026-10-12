@@ -15,7 +15,7 @@ classeBody: lettura
   <header class="pagina-testa">
     <div class="contenitore articolo-testa">
       <p class="briciole"><a href="{{ t.url.approfondimenti }}">{{ t.menu.approfondimenti }}</a>{% if categoria %} / {{ categoria }}{% endif %}</p>
-      <h1>{{ titolo }}</h1>
+      <h1>{{ titolo | titoloEvidenziato(parola_evidenziata) | safe }}</h1>
       {%- if sottotitolo %}<p class="pagina-sottotitolo">{{ sottotitolo }}</p>{% endif %}
       <p class="articolo-meta">
         <time datetime="{{ page.date | dataIso }}">{{ t.articolo.pubblicato }} {{ page.date | dataLunga(lang) }}</time>

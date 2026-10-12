@@ -1,5 +1,6 @@
 ---
 titolo: "What LUFS should a video be delivered at? Instagram, YouTube, TV and cinema compared"
+parola_evidenziata: "LUFS"
 titolo_seo: "What LUFS should a video be delivered at? Instagram, YouTube, TV and cinema | Riccardo Vojvoda"
 descrizione_seo: "Loudness levels for every destination of a video: -14 LUFS for YouTube and social, -23 LUFS for European TV (EBU R128), -24 LUFS in Italy (AGCOM), -27 LKFS dialogue for Netflix, calibrated theatre for cinema. With true peak and what platforms do to the file."
 date: 2026-09-24

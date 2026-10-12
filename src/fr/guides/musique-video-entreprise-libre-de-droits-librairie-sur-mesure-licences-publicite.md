@@ -1,5 +1,6 @@
 ---
 titolo: "Musique pour une vidéo d'entreprise : libre de droits, librairie ou sur mesure ? Ce qui change pour les droits et la publicité"
+parola_evidenziata: "libre de droits"
 titolo_seo: "Musique pour une vidéo d'entreprise : libre de droits, librairie ou sur mesure ? Droits et publicité | Riccardo Vojvoda"
 descrizione_seo: "Les trois voies pour la musique d'une vidéo d'entreprise : libre de droits par abonnement, musique de librairie, musique sur mesure. Ce que couvre la licence, ce que fait et ne fait pas une société de gestion collective, ce qu'il faut vérifier avant une campagne sponsorisée sur YouTube et Meta."
 date: 2026-09-29

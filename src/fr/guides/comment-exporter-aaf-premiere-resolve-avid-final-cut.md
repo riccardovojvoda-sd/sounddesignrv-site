@@ -1,5 +1,6 @@
 ---
 titolo: "Comment exporter l'AAF pour la post-production audio depuis Premiere Pro, DaVinci Resolve, Avid et Final Cut Pro"
+parola_evidenziata: "exporter l'AAF"
 titolo_seo: "Comment exporter l'AAF pour la post-production audio depuis Premiere, Resolve, Avid et Final Cut | Riccardo Vojvoda"
 descrizione_seo: "Les réglages d'export AAF pour Pro Tools, logiciel par logiciel : audio incorporé, poignées, 48 kHz 24 bits, effets désactivés. Premiere Pro, DaVinci Resolve, Avid Media Composer et Final Cut Pro avec X2Pro."
 date: 2026-09-24

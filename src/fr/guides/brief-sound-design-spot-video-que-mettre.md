@@ -1,5 +1,6 @@
 ---
 titolo: "Le brief pour le sound design : les 10 choses à dire avant de commencer"
+parola_evidenziata: "brief pour le sound design"
 titolo_seo: "Brief de sound design pour un spot ou une vidéo : les 10 choses à écrire | Riccardo Vojvoda"
 descrizione_seo: "Que mettre dans le brief audio d'un spot ou d'une vidéo d'entreprise : style, diffusion, références, montage final, musique, voix, versions, fichiers à livrer, délais et révisions. Avec un modèle à copier."
 date: 2026-10-20

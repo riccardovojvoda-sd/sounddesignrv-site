@@ -1,5 +1,6 @@
 ---
 titolo: "What to deliver to your sound designer: video export, AAF and production sound"
+parola_evidenziata: "sound designer"
 titolo_seo: "What to deliver to your sound designer: video export, AAF and production sound | Riccardo Vojvoda"
 descrizione_seo: "The list of materials needed to start audio post-production on a video: reference video, AAF with handles, original production sound, music and a three-line brief. With the most common mistakes."
 date: 2026-09-22

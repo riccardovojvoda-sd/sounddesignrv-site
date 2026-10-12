@@ -1,5 +1,6 @@
 ---
 titolo: "Musica per un video aziendale: royalty free, libreria o su commissione? Cosa cambia per SIAE e per gli Ads"
+parola_evidenziata: "royalty free"
 titolo_seo: "Musica per un video aziendale: royalty free, libreria o su commissione? SIAE e Ads | Riccardo Vojvoda"
 descrizione_seo: "Le tre strade per la musica di un video aziendale: royalty free in abbonamento, musica di libreria, musica composta apposta. Cosa copre la licenza, cosa fa e non fa la SIAE, cosa controllare prima di una campagna sponsorizzata su YouTube e Meta."
 date: 2026-09-29

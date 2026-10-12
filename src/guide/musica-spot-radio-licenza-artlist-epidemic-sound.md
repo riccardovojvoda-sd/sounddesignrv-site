@@ -1,5 +1,6 @@
 ---
 titolo: "Musica per uno spot radio: cosa coprono le licenze di Artlist, Epidemic Sound e delle altre librerie"
+parola_evidenziata: "spot radio"
 titolo_seo: "Musica per uno spot radio: le licenze di Artlist, Epidemic Sound e delle altre librerie coprono la radio? | Riccardo Vojvoda"
 descrizione_seo: "Molti abbonamenti di musica royalty free non coprono la radio. Servizio per servizio: Artlist, Epidemic Sound, PremiumBeat, AudioJungle, Envato Elements, Soundstripe, Pond5, Motion Array, Uppbeat. E perché tagliare il brano non toglie l'obbligo della licenza."
 date: 2026-10-27

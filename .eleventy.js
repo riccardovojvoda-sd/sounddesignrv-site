@@ -101,6 +101,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("md", (testo) => md.render(String(testo || "").trim()));
   // Markdown senza il <p> intorno: per una riga sola, come i crediti con un link dentro
   eleventyConfig.addFilter("mdInline", (testo) => md.renderInline(String(testo || "").trim()));
+  // Titolo con la parola chiave evidenziata (campo parola_evidenziata della guida): solo nella pagina,
+  // <title>, meta e dati strutturati usano il titolo pulito
+  const escHtml = (s) => String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  eleventyConfig.addFilter("titoloEvidenziato", (titolo, parola) => {
+    const t = escHtml(titolo);
+    if (!parola) return t;
+    const p = escHtml(parola);
+    const i = t.indexOf(p);
+    return i < 0 ? t : t.slice(0, i) + `<span class="chiave">${p}</span>` + t.slice(i + p.length);
+  });
   eleventyConfig.addFilter("testoPiano", (html) =>
     String(html || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
   );

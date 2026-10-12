@@ -1,5 +1,6 @@
 ---
 titolo: "Que livrer au sound designer : export vidéo, AAF et son direct"
+parola_evidenziata: "sound designer"
 titolo_seo: "Que livrer au sound designer : export vidéo, AAF et son direct | Riccardo Vojvoda"
 descrizione_seo: "La liste des éléments nécessaires pour démarrer la post-production audio d'une vidéo : vidéo de référence, AAF avec poignées, son direct original, musiques et un brief de trois lignes. Avec les erreurs les plus fréquentes."
 date: 2026-09-22

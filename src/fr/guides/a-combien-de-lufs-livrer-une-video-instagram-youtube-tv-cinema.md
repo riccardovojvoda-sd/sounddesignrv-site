@@ -1,5 +1,6 @@
 ---
 titolo: "À combien de LUFS livrer une vidéo ? Instagram, YouTube, TV et cinéma comparés"
+parola_evidenziata: "LUFS"
 titolo_seo: "À combien de LUFS livrer une vidéo ? Instagram, YouTube, TV et cinéma | Riccardo Vojvoda"
 descrizione_seo: "Les niveaux de loudness pour chaque destination d'une vidéo : -14 LUFS pour YouTube et les réseaux sociaux, -23 LUFS pour la TV européenne (EBU R128), -24 LUFS en Italie (AGCOM), -27 LKFS dialogues pour Netflix, salle calibrée au cinéma. Avec le true peak et ce que les plateformes font au fichier."
 date: 2026-09-24

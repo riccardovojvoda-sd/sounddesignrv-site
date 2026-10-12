@@ -1,5 +1,6 @@
 ---
 titolo: "Cosa consegnare al sound designer: esporto video, AAF e presa diretta"
+parola_evidenziata: "sound designer"
 titolo_seo: "Cosa consegnare al sound designer: esporto video, AAF e presa diretta | Riccardo Vojvoda"
 descrizione_seo: "La lista dei materiali che servono per iniziare la post-produzione audio di un video: video di riferimento, AAF con handles, presa diretta originale, musiche e un brief di tre righe. Con gli errori più comuni."
 date: 2026-09-22

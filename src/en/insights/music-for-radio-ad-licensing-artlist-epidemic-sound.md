@@ -1,5 +1,6 @@
 ---
 titolo: "Music for a radio ad: what the licences of Artlist, Epidemic Sound and the other libraries cover"
+parola_evidenziata: "radio ad"
 titolo_seo: "Music for a radio ad: do Artlist, Epidemic Sound and the other music libraries cover radio? | Riccardo Vojvoda"
 descrizione_seo: "Many royalty free subscriptions do not cover radio. Service by service: Artlist, Epidemic Sound, PremiumBeat, AudioJungle, Envato Elements, Soundstripe, Pond5, Motion Array, Uppbeat. And why cutting the track does not remove the need for a licence."
 date: 2026-10-27

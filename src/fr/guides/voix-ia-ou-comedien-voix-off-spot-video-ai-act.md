@@ -1,5 +1,6 @@
 ---
 titolo: "Voix IA ou vrai comédien voix off pour votre spot ? Quand c'est vraiment intéressant (et ce que dit l'AI Act)"
+parola_evidenziata: "Voix IA"
 titolo_seo: "Voix IA ou comédien voix off pour un spot ou une vidéo d'entreprise ? Quand choisir et ce que dit l'AI Act | Riccardo Vojvoda"
 descrizione_seo: "Une voix de synthèse fonctionne bien pour les textes simples, les réseaux sociaux et les vidéos informatives, surtout en anglais. Plus le texte demande d'interprétation, plus un comédien s'impose. Ce qui change dans le travail, où l'on entend la différence, licences et obligations de l'AI Act à partir du 2 août 2026."
 date: 2026-10-13

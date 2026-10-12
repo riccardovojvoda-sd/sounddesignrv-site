@@ -5,7 +5,7 @@
   <a href="{{ a.url }}" class="voce-articolo">
     {%- if a.data.copertina %}<span class="voce-articolo-cop"><img src="{{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(480) }}" srcset="{{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(480) }} 480w, {{ ("approfondimenti/" + a.data.copertina) | imgUrlSync(800) }} 800w" sizes="(min-width: 48em) 18rem, (max-width: 36em) 100vw, 32vw" width="480" height="270" alt="" loading="lazy" decoding="async"></span>{% endif %}
     <span class="voce-articolo-testo">
-      <strong>{{ a.data.titolo }}</strong>
+      <strong>{{ a.data.titolo | titoloEvidenziato(a.data.parola_evidenziata) | safe }}</strong>
       <span>{{ a.data.descrizione_seo or a.data.descrizione }}</span>
       {%- if not senza_data %}<small><time datetime="{{ a.date | dataIso }}">{{ a.date | dataLunga(l) }}</time></small>{% endif %}
     </span>

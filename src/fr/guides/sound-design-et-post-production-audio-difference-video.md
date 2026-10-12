@@ -1,5 +1,6 @@
 ---
 titolo: "Sound design et post-production audio pour la vidéo : quelle différence et que payez-vous vraiment"
+parola_evidenziata: "post-production audio"
 titolo_seo: "Sound design ou post-production audio pour la vidéo ? Différences et ce qu'il faut demander | Riccardo Vojvoda"
 descrizione_seo: "Sound design et post-production audio sont souvent employés comme synonymes. La vraie différence se situe entre la partie créative (effets sonores, ambiances, bruitage, transitions) et la partie technique (montage, nettoyage, mixage, loudness, livraison). Ce que couvre chacune et ce qu'il faut mettre dans un brief."
 date: 2026-10-06

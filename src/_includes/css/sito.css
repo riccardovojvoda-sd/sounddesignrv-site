@@ -259,6 +259,8 @@ p{margin:0 0 1em}
 .pagina-testa-ritratto{display:grid;grid-template-columns:1fr auto;gap:2rem 3rem;align-items:end}
 .ritratto{width:min(60vw,26rem);height:auto;border-radius:var(--raggio);box-shadow:.75rem .75rem 0 var(--verdigris);margin:0 .75rem calc(-1*clamp(2rem,5vw,4rem) - 6rem) 0}
 .prosa strong,.evidenzia{font-weight:600;background:linear-gradient(transparent 62%,rgba(237,210,134,.7) 62%)}
+/* Parola chiave nei titoli delle guide: tratto di evidenziatore sotto la parola (anche su più righe), più tenue nello scuro */
+.chiave{background:linear-gradient(transparent 58%,rgba(237,210,134,.8) 58%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .08em}
 .tema-verdigris .evidenzia{background:linear-gradient(transparent 55%,var(--flax) 55%);text-decoration:none}
 .pagina-testa-ritratto+.pagina-corpo,.pagina:has(.pagina-testa-ritratto) .pagina-corpo{padding-top:1rem}
 @media(max-width:48em){.pagina-testa-ritratto{grid-template-columns:1fr}.ritratto{margin:0 .75rem 0 0;width:min(75vw,20rem)}}
@@ -382,6 +384,7 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 .scuro .griglia-schede>.scheda-box:nth-child(4n+4){background:rgba(230,226,220,.05);border-top-color:var(--testo)}
 .scuro .prosa h2:nth-of-type(4n+4)::before{background:var(--testo)}
 .scuro .prosa strong,.scuro .evidenzia,.scuro .tema-verdigris .evidenzia{background:linear-gradient(transparent 62%,rgba(237,210,134,.28) 62%)}
+.scuro .chiave{background:linear-gradient(transparent 58%,rgba(237,210,134,.30) 58%)}
 .scuro .capitoli-lista button{background:rgba(230,226,220,.06)}
 .scuro .cookie-banner{background:#1F201D}
 .scuro .cookie-banner .bottone{background:var(--verdigris);border-color:var(--verdigris);color:var(--jet)}
