@@ -37,6 +37,19 @@ I work alongside directors, video production companies, communication agencies a
 
 You bring the pictures. I bring the ear, the craft and the workflow. Remote or on site, in Italian, English and French.
 
+<h2 id="as-a-team">Video and sound, as one team</h2>
+
+If you don't have the footage yet, we can make it together: one team, from the shoot to the mix.
+
+<div class="griglia-schede">
+<div class="scheda-box scheda-partner">
+<h3>Video with sound, with CROMO</h3>
+<p>CROMO is the video production company led by my brother Edoardo Vojvoda: cinematic storytelling for branded content and documentaries. He does the picture, I do the sound, from location recording to the final mix. We have worked together since 2015.</p>
+<p><strong>Together:</strong> <a href="/en/projects/maserati-mc20/">Maserati MC20</a>, <a href="/en/projects/jw-anderson-diadora-equipe/">JW Anderson x Diadora</a>, <a href="/en/projects/diadora-run-valley/">Diadora Run Valley</a>. <a href="/en/partners/#cromo">All our work with CROMO</a>.</p>
+<p><a href="/en/contact/">Ask for a quote for video and sound</a></p>
+</div>
+</div>
+
 ## Skills
 
 <div class="griglia-schede">

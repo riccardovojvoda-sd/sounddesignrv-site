@@ -37,6 +37,19 @@ Lavoro a fianco di registi, produzioni video, agenzie di comunicazione e videoma
 
 Voi portate le immagini. Io porto l'orecchio, la tecnica e il workflow. Disponibile da remoto o in presenza, in italiano, inglese e francese.
 
+<h2 id="in-squadra">Video e suono, in squadra</h2>
+
+Se le immagini non le avete ancora, possiamo farle insieme: un'unica squadra, dalle riprese al mix.
+
+<div class="griglia-schede">
+<div class="scheda-box scheda-partner">
+<h3>Video con suono, con CROMO</h3>
+<p>CROMO è la casa di produzione video guidata da mio fratello Edoardo Vojvoda: racconto cinematografico per branded content e documentari. Lui il video, io il suono, dalla presa diretta al mix. Lavoriamo insieme dal 2015.</p>
+<p><strong>Insieme:</strong> <a href="/progetti/maserati-mc20/">Maserati MC20</a>, <a href="/progetti/jw-anderson-diadora-equipe/">JW Anderson x Diadora</a>, <a href="/progetti/diadora-run-valley/">Diadora Run Valley</a>. <a href="/partner/#cromo">Tutti i lavori con CROMO</a>.</p>
+<p><a href="/contatti/">Chiedi un preventivo per video e suono</a></p>
+</div>
+</div>
+
 ## Competenze
 
 <div class="griglia-schede">

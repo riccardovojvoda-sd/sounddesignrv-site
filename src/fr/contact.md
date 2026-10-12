@@ -17,7 +17,7 @@ Je suis Riccardo Vojvoda, sound designer, monteur-mixeur son et ingénieur du so
 
 Pour un devis, j'ai besoin du matériel (ou d'un aperçu), d'un brief et, si vous en avez, de quelques références esthétiques. La [FAQ](/fr/faq/) explique quoi livrer et comment se déroule le processus.
 
-Vous êtes un studio, une agence ou une société de production et vous souhaitez proposer une collaboration suivie ? Passez par le [Network](/fr/network/#proponi).
+Vous êtes un studio, une agence ou une société de production et vous souhaitez proposer une collaboration suivie ? Passez par la page [Partenaires](/fr/partenaires/#proponi).
 
 <p><a class="bottone" href="{{ sito.profiloPdf }}" download>Télécharger le profil (PDF)</a></p>
 

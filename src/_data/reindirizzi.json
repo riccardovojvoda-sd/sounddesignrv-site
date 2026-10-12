@@ -34,5 +34,17 @@
   {
     "da": "/lufs/",
     "a": "/guide/a-quanti-lufs-consegnare-un-video-instagram-youtube-tv-cinema/"
+  },
+  {
+    "da": "/network/",
+    "a": "/partner/"
+  },
+  {
+    "da": "/en/network/",
+    "a": "/en/partners/"
+  },
+  {
+    "da": "/fr/network/",
+    "a": "/fr/partenaires/"
   }
 ]
