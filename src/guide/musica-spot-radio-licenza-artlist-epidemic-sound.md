@@ -41,6 +41,7 @@ Le altre convinzioni che girano:
 - **"Basta citare l'autore."** Il credito non sostituisce la licenza.
 - **"Royalty free vuol dire gratis."** Vuol dire che la licenza si paga una volta, o con l'abbonamento, e non a ogni passaggio.
 - **"Ho l'abbonamento, quindi posso usarlo ovunque."** L'abbonamento copre gli usi scritti nella licenza, e la radio spesso non c'è.
+- **"È Creative Commons, quindi si può usare."** Dipende dalla versione: le NC escludono gli usi a scopo commerciale, e uno spot lo è; le ND vietano le modifiche, e un brano rimontato sotto una voce rischia di esserlo. Restano CC BY e CC BY-SA, che chiedono di citare l'autore in un modo adatto al mezzo: in uno spot radio di 30 secondi è difficile, e la licenza va verificata brano per brano.
 
 ## Servizio per servizio
 
@@ -91,4 +92,4 @@ Per uno spot radio con la musica giusta e la licenza in ordine, [scrivimi](/cont
 
 ## Fonti
 
-<p class="fonti">Legge 22 aprile 1941 n. 633, artt. 18, 70 e 72 (normattiva.it) · Artlist Help Center, "Understanding Artlist's license" e "Artlist's Music and SFX plans explained" (help.artlist.io) · Epidemic Sound, "Business plan" (epidemicsound.com) · PremiumBeat Help, "How am I allowed to use the music I license from PremiumBeat?" (premiumbeat.com) · AudioJungle, "Music licenses" (audiojungle.net) · Envato Elements Help, "License Terms" (help.elements.envato.com) · Soundstripe, "Terms and Conditions of Use" e "What does each Soundstripe subscription plan cover?" (soundstripe.com) · Pond5 Help, "All about our licenses" (pond5.com) · Motion Array Help, "Can I use Motion Array assets for commercial use?" (help.motionarray.com) · Uppbeat, "Commercial licenses" (uppbeat.io) · SIAE, "Condizioni di licenza per l'utilizzazione del repertorio SIAE nei video" (siae.it).</p>
+<p class="fonti">Legge 22 aprile 1941 n. 633, artt. 18, 70 e 72 (normattiva.it) · Artlist Help Center, "Understanding Artlist's license" e "Artlist's Music and SFX plans explained" (help.artlist.io) · Epidemic Sound, "Business plan" (epidemicsound.com) · PremiumBeat Help, "How am I allowed to use the music I license from PremiumBeat?" (premiumbeat.com) · AudioJungle, "Music licenses" (audiojungle.net) · Envato Elements Help, "License Terms" (help.elements.envato.com) · Soundstripe, "Terms and Conditions of Use" e "What does each Soundstripe subscription plan cover?" (soundstripe.com) · Pond5 Help, "All about our licenses" (pond5.com) · Motion Array Help, "Can I use Motion Array assets for commercial use?" (help.motionarray.com) · Uppbeat, "Commercial licenses" (uppbeat.io) · Creative Commons, "Frequently Asked Questions" (creativecommons.org) · SIAE, "Condizioni di licenza per l'utilizzazione del repertorio SIAE nei video" (siae.it).</p>
