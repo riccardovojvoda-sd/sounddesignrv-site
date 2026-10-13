@@ -12,11 +12,22 @@ eleventyExcludeFromCollections: true
 <meta charset="utf-8">
 <title>Pagina spostata</title>
 <meta name="robots" content="noindex">
-<link rel="canonical" href="{{ sito.url }}{{ r.a }}">
+{#- "a" può avere parametri (link corti /guida/... con le utm per LinkedIn): canonical e anteprima social puntano alla pagina pulita #}
+{%- set pulito = r.a.split("?")[0] %}
+<link rel="canonical" href="{{ sito.url }}{{ pulito }}">
+{%- for p in collections.all %}{% if p.url == pulito %}
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ sito.nome }}">
+<meta property="og:title" content="{{ p.data.titolo_seo or p.data.titolo }}">
+<meta property="og:description" content="{{ p.data.descrizione_seo or p.data.descrizione }}">
+<meta property="og:url" content="{{ sito.url }}{{ pulito }}">
+<meta property="og:image" content="{{ sito.url }}{{ (p.data.immagine_og or (("approfondimenti/" + p.data.copertina) if p.data.copertina else "showreel-2026-cover.png")) | imgUrlSync }}">
+<meta name="twitter:card" content="summary_large_image">
+{%- endif %}{% endfor %}
 <meta http-equiv="refresh" content="0; url={{ r.a }}">
-<script>location.replace("{{ r.a }}");</script>
+<script>location.replace({{ r.a | dump | safe }});</script>
 </head>
 <body>
-<p>Questa pagina si è spostata: <a href="{{ r.a }}">{{ sito.url }}{{ r.a }}</a></p>
+<p>Questa pagina si è spostata: <a href="{{ r.a }}">{{ sito.url }}{{ pulito }}</a></p>
 </body>
 </html>

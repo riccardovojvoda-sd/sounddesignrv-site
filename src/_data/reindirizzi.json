@@ -46,5 +46,41 @@
   {
     "da": "/fr/network/",
     "a": "/fr/partenaires/"
+  },
+  {
+    "da": "/guida/",
+    "a": "/guide/"
+  },
+  {
+    "da": "/guida/consegna/",
+    "a": "/guide/cosa-consegnare-al-sound-designer-aaf-handles-presa-diretta/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s01"
+  },
+  {
+    "da": "/guida/aaf/",
+    "a": "/guide/come-esportare-aaf-premiere-resolve-avid-final-cut/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s41"
+  },
+  {
+    "da": "/guida/lufs/",
+    "a": "/guide/a-quanti-lufs-consegnare-un-video-instagram-youtube-tv-cinema/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s02"
+  },
+  {
+    "da": "/guida/musica-aziendale/",
+    "a": "/guide/musica-video-aziendale-royalty-free-libreria-commissione-siae-ads/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s04"
+  },
+  {
+    "da": "/guida/sound-design-o-post/",
+    "a": "/guide/sound-design-e-post-produzione-audio-differenza/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s03"
+  },
+  {
+    "da": "/guida/voce-ai/",
+    "a": "/guide/voce-ai-o-speaker-spot-video-ai-act/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s06"
+  },
+  {
+    "da": "/guida/brief/",
+    "a": "/guide/brief-sound-design-spot-video-cosa-scrivere/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s08"
+  },
+  {
+    "da": "/guida/musica-radio/",
+    "a": "/guide/musica-spot-radio-licenza-artlist-epidemic-sound/?utm_source=linkedin&utm_medium=social&utm_campaign=guide-s42"
   }
 ]
