@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Spot radio Case della Comunità: con o senza effetti sonori</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFBFA; --card:#ffffff; --text:#2D2D2A; --muted:#6b6b66; --line:#ebe4df;
+  --accent:#4f8f8b; --on-accent:#ffffff; --accent-soft:#e3f0ef; --star:#E0A93B; --star-off:#ddd6d0;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1f1f1d; --card:#2a2a27; --text:#f3eeea; --muted:#a8a39d; --line:#3a3a36;
+    --accent:#7BB5B2; --on-accent:#1f1f1d; --accent-soft:#2f3c3b; --star:#EDD286; --star-off:#4a4a45;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font:400 16px/1.55 Poppins,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:28px 16px 140px}
+.firma{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+.firma a{color:inherit;text-decoration:none}
+.firma .sito{text-transform:none;letter-spacing:.02em}
+h1{font-size:26px;line-height:1.25;font-weight:600;margin:0 0 4px}
+.sotto{color:var(--muted);margin:0 0 18px}
+.brief{background:var(--accent-soft);border-radius:14px;padding:14px 16px;margin:0 0 28px}
+.brief p{margin:0 0 8px}.brief p:last-child{margin:0}
+h2{font-size:18px;font-weight:600;margin:32px 0 12px;color:var(--accent)}
+/* ogni gruppo può avere un suo colore (es. musiche) per distinguerlo dalle voci */
+.gruppo .voce{border-left:4px solid var(--accent)}
+.tema-musica,.tema-radio{--accent:#B5654A; --accent-soft:#f6e7e1}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .tema-musica,:root:not([data-theme="light"]) .tema-radio{--accent:#E39A7E; --accent-soft:#3d302b}
+}
+.voce{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
+.testa{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px}
+.nome{font-weight:600;font-size:17px}
+.traccia{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line)}
+.traccia:first-of-type{border-top:0}
+.play{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;cursor:pointer}
+.play svg{width:18px;height:18px;fill:currentColor}
+.info{flex:1;min-width:0}
+.etichetta{font-size:14px;color:var(--muted);margin:0 0 6px}
+.barra{position:relative;height:8px;border-radius:4px;background:var(--line);cursor:pointer;touch-action:none}
+.barra i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:var(--accent);width:0}
+.tempo{font-size:12px;color:var(--muted);margin-top:4px;font-variant-numeric:tabular-nums}
+.stop{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer}
+.stop svg{width:12px;height:12px;fill:currentColor}
+.voce.prima{background:var(--accent-soft);border-color:var(--accent)}
+.voce.alt{border-color:var(--accent)}
+/* proposta consigliata: bordo pieno e etichetta accanto al nome */
+.voce.consigliata{border:2px solid var(--accent)}
+.badge{flex:none;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--on-accent);background:var(--accent);border-radius:999px;padding:3px 10px}
+.scelte{display:flex;gap:8px;margin-top:10px}
+.scelte button{flex:1;border:1px solid var(--accent);border-radius:999px;background:transparent;color:var(--accent);padding:9px 10px;font:600 14px Poppins,system-ui,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+.scelte button.on{background:var(--accent);color:var(--on-accent)}
+.scelte svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:3;display:none}
+.scelte button.on svg{display:block}
+.stato{display:inline-flex;align-items:center;gap:4px;margin-right:12px}
+.stato svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:3}
+.stato.ok{color:var(--text)}
+textarea{width:100%;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--text);font:inherit;font-size:15px;padding:10px;resize:vertical;min-height:44px}
+.vol{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);margin:0 0 6px}
+.vol input{flex:1;max-width:220px;accent-color:var(--accent)}
+.vol b{font-weight:500;font-variant-numeric:tabular-nums;min-width:3.5ch}
+.notavol{font-size:13px;color:var(--muted);margin:0 0 12px}
+.schermo{margin:0 0 14px;border-radius:10px;overflow:hidden;background:#000}
+.schermo video{display:block;width:100%;height:auto;aspect-ratio:16/9;cursor:pointer}
+.piede{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.piede .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.progresso{flex:1;font-size:13px;color:var(--muted);min-width:60px}
+.btn{border:0;border-radius:999px;padding:11px 15px;font:600 14px Poppins,system-ui,sans-serif;cursor:pointer}
+.btn.primario{background:var(--accent);color:var(--on-accent)}
+.btn.secondario{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.avviso{font-size:12px;line-height:1.4;color:var(--muted);width:100%;margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="firma"><a href="https://www.sounddesignrv.com/?utm_source=casting&amp;utm_medium=pagina-ascolto&amp;utm_campaign=casting-voce" target="_blank" rel="noopener">Riccardo Vojvoda · Sound Design · <span class="sito">www.sounddesignrv.com</span></a></p>
+  <h1>Spot radio Case della Comunità: con o senza effetti sonori</h1>
+  <p class="sotto"></p>
+  <div class="brief"><p>Due versioni dello spot, con e senza effetti sonori</p></div>
+  <div class="vol"><span>Volume</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.9" aria-label="Volume"></div>
+  <div id="gruppi"></div>
+</div>
+<div class="piede"><div class="in">
+  <div class="progresso" id="progresso"></div>
+  <button class="btn secondario" id="copia">Copia le scelte</button>
+  <button class="btn primario" id="invia">Invia le scelte</button>
+  <p class="avviso" id="avviso"></p>
+</div></div>
+<script>
+const DATI = {"mail": "riccardo@sounddesignrv.com", "oggetto": "Spot radio Case della Comunità: effetti sonori", "titolo": "Spot radio Case della Comunità: con o senza effetti sonori", "gruppi": [{"titolo": "Spot radio", "tema": "radio", "categoria": "Spot radio", "voci": [{"id": "spot-radio-effetti-sonori", "nome": "Effetti sonori", "tracce": [{"etichetta": "Spot radio 30\"", "src": "spot-radio-cdc-effetti-sonori-audio/spot-radio-effetti-sonori-spot-radio-30.mp3?v=70f15332"}], "consigliata": ""}, {"id": "spot-radio-solo-musica-e-voce", "nome": "Solo musica e voce", "tracce": [{"etichetta": "Spot radio 30\"", "src": "spot-radio-cdc-effetti-sonori-audio/spot-radio-solo-musica-e-voce-spot-radio-30.mp3?v=68cfd4be"}], "consigliata": ""}], "sincronizza": false}], "una_scelta": true, "copia": "Copia le scelte"};
+const CHIAVE = 'casting:' + location.pathname;
+const ICONA = {
+  play:'<svg viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg>',
+  pausa:'<svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>',
+  stop:'<svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/></svg>',
+  capo:'<svg viewBox="0 0 24 24"><path d="M5 4h3v16H5zM20 4v16L9 12z"/></svg>',
+  spunta:'<svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>'
+};
+// stato: note per proposta + per categoria (es. Musica, Voce) la 1ª scelta e l'alternativa facoltativa
+let stato = {};
+try { stato = JSON.parse(localStorage.getItem(CHIAVE) || '{}'); } catch (e) {}
+if (!stato.note) stato = {note: {}, scelte: {}};
+const CATEGORIE = [...new Set(DATI.gruppi.map(g => g.categoria))];
+CATEGORIE.forEach(c => stato.scelte[c] = stato.scelte[c] || {prima: '', alt: ''});
+const schede = [];
+function salva(){ try { localStorage.setItem(CHIAVE, JSON.stringify(stato)); } catch (e) {} }
+
+const lettori = [];
+let volume = 0.9;
+const fmt = s => isFinite(s) ? Math.floor(s/60) + ':' + String(Math.floor(s%60)).padStart(2,'0') : '0:00';
+
+// gruppo.vol = cursore del volume del gruppo (es. radio abbassata al livello della TV)
+const volDi = a => volume * a.gain * (a.gruppo.vol ?? 1);
+function creaTraccia(t, g){
+  const riga = document.createElement('div'); riga.className = 'traccia';
+  let a, schermo;
+  if (t.video) {
+    a = document.createElement('video'); a.preload = 'metadata'; a.playsInline = true; a.src = t.src + '#t=0.1';
+    schermo = document.createElement('div'); schermo.className = 'schermo'; schermo.append(a);
+  } else { a = new Audio(); a.preload = g.sincronizza ? 'metadata' : 'none'; a.src = t.src; }
+  a.gain = t.gain || 1; a.gruppo = g; a.volume = volDi(a);
+  const play = document.createElement('button'); play.className = 'play'; play.innerHTML = ICONA.play; play.setAttribute('aria-label','Play ' + t.etichetta);
+  const info = document.createElement('div'); info.className = 'info';
+  info.innerHTML = '<p class="etichetta"></p><div class="barra"><i></i></div><div class="tempo">0:00</div>';
+  info.querySelector('.etichetta').textContent = t.etichetta;
+  const stop = document.createElement('button'); stop.className = 'stop'; stop.innerHTML = ICONA.stop; stop.setAttribute('aria-label','Stop');
+  const barra = info.querySelector('.barra'), fill = barra.querySelector('i'), tempo = info.querySelector('.tempo');
+  // nei gruppi sincronizzati si passa da una versione all'altra allo stesso punto del brano
+  const parti = () => {
+    lettori.forEach(x => { if (x !== a) x.pause(); });
+    const u = g.ultimo; g.ultimo = a;
+    if (!g.sincronizza || !u || u === a) { a.play(); return; }
+    const t0 = u.currentTime;
+    if (a.readyState >= 1) { a.currentTime = t0; a.play(); }
+    else { a.addEventListener('loadedmetadata', () => { a.currentTime = t0; a.play(); }, {once:true}); a.load(); }
+  };
+  play.onclick = () => { if (a.paused) parti(); else a.pause(); };
+  // gruppo con video: il video (muto) segue l'audio che sta suonando
+  if (g.schermo) {
+    const v = g.schermo;
+    a.addEventListener('play', () => { v.currentTime = a.currentTime; v.play().catch(() => {}); });
+    a.addEventListener('pause', () => { if (g.ultimo === a) { v.pause(); v.currentTime = a.currentTime; } });
+    a.addEventListener('seeked', () => { if (g.ultimo === a) v.currentTime = a.currentTime; });
+    a.addEventListener('timeupdate', () => { if (g.ultimo === a && !a.paused && Math.abs(v.currentTime - a.currentTime) > 0.12) v.currentTime = a.currentTime; });
+    a.addEventListener('ended', () => { v.pause(); v.currentTime = 0; });
+    a.play_ = play.onclick;
+  }
+  if (schermo) a.onclick = play.onclick;
+  stop.onclick = () => { a.pause(); a.currentTime = 0; };
+  // da capo: torna all'inizio e suona (anche se stava già suonando)
+  const capo = document.createElement('button'); capo.className = 'stop'; capo.innerHTML = ICONA.capo; capo.setAttribute('aria-label','Da capo');
+  capo.onclick = () => { a.currentTime = 0; if (a.paused) parti(); };
+  a.addEventListener('play', () => play.innerHTML = ICONA.pausa);
+  a.addEventListener('pause', () => play.innerHTML = ICONA.play);
+  a.addEventListener('ended', () => { play.innerHTML = ICONA.play; a.currentTime = 0; });
+  a.addEventListener('timeupdate', () => {
+    fill.style.width = (a.duration ? a.currentTime / a.duration * 100 : 0) + '%';
+    tempo.textContent = fmt(a.currentTime) + ' / ' + fmt(a.duration);
+  });
+  a.addEventListener('loadedmetadata', () => tempo.textContent = '0:00 / ' + fmt(a.duration));
+  const cerca = e => {
+    const r = barra.getBoundingClientRect(); const x = Math.min(Math.max(e.clientX - r.left, 0), r.width);
+    const vai = () => { a.currentTime = x / r.width * a.duration; };
+    if (a.duration) vai(); else { a.addEventListener('loadedmetadata', vai, {once:true}); a.load(); }
+  };
+  barra.addEventListener('pointerdown', e => { cerca(e); barra.setPointerCapture(e.pointerId); });
+  barra.addEventListener('pointermove', e => { if (e.buttons) cerca(e); });
+  lettori.push(a); g.primo = g.primo || a;
+  riga.append(play, info, capo, stop);
+  if (!schermo) return riga;
+  const box = document.createElement('div'); box.append(schermo, riga); return box;
+}
+
+function creaVoce(v, categoria, g){
+  const card = document.createElement('div'); card.className = 'voce';
+  const sc = stato.scelte[categoria];
+  const testa = document.createElement('div'); testa.className = 'testa';
+  const nome = document.createElement('div'); nome.className = 'nome'; nome.textContent = v.nome;
+  testa.append(nome);
+  if (v.consigliata) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = v.consigliata; testa.append(b); card.classList.add('consigliata'); }
+  card.append(testa);
+  v.tracce.forEach(t => card.append(creaTraccia(t, g)));
+  const scelte = document.createElement('div'); scelte.className = 'scelte';
+  const bottone = (testo, chiave, altra) => {
+    const b = document.createElement('button'); b.innerHTML = ICONA.spunta + '<span></span>'; b.querySelector('span').textContent = testo;
+    b.setAttribute('aria-pressed', 'false');
+    b.onclick = () => {
+      if (sc[chiave] === v.id) sc[chiave] = '';
+      else { sc[chiave] = v.id; if (sc[altra] === v.id) sc[altra] = ''; }
+      salva(); schede.forEach(s => s.disegna()); aggiorna();
+    };
+    scelte.append(b); return b;
+  };
+  // con una_scelta si sceglie una sola proposta per categoria: niente alternativa
+  const bPrima = bottone(DATI.una_scelta ? 'Scegli questa' : '1ª scelta', 'prima', 'alt'), bAlt = DATI.una_scelta ? null : bottone('Alternativa', 'alt', 'prima');
+  card.append(scelte);
+  const nota = document.createElement('textarea'); nota.placeholder = 'Nota (facoltativa)'; nota.value = stato.note[v.id] || ''; nota.rows = 1;
+  nota.oninput = () => { stato.note[v.id] = nota.value; salva(); };
+  card.append(nota);
+  const disegna = () => {
+    const p = sc.prima === v.id, a = sc.alt === v.id;
+    card.classList.toggle('prima', p); card.classList.toggle('alt', a);
+    bPrima.classList.toggle('on', p); bPrima.setAttribute('aria-pressed', p);
+    if (bAlt) { bAlt.classList.toggle('on', a); bAlt.setAttribute('aria-pressed', a); }
+  };
+  schede.push({disegna});
+  disegna();
+  return card;
+}
+
+const contenitore = document.getElementById('gruppi');
+DATI.gruppi.forEach(g => {
+  const sez = document.createElement('section'); sez.className = 'gruppo' + (g.tema ? ' tema-' + g.tema : '');
+  const h = document.createElement('h2'); h.textContent = g.titolo; sez.append(h);
+  if (g.video) {
+    const v = document.createElement('video'); v.muted = true; v.playsInline = true; v.preload = 'metadata'; v.src = g.video + '#t=0.1';
+    const box = document.createElement('div'); box.className = 'schermo'; box.append(v); sez.append(box);
+    g.schermo = v;
+    // clic sul video = play/pausa dell'audio scelto per ultimo (o del primo)
+    v.onclick = () => { const a = g.ultimo || g.primo; if (a) a.play_(); };
+  }
+  if (g.volume) {
+    g.vol = g.volume.gain;
+    const r = document.createElement('div'); r.className = 'vol';
+    r.innerHTML = '<span></span><input type="range" min="0" max="1" step="0.01"><b></b>';
+    r.firstChild.textContent = g.volume.etichetta;
+    const cur = r.querySelector('input'), pc = r.querySelector('b');
+    cur.value = g.vol; cur.setAttribute('aria-label', g.volume.etichetta);
+    const scrivi = () => pc.textContent = Math.round(g.vol * 100) + '%';
+    cur.oninput = () => { g.vol = +cur.value; scrivi(); lettori.forEach(a => a.volume = volDi(a)); };
+    scrivi(); sez.append(r);
+    if (g.volume.nota) { const n = document.createElement('p'); n.className = 'notavol'; n.textContent = g.volume.nota; sez.append(n); }
+  }
+  g.voci.forEach(v => sez.append(creaVoce(v, g.categoria, g)));
+  contenitore.append(sez);
+});
+
+document.getElementById('volume').oninput = e => { volume = +e.target.value; lettori.forEach(a => a.volume = volDi(a)); };
+
+const nomeDi = id => { for (const g of DATI.gruppi) for (const v of g.voci) if (v.id === id) return v.nome; return ''; };
+function aggiorna(){
+  const p = document.getElementById('progresso'); p.textContent = '';
+  CATEGORIE.forEach(c => {
+    const ok = !!stato.scelte[c].prima;
+    const s = document.createElement('span'); s.className = 'stato' + (ok ? ' ok' : '');
+    s.innerHTML = (ok ? ICONA.spunta : '') + '<span></span>';
+    s.lastChild.textContent = c + (ok ? '' : ': da scegliere');
+    p.append(s);
+  });
+}
+aggiorna();
+
+function testoMail(){
+  const righe = [DATI.titolo, ''];
+  CATEGORIE.forEach(c => {
+    const sc = stato.scelte[c];
+    righe.push(c.toUpperCase());
+    if (DATI.una_scelta) righe.push('Scelta: ' + (nomeDi(sc.prima) || 'non indicata'));
+    else {
+      righe.push('1ª scelta: ' + (nomeDi(sc.prima) || 'non indicata'));
+      righe.push('Alternativa: ' + (nomeDi(sc.alt) || 'nessuna'));
+    }
+    righe.push('');
+  });
+  const note = DATI.gruppi.flatMap(g => g.voci).filter(v => (stato.note[v.id] || '').trim());
+  if (note.length) { righe.push('NOTE'); note.forEach(v => righe.push('- ' + v.nome + ': ' + stato.note[v.id].trim())); }
+  return righe.join('\n');
+}
+const avviso = document.getElementById('avviso');
+avviso.textContent = 'Se la mail non si apre, "' + DATI.copia + '" copia il riepilogo da incollare in una mail a ' + DATI.mail + '.';
+document.getElementById('invia').onclick = () => {
+  location.href = 'mailto:' + DATI.mail + '?subject=' + encodeURIComponent(DATI.oggetto) + '&body=' + encodeURIComponent(testoMail());
+};
+document.getElementById('copia').onclick = async () => {
+  try { await navigator.clipboard.writeText(testoMail()); avviso.textContent = 'Copiato: basta incollarli in una mail a ' + DATI.mail + '.'; }
+  catch (e) { avviso.textContent = 'Copia non riuscita: le scelte si possono scrivere in una mail a ' + DATI.mail + '.'; }
+};
+</script>
+</body>
+</html>
