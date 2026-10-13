@@ -81,4 +81,9 @@ Pour un projet qui n'entre pas dans le modèle, ou pour partir d'une vidéo déj
 
 ## Sources
 
-<p class="fonti">IPA, ISBA, MCCA et PRCA, « Briefing an Agency », guide de bonnes pratiques (ipa.co.uk) · Mike Thornton, « Conforming &amp; Re-conforming In Pro Tools », Sound on Sound (soundonsound.com) · Production Expert, table ronde sur la reconformation du son sans montage verrouillé (production-expert.com) · UER, Recommandation R 128 sur la loudness (tech.ebu.ch).</p>
+<ul class="fonti">
+<li>IPA, ISBA, MCCA et PRCA, « Briefing an Agency », guide de bonnes pratiques (ipa.co.uk)</li>
+<li>Mike Thornton, « Conforming &amp; Re-conforming In Pro Tools », Sound on Sound (soundonsound.com)</li>
+<li>Production Expert, table ronde sur la reconformation du son sans montage verrouillé (production-expert.com)</li>
+<li>UER, Recommandation R 128 sur la loudness (tech.ebu.ch)</li>
+</ul>

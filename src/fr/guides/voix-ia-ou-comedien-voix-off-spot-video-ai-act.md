@@ -82,4 +82,8 @@ Le casting de la voix, humaine ou IA, peut être fait par celui qui s'occupe du 
 
 ## Sources
 
-<p class="fonti">Règlement (UE) 2024/1689 sur l'intelligence artificielle (AI Act), article 3 point 60 et article 50 (eur-lex.europa.eu) · Commission européenne, « Guidelines on transparency obligations for providers and deployers of certain AI systems » (digital-strategy.ec.europa.eu) · ElevenLabs, Terms of Service et Prohibited Use Policy (elevenlabs.io).</p>
+<ul class="fonti">
+<li>Règlement (UE) 2024/1689 sur l'intelligence artificielle (AI Act), article 3 point 60 et article 50 (eur-lex.europa.eu)</li>
+<li>Commission européenne, « Guidelines on transparency obligations for providers and deployers of certain AI systems » (digital-strategy.ec.europa.eu)</li>
+<li>ElevenLabs, Terms of Service et Prohibited Use Policy (elevenlabs.io)</li>
+</ul>

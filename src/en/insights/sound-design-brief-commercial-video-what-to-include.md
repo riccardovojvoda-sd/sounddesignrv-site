@@ -81,4 +81,9 @@ For a project that doesn't fit the template, or to start from a video that is al
 
 ## Sources
 
-<p class="fonti">IPA, ISBA, MCCA and PRCA, "Briefing an Agency", best practice guide (ipa.co.uk) · Mike Thornton, "Conforming &amp; Re-conforming In Pro Tools", Sound on Sound (soundonsound.com) · Production Expert, expert panel on re-conforming audio without picture lock (production-expert.com) · EBU, Recommendation R 128 on loudness (tech.ebu.ch).</p>
+<ul class="fonti">
+<li>IPA, ISBA, MCCA and PRCA, "Briefing an Agency", best practice guide (ipa.co.uk)</li>
+<li>Mike Thornton, "Conforming &amp; Re-conforming In Pro Tools", Sound on Sound (soundonsound.com)</li>
+<li>Production Expert, expert panel on re-conforming audio without picture lock (production-expert.com)</li>
+<li>EBU, Recommendation R 128 on loudness (tech.ebu.ch)</li>
+</ul>

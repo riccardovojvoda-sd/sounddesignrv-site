@@ -82,4 +82,8 @@ The voice casting, human or AI, can be done by whoever handles the video's audio
 
 ## Sources
 
-<p class="fonti">Regulation (EU) 2024/1689 on artificial intelligence (AI Act), Article 3 point 60 and Article 50 (eur-lex.europa.eu) · European Commission, "Guidelines on transparency obligations for providers and deployers of certain AI systems" (digital-strategy.ec.europa.eu) · ElevenLabs, Terms of Service and Prohibited Use Policy (elevenlabs.io).</p>
+<ul class="fonti">
+<li>Regulation (EU) 2024/1689 on artificial intelligence (AI Act), Article 3 point 60 and Article 50 (eur-lex.europa.eu)</li>
+<li>European Commission, "Guidelines on transparency obligations for providers and deployers of certain AI systems" (digital-strategy.ec.europa.eu)</li>
+<li>ElevenLabs, Terms of Service and Prohibited Use Policy (elevenlabs.io)</li>
+</ul>

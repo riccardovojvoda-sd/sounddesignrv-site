@@ -66,4 +66,12 @@ Avec la musique d'archive, on paie la recherche et le montage sur les images, qu
 
 ## Sources
 
-<p class="fonti">SIAE, "Condizioni di licenza per l'utilizzazione del repertorio SIAE nei video" (siae.it) · Epidemic Sound, "Pricing & Licensing", "Business music licensing" et "What is safelisting" (epidemicsound.com) · Epidemic Sound Help Center, "What happens after I cancel my subscription?" (help.epidemicsound.com) · Artlist, "Artlist License" et Help Center, "Client projects and coverage" (artlist.io) · YouTube Help, "How Content ID works" (support.google.com) · Meta, Rights Manager (facebook.com) · Soundrights, "Puoi usare una canzone di Instagram o TikTok in un video aziendale?" (soundrights.it).</p>
+<ul class="fonti">
+<li>SIAE, "Condizioni di licenza per l'utilizzazione del repertorio SIAE nei video" (siae.it)</li>
+<li>Epidemic Sound, "Pricing & Licensing", "Business music licensing" et "What is safelisting" (epidemicsound.com)</li>
+<li>Epidemic Sound Help Center, "What happens after I cancel my subscription?" (help.epidemicsound.com)</li>
+<li>Artlist, "Artlist License" et Help Center, "Client projects and coverage" (artlist.io)</li>
+<li>YouTube Help, "How Content ID works" (support.google.com)</li>
+<li>Meta, Rights Manager (facebook.com)</li>
+<li>Soundrights, "Puoi usare una canzone di Instagram o TikTok in un video aziendale?" (soundrights.it)</li>
+</ul>

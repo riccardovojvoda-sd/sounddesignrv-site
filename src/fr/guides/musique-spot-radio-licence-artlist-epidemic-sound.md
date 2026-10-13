@@ -92,4 +92,17 @@ Pour un spot radio avec la bonne musique et la licence en règle, [écrivez-moi]
 
 ## Sources
 
-<p class="fonti">Loi italienne n° 633 du 22 avril 1941, art. 18, 70 et 72 (normattiva.it) · Artlist Help Center, « Understanding Artlist's license » et « Artlist's Music and SFX plans explained » (help.artlist.io) · Epidemic Sound, « Business plan » (epidemicsound.com) · PremiumBeat Help, « How am I allowed to use the music I license from PremiumBeat? » (premiumbeat.com) · AudioJungle, « Music licenses » (audiojungle.net) · Envato Elements Help, « License Terms » (help.elements.envato.com) · Soundstripe, « Terms and Conditions of Use » et « What does each Soundstripe subscription plan cover? » (soundstripe.com) · Pond5 Help, « All about our licenses » (pond5.com) · Motion Array Help, « Can I use Motion Array assets for commercial use? » (help.motionarray.com) · Uppbeat, « Commercial licenses » (uppbeat.io) · Creative Commons, « Foire aux questions » (creativecommons.org) · SIAE, « Condizioni di licenza per l'utilizzazione del repertorio SIAE nei video » (siae.it).</p>
+<ul class="fonti">
+<li>Loi italienne n° 633 du 22 avril 1941, art. 18, 70 et 72 (normattiva.it)</li>
+<li>Artlist Help Center, « Understanding Artlist's license » et « Artlist's Music and SFX plans explained » (help.artlist.io)</li>
+<li>Epidemic Sound, « Business plan » (epidemicsound.com)</li>
+<li>PremiumBeat Help, « How am I allowed to use the music I license from PremiumBeat? » (premiumbeat.com)</li>
+<li>AudioJungle, « Music licenses » (audiojungle.net)</li>
+<li>Envato Elements Help, « License Terms » (help.elements.envato.com)</li>
+<li>Soundstripe, « Terms and Conditions of Use » et « What does each Soundstripe subscription plan cover? » (soundstripe.com)</li>
+<li>Pond5 Help, « All about our licenses » (pond5.com)</li>
+<li>Motion Array Help, « Can I use Motion Array assets for commercial use? » (help.motionarray.com)</li>
+<li>Uppbeat, « Commercial licenses » (uppbeat.io)</li>
+<li>Creative Commons, « Foire aux questions » (creativecommons.org)</li>
+<li>SIAE, « Condizioni di licenza per l'utilizzazione del repertorio SIAE nei video » (siae.it)</li>
+</ul>

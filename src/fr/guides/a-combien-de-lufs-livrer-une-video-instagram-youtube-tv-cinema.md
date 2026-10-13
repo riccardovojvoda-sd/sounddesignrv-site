@@ -83,4 +83,15 @@ Le fichier final et la liste des destinations suffisent. La mesure de la loudnes
 
 ## Sources
 
-<p class="fonti">AGCOM, délibération 219/09/CSP (agcom.it) · EBU R 128 v5.0, "Loudness normalisation and permitted maximum level of audio signals" et supplément s2 sur les contenus courts (tech.ebu.ch) · ATSC A/85, "Techniques for Establishing and Maintaining Audio Loudness for Digital Television" · Netflix Partner Help Center, "Sound Mix Specifications and Best Practices" · Amazon Video Central, spécifications audio · Apple Podcasts for Creators, "Audio requirements" · Forasoft, "LUFS targets per platform in 2026" (forasoft.com), pour Meta xHE-AAC · YouTube, Statistiques avancées (content loudness) · TASA, Trailer Audio Standards (Leq(m) 85) · Dolby, calibration de la salle à 85 dB SPL.</p>
+<ul class="fonti">
+<li>AGCOM, délibération 219/09/CSP (agcom.it)</li>
+<li>EBU R 128 v5.0, "Loudness normalisation and permitted maximum level of audio signals" et supplément s2 sur les contenus courts (tech.ebu.ch)</li>
+<li>ATSC A/85, "Techniques for Establishing and Maintaining Audio Loudness for Digital Television"</li>
+<li>Netflix Partner Help Center, "Sound Mix Specifications and Best Practices"</li>
+<li>Amazon Video Central, spécifications audio</li>
+<li>Apple Podcasts for Creators, "Audio requirements"</li>
+<li>Forasoft, "LUFS targets per platform in 2026" (forasoft.com), pour Meta xHE-AAC</li>
+<li>YouTube, Statistiques avancées (content loudness)</li>
+<li>TASA, Trailer Audio Standards (Leq(m) 85)</li>
+<li>Dolby, calibration de la salle à 85 dB SPL</li>
+</ul>

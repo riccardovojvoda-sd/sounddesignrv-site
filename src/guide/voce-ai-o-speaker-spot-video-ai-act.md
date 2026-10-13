@@ -82,4 +82,8 @@ Il casting della voce, umana o AI, può farlo chi segue l'audio del video, insie
 
 ## Fonti
 
-<p class="fonti">Regolamento (UE) 2024/1689 sull'intelligenza artificiale (AI Act), articolo 3 punto 60 e articolo 50 (eur-lex.europa.eu) · Commissione europea, "Guidelines on transparency obligations for providers and deployers of certain AI systems" (digital-strategy.ec.europa.eu) · ElevenLabs, Terms of Service e Prohibited Use Policy (elevenlabs.io).</p>
+<ul class="fonti">
+<li>Regolamento (UE) 2024/1689 sull'intelligenza artificiale (AI Act), articolo 3 punto 60 e articolo 50 (eur-lex.europa.eu)</li>
+<li>Commissione europea, "Guidelines on transparency obligations for providers and deployers of certain AI systems" (digital-strategy.ec.europa.eu)</li>
+<li>ElevenLabs, Terms of Service e Prohibited Use Policy (elevenlabs.io)</li>
+</ul>

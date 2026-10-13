@@ -92,4 +92,10 @@ Su un progetto lungo, meglio esportare un AAF di 30 secondi qualche giorno prima
 
 ## Fonti
 
-<p class="fonti">Production Expert, "How To Create A Pro Tools Friendly AAF" per Adobe Premiere, DaVinci Resolve e Avid Media Composer (production-expert.com) · Avid Knowledge Base, "Media Composer AAF Audio Export Options for Pro Tools" (kb.avid.com) · Blackmagic Design, DaVinci Resolve Reference Manual, pagina Deliver, preset Pro Tools · Marquis Broadcast, X2Pro Audio Convert, guida alla conversione (x2pro.net) · Adobe, "Export AAF files", guida di Premiere Pro (helpx.adobe.com).</p>
+<ul class="fonti">
+<li>Production Expert, "How To Create A Pro Tools Friendly AAF" per Adobe Premiere, DaVinci Resolve e Avid Media Composer (production-expert.com)</li>
+<li>Avid Knowledge Base, "Media Composer AAF Audio Export Options for Pro Tools" (kb.avid.com)</li>
+<li>Blackmagic Design, DaVinci Resolve Reference Manual, pagina Deliver, preset Pro Tools</li>
+<li>Marquis Broadcast, X2Pro Audio Convert, guida alla conversione (x2pro.net)</li>
+<li>Adobe, "Export AAF files", guida di Premiere Pro (helpx.adobe.com)</li>
+</ul>

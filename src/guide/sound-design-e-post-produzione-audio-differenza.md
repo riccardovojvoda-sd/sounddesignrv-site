@@ -87,4 +87,9 @@ Ogni progetto è diverso: [scrivimi](/contatti/) con il video, o con il brief, e
 
 ## Fonti
 
-<p class="fonti">Treccani, Lessico del XXI secolo, voce "Sound design" (treccani.it) · Accademia di Belle Arti di Venezia, "Sound design. Ambiguità e necessità storica di un termine alla moda" (accademiavenezia.it) · Netflix Partner Help Center, "Netflix Sound Mix Specifications & Best Practices" e "M&E Creation & Delivery Guidelines" (partnerhelp.netflixstudios.com) · EBU, Raccomandazione R 128 sulla loudness (tech.ebu.ch).</p>
+<ul class="fonti">
+<li>Treccani, Lessico del XXI secolo, voce "Sound design" (treccani.it)</li>
+<li>Accademia di Belle Arti di Venezia, "Sound design. Ambiguità e necessità storica di un termine alla moda" (accademiavenezia.it)</li>
+<li>Netflix Partner Help Center, "Netflix Sound Mix Specifications & Best Practices" e "M&E Creation & Delivery Guidelines" (partnerhelp.netflixstudios.com)</li>
+<li>EBU, Raccomandazione R 128 sulla loudness (tech.ebu.ch)</li>
+</ul>
