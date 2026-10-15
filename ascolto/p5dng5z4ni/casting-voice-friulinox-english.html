@@ -1,10 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <title>Voci Friulinox inglese</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sound Design RV">
+<meta property="og:url" content="https://www.sounddesignrv.com/ascolto/p5dng5z4ni/casting-voice-friulinox-english.html">
+<meta property="og:title" content="Voci Friulinox inglese">
+<meta property="og:description" content="Spot Submarine e Gravity · Riccardo Vojvoda · Sound Design">
+<meta property="og:image" content="https://www.sounddesignrv.com/ascolto/p5dng5z4ni/casting-voice-friulinox-english-audio/casting-voice-friulinox-english-anteprima.jpg?v=01f8218c">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -79,6 +88,14 @@ textarea{width:100%;margin-top:10px;border:1px solid var(--line);border-radius:1
 .schermo video{display:block;width:100%;height:auto;aspect-ratio:16/9;cursor:pointer}
 .piede{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
 .solo .piede{display:none}
+/* stelle: voto a destra dei player, stessa altezza della scheda (i player si accorciano) */
+.corpo{display:flex;align-items:center;gap:10px}
+.corpo .tracce{flex:1;min-width:0}
+.stelle{flex:none;display:flex;align-items:center;align-self:stretch;padding-left:8px;border-left:1px solid var(--line)}
+.stelle button{border:0;background:none;padding:3px;cursor:pointer;color:var(--star-off)}
+.stelle button.on{color:var(--star)}
+.stelle svg{width:22px;height:22px;fill:currentColor;display:block}
+@media (max-width:480px){.corpo .traccia{gap:8px}.corpo .play{width:38px;height:38px}.corpo .stop{width:32px;height:32px}.stelle button{padding:2px}.stelle svg{width:20px;height:20px}}
 .piede .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .progresso{flex:1;font-size:13px;color:var(--muted);min-width:60px}
 .btn{border:0;border-radius:999px;padding:11px 15px;font:600 14px Poppins,system-ui,sans-serif;cursor:pointer}
@@ -91,34 +108,36 @@ textarea{width:100%;margin-top:10px;border:1px solid var(--line);border-radius:1
 <div class="wrap">
   <p class="firma"><a href="https://www.sounddesignrv.com/?utm_source=casting&amp;utm_medium=pagina-ascolto&amp;utm_campaign=casting-voce" target="_blank" rel="noopener">Riccardo Vojvoda · Sound Design · <span class="sito">www.sounddesignrv.com</span></a><span class="lingue"><b>EN</b><a href="casting-voce-friulinox.html" hreflang="it">Italiano</a></span></p>
   <h1>Voci Friulinox inglese</h1>
-  <p class="sotto">Spot Submarine e Gravity: ogni voce legge un breve estratto di ciascuno. US = accento americano, UK = accento britannico</p>
+  <p class="sotto">Spot Submarine e Gravity: ogni voce legge un breve estratto di ciascuno. US = accento americano, UK = accento britannico. Da 1 a 3 stelle per voce, poi &quot;Invia i voti&quot;.</p>
   <div class="brief"></div>
   <div class="vol"><span>Volume</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.9" aria-label="Volume"></div>
   <div id="gruppi"></div>
 </div>
 <div class="piede"><div class="in">
   <div class="progresso" id="progresso"></div>
-  <button class="btn secondario" id="copia">Copy the choices</button>
-  <button class="btn primario" id="invia">Send the choices</button>
+  <button class="btn secondario" id="copia">Copia i voti</button>
+  <button class="btn primario" id="invia">Invia i voti</button>
   <p class="avviso" id="avviso"></p>
 </div></div>
 <script>
-const DATI = {"mail": "riccardo@sounddesignrv.com", "oggetto": "Friulinox voice casting (English): choices", "titolo": "Voci Friulinox inglese", "gruppi": [{"titolo": "Voci Friulinox inglese, donna (7)", "tema": "", "categoria": "Voice", "voci": [{"id": "voci-friulinox-inglese-donna-7-victoria-us", "nome": "Victoria (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-victoria-us-submarine.mp3?v=3217fed8"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-victoria-us-gravity.mp3?v=3413d3e5"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-cassidy-us", "nome": "Cassidy (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-cassidy-us-submarine.mp3?v=a87944d3"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-cassidy-us-gravity.mp3?v=15d579ea"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-zara-us", "nome": "Zara (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-zara-us-submarine.mp3?v=f3b86b45"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-zara-us-gravity.mp3?v=f9e600dc"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-liberty-us-uk", "nome": "Liberty (US/UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-liberty-us-uk-submarine.mp3?v=6c28847c"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-liberty-us-uk-gravity.mp3?v=7a1bcf0c"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-samara-uk", "nome": "Samara (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-samara-uk-submarine.mp3?v=d37be54c"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-samara-uk-gravity.mp3?v=3ef9dc1c"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-katherine-uk", "nome": "Katherine (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-katherine-uk-submarine.mp3?v=60752964"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-katherine-uk-gravity.mp3?v=41b13c86"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-lucy-uk", "nome": "Lucy (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-lucy-uk-submarine.mp3?v=74d43488"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-lucy-uk-gravity.mp3?v=dd164e37"}], "consigliata": ""}], "sincronizza": false}, {"titolo": "Voci Friulinox inglese, uomo (6)", "tema": "", "categoria": "Voice", "voci": [{"id": "voci-friulinox-inglese-uomo-6-brian-us", "nome": "Brian (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-brian-us-submarine.mp3?v=825b3f6e"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-brian-us-gravity.mp3?v=ca2fff5d"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-jon-us", "nome": "Jon (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-jon-us-submarine.mp3?v=c0d2fc53"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-jon-us-gravity.mp3?v=fff76812"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-michael-us", "nome": "Michael (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-michael-us-submarine.mp3?v=7e61d827"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-michael-us-gravity.mp3?v=f46c8868"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-adam-us", "nome": "Adam (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-adam-us-submarine.mp3?v=71179851"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-adam-us-gravity.mp3?v=f651d027"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-alexander-uk", "nome": "Alexander (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-alexander-uk-submarine.mp3?v=10f58c32"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-alexander-uk-gravity.mp3?v=f26e3859"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-chris-uk", "nome": "Chris (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-chris-uk-submarine.mp3?v=a43e737e"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-chris-uk-gravity.mp3?v=13acca08"}], "consigliata": ""}], "sincronizza": false}], "una_scelta": false, "senza_scelte": true, "solo_ascolto": true, "copia": "Copy the choices", "testi": {"scegli": "Choose this", "prima": "1st choice", "alt": "Alternative", "nota": "Note (optional)", "da_capo": "From the start", "da_scegliere": ": to be chosen", "mail_scelta": "Choice: ", "mail_prima": "1st choice: ", "mail_alt": "Alternative: ", "non_indicata": "not given", "nessuna": "none", "mail_note": "NOTES", "avviso": "If the email does not open, \"{copia}\" copies the summary to paste into an email to {mail}.", "copiato": "Copied: just paste it into an email to {mail}.", "copia_ko": "Copy failed: the choices can be written in an email to {mail}.", "copia": "Copy the choices", "invia": "Send the choices"}};
+const DATI = {"mail": "riccardo@sounddesignrv.com", "oggetto": "Voci Friulinox inglese: voti", "titolo": "Voci Friulinox inglese", "gruppi": [{"titolo": "Voci Friulinox inglese, donna (7)", "tema": "", "categoria": "Voice", "voci": [{"id": "voci-friulinox-inglese-donna-7-victoria-us", "nome": "Victoria (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-victoria-us-submarine.mp3?v=3217fed8"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-victoria-us-gravity.mp3?v=3413d3e5"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-cassidy-us", "nome": "Cassidy (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-cassidy-us-submarine.mp3?v=a87944d3"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-cassidy-us-gravity.mp3?v=15d579ea"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-zara-us", "nome": "Zara (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-zara-us-submarine.mp3?v=f3b86b45"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-zara-us-gravity.mp3?v=f9e600dc"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-liberty-us-uk", "nome": "Liberty (US/UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-liberty-us-uk-submarine.mp3?v=6c28847c"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-liberty-us-uk-gravity.mp3?v=7a1bcf0c"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-samara-uk", "nome": "Samara (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-samara-uk-submarine.mp3?v=d37be54c"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-samara-uk-gravity.mp3?v=3ef9dc1c"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-katherine-uk", "nome": "Katherine (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-katherine-uk-submarine.mp3?v=60752964"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-katherine-uk-gravity.mp3?v=41b13c86"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-donna-7-lucy-uk", "nome": "Lucy (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-lucy-uk-submarine.mp3?v=74d43488"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-donna-7-lucy-uk-gravity.mp3?v=dd164e37"}], "consigliata": ""}], "sincronizza": false}, {"titolo": "Voci Friulinox inglese, uomo (6)", "tema": "", "categoria": "Voice", "voci": [{"id": "voci-friulinox-inglese-uomo-6-brian-us", "nome": "Brian (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-brian-us-submarine.mp3?v=825b3f6e"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-brian-us-gravity.mp3?v=ca2fff5d"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-jon-us", "nome": "Jon (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-jon-us-submarine.mp3?v=c0d2fc53"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-jon-us-gravity.mp3?v=fff76812"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-michael-us", "nome": "Michael (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-michael-us-submarine.mp3?v=7e61d827"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-michael-us-gravity.mp3?v=f46c8868"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-adam-us", "nome": "Adam (US)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-adam-us-submarine.mp3?v=71179851"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-adam-us-gravity.mp3?v=f651d027"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-alexander-uk", "nome": "Alexander (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-alexander-uk-submarine.mp3?v=10f58c32"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-alexander-uk-gravity.mp3?v=f26e3859"}], "consigliata": ""}, {"id": "voci-friulinox-inglese-uomo-6-chris-uk", "nome": "Chris (UK)", "tracce": [{"etichetta": "Submarine", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-chris-uk-submarine.mp3?v=a43e737e"}, {"etichetta": "Gravity", "src": "casting-voice-friulinox-english-audio/voci-friulinox-inglese-uomo-6-chris-uk-gravity.mp3?v=13acca08"}], "consigliata": ""}], "sincronizza": false}], "una_scelta": false, "senza_scelte": true, "solo_ascolto": true, "stelle": 3, "copia": "Copia i voti", "testi": {"scegli": "Scegli questa", "prima": "1ª scelta", "alt": "Alternativa", "nota": "Nota (facoltativa)", "da_capo": "Da capo", "da_scegliere": ": da scegliere", "mail_scelta": "Scelta: ", "mail_prima": "1ª scelta: ", "mail_alt": "Alternativa: ", "non_indicata": "non indicata", "nessuna": "nessuna", "mail_note": "NOTE", "avviso": "Se la mail non si apre, \"{copia}\" copia il riepilogo da incollare in una mail a {mail}.", "copiato": "Copiato: basta incollarli in una mail a {mail}.", "copia_ko": "Copia non riuscita: le scelte si possono scrivere in una mail a {mail}.", "copia": "Copia i voti", "invia": "Invia i voti", "voto": "Voto", "votate": "Voci votate: {n} su {tot}", "mail_voti": "VOTI"}};
 const T = DATI.testi;
 // solo_ascolto: vetrina essenziale, nome + play/stop, niente scelte, note e invio
-if (DATI.solo_ascolto) document.body.classList.add('solo');
+if (DATI.solo_ascolto && !DATI.stelle) document.body.classList.add('solo');
 const CHIAVE = 'casting:' + location.pathname;
 const ICONA = {
   play:'<svg viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg>',
   pausa:'<svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>',
   stop:'<svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/></svg>',
   capo:'<svg viewBox="0 0 24 24"><path d="M5 4h3v16H5zM20 4v16L9 12z"/></svg>',
+  stella:'<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>',
   spunta:'<svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>'
 };
 // stato: note per proposta + per categoria (es. Musica, Voce) la 1ª scelta e l'alternativa facoltativa
 let stato = {};
 try { stato = JSON.parse(localStorage.getItem(CHIAVE) || '{}'); } catch (e) {}
 if (!stato.note) stato = {note: {}, scelte: {}};
+stato.voti = stato.voti || {};
 const CATEGORIE = [...new Set(DATI.gruppi.map(g => g.categoria))];
 CATEGORIE.forEach(c => stato.scelte[c] = stato.scelte[c] || {prima: '', alt: ''});
 const schede = [];
@@ -198,7 +217,21 @@ function creaVoce(v, categoria, g){
   testa.append(nome);
   if (v.consigliata) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = v.consigliata; testa.append(b); card.classList.add('consigliata'); }
   card.append(testa);
-  v.tracce.forEach(t => card.append(creaTraccia(t, g)));
+  if (DATI.stelle) {
+    // stelle: un voto da 1 a DATI.stelle per voce, ritoccando la stessa stella si toglie
+    const corpo = document.createElement('div'); corpo.className = 'corpo';
+    const tracce = document.createElement('div'); tracce.className = 'tracce';
+    v.tracce.forEach(t => tracce.append(creaTraccia(t, g)));
+    const st = document.createElement('div'); st.className = 'stelle'; st.setAttribute('role', 'group'); st.setAttribute('aria-label', T.voto + ' ' + v.nome);
+    const bs = [];
+    const accendi = () => bs.forEach((b, i) => { const on = i < (stato.voti[v.id] || 0); b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
+    for (let i = 1; i <= DATI.stelle; i++) {
+      const b = document.createElement('button'); b.innerHTML = ICONA.stella; b.setAttribute('aria-label', i + '/' + DATI.stelle);
+      b.onclick = () => { stato.voti[v.id] = stato.voti[v.id] === i ? 0 : i; salva(); accendi(); aggiorna(); };
+      bs.push(b); st.append(b);
+    }
+    accendi(); corpo.append(tracce, st); card.append(corpo);
+  } else v.tracce.forEach(t => card.append(creaTraccia(t, g)));
   const scelte = document.createElement('div'); scelte.className = 'scelte';
   const bottone = (testo, chiave, altra) => {
     const b = document.createElement('button'); b.innerHTML = ICONA.spunta + '<span></span>'; b.querySelector('span').textContent = testo;
@@ -260,6 +293,10 @@ document.getElementById('volume').oninput = e => { volume = +e.target.value; let
 const nomeDi = id => { for (const g of DATI.gruppi) for (const v of g.voci) if (v.id === id) return v.nome; return ''; };
 function aggiorna(){
   const p = document.getElementById('progresso'); p.textContent = '';
+  if (DATI.stelle) {
+    const tutte = DATI.gruppi.flatMap(g => g.voci), n = tutte.filter(v => stato.voti[v.id]).length;
+    p.textContent = T.votate.replace('{n}', n).replace('{tot}', tutte.length);
+  }
   if (DATI.senza_scelte) return;
   CATEGORIE.forEach(c => {
     const ok = !!stato.scelte[c].prima;
@@ -283,6 +320,11 @@ function testoMail(){
     }
     righe.push('');
   });
+  if (DATI.stelle) {
+    righe.push(T.mail_voti);
+    DATI.gruppi.forEach(g => g.voci.forEach(v => righe.push('- ' + v.nome + ': ' + (stato.voti[v.id] ? '★'.repeat(stato.voti[v.id]) + ' (' + stato.voti[v.id] + '/' + DATI.stelle + ')' : '-'))));
+    righe.push('');
+  }
   const note = DATI.gruppi.flatMap(g => g.voci).filter(v => (stato.note[v.id] || '').trim());
   if (note.length) { righe.push(T.mail_note); note.forEach(v => righe.push('- ' + v.nome + ': ' + stato.note[v.id].trim())); }
   return righe.join('\n');
