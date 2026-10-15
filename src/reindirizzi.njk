@@ -10,10 +10,12 @@ eleventyExcludeFromCollections: true
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<title>Pagina spostata</title>
+<title>{{ "Download: " + r.file if r.file else "Pagina spostata" }}</title>
 <meta name="robots" content="noindex">
 {#- "a" può avere parametri (link corti /guida/... con le utm per LinkedIn): canonical e anteprima social puntano alla pagina pulita #}
 {%- set pulito = r.a.split("?")[0] %}
+{#- "file" = link corto di una consegna (/file/...): punta alla pagina del file su MediaFire (stabile; i link diretti download*.mediafire.com ruotano), niente canonical né anteprima #}
+{%- if not r.file %}
 <link rel="canonical" href="{{ sito.url }}{{ pulito }}">
 {%- for p in collections.all %}{% if p.url == pulito %}
 <meta property="og:type" content="article">
@@ -24,10 +26,15 @@ eleventyExcludeFromCollections: true
 <meta property="og:image" content="{{ sito.url }}{{ (p.data.immagine_og or (("approfondimenti/" + p.data.copertina) if p.data.copertina else "showreel-2026-cover.png")) | imgUrlSync }}">
 <meta name="twitter:card" content="summary_large_image">
 {%- endif %}{% endfor %}
+{%- endif %}
 <meta http-equiv="refresh" content="0; url={{ r.a }}">
 <script>location.replace({{ r.a | dump | safe }});</script>
 </head>
 <body>
+{%- if r.file %}
+<p>Ti porto alla pagina di download di <strong>{{ r.file }}</strong>. Se non si apre: <a href="{{ r.a }}">vai al file</a>.</p>
+{%- else %}
 <p>Questa pagina si è spostata: <a href="{{ r.a }}">{{ sito.url }}{{ pulito }}</a></p>
+{%- endif %}
 </body>
 </html>
