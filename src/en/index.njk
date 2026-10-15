@@ -82,7 +82,7 @@ permalink: /en/
   </div>
   <ul class="dietro-strip" aria-label="Behind the sound design reel covers">
     {%- asyncEach p in instagram %}
-    <li{% if p.tipo != "reel" %} class="dietro-post"{% endif %}><a href="{{ p.url }}" target="_blank" rel="noopener">{% img "instagram/" + p.copertina, ("Instagram reel: " if p.tipo == "reel" else "Instagram post: ") + p.didascalia, "(min-width: 60em) 12vw, 40vw" %}</a></li>
+    <li><a href="{{ p.url }}" target="_blank" rel="noopener">{% img "instagram/" + p.copertina, ("Instagram reel: " if p.tipo == "reel" else "Instagram post: ") + p.didascalia, "(min-width: 60em) 12vw, 40vw" %}</a></li>
     {%- endeach %}
   </ul>
 </section>
