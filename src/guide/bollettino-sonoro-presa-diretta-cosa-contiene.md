@@ -4,7 +4,6 @@ parola_evidenziata: "bollettino sonoro"
 titolo_seo: "Bollettino sonoro (sound report) della presa diretta: cos'è, cosa contiene, un modello | Riccardo Vojvoda"
 descrizione_seo: "Cos'è il bollettino sonoro della presa diretta, cosa scriverci take per take, chi lo compila e come si consegna in post-produzione audio. Con il modello che uso sui set di fiction."
 date: 2026-11-03
-bozza: true
 copertina: bollettino-sonoro-cartellina-set.jpg
 copertinaAlt: "Un bollettino sonoro compilato, fissato a una cartellina appoggiata sul registratore nella borsa del fonico, su un set di notte"
 copertinaCredito: "Bollettino di Riccardo Vojvoda; sfondo generato con l'AI (FLUX.2)"
@@ -20,7 +19,7 @@ Cosa consegnare in generale al sound designer (montato, AAF, presa diretta) è n
 
 ## Cosa contiene
 
-Non esiste un modello unico: ogni fonico ha il suo, adattato al registratore e al tipo di lavoro. Il mio, quello che uso con il MixPre sui set di fiction, ha queste colonne:
+Non esiste un modello unico: ogni fonico può costruirsi il suo template, adattato al registratore e al tipo di lavoro, a patto che ci siano le informazioni fondamentali. Il mio, quello che uso con il mio MixPre 6, ha queste colonne:
 
 - **O/X**: take buona o scartata;
 - **Take**: il numero del file;
@@ -31,7 +30,7 @@ Non esiste un modello unico: ogni fonico ha il suo, adattato al registratore e a
 - **Descrizione e commenti**;
 - **REC2**: il numero del file sul secondo registratore, se c'è.
 
-In testa a ogni pagina: registratore, data, episodio, progetto e giornata di riprese. In fondo al bollettino, una legenda con le sigle dei microfoni, delle inquadrature e la lista numerata del cast.
+In testa a ogni pagina: registratore, data, episodio, progetto e giornata di riprese. In fondo al bollettino, una legenda con le sigle dei microfoni, delle inquadrature e la lista numerata del cast e altre informazioni utili per navigare.
 
 ## Bollettino sonoro e rapporto di edizione
 
@@ -45,7 +44,7 @@ Il montaggio arriva in audio con l'AAF, che porta con sé le clip usate. Il boll
 
 - nell'AAF manca una traccia, per esempio un radiomicrofono;
 - una take è rumorosa o ha un problema e serve un'alternativa per la stessa battuta;
-- bisogna coprire un buco con il tono d'ambiente (room tone) registrato nella stessa location;
+- bisogna coprire un buco con il tono d'ambiente (room tone) registrato nella stessa location dalla stessa prospettiva;
 - bisogna ritrovare le wild track, cioè le battute o i suoni registrati solo in audio, senza camera.
 
 Con il bollettino queste ricerche durano pochi minuti. Senza, si riascoltano intere giornate di registrazione.
@@ -58,13 +57,13 @@ Un accorgimento che uso sempre: non ripeto un'informazione nella riga successiva
 
 ## Chi lo compila e quando
 
-Lo compila chi registra: il fonico di presa diretta, il microfonista o un assistente, una riga per take. Si può completare a fine giornata, soprattutto quando si lavora da soli e durante le riprese le mani servono alla giraffa e al registratore.
+Lo compila chi registra: il fonico di presa diretta, il microfonista o un assistente, una riga per take. Si può completare nelle pause o a fine giornata, soprattutto quando si lavora da soli e durante le riprese le mani servono alla boompole e al registratore.
 
 ## Carta o metadati nei file
 
 I registratori professionali possono scrivere scena, take, nomi delle tracce e note dentro i file WAV (metadati iXML), e alcuni generano da soli un sound report: i Sound Devices delle serie maggiori, lo Zoom F8n Pro, il MixPre attraverso l'app Wingman. È il modo più completo, ma richiede tempo durante le riprese.
 
-Quando sono da solo registro, ascolto e tengo la giraffa nello stesso momento: non c'è tempo per inserire i metadati take per take, e il bollettino scritto resta il modo più rapido. In una squadra con almeno un fonico al mixer e un microfonista, i metadati diventano possibili, e il bollettino resta comunque utile come colpo d'occhio sull'intera giornata.
+Quando sono da solo registro, ascolto e tengo il boom nello stesso momento: non c'è tempo per inserire i metadati take per take, e il bollettino scritto resta il modo più rapido. In una squadra con almeno un fonico al mixer e un microfonista, i metadati diventano possibili, e il bollettino resta comunque utile come colpo d'occhio sull'intera giornata.
 
 ## Come si consegna
 

@@ -4,7 +4,6 @@ parola_evidenziata: "sound report"
 titolo_seo: "Production sound report: what it is, what it contains, a template | Riccardo Vojvoda"
 descrizione_seo: "What a production sound report is, what to write in it take by take, who fills it in and how it is delivered to audio post-production. With the template I use on drama sets."
 date: 2026-11-03
-bozza: true
 copertina: bollettino-sonoro-cartellina-set.jpg
 copertinaAlt: "A filled-in sound report clipped to a clipboard, resting on the recorder in the sound bag, on a film set at night"
 copertinaCredito: "Sound report by Riccardo Vojvoda; background generated with AI (FLUX.2)"
@@ -20,7 +19,7 @@ What to deliver to the sound designer in general (the cut, the AAF, production s
 
 ## What it contains
 
-There is no single template: every sound mixer has their own, adapted to the recorder and the kind of job. Mine, the one I use with the MixPre on drama sets, has these columns:
+There is no single template: every sound mixer can build their own, adapted to the recorder and the kind of job, as long as the essential information is there. Mine, the one I use with my MixPre 6, has these columns:
 
 - **O/X**: good or no good take;
 - **Take**: the file number;
@@ -31,7 +30,7 @@ There is no single template: every sound mixer has their own, adapted to the rec
 - **Description and comments**;
 - **REC2**: the file number on the second recorder, if there is one.
 
-At the top of each page: recorder, date, episode, project and shooting day. At the end of the report, a legend with the microphone and shot codes and the numbered cast list.
+At the top of each page: recorder, date, episode, project and shooting day. At the end of the report, a legend with the microphone and shot codes and the numbered cast list, plus any other information that helps find your way around.
 
 ## Sound report and continuity report
 
@@ -45,7 +44,7 @@ The cut reaches audio with the AAF, which carries the clips that were used. The 
 
 - a track is missing from the AAF, for example a radio mic;
 - a take is noisy or has a problem and an alternative is needed for the same line;
-- a gap has to be covered with room tone recorded in the same location;
+- a gap has to be covered with room tone recorded in the same location from the same perspective;
 - the wild tracks have to be found, the lines or sounds recorded for audio only, without camera.
 
 With the sound report these searches take a few minutes. Without it, whole shooting days get listened to again.
@@ -58,7 +57,7 @@ One habit I always keep: I don't repeat information on the next row if nothing h
 
 ## Who fills it in and when
 
-Whoever records fills it in: the production sound mixer, the boom operator or an assistant, one row per take. It can be completed at the end of the day, especially when working alone, when during takes the hands are busy with the boom and the recorder.
+Whoever records fills it in: the production sound mixer, the boom operator or an assistant, one row per take. It can be completed during breaks or at the end of the day, especially when working alone, when during takes the hands are busy with the boom pole and the recorder.
 
 ## Paper or metadata in the files
 

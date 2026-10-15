@@ -4,7 +4,6 @@ parola_evidenziata: "rapport son"
 titolo_seo: "Rapport son du tournage : ce que c'est, ce qu'il contient, un modèle | Riccardo Vojvoda"
 descrizione_seo: "Ce qu'est le rapport son d'un tournage, ce qu'il faut y écrire prise par prise, qui le remplit et comment il est livré à la post-production audio. Avec le modèle que j'utilise sur les tournages de fiction."
 date: 2026-11-03
-bozza: true
 copertina: bollettino-sonoro-cartellina-set.jpg
 copertinaAlt: "Un rapport son rempli, fixé sur un porte-bloc posé sur l'enregistreur dans le sac de l'ingénieur du son, sur un tournage de nuit"
 copertinaCredito: "Rapport son de Riccardo Vojvoda ; fond généré par IA (FLUX.2)"
@@ -20,7 +19,7 @@ Ce qu'il faut livrer en général au sound designer (montage, AAF, son direct) s
 
 ## Ce qu'il contient
 
-Il n'existe pas de modèle unique : chaque ingénieur du son a le sien, adapté à l'enregistreur et au type de travail. Le mien, celui que j'utilise avec le MixPre sur les tournages de fiction, a ces colonnes :
+Il n'existe pas de modèle unique : chaque ingénieur du son peut construire le sien, adapté à l'enregistreur et au type de travail, à condition que les informations essentielles y soient. Le mien, celui que j'utilise avec mon MixPre 6, a ces colonnes :
 
 - **O/X** : prise bonne ou écartée ;
 - **Prise** : le numéro du fichier ;
@@ -31,7 +30,7 @@ Il n'existe pas de modèle unique : chaque ingénieur du son a le sien, adapté 
 - **Description et commentaires** ;
 - **REC2** : le numéro du fichier sur le second enregistreur, s'il y en a un.
 
-En tête de chaque page : enregistreur, date, épisode, projet et journée de tournage. À la fin du rapport, une légende avec les codes des micros et des plans et la liste numérotée de la distribution.
+En tête de chaque page : enregistreur, date, épisode, projet et journée de tournage. À la fin du rapport, une légende avec les codes des micros et des plans et la liste numérotée de la distribution, ainsi que d'autres informations utiles pour s'y retrouver.
 
 ## Rapport son et rapport de scripte
 
@@ -45,7 +44,7 @@ Le montage arrive au son avec l'AAF, qui contient les clips utilisés. Le rappor
 
 - une piste manque dans l'AAF, par exemple un micro HF ;
 - une prise est bruyante ou a un problème et il faut une alternative pour la même réplique ;
-- il faut combler un trou avec l'ambiance (room tone) enregistrée dans le même décor ;
+- il faut combler un trou avec l'ambiance (room tone) enregistrée dans le même décor, avec la même perspective ;
 - il faut retrouver les sons seuls, répliques ou sons enregistrés uniquement en audio, sans caméra.
 
 Avec le rapport son, ces recherches prennent quelques minutes. Sans lui, on réécoute des journées entières.
@@ -58,7 +57,7 @@ Une habitude que je garde toujours : je ne répète pas une information à la li
 
 ## Qui le remplit et quand
 
-C'est la personne qui enregistre qui le remplit : l'ingénieur du son, le perchman ou un assistant, une ligne par prise. On peut le compléter en fin de journée, surtout quand on travaille seul et que pendant les prises les mains sont prises par la perche et l'enregistreur.
+C'est la personne qui enregistre qui le remplit : l'ingénieur du son, le perchman ou un assistant, une ligne par prise. On peut le compléter pendant les pauses ou en fin de journée, surtout quand on travaille seul et que pendant les prises les mains sont prises par la perche et l'enregistreur.
 
 ## Papier ou métadonnées dans les fichiers
 
