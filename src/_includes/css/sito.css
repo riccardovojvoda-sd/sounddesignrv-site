@@ -407,3 +407,43 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 .scuro .interruttore-scuro{background:var(--carta);color:var(--jet)}
 @media(max-width:48em){.interruttore-scuro{bottom:calc(var(--testata-h) + 4.1rem)}}
 @media(max-width:36em){.interruttore-scuro{right:.75rem}}
+
+/* Colonna a destra delle guide (decisa il 16/10/2026): autore con foto, riquadro "Scrivimi" con lo showreel,
+   e nelle singole guide l'indice dei paragrafi. Da 64em in su sta a destra e resta ferma mentre si scorre;
+   sotto scende in fondo al testo e l'indice sparisce (sul telefono non serve). */
+.con-colonna{display:grid;grid-template-columns:minmax(0,1fr);gap:2.5rem}
+.prosa>.con-colonna{max-width:none}
+.con-colonna-testo{min-width:0}
+.colonna-guide{display:flex;flex-direction:column;gap:1.25rem;font-size:.92rem}
+.colonna-indice{display:none}
+@media(min-width:64em){
+  .con-colonna{grid-template-columns:minmax(0,1fr) 17rem;gap:clamp(2.5rem,4vw,4rem);align-items:start}
+  .colonna-guide{position:sticky;top:6.5rem;max-height:calc(100vh - 8rem);overflow-y:auto;scrollbar-width:thin}
+  .colonna-indice{display:block}
+}
+.colonna-etichetta{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin:0 0 .5rem}
+.colonna-indice ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--jet-15)}
+.colonna-indice li{margin:0}
+.colonna-indice a{display:block;padding:.3rem 0 .3rem .85rem;margin-left:-2px;border-left:2px solid transparent;color:inherit;text-decoration:none;opacity:.75;line-height:1.35;transition:opacity .15s,border-color .15s}
+.colonna-indice a:hover{opacity:1}
+.colonna-indice a[aria-current=true]{opacity:1;font-weight:600;border-left-color:var(--accento)}
+.colonna-autore{display:flex;align-items:center;gap:.75rem;color:inherit;text-decoration:none;line-height:1.3}
+.colonna-autore picture{flex:0 0 auto}
+.colonna-autore-foto{width:3.5rem;height:3.5rem;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--verdigris)}
+.colonna-autore span{display:flex;flex-direction:column}
+.colonna-autore small{font-size:.78rem;opacity:.7}
+.colonna-guide .colonna-autore strong{font-weight:600;background:none}
+.colonna-autore:hover strong{text-decoration:underline;text-underline-offset:.15em}
+.colonna-cta{background:rgba(123,181,178,.14);border:1px solid var(--jet-15);border-top:5px solid var(--verdigris);border-radius:var(--raggio);padding:1.1rem 1.2rem 1.2rem}
+.colonna-cta p{margin:0 0 .75rem}
+.colonna-cta .colonna-cta-titolo{font-weight:600;font-size:1.02rem;line-height:1.3;margin-bottom:.4rem}
+.colonna-cta .bottone{display:block;text-align:center}
+.colonna-reel{display:block;margin-top:1rem;color:inherit;text-decoration:none}
+.colonna-reel img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:calc(var(--raggio)/2);transition:transform .2s}
+.colonna-reel:hover img{transform:scale(1.02)}
+.colonna-reel span{display:flex;align-items:center;gap:.35rem;margin-top:.45rem;font-size:.85rem;font-weight:500}
+.colonna-reel svg{width:1rem;height:1rem;fill:currentColor}
+.scuro .colonna-cta{background:rgba(123,181,178,.10)}
+.articolo-corpo h2{scroll-margin-top:6rem}
+@media(max-width:48em){.articolo-corpo h2{scroll-margin-top:1rem}}
+@media(prefers-reduced-motion:reduce){.colonna-reel img{transition:none}}

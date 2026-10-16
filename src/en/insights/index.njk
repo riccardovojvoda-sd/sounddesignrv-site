@@ -16,12 +16,18 @@ classeBody: lettura
 {%- set lista = collections.approfondimenti_en %}
 {%- if lista.length %}
 {%- set l = "en" %}
+<div class="con-colonna">
+<div class="con-colonna-testo">
 {% include "parti/filtri.njk" %}
 <ul class="elenco-approfondimenti elenco-approfondimenti-tutti" data-lista>
 {%- for a in lista %}
 {% include "parti/voce-articolo.njk" %}
 {%- endfor %}
 </ul>
+</div>
+{%- set t = testi[l] %}
+{% include "parti/colonna-guide.njk" %}
+</div>
 {%- else %}
 <p>The first insights are on their way. In the meantime, the <a href="/en/faq/">FAQ</a> answers the most common questions.</p>
 {%- endif %}

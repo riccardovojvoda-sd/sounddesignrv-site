@@ -16,6 +16,7 @@ module.exports = {
       pdf: "Scarica il profilo in PDF"
     },
     articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutte le guide", altri: "Da leggere anche", leggiIn: "Leggi in italiano", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
+    colonna: { scrittoDa: "Scritto da", ruolo: "Sound designer e audio post-producer", ctaTitolo: "Hai un video da sonorizzare?", ctaTesto: "Sound design, mix e voci per spot, documentari e branded content. Rispondo di norma entro 24-48 ore.", ctaBottone: "Scrivimi", ascolta: "Ascolta lo showreel", indice: "In questa guida", etichetta: "Autore e contatti" },
     analytics: { testo: "Questo sito usa Google Analytics per contare le visite e capire quali pagine vengono lette. Nessuna pubblicità. Accetti?", si: "Accetto", no: "No, grazie", link: "Cookie" },
     pie: { piva: "P.IVA" }
   },
@@ -35,6 +36,7 @@ module.exports = {
       pdf: "Download the profile (PDF)"
     },
     articolo: { pubblicato: "Published on", aggiornato: "updated on", tutti: "All insights", altri: "Also worth reading", leggiIn: "Read in English", minuti: "min read", bozza: "DRAFT: preview page, not published yet" },
+    colonna: { scrittoDa: "Written by", ruolo: "Sound designer and audio post-producer", ctaTitolo: "Got a video that needs sound?", ctaTesto: "Sound design, mixing and voice for commercials, documentaries and branded content. I usually reply within 24-48 hours.", ctaBottone: "Get in touch", ascolta: "Watch the showreel", indice: "In this guide", etichetta: "Author and contact" },
     analytics: { testo: "This site uses Google Analytics to count visits and see which pages get read. No advertising. Do you accept?", si: "Accept", no: "No, thanks", link: "Cookies" },
     pie: { piva: "VAT" }
   },
@@ -43,6 +45,7 @@ module.exports = {
     url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/fr/guides/", partner: "/fr/partenaires/" },
     menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", approfondimenti: "Guides", approfondimentiCorto: "Guides", partner: "Partenaires", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
     articolo: { pubblicato: "Publié le", aggiornato: "mis à jour le", tutti: "Tous les guides", altri: "À lire aussi", leggiIn: "Lire en français", minuti: "min de lecture", bozza: "BROUILLON : page d'aperçu, pas encore publiée" },
+    colonna: { scrittoDa: "Écrit par", ruolo: "Sound designer et post-producteur audio", ctaTitolo: "Une vidéo à sonoriser ?", ctaTesto: "Sound design, mixage et voix pour spots, documentaires et branded content. Je réponds en général sous 24 à 48 heures.", ctaBottone: "Écrivez-moi", ascolta: "Voir le showreel", indice: "Dans ce guide", etichetta: "Auteur et contact" },
     salta: "Aller au contenu", tornaSu: "Retour en haut", temaScuro: "Mode sombre",
     marchioRuolo: "Sound Design | Audio Post",
     video: { ascolta: "Écouter", anteprima: "Aperçu vidéo", suYoutube: "Écouter sur YouTube", durata: "Durée" },

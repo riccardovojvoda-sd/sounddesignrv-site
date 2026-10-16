@@ -1,0 +1,29 @@
+{#- Colonna a destra delle guide (solo desktop larghi; sotto i 64em scende in fondo e l'indice sparisce).
+    Parametri: t = testi della lingua, voci = indice dei paragrafi (solo nelle singole guide).
+    Niente shortcode img qui: async dentro un include nel corpo di una pagina non rende niente (vedi voce-articolo.njk).
+    La foto del viso è copiata così com'è (192 px, 7 KB), la copertina del reel usa i file generati dalla home. -#}
+<aside class="colonna-guide" aria-label="{{ t.colonna.etichetta }}">
+  {%- if voci and voci.length %}
+  <nav class="colonna-indice" aria-labelledby="indice-titolo" data-indice>
+    <p id="indice-titolo" class="colonna-etichetta">{{ t.colonna.indice }}</p>
+    <ol>
+      {%- for v in voci %}
+      <li><a href="#{{ v.id }}">{{ v.testo }}</a></li>
+      {%- endfor %}
+    </ol>
+  </nav>
+  {%- endif %}
+  <a class="colonna-autore" href="{{ t.url.chiSono }}">
+    <img class="colonna-autore-foto" src="/assets/img/riccardo-vojvoda-viso.jpg" alt="" width="96" height="96" loading="lazy" decoding="async">
+    <span><small>{{ t.colonna.scrittoDa }}</small> <strong>{{ sito.titolare }}</strong> <small>{{ t.colonna.ruolo }}</small></span>
+  </a>
+  <div class="colonna-cta">
+    <p class="colonna-cta-titolo">{{ t.colonna.ctaTitolo }}</p>
+    <p>{{ t.colonna.ctaTesto }}</p>
+    <a class="bottone" href="{{ t.url.contatti }}">{{ t.colonna.ctaBottone }}</a>
+    <a class="colonna-reel" href="{{ t.url.home }}">
+      <img src="{{ sito.showreel.poster | imgUrlSync(480) }}" srcset="{{ sito.showreel.poster | imgUrlSync(480) }} 480w, {{ sito.showreel.poster | imgUrlSync(800) }} 800w" sizes="17rem" width="480" height="270" alt="" loading="lazy" decoding="async">
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> {{ t.colonna.ascolta }} · {{ sito.showreel.durata | tempo }}</span>
+    </a>
+  </div>
+</aside>

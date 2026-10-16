@@ -16,12 +16,18 @@ classeBody: lettura
 {%- set lista = collections.approfondimenti_fr %}
 {%- if lista.length %}
 {%- set l = "fr" %}
+<div class="con-colonna">
+<div class="con-colonna-testo">
 {% include "parti/filtri.njk" %}
 <ul class="elenco-approfondimenti elenco-approfondimenti-tutti" data-lista>
 {%- for a in lista %}
 {% include "parti/voce-articolo.njk" %}
 {%- endfor %}
 </ul>
+</div>
+{%- set t = testi[l] %}
+{% include "parti/colonna-guide.njk" %}
+</div>
 {%- else %}
 <p>Les premiers guides sont en préparation. En attendant, la <a href="/fr/faq/">FAQ</a> répond aux questions les plus fréquentes.</p>
 {%- endif %}

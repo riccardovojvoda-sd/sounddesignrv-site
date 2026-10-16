@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/img/loghi": "assets/img/loghi" });
   // Anteprime delle opzioni di copertina degli articoli, linkate nei Google Doc di revisione (approfondimenti/ non si copia tal quale)
   eleventyConfig.addPassthroughCopy({ "src/assets/img/opzioni-copertina": "assets/img/opzioni-copertina" });
-  eleventyConfig.addPassthroughCopy({ "src/assets/img/logo-sdrv-96.png": "assets/img/logo-sdrv-96.png", "src/assets/img/logo-sdrv.png": "assets/img/logo-sdrv.png" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/img/logo-sdrv-96.png": "assets/img/logo-sdrv-96.png", "src/assets/img/logo-sdrv.png": "assets/img/logo-sdrv.png", "src/assets/img/riccardo-vojvoda-viso.jpg": "assets/img/riccardo-vojvoda-viso.jpg" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "s" }); // vecchio percorso Squarespace del profilo PDF
   eleventyConfig.addPassthroughCopy({ "src/radice": "." });
@@ -113,6 +113,20 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addFilter("testoPiano", (html) =>
     String(html || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
+  );
+  // Indice delle guide: ogni <h2> del testo prende un id (dal titolo) e finisce nell'elenco della colonna a destra.
+  // La sezione Fonti resta fuori dall'indice.
+  const idDaTesto = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const TITOLI_FUORI_INDICE = /^(fonti|sources)$/i;
+  const conAncore = (html) => String(html || "").replace(/<h2(\s[^>]*)?>([\s\S]*?)<\/h2>/g, (tag, attr = "", dentro) => {
+    if (/\sid=/.test(attr)) return tag;
+    return `<h2${attr} id="${idDaTesto(dentro.replace(/<[^>]+>/g, ""))}">${dentro}</h2>`;
+  });
+  eleventyConfig.addFilter("conAncore", conAncore);
+  eleventyConfig.addFilter("indiceH2", (html) =>
+    [...conAncore(html).matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)]
+      .map((m) => ({ id: m[1], testo: m[2].replace(/<[^>]+>/g, "").trim() }))
+      .filter((v) => !TITOLI_FUORI_INDICE.test(v.testo))
   );
   eleventyConfig.addFilter("slugTema", (tema) => `tema-${tema || "snow"}`);
   eleventyConfig.addFilter("tempo", (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`);

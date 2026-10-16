@@ -31,8 +31,12 @@ classeBody: lettura
     {%- if copertinaCredito %}<figcaption>{{ copertinaCredito | mdInline | safe }}</figcaption>{% endif %}
   </figure>
   {%- endif %}
-  <div class="contenitore pagina-corpo prosa articolo-corpo">
-    {{ content | safe }}
+  <div class="contenitore pagina-corpo con-colonna">
+    <div class="prosa articolo-corpo con-colonna-testo">
+      {{ content | conAncore | safe }}
+    </div>
+    {%- set voci = content | indiceH2 %}
+    {% include "parti/colonna-guide.njk" %}
   </div>
   {%- set altri = lista | correlati(page.url, 3, { argomento: argomento, per_chi: per_chi, categoria: categoria }) %}
   {%- if altri.length %}
@@ -48,6 +52,7 @@ classeBody: lettura
   </aside>
   {%- endif %}
 </article>
+<script src="/assets/js/indice.js" defer></script>
 {%- if not bozza %}
 <script type="application/ld+json">{{ {
   "@context": "https://schema.org",
