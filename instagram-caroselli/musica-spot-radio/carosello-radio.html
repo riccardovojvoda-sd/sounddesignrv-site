@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><title>Carosello musica spot radio</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../../src/assets/font/poppins-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:500;src:url(../../src/assets/font/poppins-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;src:url(../../src/assets/font/poppins-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:700;src:url(../../src/assets/font/poppins-latin-700-normal.woff2) format("woff2")}
+:root{--jet:#2D2D2A;--verdigris:#7BB5B2;--apricot:#F6C9AC;--flax:#EDD286;--snow:#FFFBFA;--carta:#EEE9E1}
+html,body{margin:0;background:#000}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;box-sizing:border-box;font-family:Poppins,sans-serif;display:none}
+.slide.attiva{display:block} body.tutte .slide{display:block;margin:0 auto 40px}
+.pad{position:absolute;inset:110px 96px 170px 96px;display:flex;flex-direction:column;justify-content:center}
+.etichetta{font-size:30px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0 0 30px}
+h1,h2{font-weight:600;letter-spacing:-.01em;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:104px} h2{font-size:84px;margin-bottom:52px}
+p{font-size:50px;line-height:1.38;margin:0 0 30px}
+b{font-weight:600}
+.piede{position:absolute;left:96px;right:96px;bottom:64px;display:flex;align-items:center;gap:22px;font-size:26px;font-weight:500}
+.piede img{height:64px;width:64px;border-radius:12px}
+.piede span:last-child{margin-left:auto}
+/* chiare */
+.chiara{background:var(--carta);color:var(--jet)}
+.chiara .num{font-size:130px;font-weight:700;line-height:1;color:var(--verdigris);margin:0 0 26px}
+.chiara b{background:linear-gradient(transparent 62%,var(--flax) 62%)}
+.chiara .muto{color:rgba(45,45,42,.68)}
+.chiara .piede{color:rgba(45,45,42,.7)}
+/* copertina */
+.cop{background:var(--jet);color:var(--snow)}
+.cop .sfondo,.cop .sfocato{position:absolute;inset:0;background:url(../../src/assets/img/approfondimenti/musica-spot-radio-manopola.jpg) 45% 100%/auto 115% no-repeat}
+.cop .sfocato{filter:blur(12px);transform:scale(1.06);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0.350) 20.0%,rgba(0,0,0,0.360) 24.8%,rgba(0,0,0,0.417) 29.5%,rgba(0,0,0,0.529) 34.2%,rgba(0,0,0,0.675) 39.0%,rgba(0,0,0,0.821) 43.8%,rgba(0,0,0,0.933) 48.5%,rgba(0,0,0,0.990) 53.2%,rgba(0,0,0,1.000) 58.0%,#000 100%);mask-image:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0.350) 20.0%,rgba(0,0,0,0.360) 24.8%,rgba(0,0,0,0.417) 29.5%,rgba(0,0,0,0.529) 34.2%,rgba(0,0,0,0.675) 39.0%,rgba(0,0,0,0.821) 43.8%,rgba(0,0,0,0.933) 48.5%,rgba(0,0,0,0.990) 53.2%,rgba(0,0,0,1.000) 58.0%,#000 100%)}
+.cop .velo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,45,42,.38) 0%,rgba(45,45,42,0.380) 22.0%,rgba(45,45,42,0.389) 28.0%,rgba(45,45,42,0.441) 34.0%,rgba(45,45,42,0.542) 40.0%,rgba(45,45,42,0.675) 46.0%,rgba(45,45,42,0.808) 52.0%,rgba(45,45,42,0.909) 58.0%,rgba(45,45,42,0.961) 64.0%,rgba(45,45,42,0.970) 70.0%,rgba(45,45,42,.97) 100%)}
+.cop .pad{justify-content:flex-end;padding-bottom:20px}
+.cop .etichetta{color:var(--flax)}
+.cop .piede{color:var(--snow)} .cop .piede span:last-child{color:var(--flax)}
+/* cta */
+.cta{background:var(--flax);color:var(--jet)}
+.cta .etichetta{opacity:.75}
+.cta h2{font-size:88px}
+.cta .url{font-size:46px;font-weight:600;background:var(--jet);color:var(--snow);padding:20px 30px;border-radius:12px;align-self:flex-start;margin:6px 0 44px}
+.cta p{font-size:46px}
+</style></head><body>
+
+<section class="slide cop" id="s1"><div class="sfondo"></div><div class="sfocato"></div><div class="velo"></div>
+ <div class="pad"><p class="etichetta">Guide · Musica</p><h1>Musica per uno spot radio</h1></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>Scorri →</span></div></section>
+<section class="slide chiara" id="s2"><div class="pad">
+ <div class="num">01</div><h2>La radio è un uso a parte</h2>
+ <p>Molti abbonamenti royalty free coprono il <b>web</b>, non la <b>radio</b>.</p><p class="muto">La radio è broadcast: costa di più ed è limitata per territorio.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>2/8</span></div></section>
+<section class="slide chiara" id="s3"><div class="pad">
+ <div class="num">02</div><h2>Tagliarlo non basta</h2>
+ <p>Accorciare o rimontare un brano <b>resta un uso</b> del brano: serve la licenza.</p><p class="muto">Lo dice la legge sul diritto d'autore, articoli 18 e 72.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>3/8</span></div></section>
+<section class="slide chiara" id="s4"><div class="pad">
+ <div class="num">03</div><h2>Le altre leggende</h2>
+ <p>"Sotto i tot secondi è libero": <b>no</b>. "Basta citare l'autore": <b>no</b>.</p><p class="muto">Royalty free non vuol dire gratis: la licenza si paga una volta.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>4/8</span></div></section>
+<section class="slide chiara" id="s5"><div class="pad">
+ <div class="num">04</div><h2>Chi non copre la radio</h2>
+ <p><b>Artlist</b> ed <b>Epidemic Sound</b> nei piani standard, Envato Elements, Soundstripe, Uppbeat.</p><p class="muto">Per la radio servono piani o contratti su misura.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>5/8</span></div></section>
+<section class="slide chiara" id="s6"><div class="pad">
+ <div class="num">05</div><h2>Chi la copre</h2>
+ <p><b>PremiumBeat</b>, <b>AudioJungle</b> con le licenze broadcast, <b>Pond5</b>.</p><p class="muto">Licenza per singolo brano: controlla territorio e versioni.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>6/8</span></div></section>
+<section class="slide chiara" id="s7"><div class="pad">
+ <div class="num">06</div><h2>Prima di scegliere</h2>
+ <p>Dove va lo spot, il <b>territorio</b>, la <b>durata</b> della campagna, quanti tagli.</p><p class="muto">La licenza si consegna con i file finali.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>7/8</span></div></section>
+<section class="slide cta" id="s8"><div class="pad">
+ <p class="etichetta">La guida completa</p>
+ <h2>Servizio per servizio, con i link alle licenze</h2>
+ <div class="url">sounddesignrv.com/musica-radio</div>
+ <p>Uno spot radio da fare? Scrivimi con copione, durata e dove va in onda.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>Salva il post</span></div></section>
+<script>const h=location.hash.slice(1);if(h){document.getElementById(h).classList.add('attiva')}else{document.body.classList.add('tutte')}</script>
+</body></html>
