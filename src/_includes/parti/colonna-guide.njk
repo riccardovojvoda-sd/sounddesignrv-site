@@ -1,7 +1,7 @@
 {#- Colonna a destra delle guide (solo desktop larghi; sotto i 64em scende in fondo e l'indice sparisce).
     Parametri: t = testi della lingua, voci = indice dei paragrafi (solo nelle singole guide).
     Niente shortcode img qui: async dentro un include nel corpo di una pagina non rende niente (vedi voce-articolo.njk).
-    La foto del viso è copiata così com'è (192 px, 7 KB), la copertina del reel usa i file generati dalla home. -#}
+    La foto del viso (ritaglio di CV thumbnail/Riccardo Vojvoda_social-7.jpg) è copiata così com'è (192 px), la copertina del reel usa i file generati dalla home. -#}
 <aside class="colonna-guide" aria-label="{{ t.colonna.etichetta }}">
   {%- if voci and voci.length %}
   <nav class="colonna-indice" aria-labelledby="indice-titolo" data-indice>
