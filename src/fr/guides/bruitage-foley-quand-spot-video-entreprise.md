@@ -5,8 +5,8 @@ titolo_seo: "Qu'est-ce que le foley (bruitage) et quand en a-t-on besoin dans un
 descrizione_seo: "Le foley est l'ensemble des sons refaits en synchronisation avec l'image : pas, vêtements, objets. En quoi il diffère des effets de bibliothèque et du son direct, quand un spot ou une vidéo d'entreprise en a besoin, ce qui pèse sur les délais et quoi écrire dans le brief."
 date: 2026-11-10
 bozza: true
-copertina: brief-sound-design-cuffie-scrivania.jpg
-copertinaAlt: "Image provisoire en attendant la hero"
+copertina: foley-microfono-tavolo-studio.jpg
+copertinaAlt: "Microphone suspendu au-dessus d'une table avec clés, tissu, pierres et une chaussure : les objets d'une séance de bruitage"
 copertinaCredito: ""
 chiave: articolo-s11
 categoria: Sound design
