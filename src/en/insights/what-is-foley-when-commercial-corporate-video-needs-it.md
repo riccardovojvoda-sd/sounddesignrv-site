@@ -22,15 +22,15 @@ The name comes from Jack Foley, a technician at Universal Studios who, with the 
 
 These are three different sources of sound, and a video usually uses more than one:
 
-- **production sound**: sounds recorded on set together with the picture. They are the most natural, but often dirty, covered by dialogue or by the noise of the location;
-- **library effects**: sounds already recorded, from archives such as Soundly or Freesound, chosen and placed on the video. They are quick and cover almost everything;
-- **foley**: sounds recorded or built specifically for that video, object by object, in time with the action.
+- **production sound**: sounds recorded on set together with the picture. They are the most natural, but often dirty, covered by dialogue or by the noise of the location, or thin, lacking detail because the microphone is pointed elsewhere;
+- **library effects**: sounds already recorded, from archives such as Soundly or Freesound, chosen and placed on the video. They are quick and cover almost everything, but their timbres vary a lot;
+- **foley**: sounds recorded or built specifically for that video, object by object, in time with the action, rich in detail and texture, chosen for the purpose.
 
 The boundary is not sharp. A foley sound can come from a studio recording, from a personal archive built up over the years, from improvised objects or from a combination of several sources. Every approach is valid if the result serves the product: the viewer cares that the sound is right, not where it comes from.
 
 ## When it is needed
 
-Foley is useful in almost every kind of video, and more so where sound tells the scene: documentaries, brand films, stories with people, gestures and objects.
+Foley is useful in almost every kind of video, and more so where sound tells the scene: documentaries, fiction, but also brand films, stories with people, gestures and objects.
 
 In **commercials** the picture changes. A product's sound is almost always a sound effect rather than foley: it takes the timbre of the natural sound as its reference, but enlarged, sharper and more present than it would be in reality, because a commercial calls for that. A car door, a drink being poured, a close-up gesture: you start from the real thing and take it "larger than life". That is why the work on commercials is often a mix of library effects, sounds built from scratch and some targeted foley.
 
@@ -38,11 +38,11 @@ In **corporate videos** foley matters less when the video is only interviews and
 
 ## When it is not needed
 
-A TV news item can do without it. In every other case the point is different: well-made foley is invisible. Nobody asks for sounds that "seem real" to be removed, which is why the work is noticed only when it is missing. It depends on who does it: where each sound is placed, with which perspective (close to or far from the camera), with which reverb and timbre, so that it blends into the rest of the mix.
+A TV news item can do without it. In every other case the point is different: well-made foley is invisible: it sits in the right place, so it feels natural for it to be there, it does not distract, it completes. Nobody asks for sounds that "seem real" to be removed; clients have even asked to keep only the "real sounds", unaware that all of it had been recreated. That is exactly why the work is noticed only when it is missing. It depends on who does it: where each sound is placed, with which perspective (close to or far from the camera), with which reverb and timbre, so that it blends into the rest of the mix. The sensitivity of the foley artist and the sound editor is essential.
 
 ## How long it takes
 
-Foley is meticulous work. Time grows with the number of actions to cover, with close-ups, with the precision of sync required and, above all, with the level of originality: an exclusive job, recorded from scratch, takes much more time than one built largely from archives. That is why it is assessed and quoted case by case.
+Foley is meticulous work. Time grows with the number of actions to cover, with close-ups, with the precision of sync required and, above all, with the level of originality: an exclusive job, recorded from scratch, takes much more time than one that makes use of archives. That is why it is assessed and quoted case by case.
 
 ## What to say in the brief
 

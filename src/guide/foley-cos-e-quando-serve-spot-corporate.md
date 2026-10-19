@@ -22,15 +22,15 @@ Il nome viene da Jack Foley, tecnico degli Universal Studios che alla fine degli
 
 Sono tre fonti diverse di suono, e un video ne usa di solito più di una:
 
-- **presa diretta**: i suoni registrati sul set insieme alle immagini. Sono i più naturali, ma spesso sporchi, coperti dal dialogo o dal rumore del luogo;
-- **effetti da libreria**: suoni già registrati, da archivi come Soundly o Freesound, scelti e posizionati sul video. Sono veloci e coprono quasi tutto;
-- **foley**: suoni registrati o costruiti apposta per quel video, oggetto per oggetto, a tempo con l'azione.
+- **presa diretta**: i suoni registrati sul set insieme alle immagini. Sono i più naturali, ma spesso sporchi, coperti dal dialogo o dal rumore del luogo, o sono scarni, privi di dettaglio perché il microfono punta altrove;
+- **effetti da libreria**: suoni già registrati, da archivi come Soundly o Freesound, scelti e posizionati sul video. Sono veloci e coprono quasi tutto, ma le timbriche sonore sono molto eterogenee;
+- **foley**: suoni registrati o costruiti apposta per quel video, oggetto per oggetto, a tempo con l'azione, ricchi di particolari e timbriche, scelti ad hoc.
 
 Il confine non è netto. Un foley può nascere da una registrazione in studio, da un archivio personale accumulato negli anni, da oggetti improvvisati o da un montaggio di più fonti. Tutti gli approcci sono validi se il risultato serve al prodotto: a chi guarda interessa che il suono sia giusto, non da dove arriva.
 
 ## Quando serve
 
-Il foley è utile in quasi ogni tipo di video, e di più dove il suono racconta la scena: documentari, video di brand, racconti in cui ci sono persone, gesti e oggetti.
+Il foley è utile in quasi ogni tipo di video, e di più dove il suono racconta la scena: documentari, fiction, ma anche video di brand, racconti in cui ci sono persone, gesti e oggetti.
 
 Negli **spot** il discorso cambia. Qui il suono di un prodotto è quasi sempre un effetto sonoro più che un foley: ha come riferimento il timbro del suono naturale, ma è ingrandito, più nitido e più presente di come lo si sentirebbe nella realtà, perché uno spot lo richiede. Una portiera, una bevanda che si versa, un gesto in primo piano: si parte dal vero e lo si porta "larger than life". Per questo negli spot il lavoro è spesso un misto di effetti da libreria, suoni costruiti da zero e qualche foley mirato.
 
@@ -38,11 +38,11 @@ Nei **video aziendali** i foley servono meno quando il video è fatto solo di in
 
 ## Quando non serve
 
-Un servizio da telegiornale può farne a meno. In tutti gli altri casi il punto è un altro: un foley fatto bene è invisibile. Nessuno chiede di togliere suoni che "sembrano veri", e proprio per questo il lavoro si nota solo quando manca. Dipende da chi lo fa: dove si mette ogni suono, con quali prospettive (vicino o lontano dalla camera), con quale riverbero e quale timbro, in modo che si fonda con il resto del mix.
+Un servizio da telegiornale può farne a meno. In tutti gli altri casi il punto è un altro: un foley fatto bene è invisibile, è nel posto giusto e quindi sembra normale che ci sia, non distrae, completa. Nessuno chiede di togliere suoni che "sembrano veri", è successo che chiedessero di tenere solo i "suoni veri", ignari che tutto fosse ricreato. Proprio per questo il lavoro si nota solo quando manca. Dipende da chi lo fa: dove si mette ogni suono, con quali prospettive (vicino o lontano dalla camera), con quale riverbero e quale timbro, in modo che si fonda con il resto del mix. La sensibilità del foley artist e del sound editor sono fondamentali.
 
 ## Quanto tempo richiede
 
-Il foley è un lavoro minuzioso. I tempi crescono con la quantità di azioni da coprire, con i primi piani, con la precisione del sincrono richiesta e, soprattutto, con il livello di originalità: un lavoro esclusivo, registrato da capo, richiede molto più tempo di uno costruito in gran parte da archivi. Per questo viene valutato e preventivato caso per caso.
+Il foley è un lavoro minuzioso. I tempi crescono con la quantità di azioni da coprire, con i primi piani, con la precisione del sincrono richiesta e, soprattutto, con il livello di originalità: un lavoro esclusivo, registrato da capo, richiede molto più tempo di uno costruito sfruttando gli archivi. Per questo viene valutato e preventivato caso per caso.
 
 ## Cosa dire nel brief
 

@@ -22,15 +22,15 @@ Le nom vient de Jack Foley, technicien des studios Universal qui, à la fin des 
 
 Ce sont trois sources de son différentes, et une vidéo en utilise généralement plusieurs :
 
-- **son direct** : les sons enregistrés sur le plateau avec l'image. Ce sont les plus naturels, mais souvent sales, couverts par le dialogue ou le bruit du lieu ;
-- **effets de bibliothèque** : des sons déjà enregistrés, issus d'archives comme Soundly ou Freesound, choisis et placés sur la vidéo. Ils sont rapides et couvrent presque tout ;
-- **foley** : des sons enregistrés ou construits spécialement pour cette vidéo, objet par objet, en rythme avec l'action.
+- **son direct** : les sons enregistrés sur le plateau avec l'image. Ce sont les plus naturels, mais souvent sales, couverts par le dialogue ou le bruit du lieu, ou maigres, pauvres en détails parce que le micro est dirigé ailleurs ;
+- **effets de bibliothèque** : des sons déjà enregistrés, issus d'archives comme Soundly ou Freesound, choisis et placés sur la vidéo. Ils sont rapides et couvrent presque tout, mais leurs timbres sont très hétérogènes ;
+- **foley** : des sons enregistrés ou construits spécialement pour cette vidéo, objet par objet, en rythme avec l'action, riches en détails et en timbres, choisis sur mesure.
 
 La frontière n'est pas nette. Un foley peut naître d'un enregistrement en studio, d'une archive personnelle constituée au fil des ans, d'objets improvisés ou d'un montage de plusieurs sources. Toutes les approches sont valables si le résultat sert le produit : ce qui compte pour le spectateur, c'est que le son soit juste, pas d'où il vient.
 
 ## Quand il est utile
 
-Le foley est utile dans presque tous les types de vidéo, et davantage là où le son raconte la scène : documentaires, films de marque, récits avec des personnes, des gestes et des objets.
+Le foley est utile dans presque tous les types de vidéo, et davantage là où le son raconte la scène : documentaires, fiction, mais aussi films de marque, récits avec des personnes, des gestes et des objets.
 
 Dans les **spots**, le discours change. Le son d'un produit y est presque toujours un effet sonore plutôt qu'un foley : il prend pour référence le timbre du son naturel, mais agrandi, plus net et plus présent que dans la réalité, car un spot l'exige. Une portière, une boisson qu'on verse, un geste en gros plan : on part du réel et on le porte « larger than life ». C'est pourquoi le travail sur un spot est souvent un mélange d'effets de bibliothèque, de sons construits de zéro et de quelques foleys ciblés.
 
@@ -38,11 +38,11 @@ Dans les **vidéos d'entreprise**, le foley compte moins quand la vidéo se comp
 
 ## Quand il n'est pas utile
 
-Un reportage de journal télévisé peut s'en passer. Dans tous les autres cas, le point est ailleurs : un foley bien fait est invisible. Personne ne demande de retirer des sons qui « semblent vrais », et c'est pourquoi le travail ne se remarque que lorsqu'il manque. Tout dépend de celui qui le réalise : où chaque son est placé, avec quelles perspectives (près ou loin de la caméra), quelle réverbération et quel timbre, pour qu'il se fonde dans le reste du mixage.
+Un reportage de journal télévisé peut s'en passer. Dans tous les autres cas, le point est ailleurs : un foley bien fait est invisible : il est à sa place, il semble donc normal qu'il soit là, il ne distrait pas, il complète. Personne ne demande de retirer des sons qui « semblent vrais » ; il est même arrivé qu'on demande de ne garder que les « vrais sons », sans savoir que tout avait été recréé. C'est justement pour cela que le travail ne se remarque que lorsqu'il manque. Tout dépend de celui qui le réalise : où chaque son est placé, avec quelles perspectives (près ou loin de la caméra), quelle réverbération et quel timbre, pour qu'il se fonde dans le reste du mixage. La sensibilité du bruiteur et du monteur son est essentielle.
 
 ## Combien de temps cela prend
 
-Le foley est un travail minutieux. Le temps augmente avec le nombre d'actions à couvrir, avec les gros plans, avec la précision de synchronisation demandée et, surtout, avec le niveau d'originalité : un travail exclusif, enregistré entièrement, demande bien plus de temps qu'un travail construit en grande partie à partir d'archives. C'est pourquoi il est évalué et chiffré au cas par cas.
+Le foley est un travail minutieux. Le temps augmente avec le nombre d'actions à couvrir, avec les gros plans, avec la précision de synchronisation demandée et, surtout, avec le niveau d'originalité : un travail exclusif, enregistré entièrement, demande bien plus de temps qu'un travail qui exploite les archives. C'est pourquoi il est évalué et chiffré au cas par cas.
 
 ## Que mettre dans le brief
 
