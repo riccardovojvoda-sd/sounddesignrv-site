@@ -38,7 +38,7 @@ Nei **video aziendali** i foley servono meno quando il video è fatto solo di in
 
 ## Quando non serve
 
-Un servizio da telegiornale può farne a meno. In tutti gli altri casi il punto è un altro: un foley fatto bene è invisibile, è nel posto giusto e quindi sembra normale che ci sia, non distrae, completa. Nessuno chiede di togliere suoni che "sembrano veri", è successo che chiedessero di tenere solo i "suoni veri", ignari che tutto fosse ricreato. Proprio per questo il lavoro si nota solo quando manca. Dipende da chi lo fa: dove si mette ogni suono, con quali prospettive (vicino o lontano dalla camera), con quale riverbero e quale timbro, in modo che si fonda con il resto del mix. La sensibilità del foley artist e del sound editor sono fondamentali.
+Un servizio da telegiornale può farne a meno. In tutti gli altri casi il punto è un altro: un foley fatto bene è invisibile, è nel posto giusto e quindi sembra normale che ci sia, non distrae, completa. Nessuno chiede di togliere suoni che "sembrano veri": anzi, è capitato che chiedessero di tenere solo i "suoni veri", senza sapere che era tutto ricreato. Proprio per questo il lavoro si nota solo quando manca. Dipende da chi lo fa: dove si mette ogni suono, con quali prospettive (vicino o lontano dalla camera), con quale riverbero e quale timbro, in modo che si fonda con il resto del mix. La sensibilità del foley artist e del sound editor è fondamentale.
 
 ## Quanto tempo richiede
 
