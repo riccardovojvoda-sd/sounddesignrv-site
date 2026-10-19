@@ -141,6 +141,13 @@ p{margin:0 0 1em}
 @media(max-width:36em){.loghi{grid-template-columns:repeat(3,1fr);gap:1.25rem 1.25rem}.loghi img{height:3rem}}
 .loghi img{width:100%;height:4rem;object-fit:contain;filter:grayscale(1) contrast(1.1);opacity:.65;transition:opacity .2s,filter .2s;margin:auto}
 .loghi li:hover img{filter:none;opacity:1}
+/* Home: due righe di loghi e "Vedi tutti" verso Chi sono; sul telefono (3 colonne) restano i primi 6 */
+.clienti-testa{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.clienti-testa .etichetta{margin:0}
+@media(max-width:36em){.loghi-home li:nth-child(n+7){display:none}}
+.prosa>.loghi{max-width:none;margin:1.5rem 0 2rem}
+.prosa h2[id]{scroll-margin-top:5.5rem}
+@media(max-width:48em){.prosa h2[id]{scroll-margin-top:1rem}}
 
 /* Progetti in home */
 .progetto{padding-block:clamp(3rem,7vw,6rem);scroll-margin-top:4.7rem} /* ancora /#slug: atterra sotto la testata fissa */

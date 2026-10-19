@@ -1,0 +1,10 @@
+{#- Griglia dei loghi clienti. Con `soloHome` mostra solo i loghi di sito.loghiHome, in quell'ordine (due righe in home,
+    deciso il 19/10/2026 come su cromostudio.it); senza, tutti i loghi di sito.loghi (pagina Chi sono). -#}
+{%- set elenco = [] %}
+{%- if soloHome %}{% for n in sito.loghiHome %}{% for l in sito.loghi %}{% if l[1] == n %}{% set elenco = (elenco.push(l), elenco) %}{% endif %}{% endfor %}{% endfor %}
+{%- else %}{% set elenco = sito.loghi %}{% endif %}
+<ul class="loghi{% if soloHome %} loghi-home{% endif %}">
+  {%- for l in elenco %}
+  <li><img {% if l[2] %}class="logo-per-chiaro" {% endif %}src="/assets/img/loghi/{{ l[0] }}" alt="{{ l[1] }}" loading="lazy" decoding="async" width="150" height="75">{% if l[2] %}<img class="logo-per-scuro" src="/assets/img/loghi/{{ l[2] }}" alt="{{ l[1] }}" loading="lazy" decoding="async" width="150" height="75">{% endif %}</li>
+  {%- endfor %}
+</ul>

@@ -12,7 +12,7 @@ Sito personale di Riccardo Vojvoda, sounddesignrv.com. Statico, generato con Ele
 
 - `src/progetti/*.md` una scheda per progetto (front matter: brand, titolo, frase, crediti, categoria, ruolo, tema, immagine, video). Il corpo Markdown è la descrizione. `ordine` decide la sequenza nel portfolio.
 - Portfolio filtrabile (dal 19/10/2026): `src/_data/portfolio.js` dà a ogni progetto un genere e i ruoli (uguali nelle tre lingue), i nomi dei filtri e i sei progetti in evidenza in home. **Un progetto nuovo va aggiunto lì**, altrimenti compare solo sotto "Tutti". Pagine `/portfolio/` e una per genere (`/portfolio/spot/`...), stesse in `/en/` e `/fr/`: layout `layouts/portfolio.njk`, filtri senza ricaricare in `assets/js/portfolio.js` (ruolo come `?ruolo=`). La home mostra un'anteprima di ogni pagina del menu: `parti/home-anteprime.njk`, testi in `src/_data/anteprime.js`.
-- `src/_data/sito.json` dati del sito (contatti, social, loghi clienti). `src/_data/faq.js` le FAQ (pagina + dati strutturati FAQPage).
+- `src/_data/sito.json` dati del sito (contatti, social, loghi clienti: `loghiHome` sono i 12 in home, due righe, 6 sul telefono; tutti gli altri compaiono in Chi sono, griglia in `parti/loghi.njk`). `src/_data/faq.js` le FAQ (pagina + dati strutturati FAQPage).
 - `src/_includes/layouts/` base, progetto, pagina. `src/_includes/parti/` testata, video, contatto, pie'.
 - `src/_includes/css/sito.css` unico foglio di stile, inserito inline in ogni pagina.
 - `src/assets/img/progetti/` copertine (le versioni responsive avif/webp/jpeg le genera la build in `_site/assets/img/r/`).

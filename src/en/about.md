@@ -42,7 +42,9 @@ I design and build sound as an integral part of the visual story, taking care of
 
 I work collaboratively with directors, editors and content creators, but I am also fully independent: I can carry the whole creative and technical side through to a rich, engaging result that fits the style of the product.
 
-## Clients and collaborations
+<h2 id="clienti">Clients and collaborations</h2>
+
+{% set soloHome = false %}{% include "parti/loghi.njk" %}
 
 <p class="elenco-clienti">{{ sito.clienti }} and others.</p>
 

@@ -89,6 +89,7 @@
     "cromo": "https://cromostudio.it/"
   },
   "clienti": "Alfa Romeo, Maserati, Fiat, Lancia, Abarth, Azimut Yachts, Renault Trucks, Diadora, The North Face, Everli, CMP, Ballantyne, Lane Rossi, Calligaris, Connubia, Valcucine, Nero Cucine, Arrital, Copat Life, Laufen, Oasis, Pulkra, Varaschin, Lainox, Friulinox, Fitt Industrial, Casagrande, Savio, Goriziane, Benincà, Alpi Woods, Federlegno, Roxa, Zilo, Hausbrandt, Ponte 1948, Pitars, LaMarca, Fantini Wines, Sacchetto Vini, Weldan, Moroder, Mr.Bio, Arcadia Earth, H-Farm, IUAV, University of Chichester, SOS Chirurgia (RealTime), SIGEP, HOST",
+  "loghiHome": ["Maserati", "Alfa Romeo", "The North Face", "Diadora", "Fiat", "Lancia", "Abarth", "Arcadia Earth", "Everli", "CMP", "Lainox", "Valcucine"],
   "loghi": [
     [
       "alfa-romeo.png",

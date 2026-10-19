@@ -42,7 +42,9 @@ Je conçois et construis le son comme une partie intégrante du récit visuel, e
 
 Je travaille de façon collaborative avec les réalisateurs, les monteurs et les créateurs de contenus, mais je suis aussi totalement autonome : je peux porter l'ensemble du volet créatif et technique jusqu'à un résultat riche, prenant et fidèle au style du produit.
 
-## Clients et collaborations
+<h2 id="clienti">Clients et collaborations</h2>
+
+{% set soloHome = false %}{% include "parti/loghi.njk" %}
 
 <p class="elenco-clienti">{{ sito.clienti }} et d'autres.</p>
 

@@ -66,7 +66,7 @@ module.exports = {
       nota: "Sound design e mix in tutti i progetti.",
       conta: "{n} progetti", conta1: "1 progetto", nessuno: "Nessun progetto con questa combinazione.", azzera: "Azzera i filtri",
       video: "video", inEvidenza: "Progetti in evidenza", tuttiI: "Vai al portfolio",
-      selezione: "Ho lasciato fuori i lavori simili tra loro o meno rappresentativi.", selezioneLink: "Se ti serve un esempio più vicino al tuo progetto, chiedimelo."
+      selezione: "Ho lasciato fuori i lavori simili tra loro o meno rappresentativi.", selezioneLink: "Se ti serve un esempio più vicino al tuo progetto, scrivimi."
     },
     en: {
       url: "/en/portfolio/", titolo: "Portfolio", occhiello: "Selected work",
@@ -77,7 +77,7 @@ module.exports = {
       nota: "Sound design and mixing on every project.",
       conta: "{n} projects", conta1: "1 project", nessuno: "No project matches this combination.", azzera: "Clear filters",
       video: "videos", inEvidenza: "Featured projects", tuttiI: "Go to the portfolio",
-      selezione: "I have left out work that repeats itself or shows less of how I work.", selezioneLink: "If you need an example closer to your project, just ask."
+      selezione: "I have left out work that repeats itself or shows less of how I work.", selezioneLink: "If you need an example closer to your project, get in touch."
     },
     fr: {
       url: "/fr/portfolio/", titolo: "Portfolio", occhiello: "Projets choisis",
@@ -88,7 +88,7 @@ module.exports = {
       nota: "Sound design et mixage sur tous les projets.",
       conta: "{n} projets", conta1: "1 projet", nessuno: "Aucun projet ne correspond à cette combinaison.", azzera: "Effacer les filtres",
       video: "vidéos", inEvidenza: "Projets à la une", tuttiI: "Voir le portfolio",
-      selezione: "J'ai écarté les projets trop proches entre eux ou moins représentatifs.", selezioneLink: "Si vous cherchez un exemple plus proche de votre projet, demandez-le-moi."
+      selezione: "J'ai écarté les projets trop proches entre eux ou moins représentatifs.", selezioneLink: "Si vous cherchez un exemple plus proche de votre projet, écrivez-moi."
     }
   }
 };

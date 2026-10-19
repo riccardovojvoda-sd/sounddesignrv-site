@@ -42,7 +42,9 @@ Progetto e realizzo il suono come parte integrante del racconto visivo, curando 
 
 Lavoro in modo collaborativo con registi, editor e content creator, ma sono anche pienamente autonomo: posso seguire l'intera parte creativa e tecnica fino a un risultato corposo, coinvolgente e perfettamente allineato allo stile del prodotto.
 
-## Clienti e collaborazioni
+<h2 id="clienti">Clienti e collaborazioni</h2>
+
+{% set soloHome = false %}{% include "parti/loghi.njk" %}
 
 <p class="elenco-clienti">{{ sito.clienti }} e altri.</p>
 
