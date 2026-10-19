@@ -1,0 +1,13 @@
+---
+layout: layouts/portfolio.njk
+pagination:
+  data: portfolio.pagine
+  size: 1
+  alias: g
+  addAllPagesToCollections: true
+permalink: "/portfolio/{% if g.chiave %}{{ g.it.slug }}/{% endif %}"
+eleventyComputed:
+  chiave: "portfolio{% if g.chiave %}-{{ g.chiave }}{% endif %}"
+  titolo_seo: "{% if g.chiave %}{{ portfolio.testi.it.titolo_seo_genere | replace('{genere}', g.it.nome) | safe }}{% else %}{{ portfolio.testi.it.titolo_seo | safe }}{% endif %}"
+  descrizione_seo: "{% if g.chiave %}{{ g.it.descrizione | safe }}{% else %}{{ portfolio.testi.it.descrizione | safe }}{% endif %}"
+---

@@ -14,7 +14,7 @@ chiave: home
       <p class="eroe-intro eroe-intro-corta">Fonica e post-produzione audio per film, documentari, branded content, animazione e videogiochi: sound design, mix stereo e surround, musica, voci, ADR e presa diretta.</p>
       <p class="eroe-nota">Lavoro da remoto in italiano, inglese e francese.<br class="a-capo-desktop"> Per le riprese, in trasferta in Italia e all'estero.</p>
       <div class="eroe-azioni">
-        <a class="bottone" href="#progetti">Guarda i progetti</a>
+        <a class="bottone" href="/portfolio/">Guarda i progetti</a>
         <a class="bottone bottone-secondario" href="/contatti/">Scrivimi</a>
       </div>
     </div>
@@ -46,33 +46,8 @@ chiave: home
   </div>
 </section>
 
-<section id="progetti" class="progetti" aria-label="Portfolio">
-  <h2 class="visivamente-nascosto">Portfolio</h2>
-  {%- asyncEach p in collections["progetti_" + (lang or "it")] %}
-  <article class="progetto {{ p.data.tema | slugTema }}" id="{{ p.fileSlug }}">
-    <div class="contenitore progetto-griglia">
-      <div class="progetto-media">
-        {% set v = p.data.video[0] %}
-        {% set poster = "progetti/" + p.data.immagine %}
-        {% set eager = false %}
-        {% include "parti/video.njk" %}
-        {%- if p.data.video.length > 1 %}
-        <p class="progetto-altri"><a href="{{ p.url }}">{{ p.data.video.length }} {{ testi[lang].scheda.serie }}</a></p>
-        {%- endif %}
-      </div>
-      <div class="progetto-testo">
-        <p class="progetto-frase">{{ p.data.frase }}</p>
-        <h3 class="progetto-brand"><a href="{{ p.url }}">{{ p.data.brand }}</a></h3>
-        <p class="progetto-titolo">{{ p.data.titolo }}</p>
-        <p class="progetto-crediti">{{ p.data.crediti | mdInline | safe }}</p>
-        <div class="progetto-descrizione">{{ p.rawInput | md | safe }}</div>
-        <p class="progetto-meta"><span>{{ testi[lang].scheda.categoria }}: {{ p.data.categoria }}</span> <span>{{ testi[lang].scheda.ruolo }}: {{ p.data.ruolo }}</span></p>
-        <a class="progetto-link" href="{{ p.url }}">{{ testi[lang].scheda.apri }}</a>
-      </div>
-    </div>
-  </article>
-  {%- endeach %}
-</section>
+{%- set l = "it" %}
+{% include "parti/home-anteprime.njk" %}
 
 <section class="dietro tema-jet" aria-labelledby="dietro-titolo">
   <div class="contenitore">

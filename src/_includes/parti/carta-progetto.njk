@@ -1,0 +1,15 @@
+{#- Copertina di un progetto nella griglia del portfolio e in home: immagine, marchio, titolo, frase e categoria; porta alla scheda.
+    Variabili: p = progetto della collezione, l = lingua, temaCarta = colore della copertina se diverso dal tema del progetto (home). -#}
+<a class="carta-progetto {{ (temaCarta or p.data.tema) | slugTema }}" href="{{ p.url }}">
+  <span class="carta-progetto-img">
+    {% img "progetti/" + p.data.immagine, "", "(min-width: 60em) 28vw, (min-width: 36em) 46vw, 100vw", "lazy" %}
+    {%- if p.data.video.length > 1 %}<span class="carta-progetto-badge">{{ p.data.video.length }} {{ portfolio.testi[l].video }}</span>
+    {%- elif p.data.video[0].durata %}<span class="carta-progetto-badge">{{ p.data.video[0].durata | tempo }}</span>{% endif %}
+  </span>
+  <span class="carta-progetto-testo">
+    <strong class="carta-progetto-brand">{{ p.data.brand }}</strong>
+    <span class="carta-progetto-titolo">{{ p.data.titolo }}</span>
+    <span class="carta-progetto-frase">{{ p.data.frase }}</span>
+    <small class="carta-progetto-cat">{{ p.data.categoria }}</small>
+  </span>
+</a>

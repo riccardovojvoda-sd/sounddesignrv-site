@@ -165,6 +165,72 @@ p{margin:0 0 1em}
 .progetto-altri a{font-weight:500}
 .progetto .video{box-shadow:var(--ombra)}
 
+/* Portfolio a griglia (pagina /portfolio/ e anteprima in home): copertine con il colore di banda del progetto */
+.portfolio-corpo{padding-bottom:clamp(2.5rem,6vw,5rem)}
+.filtri.filtri-portfolio{max-width:none;margin-bottom:2rem}
+.filtri-portfolio .chip{text-decoration:none;display:inline-flex;align-items:baseline;gap:.4em}
+.chip-n{font-size:.78em;opacity:.6;font-variant-numeric:tabular-nums}
+.chip.spento{opacity:.4}
+.filtri-nota{opacity:.85}
+/* Telefono: ogni gruppo di filtri su una riga sola che scorre di lato, così la griglia si vede subito */
+@media(max-width:36em){
+  .filtri.filtri-portfolio{padding:.9rem 0;gap:.6rem;overflow:hidden}
+  .filtri-portfolio .filtri-gruppo,.anteprima-generi{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-inline:1rem;scroll-padding-inline:1rem}
+  .filtri-portfolio .filtri-gruppo::-webkit-scrollbar,.anteprima-generi::-webkit-scrollbar{display:none}
+  .anteprima-generi{margin-inline:calc(-1*var(--gutter));padding-inline:var(--gutter)}
+  .filtri-portfolio .chip,.anteprima-generi .chip{white-space:nowrap;font-size:.85rem}
+  .filtri-portfolio .filtri-nome{flex:0 0 auto}
+  .filtri-portfolio .filtri-esito{padding-inline:1rem;gap:.25rem .75rem}
+  .filtri-portfolio .filtri-nota{display:none}
+}
+.griglia-progetti{list-style:none;margin:0;padding:0;display:grid;gap:clamp(1rem,2.5vw,1.75rem);grid-template-columns:1fr}
+@media(min-width:36em){.griglia-progetti{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:60em){.griglia-progetti{grid-template-columns:repeat(3,1fr)}}
+.griglia-progetti>li[hidden]{display:none}
+/* Nota in fondo alla griglia: è una selezione, non l'archivio (richiesta di Riccardo del 19/10/2026) */
+.portfolio-selezione{max-width:44rem;margin:clamp(2rem,4vw,3rem) 0 0;padding-top:1.25rem;border-top:1px solid var(--jet-15);font-size:.95rem;opacity:.85}
+.portfolio-selezione a{font-weight:500}
+.carta-progetto{display:flex;flex-direction:column;height:100%;text-decoration:none;border-radius:var(--raggio);overflow:hidden;border:1px solid var(--jet-15);transition:transform .2s,box-shadow .2s}
+.carta-progetto:hover{transform:translateY(-3px);box-shadow:var(--ombra)}
+.carta-progetto-img{position:relative;display:block;aspect-ratio:16/9;background:var(--jet);overflow:hidden}
+.carta-progetto-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.carta-progetto:hover .carta-progetto-img img{transform:scale(1.04)}
+.carta-progetto-badge{position:absolute;right:.6rem;bottom:.6rem;padding:.2em .5em;border-radius:.3rem;background:rgba(45,45,42,.85);color:var(--snow);font-size:.75rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.2}
+.carta-progetto-testo{display:flex;flex-direction:column;gap:.2rem;padding:1rem 1.15rem 1.15rem;flex:1}
+.carta-progetto-brand{font-size:1.25rem;font-weight:700;letter-spacing:.03em;line-height:1.15}
+.carta-progetto-titolo{font-weight:500}
+.carta-progetto-frase{font-size:.88rem;font-style:italic;opacity:.8;margin-top:.15rem}
+.carta-progetto-cat{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;opacity:.65;margin-top:auto;padding-top:.6rem}
+.scuro .carta-progetto :is(.carta-progetto-brand){color:var(--accento)}
+.scuro .carta-progetto.tema-snow .carta-progetto-brand,.scuro .carta-progetto.tema-jet .carta-progetto-brand{color:var(--testo)}
+@media(prefers-reduced-motion:reduce){.carta-progetto,.carta-progetto-img img{transition:none}}
+
+/* Home: sezioni di anteprima delle pagine del menu */
+.anteprima{padding-block:clamp(3rem,7vw,5.5rem)}
+.anteprima-testa{display:flex;justify-content:space-between;align-items:end;gap:1rem 2rem;flex-wrap:wrap;margin-bottom:clamp(1.5rem,3vw,2.25rem)}
+.anteprima-testa .etichetta{margin-bottom:.5rem}
+.anteprima h2{font-size:clamp(1.6rem,3.5vw,2.5rem);margin:0}
+.anteprima-intro{max-width:44rem;margin:.75rem 0 0;font-size:1.02rem}
+.anteprima-generi{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1.5rem;padding:0;list-style:none}
+.anteprima-generi .chip{text-decoration:none;display:inline-flex;align-items:baseline;gap:.4em}
+.anteprima-piede{margin-top:clamp(1.5rem,3vw,2.25rem)}
+.anteprima-servizi{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin:0;padding:0;list-style:none}
+.anteprima-servizi li{background:rgba(255,251,250,.55);border:1px solid var(--jet-15);border-radius:var(--raggio);padding:1.1rem 1.25rem}
+.anteprima-servizi strong{display:block;font-weight:600;margin-bottom:.3rem}
+.anteprima-servizi span{font-size:.92rem;opacity:.9}
+.scuro .anteprima-servizi li{background:rgba(230,226,220,.05)}
+.anteprima-due{display:grid;gap:clamp(2rem,5vw,4rem)}
+@media(min-width:60em){.anteprima-due{grid-template-columns:1fr 1fr}}
+.anteprima-chi{display:flex;gap:1.25rem;align-items:flex-start}
+.anteprima-chi picture,.anteprima-chi>img{flex:0 0 auto}
+.anteprima-chi img{width:7rem;height:7rem;border-radius:50%;object-fit:cover;border:4px solid var(--verdigris)}
+@media(max-width:36em){.anteprima-chi{flex-direction:column}}
+.anteprima-partner{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 1.25rem;padding:0;list-style:none}
+.anteprima-partner li{font-weight:600;font-size:.9rem;padding:.3em .8em;border-radius:999px;border:1px solid var(--jet-15)}
+.anteprima .elenco-approfondimenti{max-width:none}
+.link-freccia{display:inline-block;font-weight:600;text-decoration:none;border-bottom:2px solid var(--accento)}
+.link-freccia::after{content:" \2192"}
+
 /* Dietro le quinte */
 .dietro{padding-block:clamp(3rem,6vw,5rem) 0;overflow:hidden}
 .dietro h2{font-size:clamp(1.5rem,3.5vw,2.4rem);letter-spacing:.04em}

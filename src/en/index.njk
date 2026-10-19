@@ -15,7 +15,7 @@ permalink: /en/
       <p class="eroe-intro eroe-intro-corta">Production sound and audio post for film, documentary, branded content, animation and video games: sound design, stereo and surround mixing, music, voices, ADR and location sound.</p>
       <p class="eroe-nota">Remote work in Italian, English and French.<br class="a-capo-desktop"> For shoots, on location in Italy and abroad.</p>
       <div class="eroe-azioni">
-        <a class="bottone" href="#projects">See the projects</a>
+        <a class="bottone" href="/en/portfolio/">See the projects</a>
         <a class="bottone bottone-secondario" href="/en/contact/">Get in touch</a>
       </div>
     </div>
@@ -47,33 +47,8 @@ permalink: /en/
   </div>
 </section>
 
-<section id="projects" class="progetti" aria-label="Portfolio">
-  <h2 class="visivamente-nascosto">Portfolio</h2>
-  {%- asyncEach p in collections.progetti_en %}
-  <article class="progetto {{ p.data.tema | slugTema }}" id="{{ p.fileSlug }}">
-    <div class="contenitore progetto-griglia">
-      <div class="progetto-media">
-        {% set v = p.data.video[0] %}
-        {% set poster = "progetti/" + p.data.immagine %}
-        {% set eager = false %}
-        {% include "parti/video.njk" %}
-        {%- if p.data.video.length > 1 %}
-        <p class="progetto-altri"><a href="{{ p.url }}">{{ p.data.video.length }} videos in this series</a></p>
-        {%- endif %}
-      </div>
-      <div class="progetto-testo">
-        <p class="progetto-frase">{{ p.data.frase }}</p>
-        <h3 class="progetto-brand"><a href="{{ p.url }}">{{ p.data.brand }}</a></h3>
-        <p class="progetto-titolo">{{ p.data.titolo }}</p>
-        <p class="progetto-crediti">{{ p.data.crediti | mdInline | safe }}</p>
-        <div class="progetto-descrizione">{{ p.rawInput | md | safe }}</div>
-        <p class="progetto-meta"><span>Category: {{ p.data.categoria }}</span> <span>Role: {{ p.data.ruolo }}</span></p>
-        <a class="progetto-link" href="{{ p.url }}">Project page</a>
-      </div>
-    </div>
-  </article>
-  {%- endeach %}
-</section>
+{%- set l = "en" %}
+{% include "parti/home-anteprime.njk" %}
 
 <section class="dietro tema-jet" aria-labelledby="dietro-titolo">
   <div class="contenitore">

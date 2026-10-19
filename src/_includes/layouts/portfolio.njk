@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+---
+{#- Portfolio filtrabile per genere e ruolo (dati in _data/portfolio.js). Una pagina per genere, così ogni genere ha un indirizzo
+    da mandare a un cliente; dentro la pagina i filtri lavorano senza ricaricare (assets/js/portfolio.js).
+    Variabile di paginazione: g = { chiave: "" } per "Tutti", altrimenti il genere. -#}
+{%- set l = lang or "it" %}
+{%- set tp = portfolio.testi[l] %}
+{%- set lista = collections["progetti_" + l] %}
+{%- set contaGenere = {} %}{% set contaRuolo = {} %}{% set inPagina = 0 %}
+{%- for p in lista %}
+  {%- set info = portfolio.progetti[p.fileSlug] or { ruoli: [] } %}
+  {%- if not g.chiave or info.genere == g.chiave %}{% set inPagina = inPagina + 1 %}
+    {%- for r in info.ruoli %}{% set contaRuolo = contaRuolo | conta(r) %}{% endfor %}
+  {%- endif %}
+  {%- set contaGenere = contaGenere | conta(info.genere) %}
+{%- endfor %}
+<article class="pagina portfolio tema-snow">
+  <header class="pagina-testa">
+    <div class="contenitore">
+      <p class="etichetta">{{ tp.occhiello }}</p>
+      <h1>{{ tp.titolo }}</h1>
+      <p class="pagina-sottotitolo" data-descrizione>{{ g[l].descrizione if g.chiave else tp.descrizione }}</p>
+    </div>
+  </header>
+  <div class="contenitore portfolio-corpo">
+    <div class="filtri filtri-portfolio" data-portfolio data-genere="{{ g.chiave }}">
+      <div class="filtri-gruppo" data-gruppo="genere" role="group" aria-label="{{ tp.genere }}">
+        <span class="filtri-nome">{{ tp.genere }}</span>
+        <a class="chip{% if not g.chiave %} attivo{% endif %}" href="{{ tp.url }}" data-v="" data-descrizione="{{ tp.descrizione }}" data-titolo="{{ tp.titolo_seo }}"{% if not g.chiave %} aria-current="page"{% endif %}>{{ tp.tutti }} <span class="chip-n">{{ lista.length }}</span></a>
+        {%- for gg in portfolio.generi %}
+        <a class="chip{% if g.chiave == gg.chiave %} attivo{% endif %}" href="{{ tp.url }}{{ gg[l].slug }}/" data-v="{{ gg.chiave }}" data-descrizione="{{ gg[l].descrizione }}" data-titolo="{{ tp.titolo_seo_genere | replace('{genere}', gg[l].nome) }}"{% if g.chiave == gg.chiave %} aria-current="page"{% endif %}>{{ gg[l].nome }} <span class="chip-n">{{ contaGenere[gg.chiave] or 0 }}</span></a>
+        {%- endfor %}
+      </div>
+      <div class="filtri-gruppo" data-gruppo="ruolo" role="group" aria-label="{{ tp.ruolo }}">
+        <span class="filtri-nome">{{ tp.ruolo }}</span>
+        <button type="button" class="chip attivo" data-v="" aria-pressed="true">{{ tp.tutte }}</button>
+        {%- for r in portfolio.ruoli %}
+        <button type="button" class="chip" data-v="{{ r.chiave }}" aria-pressed="false">{{ r[l] }} <span class="chip-n">{{ contaRuolo[r.chiave] or 0 }}</span></button>
+        {%- endfor %}
+      </div>
+      <p class="filtri-esito"><span data-conta data-uno="{{ tp.conta1 }}" data-molti="{{ tp.conta }}" aria-live="polite">{{ tp.conta | replace("{n}", inPagina) }}</span> <span class="filtri-nota">{{ tp.nota }}</span> <button type="button" class="filtri-azzera" data-azzera hidden>{{ tp.azzera }}</button></p>
+    </div>
+    <p class="filtri-vuoto" data-vuoto hidden>{{ tp.nessuno }}</p>
+    <ul class="griglia-progetti" data-griglia>
+      {%- asyncEach p in lista %}
+      {%- set info = portfolio.progetti[p.fileSlug] or { ruoli: [] } %}
+      <li data-genere="{{ info.genere }}" data-ruoli="{{ info.ruoli | join(' ') }}"{% if g.chiave and info.genere != g.chiave %} hidden{% endif %}>
+        {% include "parti/carta-progetto.njk" %}
+      </li>
+      {%- endeach %}
+    </ul>
+    <p class="portfolio-selezione">{{ tp.selezione }} <a href="{{ testi[l].url.contatti }}">{{ tp.selezioneLink }}</a></p>
+  </div>
+</article>
+{#- Indirizzi di ogni genere nelle tre lingue: quando il filtro cambia genere, lo script aggiorna anche il selettore lingua -#}
+<script type="application/json" data-portfolio-url>{{ portfolio | urlPortfolio | json | safe }}</script>
+<script src="/assets/js/portfolio.js" defer></script>

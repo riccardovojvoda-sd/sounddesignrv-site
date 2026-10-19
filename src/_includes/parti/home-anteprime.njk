@@ -1,0 +1,99 @@
+{#- Home: anteprima di ogni pagina del menu (decisa il 19/10/2026). Portfolio con sei progetti scelti e scorciatoie per genere,
+    poi Servizi, Guide, Chi sono e Partner. Testi in _data/anteprime.js, generi e progetti in evidenza in _data/portfolio.js.
+    Variabile: l = lingua. -#}
+{%- set ta = anteprime[l] %}
+{%- set t = testi[l] %}
+{%- set tp = portfolio.testi[l] %}
+{%- set tutti = collections["progetti_" + l] %}
+{%- set scelti = [] %}
+{%- for s in portfolio.evidenza %}{% for p in tutti %}{% if p.fileSlug == s.progetto %}{% set scelti = (scelti.push({ p: p, tema: s.tema }), scelti) %}{% endif %}{% endfor %}{% endfor %}
+{%- set contaGenere = {} %}{% for p in tutti %}{% set contaGenere = contaGenere | conta((portfolio.progetti[p.fileSlug] or {}).genere) %}{% endfor %}
+<section id="{{ ta.ancora }}" class="anteprima anteprima-portfolio" aria-labelledby="anteprima-portfolio-titolo">
+  <div class="contenitore">
+    <div class="anteprima-testa">
+      <div>
+        <p class="etichetta">{{ ta.portfolio.etichetta }}</p>
+        <h2 id="anteprima-portfolio-titolo">{{ ta.portfolio.titolo }}</h2>
+        <p class="anteprima-intro">{{ ta.portfolio.intro }}</p>
+      </div>
+    </div>
+    <ul class="anteprima-generi" aria-label="{{ tp.genere }}">
+      {%- for gg in portfolio.generi %}
+      <li><a class="chip" href="{{ tp.url }}{{ gg[l].slug }}/">{{ gg[l].nome }} <span class="chip-n">{{ contaGenere[gg.chiave] or 0 }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    <ul class="griglia-progetti">
+      {%- asyncEach s in scelti %}
+      {%- set p = s.p %}{% set temaCarta = s.tema %}
+      <li>{% include "parti/carta-progetto.njk" %}</li>
+      {%- endeach %}
+    </ul>
+    <p class="anteprima-piede"><a class="bottone" href="{{ tp.url }}">{{ tp.tuttiI }}</a></p>
+  </div>
+</section>
+
+<section class="anteprima tema-apricot" aria-labelledby="anteprima-servizi-titolo">
+  <div class="contenitore">
+    <div class="anteprima-testa">
+      <div>
+        <p class="etichetta">{{ ta.servizi.etichetta }}</p>
+        <h2 id="anteprima-servizi-titolo">{{ ta.servizi.titolo }}</h2>
+        <p class="anteprima-intro">{{ ta.servizi.intro }}</p>
+      </div>
+      <a class="link-freccia" href="{{ t.url.servizi }}">{{ ta.servizi.link }}</a>
+    </div>
+    <ul class="anteprima-servizi">
+      {%- for v in ta.servizi.voci %}
+      <li><strong>{{ v.titolo }}</strong><span>{{ v.testo }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- set guide = collections["approfondimenti" + ("" if l == "it" else "_" + l)] %}
+{%- if guide.length %}
+<section class="anteprima" aria-labelledby="anteprima-guide-titolo">
+  <div class="contenitore">
+    <div class="anteprima-testa">
+      <div>
+        <p class="etichetta">{{ ta.guide.etichetta }}</p>
+        <h2 id="anteprima-guide-titolo">{{ ta.guide.titolo }}</h2>
+        <p class="anteprima-intro">{{ ta.guide.intro }}</p>
+      </div>
+      <a class="link-freccia" href="{{ t.url.approfondimenti }}">{{ ta.guide.link }}</a>
+    </div>
+    <ul class="elenco-approfondimenti">
+      {%- for a in guide.slice(0, 3) %}
+      {% include "parti/voce-articolo.njk" %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section class="anteprima tema-flax" aria-label="{{ ta.chiSono.etichetta }}, {{ ta.partner.etichetta }}">
+  <div class="contenitore anteprima-due">
+    <div>
+      <p class="etichetta">{{ ta.chiSono.etichetta }}</p>
+      <div class="anteprima-chi">
+        <img src="/assets/img/riccardo-vojvoda-viso.jpg" alt="{{ sito.titolare }}" width="112" height="112" loading="lazy" decoding="async">
+        <div>
+          <h2>{{ ta.chiSono.titolo }}</h2>
+          <p class="anteprima-intro">{{ ta.chiSono.testo }}</p>
+          <a class="link-freccia" href="{{ t.url.chiSono }}">{{ ta.chiSono.link }}</a>
+        </div>
+      </div>
+    </div>
+    {%- if t.url.partner %}
+    <div>
+      <p class="etichetta">{{ ta.partner.etichetta }}</p>
+      <h2>{{ ta.partner.titolo }}</h2>
+      <p class="anteprima-intro">{{ ta.partner.testo }}</p>
+      <ul class="anteprima-partner">
+        {%- for n in anteprime.nomiPartner %}<li>{{ n }}</li>{% endfor %}
+      </ul>
+      <a class="link-freccia" href="{{ t.url.partner }}">{{ ta.partner.link }}</a>
+    </div>
+    {%- endif %}
+  </div>
+</section>

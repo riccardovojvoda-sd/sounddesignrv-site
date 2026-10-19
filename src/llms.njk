@@ -14,7 +14,8 @@ eleventyExcludeFromCollections: true
 - Strumenti: Pro Tools, DaVinci Resolve/Fairlight, iZotope RX, monitoring calibrato SoundID Reference Multichannel
 
 ## Pagine
-- [Home e portfolio]({{ sito.url }}/): showreel 2026 e 14 progetti con video
+- [Home]({{ sito.url }}/): showreel 2026, progetti in evidenza e anteprima delle altre pagine
+- [Portfolio]({{ sito.url }}/portfolio/): tutti i {{ collections.progetti.length }} progetti con video, filtrabili per genere ({% for g in portfolio.generi %}[{{ g.it.nome | safe }}]({{ sito.url }}/portfolio/{{ g.it.slug }}/){% if not loop.last %}, {% endif %}{% endfor %}) e per ruolo
 - [Servizi]({{ sito.url }}/servizi/)
 - [Chi sono]({{ sito.url }}/chi-sono/)
 - [FAQ]({{ sito.url }}/faq/): cosa include la post-produzione audio, cosa consegnare (AAF, handles, bollettino sonoro), tempi per formato, revisioni, formati, preventivo, voice over, voci AI
@@ -29,7 +30,8 @@ eleventyExcludeFromCollections: true
 
 ## English version
 Every page also exists in English, same structure, with hreflang links between the language versions.
-- [Home and portfolio]({{ sito.url }}/en/)
+- [Home]({{ sito.url }}/en/)
+- [Portfolio]({{ sito.url }}/en/portfolio/): all projects, filterable by genre ({% for g in portfolio.generi %}[{{ g.en.nome | safe }}]({{ sito.url }}/en/portfolio/{{ g.en.slug }}/){% if not loop.last %}, {% endif %}{% endfor %}) and by role
 - [Services]({{ sito.url }}/en/services/)
 - [About]({{ sito.url }}/en/about/)
 - [FAQ]({{ sito.url }}/en/faq/): what audio post-production includes, what to deliver (AAF, handles, sound report), turnaround by format, revisions, formats, quotes, voice over, AI voices
@@ -40,7 +42,8 @@ Every page also exists in English, same structure, with hreflang links between t
 
 ## Version française
 Chaque page existe aussi en français, même structure, avec des liens hreflang entre les versions.
-- [Accueil et portfolio]({{ sito.url }}/fr/)
+- [Accueil]({{ sito.url }}/fr/)
+- [Portfolio]({{ sito.url }}/fr/portfolio/) : tous les projets, filtrables par genre ({% for g in portfolio.generi %}[{{ g.fr.nome | safe }}]({{ sito.url }}/fr/portfolio/{{ g.fr.slug }}/){% if not loop.last %}, {% endif %}{% endfor %}) et par rôle
 - [Services]({{ sito.url }}/fr/services/)
 - [À propos]({{ sito.url }}/fr/a-propos/)
 - [FAQ]({{ sito.url }}/fr/faq/) : ce que comprend la post-production audio, quoi livrer (AAF, poignées, rapport son), délais par format, corrections, formats, devis, voix off, voix IA

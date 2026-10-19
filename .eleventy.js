@@ -129,6 +129,11 @@ module.exports = function (eleventyConfig) {
       .filter((v) => !TITOLI_FUORI_INDICE.test(v.testo))
   );
   eleventyConfig.addFilter("slugTema", (tema) => `tema-${tema || "snow"}`);
+  // Portfolio: conteggi per genere e ruolo (Nunjucks non sa incrementare una chiave di un oggetto)
+  eleventyConfig.addFilter("conta", (oggetto, chiave) => (chiave ? { ...oggetto, [chiave]: (oggetto[chiave] || 0) + 1 } : oggetto));
+  // Portfolio: indirizzo di ogni genere in ogni lingua, { it: { "": "/portfolio/", spot: "/portfolio/spot/" }, en: {...} }
+  eleventyConfig.addFilter("urlPortfolio", (portfolio) => Object.fromEntries(Object.entries(portfolio.testi).map(([l, tp]) =>
+    [l, Object.fromEntries([["", tp.url], ...portfolio.generi.map((g) => [g.chiave, tp.url + g[l].slug + "/"])])])));
   eleventyConfig.addFilter("tempo", (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`);
   eleventyConfig.addFilter("anno", () => new Date().getFullYear());
   eleventyConfig.addFilter("dataIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString().slice(0, 10));

@@ -9,7 +9,8 @@ og_type: article
 <article class="scheda {{ tema | slugTema }}">
   <header class="scheda-testa">
     <div class="contenitore">
-      <p class="briciole"><a href="{{ t.url.portfolio }}">{{ t.scheda.portfolio }}</a> / {{ categoria }}</p>
+      {%- set genereScheda = false %}{% for gg in portfolio.generi %}{% if (portfolio.progetti[page.fileSlug] or {}).genere == gg.chiave %}{% set genereScheda = gg %}{% endif %}{% endfor %}
+      <p class="briciole"><a href="{{ t.url.portfolio }}">{{ t.scheda.portfolio }}</a>{% if genereScheda %} / <a href="{{ t.url.portfolio }}{{ genereScheda[lang or "it"].slug }}/">{{ genereScheda[lang or "it"].nome }}</a>{% endif %}{% if not genereScheda or categoria != genereScheda[lang or "it"].nome %} / {{ categoria }}{% endif %}</p>
       <h1 class="scheda-brand">{{ brand }}</h1>
       <p class="scheda-titolo">{{ titolo }}</p>
       <p class="scheda-frase">{{ frase }}</p>

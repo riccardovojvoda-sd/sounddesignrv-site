@@ -2,7 +2,7 @@
 module.exports = {
   it: {
     codice: "it", locale: "it_IT", nome: "Italiano", sigla: "IT",
-    url: { home: "/", portfolio: "/#progetti", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/", approfondimenti: "/guide/", partner: "/partner/" },
+    url: { home: "/", portfolio: "/portfolio/", servizi: "/servizi/", chiSono: "/chi-sono/", faq: "/faq/", contatti: "/contatti/", approfondimenti: "/guide/", partner: "/partner/" },
     menu: { portfolio: "Portfolio", servizi: "Servizi", chiSono: "Chi sono", contatti: "Contatti", faq: "FAQ", approfondimenti: "Guide", approfondimentiCorto: "Guide", partner: "Partner", principale: "Principale", pagine: "Pagine", profili: "Profili esterni", lingua: "Lingua" },
     salta: "Vai al contenuto", tornaSu: "Torna in alto", temaScuro: "Tema scuro",
     marchioRuolo: "Sound Design | Audio Post",
@@ -22,7 +22,7 @@ module.exports = {
   },
   en: {
     codice: "en", locale: "en_GB", nome: "English", sigla: "EN",
-    url: { home: "/en/", portfolio: "/en/#projects", servizi: "/en/services/", chiSono: "/en/about/", faq: "/en/faq/", contatti: "/en/contact/", approfondimenti: "/en/insights/", partner: "/en/partners/" },
+    url: { home: "/en/", portfolio: "/en/portfolio/", servizi: "/en/services/", chiSono: "/en/about/", faq: "/en/faq/", contatti: "/en/contact/", approfondimenti: "/en/insights/", partner: "/en/partners/" },
     menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "About", contatti: "Contact", faq: "FAQ", approfondimenti: "Insights", approfondimentiCorto: "Insights", partner: "Partners", principale: "Main", pagine: "Pages", profili: "External profiles", lingua: "Language" },
     salta: "Skip to content", tornaSu: "Back to top", temaScuro: "Dark mode",
     marchioRuolo: "Sound Design | Audio Post",
@@ -42,7 +42,7 @@ module.exports = {
   },
   fr: {
     codice: "fr", locale: "fr_FR", nome: "Français", sigla: "FR",
-    url: { home: "/fr/", portfolio: "/fr/#projets", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/fr/guides/", partner: "/fr/partenaires/" },
+    url: { home: "/fr/", portfolio: "/fr/portfolio/", servizi: "/fr/services/", chiSono: "/fr/a-propos/", faq: "/fr/faq/", contatti: "/fr/contact/", approfondimenti: "/fr/guides/", partner: "/fr/partenaires/" },
     menu: { portfolio: "Portfolio", servizi: "Services", chiSono: "À propos", contatti: "Contact", faq: "FAQ", approfondimenti: "Guides", approfondimentiCorto: "Guides", partner: "Partenaires", principale: "Principal", pagine: "Pages", profili: "Profils externes", lingua: "Langue" },
     articolo: { pubblicato: "Publié le", aggiornato: "mis à jour le", tutti: "Tous les guides", altri: "À lire aussi", leggiIn: "Lire en français", minuti: "min de lecture", bozza: "BROUILLON : page d'aperçu, pas encore publiée" },
     colonna: { scrittoDa: "Écrit par", ruolo: "Sound designer et post‑producteur audio", ctaTitolo: "Une vidéo à sonoriser ?", ctaTesto: "Sound design, mixage et voix pour spots, documentaires et branded content. Je réponds en général sous 24 à 48 heures.", ctaBottone: "Écrivez-moi", ascolta: "Voir le showreel", indice: "Dans ce guide", etichetta: "Auteur et contact" },
