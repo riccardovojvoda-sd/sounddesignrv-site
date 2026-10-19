@@ -4,7 +4,6 @@ parola_evidenziata: "foley"
 titolo_seo: "Cos'è il foley e quando serve in uno spot o in un video aziendale | Riccardo Vojvoda"
 descrizione_seo: "Il foley è l'insieme dei suoni rifatti a tempo con le immagini: passi, vestiti, oggetti. Come si distingue da effetti di libreria e presa diretta, quando serve in uno spot o in un corporate, cosa pesa sui tempi e cosa dire nel brief."
 date: 2026-11-10
-bozza: true
 copertina: foley-microfono-tavolo-studio.jpg
 copertinaAlt: "Microfono sospeso sopra un tavolo con chiavi, stoffa, sassi e una scarpa: gli oggetti di una sessione di foley"
 copertinaCredito: ""

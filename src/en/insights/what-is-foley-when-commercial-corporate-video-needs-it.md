@@ -4,7 +4,6 @@ parola_evidenziata: "foley"
 titolo_seo: "What is foley and when does a commercial or corporate video need it | Riccardo Vojvoda"
 descrizione_seo: "Foley is the set of sounds recreated in sync with the picture: footsteps, clothing, objects. How it differs from library effects and production sound, when a commercial or corporate video needs it, what affects the time it takes and what to put in a brief."
 date: 2026-11-10
-bozza: true
 copertina: foley-microfono-tavolo-studio.jpg
 copertinaAlt: "Microphone hanging above a table with keys, cloth, stones and a shoe: the objects of a foley session"
 copertinaCredito: ""
