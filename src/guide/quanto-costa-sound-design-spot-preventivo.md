@@ -5,8 +5,8 @@ titolo_seo: "Quanto costa il sound design di uno spot? Le variabili del preventi
 descrizione_seo: "Cosa entra nel preventivo audio di uno spot: tipo di video, destinazioni e versioni, materiale di partenza, voce, musica e licenze, sound design, mix per TV, radio e web, revisioni. Le informazioni da mandare per avere un preventivo preciso al primo giro."
 date: 2026-11-17
 bozza: true
-copertina: ""
-copertinaAlt: ""
+copertina: preventivo-bilancia-cuffie-fogli.jpg
+copertinaAlt: "Bilancia d'ottone su una scrivania di studio: da una parte una cuffia, dall'altra una pila di fogli"
 copertinaCredito: ""
 chiave: articolo-s21
 categoria: Brief
