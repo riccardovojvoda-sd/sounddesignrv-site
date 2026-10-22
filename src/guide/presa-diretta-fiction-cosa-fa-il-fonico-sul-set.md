@@ -6,7 +6,7 @@ descrizione_seo: "Cosa fa il fonico di presa diretta sul set di una fiction, com
 date: 2026-11-24
 bozza: true
 copertina: presa-diretta-fiction-boom-attore-porta.jpg
-copertinaAlt: "Il fonico di spalle con il boom alzato in una stanza di set; sulla destra un attore entra dalla porta mentre il microfono lo segue"
+copertinaAlt: "Il fonico di spalle con il boom alzato in una stanza di set; sulla destra un uomo in borghese si affaccia dalla porta aperta"
 copertinaCredito: "Foto di Riccardo Vojvoda, attore aggiunto con l'AI (FLUX.2)"
 chiave: articolo-s15
 categoria: Presa diretta
