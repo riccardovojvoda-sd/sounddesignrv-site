@@ -5,9 +5,9 @@ titolo_seo: "Presa diretta in fiction: cosa può fare il fonico sul set e cosa s
 descrizione_seo: "Cosa fa il fonico di presa diretta sul set di una fiction, come lavora da solo o in squadra, dove si decide la qualità del suono e le richieste da fare alla produzione prima del ciak."
 date: 2026-11-24
 bozza: true
-copertina: ""
-copertinaAlt: ""
-copertinaCredito: ""
+copertina: presa-diretta-fiction-boom-attore-porta.jpg
+copertinaAlt: "Il fonico di spalle con la giraffa alzata in una stanza di set; sulla destra un attore entra dalla porta mentre il microfono lo segue"
+copertinaCredito: "Foto di Riccardo Vojvoda, attore aggiunto con l'AI (FLUX.2)"
 chiave: articolo-s15
 categoria: Presa diretta
 per_chi: ["regista-produzione", "montatore"]
