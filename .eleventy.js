@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/img/opzioni-copertina": "assets/img/opzioni-copertina" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img/logo-sdrv-96.png": "assets/img/logo-sdrv-96.png", "src/assets/img/logo-sdrv.png": "assets/img/logo-sdrv.png", "src/assets/img/riccardo-vojvoda-viso.jpg": "assets/img/riccardo-vojvoda-viso.jpg" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "assets" });
-  eleventyConfig.addPassthroughCopy({ "src/assets/*.pdf": "s" }); // vecchio percorso Squarespace del profilo PDF
+  eleventyConfig.addPassthroughCopy({ "src/assets/Riccardo-*.pdf": "s" }); // vecchio percorso Squarespace del profilo PDF
   eleventyConfig.addPassthroughCopy({ "src/radice": "." });
   // Pagine di ascolto per i clienti (casting, vetrine, player), generate da tool-personali/casting-vo/pagina.py: noindex, fuori da sitemap e menu
   eleventyConfig.addPassthroughCopy({ "ascolto": "ascolto" });
