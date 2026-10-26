@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><title>Carosello voce AI o speaker</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../../src/assets/font/poppins-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:500;src:url(../../src/assets/font/poppins-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;src:url(../../src/assets/font/poppins-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:700;src:url(../../src/assets/font/poppins-latin-700-normal.woff2) format("woff2")}
+:root{--jet:#2D2D2A;--verdigris:#7BB5B2;--apricot:#F6C9AC;--flax:#EDD286;--snow:#FFFBFA;--carta:#EEE9E1}
+html,body{margin:0;background:#000}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;box-sizing:border-box;font-family:Poppins,sans-serif;display:none}
+.slide.attiva{display:block} body.tutte .slide{display:block;margin:0 auto 40px}
+.pad{position:absolute;inset:110px 96px 170px 96px;display:flex;flex-direction:column;justify-content:center}
+.etichetta{font-size:30px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0 0 30px}
+h1,h2{font-weight:600;letter-spacing:-.01em;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:104px} h2{font-size:84px;margin-bottom:52px}
+p{font-size:50px;line-height:1.38;margin:0 0 30px}
+b{font-weight:600}
+.piede{position:absolute;left:96px;right:96px;bottom:64px;display:flex;align-items:center;gap:22px;font-size:26px;font-weight:500}
+.piede img{height:64px;width:64px;border-radius:12px}
+.piede span:last-child{margin-left:auto}
+/* chiare */
+.chiara{background:var(--carta);color:var(--jet)}
+.chiara .num{font-size:130px;font-weight:700;line-height:1;color:var(--verdigris);margin:0 0 26px}
+.chiara b{background:linear-gradient(transparent 62%,var(--flax) 62%)}
+.chiara .muto{color:rgba(45,45,42,.68)}
+.chiara .piede{color:rgba(45,45,42,.7)}
+/* copertina */
+.cop{background:var(--jet);color:var(--snow)}
+.cop .sfondo,.cop .sfocato{position:absolute;inset:0;background:url(../../src/assets/img/approfondimenti/voce-ai-speaker-microfono.jpg) 50% 40%/cover no-repeat}
+.cop .sfocato{filter:blur(12px);transform:scale(1.06);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0.350) 20.0%,rgba(0,0,0,0.360) 24.8%,rgba(0,0,0,0.417) 29.5%,rgba(0,0,0,0.529) 34.2%,rgba(0,0,0,0.675) 39.0%,rgba(0,0,0,0.821) 43.8%,rgba(0,0,0,0.933) 48.5%,rgba(0,0,0,0.990) 53.2%,rgba(0,0,0,1.000) 58.0%,#000 100%);mask-image:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0.350) 20.0%,rgba(0,0,0,0.360) 24.8%,rgba(0,0,0,0.417) 29.5%,rgba(0,0,0,0.529) 34.2%,rgba(0,0,0,0.675) 39.0%,rgba(0,0,0,0.821) 43.8%,rgba(0,0,0,0.933) 48.5%,rgba(0,0,0,0.990) 53.2%,rgba(0,0,0,1.000) 58.0%,#000 100%)}
+.cop .velo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,45,42,.38) 0%,rgba(45,45,42,0.380) 22.0%,rgba(45,45,42,0.389) 28.0%,rgba(45,45,42,0.441) 34.0%,rgba(45,45,42,0.542) 40.0%,rgba(45,45,42,0.675) 46.0%,rgba(45,45,42,0.808) 52.0%,rgba(45,45,42,0.909) 58.0%,rgba(45,45,42,0.961) 64.0%,rgba(45,45,42,0.970) 70.0%,rgba(45,45,42,.97) 100%)}
+.cop .pad{justify-content:flex-end;padding-bottom:20px}
+.cop .etichetta{color:var(--flax)}
+.cop .piede{color:var(--snow)} .cop .piede span:last-child{color:var(--flax)}
+/* cta */
+.cta{background:var(--flax);color:var(--jet)}
+.cta .etichetta{opacity:.75}
+.cta h2{font-size:88px}
+.cta .url{font-size:46px;font-weight:600;background:var(--jet);color:var(--snow);padding:20px 30px;border-radius:12px;align-self:flex-start;margin:6px 0 44px}
+.cta p{font-size:46px}
+/*tinta-inizio*/
+/* categoria: Voce e parlato (tinte-categorie.json) */
+.cop .sfocato{opacity:0}
+.cop .sfondo{filter:saturate(1.35) contrast(1.12)}
+.cop .velo{background:linear-gradient(180deg,rgba(68,53,8,0.000) 0%,rgba(68,53,8,0.000) 4%,rgba(68,53,8,0.000) 8%,rgba(68,53,8,0.000) 12%,rgba(68,53,8,0.000) 16%,rgba(68,53,8,0.000) 20%,rgba(68,53,8,0.000) 24%,rgba(68,53,8,0.000) 28%,rgba(68,53,8,0.000) 32%,rgba(68,53,8,0.002) 36%,rgba(68,53,8,0.040) 40%,rgba(68,53,8,0.120) 44%,rgba(68,53,8,0.231) 48%,rgba(68,53,8,0.361) 52%,rgba(68,53,8,0.500) 56%,rgba(68,53,8,0.636) 60%,rgba(68,53,8,0.758) 64%,rgba(68,53,8,0.855) 68%,rgba(68,53,8,0.915) 72%,rgba(68,53,8,0.930) 76%,rgba(68,53,8,0.930) 80%,rgba(68,53,8,0.930) 84%,rgba(68,53,8,0.930) 88%,rgba(68,53,8,0.930) 92%,rgba(68,53,8,0.930) 96%,rgba(68,53,8,0.930) 100%)}
+.cop .etichetta,.cop .piede span:last-child{color:#f6d36a}
+/*tinta-fine*/
+</style></head><body>
+
+<section class="slide cop" id="s1"><div class="sfondo"></div><div class="sfocato"></div><div class="velo"></div>
+ <div class="pad"><p class="etichetta">Guide · Voce</p><h1>Voce AI o speaker vero per lo spot?</h1></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>Scorri →</span></div></section>
+<section class="slide chiara" id="s2"><div class="pad">
+ <div class="num">01</div><h2>Dove la voce AI funziona</h2>
+ <p><b>Testi informativi</b>, social, e-learning, video interni.</p><p class="muto">Rende meglio in inglese che in italiano.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>2/8</span></div></section>
+<section class="slide chiara" id="s3"><div class="pad">
+ <div class="num">02</div><h2>Dove si sente la differenza</h2>
+ <p><b>Emozione</b>, ironia, nomi propri e marchi, <b>dialoghi</b>.</p><p class="muto">Tutto quello che chiede di capire il testo.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>3/8</span></div></section>
+<section class="slide chiara" id="s4"><div class="pad">
+ <div class="num">03</div><h2>Veloce sui testi semplici</h2>
+ <p>Per una lettura ambiziosa si generano molte varianti e si montano, <b>a volte sillaba per sillaba</b>.</p><p class="muto">L'editing può costare più di uno speaker.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>4/8</span></div></section>
+<section class="slide chiara" id="s5"><div class="pad">
+ <div class="num">04</div><h2>Quale scegliere</h2>
+ <p>Spot TV e radio, branded content, documentari: <b>uno speaker</b>.</p><p class="muto">Social e video informativi: la voce AI è un'opzione concreta.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>5/8</span></div></section>
+<section class="slide chiara" id="s6"><div class="pad">
+ <div class="num">05</div><h2>Licenze</h2>
+ <p>Con molti piani gratuiti <b>l'uso commerciale</b> non è ammesso.</p><p class="muto">Clonare una voce reale richiede il consenso della persona.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>6/8</span></div></section>
+<section class="slide chiara" id="s7"><div class="pad">
+ <div class="num">06</div><h2>AI Act, dal 2&nbsp;agosto 2026</h2>
+ <p>Una voce che imita <b>una persona reale</b> va dichiarata.</p><p class="muto">Per una voce generica, nel dubbio, dichiararlo costa poco.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>7/8</span></div></section>
+<section class="slide cta" id="s8"><div class="pad">
+ <p class="etichetta">La guida completa</p>
+ <h2>Pro e contro, licenze e cosa dice l'AI Act</h2>
+ <div class="url">sounddesignrv.com/voce-ai</div>
+ <p>Uno spot da fare? Scrivimi con il brief e scegliamo insieme la voce.</p></div>
+ <div class="piede"><img src="../../src/assets/img/logo-sdrv-96.png" alt=""><span>Sound Design RV</span><span>Salva il post</span></div></section>
+<script>const h=location.hash.slice(1);if(h){document.getElementById(h).classList.add('attiva')}else{document.body.classList.add('tutte')}</script>
+</body></html>
