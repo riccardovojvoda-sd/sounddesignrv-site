@@ -1,0 +1,77 @@
+<title>Tinte SDRV</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Poppins:wght@400;600;700&display=swap">
+<style>
+/* Layout: un provino per argomento, quattro copertine affiancate, la scelta si fa toccando la copertina */
+:root{
+  --bg:#f3f1ec; --carta:#ffffff; --fg:#1c1b19; --muto:#6d6a63; --linea:#dcd8cf; --oro:#a8781f; --verdigris:#3f8f86;
+  --display:"Space Mono",ui-monospace,Menlo,monospace; --testo:"Poppins",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121110; --carta:#1b1a18; --fg:#ece8df; --muto:#9a958b; --linea:#2e2c28; --oro:#d6a24a; --verdigris:#6cc0b5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121110; --carta:#1b1a18; --fg:#ece8df; --muto:#9a958b; --linea:#2e2c28; --oro:#d6a24a; --verdigris:#6cc0b5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--testo);font-size:15px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+main{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2{font-family:var(--display);font-weight:700;margin:0;text-wrap:balance}
+h1{font-size:clamp(24px,4vw,34px)}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.1em}
+p{margin:0;max-width:68ch}
+.nota{color:var(--muto);font-size:14px}
+section{display:flex;flex-direction:column;gap:14px}
+.griglia{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.scelta{display:flex;flex-direction:column;gap:8px;cursor:pointer;min-width:0}
+.scelta input{position:absolute;opacity:0}
+.scelta .nome{font-size:13px;font-weight:600}
+.scelta input:checked + .cop{outline:3px solid var(--oro);outline-offset:3px}
+.scelta input:focus-visible + .cop{outline:3px dashed var(--oro);outline-offset:3px}
+.cop{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:8px;overflow:hidden;background:#111;container-type:inline-size}
+.cop .sfondo{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.35) contrast(1.12)}
+.cop .velo{position:absolute;inset:0}
+.cop .etichetta{position:absolute;left:7%;right:7%;bottom:31%;font:700 3.6cqi var(--testo);letter-spacing:.08em}
+.cop .titolo{position:absolute;left:7%;right:7%;bottom:12%;color:#fff;font:700 7.4cqi/1.12 var(--testo);text-wrap:balance}
+.cop .piede{position:absolute;left:7%;right:7%;bottom:4.5%;display:flex;justify-content:space-between;font:600 3.2cqi var(--testo);color:rgba(255,255,255,.8)}
+.invio{background:var(--carta);border:1px solid var(--linea);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px}
+textarea{font:15px var(--testo);background:var(--bg);color:var(--fg);border:1px solid var(--linea);border-radius:8px;padding:9px 10px;width:100%;box-sizing:border-box;min-height:70px}
+button{font:600 14px var(--testo);border:1px solid var(--linea);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;cursor:pointer;align-self:flex-start}
+.uscita{font-family:var(--display);font-size:13px;white-space:pre-wrap;background:var(--bg);border:1px dashed var(--linea);border-radius:8px;padding:12px;user-select:all}
+.esito{font-size:14px;color:var(--verdigris);min-height:1.2em}
+@media (max-width:760px){.griglia{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+
+<main>
+  <div>
+    <h1>Tinte SDRV</h1>
+    <p>Una tinta per argomento sulle copertine dei caroselli. Per ogni argomento la prima è quella di adesso, le altre tre sono alternative. Tocca la copertina che preferisci, in fondo copia le scelte e incollale nella chat.</p>
+    <p class="nota">Ogni copertina usa la foto vera di una guida di quell'argomento, con lo stesso velo e lo stesso testo del carosello. Gli argomenti devono restare distinguibili tra loro: controlla anche l'insieme.</p>
+  </div>
+<!--SEZIONI-->
+  <form class="invio" id="invio">
+    <label for="note"><b>Note</b> (per esempio: più scuro, meno saturo, un'altra idea)</label>
+    <textarea id="note"></textarea>
+    <button type="button" id="copia">Copia le scelte</button>
+    <span class="esito" id="esito" role="status"></span>
+    <div class="uscita" id="uscita" aria-label="Testo da incollare nella chat"></div>
+  </form>
+</main>
+<script>
+const form = document.getElementById('invio');
+const uscita = document.getElementById('uscita');
+function testo() {
+  const righe = [...document.querySelectorAll('section')].map(s => {
+    const r = s.querySelector('input:checked'); return `${s.querySelector('h2').textContent}: ${r ? r.value : 'non scelto'}`;
+  });
+  const n = document.getElementById('note').value.trim();
+  return 'Tinte SDRV\n' + righe.join('\n') + '\nNote: ' + (n || 'nessuna');
+}
+const aggiorna = () => { uscita.textContent = testo(); };
+document.addEventListener('change', aggiorna); document.getElementById('note').addEventListener('input', aggiorna); aggiorna();
+document.getElementById('copia').addEventListener('click', () => {
+  const esito = document.getElementById('esito');
+  navigator.clipboard.writeText(testo()).then(() => { esito.textContent = 'Copiato: incollalo nella chat con Claude.'; })
+    .catch(() => { const sel = getSelection(), rg = document.createRange(); rg.selectNodeContents(uscita); sel.removeAllRanges(); sel.addRange(rg);
+      esito.textContent = 'Testo selezionato qui sotto: copialo e incollalo nella chat.'; });
+});
+</script>
