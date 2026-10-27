@@ -38,14 +38,17 @@ textarea{font:15px var(--testo);background:var(--bg);color:var(--fg);border:1px 
 button{font:600 14px var(--testo);border:1px solid var(--linea);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;cursor:pointer;align-self:flex-start}
 .uscita{font-family:var(--display);font-size:13px;white-space:pre-wrap;background:var(--bg);border:1px dashed var(--linea);border-radius:8px;padding:12px;user-select:all}
 .esito{font-size:14px;color:var(--verdigris);min-height:1.2em}
-@media (max-width:760px){.griglia{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.griglia.sei{grid-template-columns:repeat(6,minmax(0,1fr))}
+figure.fissa{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
+figure.fissa figcaption{font-size:12px;color:var(--muto)}
+@media (max-width:760px){.griglia,.griglia.sei{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 
 <main>
   <div>
     <h1>Tinte SDRV</h1>
-    <p>Una tinta per argomento sulle copertine dei caroselli. Per ogni argomento la prima è quella di adesso, le altre tre sono alternative. Tocca la copertina che preferisci, in fondo copia le scelte e incollale nella chat.</p>
-    <p class="nota">Ogni copertina usa la foto vera di una guida di quell'argomento, con lo stesso velo e lo stesso testo del carosello. Gli argomenti devono restare distinguibili tra loro: controlla anche l'insieme.</p>
+    <p>Secondo giro: resta da scegliere solo Voce e parlato. Le quattro proposte stanno lontane dall'arancione di Musica e licenze e dagli altri colori già approvati, che trovi sotto per confronto. Tocca la copertina che preferisci, in fondo copia la scelta e incollala nella chat.</p>
+    <p class="nota">Ogni copertina usa la foto vera di una guida di quell'argomento, con lo stesso velo e lo stesso testo del carosello.</p>
   </div>
 <!--SEZIONI-->
   <form class="invio" id="invio">
@@ -60,7 +63,7 @@ button{font:600 14px var(--testo);border:1px solid var(--linea);background:var(-
 const form = document.getElementById('invio');
 const uscita = document.getElementById('uscita');
 function testo() {
-  const righe = [...document.querySelectorAll('section')].map(s => {
+  const righe = [...document.querySelectorAll('section')].filter(s => s.querySelector('input')).map(s => {
     const r = s.querySelector('input:checked'); return `${s.querySelector('h2').textContent}: ${r ? r.value : 'non scelto'}`;
   });
   const n = document.getElementById('note').value.trim();
