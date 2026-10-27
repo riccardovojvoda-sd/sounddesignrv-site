@@ -1,10 +1,10 @@
 {
-  "_nota": "Tinta della copertina di ogni guida sdrv, per categoria (decisa con Riccardo il 23/10/2026). hue in gradi, sat 0-1, velo = luminosità del velo, etichetta = luminosità di occhiello e 'Scorri'. Le tinte verdigris, apricot e flax sono le hue della palette del sito. Una guida nuova: aggiungere il suo id (Sxx del piano articoli) alla categoria giusta in 'guide' e lanciare applica_tinta.py sulla sua cartella.",
+  "_nota": "Tinta della copertina di ogni guida sdrv, per categoria (decisa con Riccardo il 23/10/2026; Voce cambiata in Grafite il 27/10/2026). hue in gradi, sat 0-1, velo = luminosità del velo, etichetta = luminosità di occhiello e 'Scorri'. Le tinte verdigris, apricot e flax sono le hue della palette del sito. Una guida nuova: aggiungere il suo id (Sxx del piano articoli) alla categoria giusta in 'guide' e lanciare applica_tinta.py sulla sua cartella.",
   "categorie": {
     "consegna":   {"nome": "Consegna e file",          "hue": 177, "sat": 0.31, "velo": 0.17, "etichetta": 0.60},
     "loudness":   {"nome": "Loudness e piattaforme",   "hue": 215, "sat": 0.45, "velo": 0.19, "etichetta": 0.68},
     "musica":     {"nome": "Musica e licenze",         "hue": 24,  "sat": 0.85, "velo": 0.17, "etichetta": 0.82},
-    "voce":       {"nome": "Voce e parlato",           "hue": 45,  "sat": 0.78, "velo": 0.15, "etichetta": 0.69},
+    "voce":       {"nome": "Voce e parlato",           "hue": 210, "sat": 0.06, "velo": 0.15, "etichetta": 0.69},
     "set":        {"nome": "Presa diretta e set",      "hue": 140, "sat": 0.30, "velo": 0.15, "etichetta": 0.62},
     "sounddesign":{"nome": "Sound design e immersivo", "hue": 275, "sat": 0.32, "velo": 0.20, "etichetta": 0.72},
     "brief":      {"nome": "Brief e preventivi",       "hue": 345, "sat": 0.45, "velo": 0.20, "etichetta": 0.72}
