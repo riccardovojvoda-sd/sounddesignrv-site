@@ -34,6 +34,8 @@ classeBody: lettura
   <div class="contenitore pagina-corpo con-colonna">
     <div class="prosa articolo-corpo con-colonna-testo">
       {{ content | conAncore | safe }}
+      {#- Firma decisa il 04/11/2026 con Riccardo: le parole sono dell'AI, esperienza e approvazione sue. -#}
+      <p class="nota-ai">{{ t.colonna.notaAi }}</p>
     </div>
     {%- set voci = content | indiceH2 %}
     {% include "parti/colonna-guide.njk" %}

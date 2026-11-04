@@ -9,6 +9,7 @@
     <div class="contatto-dati">
       <a class="contatto-mail" href="mailto:{{ sito.email }}">{{ sito.email }}</a>
       <a class="contatto-tel" href="tel:{{ sito.telefonoHref }}">{{ sito.telefono }}</a>
+      <a class="contatto-whatsapp" href="https://wa.me/{{ sito.telefonoHref | replace('+', '') }}">{{ t.contatto.whatsapp }}</a>
       <a class="bottone" href="{{ sito.profiloPdf }}" download>{{ t.contatto.pdf }}</a>
     </div>
   </div>
