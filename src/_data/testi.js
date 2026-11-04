@@ -13,10 +13,8 @@ module.exports = {
       testo: "Mi chiamo Riccardo Vojvoda, sound designer, post-producer e fonico per film, documentari, branded content, animazione, videogiochi, radio e installazioni immersive. Sono disponibile da remoto o in presenza, in italiano, inglese e francese.",
       nota: "Rispondo di norma entro 24-48 ore. Hai dubbi sul processo o sui materiali da consegnare?",
       faq: "Consulta le FAQ",
-      pdf: "Scarica il profilo in PDF",
-      oggetto: "Dal sito", whatsapp: "Scrivimi su WhatsApp", whatsappTesto: "Ciao Riccardo, ti scrivo dal sito"
+      pdf: "Scarica il profilo in PDF"
     },
-    rimandi: { servizi: "Servizi in questo lavoro", tuttiServizi: "Tutti i servizi", simili: "Lavori simili", guide: "Dalle guide", tutteGuide: "Tutte le guide", ctaTesto: "Raccontami il progetto: rispondo di norma entro 24-48 ore.", scrivimi: "Scrivimi", contatti: "Tutti i contatti", fineContatto: "Parliamo del tuo progetto", fineProssimo: "Prossimo lavoro", fineRivedi: "Rivedi", video: "Video", videoTitolo: "Video completi", videoIntro: "I lavori completi dei reel usciti su Instagram e LinkedIn, dal più recente.", ultimo: "Ultimo uscito", puntate: "Le altre puntate", uscito: "Uscito il" },
     articolo: { pubblicato: "Pubblicato il", aggiornato: "aggiornato il", tutti: "Tutte le guide", altri: "Da leggere anche", leggiIn: "Leggi in italiano", minuti: "min di lettura", bozza: "BOZZA: pagina di anteprima, non ancora pubblicata" },
     colonna: { scrittoDa: "A cura di", notaAi: "Testo scritto dall’AI sulla base dell’esperienza di Riccardo, che lo ha rivisto e approvato.", ruolo: "Sound designer e audio post‑producer", ctaTitolo: "Hai un video da sonorizzare?", ctaTesto: "Sound design, mix e voci per spot, documentari e branded content. Rispondo di norma entro 24-48 ore.", ctaBottone: "Scrivimi", ascolta: "Ascolta lo showreel", indice: "In questa guida", etichetta: "Autore e contatti" },
     analytics: { testo: "Questo sito usa Google Analytics per contare le visite e capire quali pagine vengono lette. Nessuna pubblicità. Accetti?", si: "Accetto", no: "No, grazie", link: "Cookie" },
@@ -35,10 +33,8 @@ module.exports = {
       testo: "I'm Riccardo Vojvoda, sound designer, audio post-producer and production sound mixer for film, documentary, branded content, animation, video games, radio and immersive installations. Available remotely or on site, in Italian, English and French.",
       nota: "I usually reply within 24-48 hours. Questions about the process or the materials to deliver?",
       faq: "Read the FAQ",
-      pdf: "Download the profile (PDF)",
-      oggetto: "From the website", whatsapp: "Message me on WhatsApp", whatsappTesto: "Hi Riccardo, I am writing from your website"
+      pdf: "Download the profile (PDF)"
     },
-    rimandi: { servizi: "Services in this project", tuttiServizi: "All services", simili: "Similar work", guide: "From the insights", tutteGuide: "All insights", ctaTesto: "Tell me about your project: I usually reply within 24-48 hours.", scrivimi: "Get in touch", contatti: "All contact details", fineContatto: "Let's talk about your project", fineProssimo: "Next project", fineRivedi: "Watch again", video: "Videos", videoTitolo: "Full videos", videoIntro: "The full versions of the reels posted on Instagram and LinkedIn, newest first.", ultimo: "Latest", puntate: "The other episodes", uscito: "Posted on" },
     articolo: { pubblicato: "Published on", aggiornato: "updated on", tutti: "All insights", altri: "Also worth reading", leggiIn: "Read in English", minuti: "min read", bozza: "DRAFT: preview page, not published yet" },
     colonna: { scrittoDa: "Curated by", notaAi: "Written by AI based on Riccardo’s experience, then reviewed and approved by him.", ruolo: "Sound designer and audio post‑producer", ctaTitolo: "Got a video that needs sound?", ctaTesto: "Sound design, mixing and voice for commercials, documentaries and branded content. I usually reply within 24-48 hours.", ctaBottone: "Get in touch", ascolta: "Watch the showreel", indice: "In this guide", etichetta: "Author and contact" },
     analytics: { testo: "This site uses Google Analytics to count visits and see which pages get read. No advertising. Do you accept?", si: "Accept", no: "No, thanks", link: "Cookies" },
@@ -59,10 +55,8 @@ module.exports = {
       testo: "Je suis Riccardo Vojvoda, sound designer, monteur-mixeur son et ingénieur du son de plateau pour le cinéma, le documentaire, le branded content, l'animation, le jeu vidéo, la radio et les installations immersives. Disponible à distance ou sur place, en italien, en anglais et en français.",
       nota: "Je réponds en général sous 24 à 48 heures. Des questions sur le processus ou sur les éléments à livrer ?",
       faq: "Consulter la FAQ",
-      pdf: "Télécharger le profil (PDF)",
-      oggetto: "Depuis le site", whatsapp: "Écrivez-moi sur WhatsApp", whatsappTesto: "Bonjour Riccardo, je vous écris depuis votre site"
+      pdf: "Télécharger le profil (PDF)"
     },
-    rimandi: { servizi: "Services sur ce projet", tuttiServizi: "Tous les services", simili: "Projets similaires", guide: "Dans les guides", tutteGuide: "Tous les guides", ctaTesto: "Parlez-moi de votre projet : je réponds en général sous 24 à 48 heures.", scrivimi: "Écrivez-moi", contatti: "Toutes les coordonnées", fineContatto: "Parlons de votre projet", fineProssimo: "Projet suivant", fineRivedi: "Revoir", video: "Vidéos", videoTitolo: "Vidéos complètes", videoIntro: "Les versions complètes des reels publiés sur Instagram et LinkedIn, du plus récent au plus ancien.", ultimo: "Dernière sortie", puntate: "Les autres épisodes", uscito: "Publié le" },
     analytics: { testo: "Ce site utilise Google Analytics pour compter les visites et savoir quelles pages sont lues. Aucune publicité. Acceptez-vous ?", si: "J'accepte", no: "Non, merci", link: "Cookies" },
     pie: { piva: "TVA" }
   }

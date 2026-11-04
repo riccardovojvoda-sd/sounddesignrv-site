@@ -1,7 +1,7 @@
 <!doctype html>
 {%- set t = testi[lang or "it"] %}
 {%- set alternative = collections.all | traduzioni(chiave) %}
-<html lang="{{ lang or "it" }}" data-oggetto-mail="{{ t.contatto.oggetto }}" data-whatsapp="{{ t.contatto.whatsappTesto }}">
+<html lang="{{ lang or "it" }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -80,7 +80,6 @@
 <a class="in-alto" href="#" aria-label="{{ t.tornaSu }}" title="{{ t.tornaSu }}" hidden><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 <button type="button" class="interruttore-scuro" aria-pressed="false" aria-label="{{ t.temaScuro }}" title="{{ t.temaScuro }}"><svg class="icona-luna" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="icona-sole" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
 <script src="/assets/js/tema.js" defer></script>
-<script src="/assets/js/tracciamento-contatti.js" defer></script>
 <script src="/assets/js/video.js" defer></script>
 <script src="/assets/js/in-alto.js" defer></script>
 {%- if filtri_articoli %}<script src="/assets/js/filtri.js" defer></script>{% endif %}

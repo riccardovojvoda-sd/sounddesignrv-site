@@ -68,7 +68,7 @@ p{margin:0 0 1em}
   .testata .lingue-tendina{display:none}
   /* Il titolo lascia posto alle sigle sulla prima riga (home: accanto a RICCARDO; pagine: accanto a briciole/etichetta) */
   .eroe h1{padding-right:6.5rem}
-  .pagina-testa .briciole,.pagina-testa .etichetta,.pagina-testa h1:first-child,.scheda-testa>.contenitore>:first-child,.scheda-capo>:first-child{padding-right:6.5rem}
+  .pagina-testa .briciole,.pagina-testa .etichetta,.pagina-testa h1:first-child,.scheda-testa>.contenitore>:first-child{padding-right:6.5rem}
   p.articolo-bozza.contenitore{padding-right:7rem;text-align:left}
 }
 
@@ -525,37 +525,6 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 .articolo-corpo h2{scroll-margin-top:6rem}
 @media(max-width:48em){.articolo-corpo h2{scroll-margin-top:1rem}}
 @media(prefers-reduced-motion:reduce){.colonna-reel img{transition:none}}
-/* Rimandi nelle schede (21/10/2026): servizi, riquadro contatto, cartello di fine video, simili, guide */
-.scheda-servizi{margin:1.5rem 0}
-.scheda-servizi-titolo{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.7;margin-bottom:.4rem}
-.scheda-servizi ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.3rem;font-size:.92rem}
-.scheda-servizi a{text-decoration:none;border-bottom:2px solid var(--accento)}
-.scheda-cta{background:rgba(255,251,250,.55);border:1px solid var(--jet-15);border-top:5px solid var(--accento);border-radius:var(--raggio);padding:1.1rem 1.2rem 1.2rem;margin-top:1.5rem;scroll-margin-top:6.5rem}
-.scheda-cta p{margin:0 0 .75rem;font-size:.95rem}
-.scheda-cta .scheda-cta-titolo{font-weight:600;font-size:1.05rem;line-height:1.3;margin-bottom:.4rem}
-.scheda-cta-azioni{display:flex;flex-wrap:wrap;gap:.5rem}
-.scheda-cta-link{font-size:.88rem;opacity:.85}
-.tema-jet .scheda-cta{background:rgba(255,251,250,.06)}
-.scuro .scheda-cta{background:rgba(255,251,250,.05)}
-.scheda-corpo-alta{padding-top:clamp(2.5rem,6vw,5rem);row-gap:0}
-.scheda-corpo-alta .scheda-media,.scheda-corpo-alta .scheda-testo{margin-top:clamp(1.5rem,3vw,2.5rem)}
-@media(min-width:60em){
-  .scheda-corpo-alta{grid-template-areas:"capo capo" "sotto testo" "media testo";grid-template-rows:auto auto 1fr}
-  .scheda-capo{grid-area:capo}.scheda-sotto{grid-area:sotto}.scheda-corpo-alta .scheda-media{grid-area:media}
-  .scheda-corpo-alta .scheda-testo{grid-area:testo;margin-top:.4rem;position:sticky;top:6.5rem}
-}
-.video-fine{position:absolute;inset:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;align-content:center;gap:.75rem;padding:1rem;background:rgba(45,45,42,.88);z-index:2}
-.video-fine .bottone{background:var(--snow);color:var(--jet);border-color:var(--snow)}
-.video-fine .bottone-secondario{background:transparent;color:var(--snow)}
-.video-fine-rivedi{flex-basis:100%;background:none;border:0;color:var(--snow);font:500 .9rem var(--font);text-decoration:underline;cursor:pointer;opacity:.85}
-.rimandi{padding-bottom:clamp(2rem,5vw,3.5rem)}
-.rimandi-testa{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem}
-.rimandi-testa .etichetta{margin:0}
-.rimandi .elenco-approfondimenti{max-width:none;margin-bottom:0}
-@media(min-width:48em){.rimandi-guide{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem}}
-.contatto-whatsapp{font-weight:500}
-@media(min-width:48em){.rimandi-guide .voce-articolo-cop{flex-basis:11rem}.rimandi-guide .voce-articolo-testo>span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
-@media(max-width:36em){.rimandi .griglia-progetti{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem}.rimandi .griglia-progetti>li{scroll-snap-align:start}.rimandi-guide .voce-articolo{flex-direction:row}.rimandi-guide .voce-articolo-cop{flex:0 0 7.5rem;width:auto}.rimandi-guide .voce-articolo-testo>span{display:none}}
 
 /* Riga sull'AI in fondo agli articoli (04/11/2026) */
 .prosa .nota-ai,.nota-ai{margin-top:2.5rem;padding-top:1rem;border-top:1px solid currentColor;border-top-color:color-mix(in srgb,currentColor 20%,transparent);font-size:.85rem;font-style:italic;opacity:.7}
