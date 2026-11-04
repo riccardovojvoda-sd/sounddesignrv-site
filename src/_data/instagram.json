@@ -1,5 +1,11 @@
 [
  {
+  "url": "https://www.instagram.com/p/DfUiTifDQnJ/",
+  "copertina": "DfUiTifDQnJ.jpg",
+  "didascalia": "Questa voce ti sembra vera? L'ho generata con l'intelligenza artificiale. 🎙️ Una voce AI di solito funziona bene per testi informativi, soci",
+  "tipo": "p"
+ },
+ {
   "url": "https://www.instagram.com/p/DfR9kPKjStp/",
   "copertina": "DfR9kPKjStp.jpg",
   "didascalia": "Il bollettino sonoro della presa diretta: cosa deve contenere? 🎙️ È il foglio in cui il fonico annota, take per take, scena, ciak, microfono",
@@ -63,12 +69,6 @@
   "url": "https://www.instagram.com/reel/C5lFv1ktrrd/",
   "copertina": "C5lFv1ktrrd.jpg",
   "didascalia": "Weldan | Vinaioli del Friuli Vendemmia Sound Design by @sound_design_rv REACH OUT FOR COLLAB! Link in bio for more… CREDITS Client - @mrbio_",
-  "tipo": "reel"
- },
- {
-  "url": "https://www.instagram.com/reel/C5BCYEetT2-/",
-  "copertina": "C5BCYEetT2-.jpg",
-  "didascalia": "Lainox Oracle - FX Only Sound Design by @sound_design_rv REACH OUT FOR COLLAB! CREDITS Client - @lainoxali Director, Post - @cromo_studio / ",
   "tipo": "reel"
  }
 ]
