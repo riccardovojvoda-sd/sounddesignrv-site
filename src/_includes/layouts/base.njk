@@ -50,20 +50,39 @@
 {% include "parti/analytics.njk" %}
 <script type="application/ld+json">{{ {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": sito.url + "/#riccardo-vojvoda",
-  "name": sito.nome,
-  "alternateName": "Riccardo Vojvoda Sound Designer",
-  "url": sito.url,
-  "image": sito.url + "/assets/img/logo-sdrv.png",
-  "email": sito.email,
-  "telephone": sito.telefonoHref,
-  "vatID": "IT" + sito.piva,
-  "founder": { "@type": "Person", "name": sito.titolare, "jobTitle": "Sound Designer, Audio Post-Producer", "sameAs": [sito.social.instagram, sito.social.linkedin, sito.social.imdb] },
-  "areaServed": ["Italia", "Francia", "Europa"],
-  "availableLanguage": ["it", "en", "fr"],
-  "knowsAbout": ["sound design", "post-produzione audio", "dialogue editing", "mix 5.1", "mix 7.1", "fonica di presa diretta", "sound design per planetari", "installazioni immersive", "ADR", "foley"],
-  "sameAs": [sito.social.instagram, sito.social.linkedin, sito.social.imdb]
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": sito.url + "/#riccardo-vojvoda",
+      "name": sito.nome,
+      "alternateName": "Riccardo Vojvoda Sound Designer",
+      "url": sito.url,
+      "image": sito.url + "/assets/img/logo-sdrv.png",
+      "email": sito.email,
+      "telephone": sito.telefonoHref,
+      "vatID": "IT" + sito.piva,
+      "founder": { "@id": sito.url + "/#persona-riccardo-vojvoda" },
+      "areaServed": ["Italia", "Francia", "Europa"],
+      "availableLanguage": ["it", "en", "fr"],
+      "knowsAbout": ["sound design", "post-produzione audio", "dialogue editing", "mix 5.1", "mix 7.1", "fonica di presa diretta", "sound design per planetari", "installazioni immersive", "ADR", "foley"],
+      "sameAs": [sito.social.instagram, sito.social.linkedin, sito.social.imdb]
+    },
+    {
+      "@type": "Person",
+      "@id": sito.url + "/#persona-riccardo-vojvoda",
+      "name": sito.titolare,
+      "jobTitle": "Sound Designer, Audio Post-Producer",
+      "url": sito.url + t.url.chiSono,
+      "worksFor": { "@id": sito.url + "/#riccardo-vojvoda" },
+      "knowsLanguage": ["it", "en", "fr"],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Conservatorio di Trieste" },
+        { "@type": "CollegeOrUniversity", "name": "SAE Institute Milano" }
+      ],
+      "knowsAbout": ["sound design", "post-produzione audio", "fonica di presa diretta", "mix 5.1 e 7.1", "dialogue editing", "foley", "ADR"],
+      "sameAs": [sito.social.instagram, sito.social.linkedin, sito.social.imdb]
+    }
+  ]
 } | json | safe }}</script>
 </head>
 <body class="{{ classeBody or '' }}">

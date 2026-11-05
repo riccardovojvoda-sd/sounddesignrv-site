@@ -65,7 +65,7 @@ classeBody: lettura
   "datePublished": page.date | dataIso,
   "dateModified": (aggiornato or page.date) | dataIso,
   "image": (sito.url + (("approfondimenti/" + copertina) | imgUrlSync(1200))) if copertina else undefined,
-  "author": { "@type": "Person", "name": sito.titolare, "url": sito.url + t.url.chiSono },
+  "author": { "@type": "Person", "@id": sito.url + "/#persona-riccardo-vojvoda", "name": sito.titolare, "url": sito.url + t.url.chiSono },
   "publisher": { "@id": sito.url + "/#riccardo-vojvoda" },
   "mainEntityOfPage": sito.url + page.url
 } | json | safe }}</script>
