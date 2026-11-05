@@ -12,8 +12,25 @@ categoria: Brief
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["consegna-materiali", "effetti-sonori"]
 tags: ["approfondimenti_en", "audio brief", "sound design brief", "sound design", "audio post-production", "commercial", "corporate video", "references", "revisions", "conform"]
+domande_faq:
+  - d: "What should I put in the sound design brief for a commercial or a video?"
+    r: "Ten things: the style of the sound, where it will be shown, references, the final edit, music, voice, length and versions, deliverables, the deadline, and revisions and approval. A few lines in an email are enough, but the more information there is, the closer the quote matches the actual work."
+  - d: "How do I share references with a sound designer?"
+    r: "With YouTube links, titles of films or commercials, links to tracks in music libraries, or files sent through a transfer service. Next to each reference it helps to write what you like about it, such as the rhythm of the sounds or the ambience, and to add two adjectives such as warmer, drier, more powerful."
+  - d: "When should I bring the sound designer into a video project?"
+    r: "At picture lock. While the edit is still in progress it is possible to think about direction and references, but work in the audio session begins once the edit is locked. If the edit changes afterwards, the session has to be conformed and the hours needed are often charged separately."
+  - d: "How many revision rounds are there for sound design?"
+    r: "Two or three rounds are the norm, and the number is agreed at the start. The most useful feedback is written, itemized, with the timecode of each point, and collected by one person who gathers everyone's comments."
+  - d: "How long does sound design for a commercial take?"
+    r: "For a commercial or a short video, plan on at least one full working week, for example material on Monday and delivery on Friday. A same-day job is possible, but urgency costs extra."
 ---
 A sound design brief can be just a few lines in an email: whoever works on the audio is used to reading the intentions of the people making the video, and a handful of details is enough to start in the right direction. The more information there is, though, the less is left to interpretation and the closer the quote matches the actual work.
+
+<div class="riquadro">
+
+**The short answer.** The sound design brief has ten items: style of the sound, destinations, references, final edit, music, voice, length and versions, deliverables, deadline, and revisions and approval. It can be a few lines in an email, sent once the edit is locked.
+
+</div>
 
 What sound design covers, and what audio post-production covers, is explained in the [guide on the difference between the two](/en/insights/sound-design-vs-audio-post-production-video/). Here is the list of things to write.
 

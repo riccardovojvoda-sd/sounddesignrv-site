@@ -12,8 +12,25 @@ categoria: Sound design
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["effetti-sonori"]
 tags: ["approfondimenti_en", "foley", "sound design", "sound effects", "audio for video", "commercial", "corporate video", "audio brief", "audio post-production"]
+domande_faq:
+  - d: "What is foley in sound design?"
+    r: "It is the set of on-screen sounds recreated in sync with the picture: footsteps, clothing movement, hands touching an object, a cup set down on a table. The name comes from Jack Foley, a technician at Universal Studios who in the late 1920s recorded effects live while the film played on screen."
+  - d: "What is the difference between foley, library effects and production sound?"
+    r: "Production sound is recorded on set with the picture, natural but often dirty or thin. Library effects are sounds already recorded in archives such as Soundly or Freesound, quick but with timbres that vary a lot. Foley is recorded or built specifically for that video, object by object, in time with the action."
+  - d: "Does a commercial need foley?"
+    r: "In commercials a product's sound is almost always a sound effect rather than foley: it starts from the natural timbre but is enlarged, sharper and more present. The work is often a mix of library effects, sounds built from scratch and some targeted foley."
+  - d: "Does a corporate video need foley?"
+    r: "It matters less when the video is only interviews and stock footage, and more when there are people at work, machinery, handled products or detail shots. These are the sounds that make a company feel like a real place."
+  - d: "What should I put in the brief to ask for foley?"
+    r: "Whether the video was shot without audio or with production sound that is hard to use, whether there are product close-ups, gestures or actions that need to sound, whether the style should be realistic or exaggerated, and one or more reference videos. Foley need not be asked for by name: it is up to whoever works on the audio to judge whether it is needed and quote it."
 ---
 Foley is the set of on-screen sounds recreated in sync with the picture: footsteps, clothing movement, hands touching an object, a cup set down on a table. In videos shot without production sound, or with unusable production sound, these sounds are missing entirely, and a video without them sounds empty even when the music and the voice are perfect.
+
+<div class="riquadro">
+
+**The short answer.** Foley is the set of on-screen sounds recreated in sync with the picture: footsteps, clothing, objects. It is needed when production sound is missing or unusable, and more in videos with people, gestures and objects in close-up. In commercials, enlarged sound effects prevail, with some targeted foley.
+
+</div>
 
 The name comes from Jack Foley, a technician at Universal Studios who, with the arrival of sound in the late 1920s, recorded effects live while the film played on screen. The principle has not changed: watch the picture and recreate the sound in sync.
 

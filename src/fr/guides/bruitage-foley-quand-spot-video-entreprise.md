@@ -12,8 +12,25 @@ categoria: Sound design
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["effetti-sonori"]
 tags: ["approfondimenti_fr", "foley", "bruitage", "sound design", "effets sonores", "son pour la vidéo", "spot publicitaire", "vidéo d'entreprise", "brief audio", "post-production audio"]
+domande_faq:
+  - d: "Qu'est-ce que le foley (bruitage) en sound design ?"
+    r: "C'est l'ensemble des sons de la scène refaits en synchronisation avec l'image : des pas, des vêtements qui bougent, des mains qui touchent un objet, une tasse posée sur une table. Le nom vient de Jack Foley, technicien des studios Universal qui, à la fin des années 1920, enregistrait les effets en direct pendant que le film défilait à l'écran."
+  - d: "Quelle est la différence entre foley, effets de bibliothèque et son direct ?"
+    r: "Le son direct, ce sont les sons enregistrés sur le plateau avec l'image, naturels mais souvent sales ou maigres. Les effets de bibliothèque sont des sons déjà enregistrés, issus d'archives comme Soundly ou Freesound, rapides mais aux timbres hétérogènes. Le foley est enregistré ou construit spécialement pour cette vidéo, objet par objet, en rythme avec l'action."
+  - d: "Le foley est-il utile dans un spot ?"
+    r: "Dans un spot, le son d'un produit est presque toujours un effet sonore plutôt qu'un foley : il part du timbre naturel mais il est agrandi, plus net et plus présent. Le travail est souvent un mélange d'effets de bibliothèque, de sons construits de zéro et de quelques foleys ciblés."
+  - d: "Le foley est-il utile dans une vidéo d'entreprise ?"
+    r: "Il compte moins quand la vidéo se compose seulement d'interviews et d'images d'archives, et davantage quand on voit des personnes au travail, des machines, des produits manipulés ou des plans de détail. Ce sont les sons qui font ressentir l'entreprise comme un lieu réel."
+  - d: "Que mettre dans le brief pour demander du foley ?"
+    r: "Si la vidéo a été tournée sans son ou avec un son direct difficile à utiliser, s'il y a des gros plans de produit, des gestes ou des actions qui doivent sonner, si le style doit être réaliste ou exagéré, et une ou plusieurs vidéos de référence. Le foley ne se demande pas par son nom : c'est à celui qui travaille sur l'audio de juger s'il est utile et de le chiffrer."
 ---
 Le foley, ou bruitage, est l'ensemble des sons de la scène refaits en synchronisation avec l'image : des pas, des vêtements qui bougent, des mains qui touchent un objet, une tasse posée sur une table. Dans les vidéos tournées sans son direct, ou avec un son direct inutilisable, ces sons manquent complètement, et une vidéo qui en est privée sonne creux même quand la musique et la voix sont parfaites.
+
+<div class="riquadro">
+
+**La réponse en bref.** Le foley est l'ensemble des sons de la scène refaits en synchronisation avec l'image : pas, vêtements, objets. Il sert quand le son direct manque ou est inutilisable, et davantage dans les vidéos avec des personnes, des gestes et des objets en gros plan. Dans les spots, ce sont surtout des effets sonores agrandis qui dominent, avec quelques foleys ciblés.
+
+</div>
 
 Le nom vient de Jack Foley, technicien des studios Universal qui, à la fin des années 1920, avec l'arrivée du parlant, enregistrait les effets en direct pendant que le film défilait à l'écran. Le principe n'a pas changé : on regarde l'image et on refait le son en synchronisation.
 

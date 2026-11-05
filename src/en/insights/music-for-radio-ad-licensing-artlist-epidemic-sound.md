@@ -12,8 +12,25 @@ categoria: Music and rights
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["musica-diritti"]
 tags: ["approfondimenti_en", "music for radio ad", "radio music licence", "royalty free", "Artlist", "Epidemic Sound", "PremiumBeat", "AudioJungle", "broadcast licence", "copyright", "SIAE", "radio commercial"]
+domande_faq:
+  - d: "Does an Artlist licence cover a radio ad?"
+    r: "No, not in the standard plans. Artlist's licence lists radio among the uses that fall outside the standard licence, and broadcast requires Max Business or an Enterprise agreement. For an audio-only ad you need written confirmation from Artlist."
+  - d: "Can I use Epidemic Sound for a radio ad?"
+    r: "Not in the Business plan, which explicitly excludes radio, billboards and live broadcasts. You need the custom Enterprise plan."
+  - d: "Which music libraries cover radio?"
+    r: "According to the October 2026 terms, PremiumBeat (with the Premium or Business licence), AudioJungle (with the Music Broadcast or Broadcast & Film licences) and Pond5 (with the standard licence). For Motion Array the coverage needs written confirmation; Envato Elements and Uppbeat do not cover it in their plans."
+  - d: "If I shorten or re-edit the track, don't I need a licence?"
+    r: "You still do. A track carries two separate rights, in the composition and in the recording, and Italian law 633/1941 also protects the adaptation of the work (art. 18) and the reproduction of the recording in whole or in part (art. 72). Cutting, looping or re-editing is still a use of the track."
+  - d: "Does SIAE pay for the music in a radio ad?"
+    r: "Radio stations already pay SIAE for the tracks they broadcast, but this covers airing the repertoire, not placing a track inside an ad. That is authorised by the rights holders or by the library licence."
 ---
 A radio ad needs a music licence that covers radio. Many royalty free subscriptions are designed for online video and exclude radio, or keep it for business plans and custom contracts. Shortening or re-editing the track changes nothing. The conditions below are those published by the services in October 2026.
+
+<div class="riquadro">
+
+**The short answer.** Many royalty free subscriptions do not cover radio: Artlist and Epidemic Sound exclude it in the standard and business plans. PremiumBeat, AudioJungle and Pond5 cover radio, with the right licence. Shortening or re-editing the track does not remove the need for a licence.
+
+</div>
 
 For music in a corporate video, with the differences between royalty free, library music and custom music, there is a [dedicated guide](/en/insights/music-for-corporate-video-royalty-free-library-custom-licensing-ads/). This one is only about radio.
 

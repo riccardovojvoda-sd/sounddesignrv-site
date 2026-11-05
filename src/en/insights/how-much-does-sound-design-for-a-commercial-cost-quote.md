@@ -12,8 +12,25 @@ categoria: Brief
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["consegna-materiali", "musica-diritti", "voce"]
 tags: ["approfondimenti_en", "audio quote", "sound design cost", "how much does sound design cost", "commercial quote", "audio for commercials", "TV commercial mix", "radio ad", "voice over", "music licence", "revisions", "audio brief", "audio post-production"]
+domande_faq:
+  - d: "How much does sound design for a commercial cost?"
+    r: "It depends on what sits inside the word audio: sometimes it is just a mix of a voice and music that already exist, sometimes it includes casting and recording the voice, searching for the music, sound design, mixing and versions for different channels. That is why a serious quote comes after a few details about the project."
+  - d: "What information do I need to send to get an accurate audio quote?"
+    r: "The type of video, where it goes, how many versions, the length, the final or rough edit, references or the brief, the music, the voice and the audio material available, plus the dates for the first version and the delivery of the masters. With these the quote is accurate on the first round."
+  - d: "What makes an audio quote change after it is first sent?"
+    r: "Mostly the number of versions and formats, because each version has its own voice editing, its own music edit and its own mix. Then the starting material: music chosen by the client that turns out to need a search, or an edit that changes after the audio has been produced."
+  - d: "Is the music licence included in the audio quote?"
+    r: "For library music, searching and editing it to the versions is work, while the licence is a separate cost. It can be bought by whoever does the audio, who puts it on the invoice, or directly by the client, given the exact track and the type of licence."
+  - d: "How many revisions are included in a sound design quote?"
+    r: "Usually three rounds, written into a clause, and an hourly rate beyond those. A change to the script after the voice has been approved counts as a round, while major changes to the edit after the audio has been delivered are new work, to be assessed separately."
 ---
 The cost of the audio for a commercial depends on what sits inside the word "audio": sometimes it is just a mix of a voice and music that already exist, sometimes it is casting and recording the voice, searching for the music, sound design, mixing and a series of versions for different channels. That is why a serious quote comes after a few details about the project, and the more complete they are, the more likely the first quote is also the final one.
+
+<div class="riquadro">
+
+**The short answer.** The cost of the audio for a commercial depends on what it includes: casting and recording the voice, searching for the music, sound design, mixing and the number of versions for the different channels. The variables that move the quote the most are the versions and the starting material. With the project information in hand, the first quote is also the final one.
+
+</div>
 
 ## The information needed
 

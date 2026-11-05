@@ -12,8 +12,25 @@ categoria: Brief
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["consegna-materiali", "musica-diritti", "voce"]
 tags: ["approfondimenti_fr", "devis audio", "coût sound design", "combien coûte le sound design", "devis spot", "audio pour spot", "mixage spot TV", "spot radio", "voix off", "licence musicale", "révisions", "brief audio", "post-production audio"]
+domande_faq:
+  - d: "Combien coûte le sound design d'un spot ?"
+    r: "Cela dépend de ce que recouvre le poste audio : parfois c'est seulement un mixage sur une voix et une musique déjà prêtes, parfois cela comprend le casting et l'enregistrement de la voix, la recherche de la musique, le sound design, le mixage et des versions pour différents canaux. C'est pourquoi un devis sérieux arrive après quelques informations sur le projet."
+  - d: "Quelles informations faut-il pour obtenir un devis audio précis ?"
+    r: "Le type de vidéo, où elle sera diffusée, combien de versions, la durée, le montage final ou le prémontage, les références ou le brief, la musique, la voix et le matériel audio disponible, plus les dates de la première version et de la livraison des masters. Avec cela, le devis arrive précis du premier coup."
+  - d: "Qu'est-ce qui fait changer un devis audio après le premier envoi ?"
+    r: "Surtout le nombre de versions et de formats, parce que chaque version a son montage de la voix, son montage de la musique et son mixage. Ensuite le matériel de départ : une musique choisie par le client qu'il faut finalement chercher, ou un montage qui change après la production de l'audio."
+  - d: "La licence de la musique est-elle incluse dans le devis audio ?"
+    r: "Pour la musique de librairie, la recherche et le montage sur les versions sont du travail, tandis que la licence est un coût à part. Elle peut être achetée par la personne qui fait l'audio, qui la facture, ou directement par le client, sur indication précise du morceau et du type de licence."
+  - d: "Combien de révisions sont incluses dans le devis de sound design ?"
+    r: "En général trois tours de révision, écrits dans une clause, et au-delà un tarif horaire. Une modification du texte après la validation de la voix compte comme un tour, tandis que les modifications importantes du montage après la livraison de l'audio sont un nouveau travail, à évaluer à part."
 ---
 Le coût de l'audio d'un spot dépend de ce que recouvre le mot « audio » : parfois c'est seulement le mixage d'une voix et d'une musique déjà prêtes, parfois c'est le casting et l'enregistrement de la voix, la recherche de la musique, le sound design, le mixage et une série de versions pour différents canaux. C'est pourquoi un devis sérieux arrive après quelques informations sur le projet, et plus elles sont complètes, plus le premier devis a de chances d'être le définitif.
+
+<div class="riquadro">
+
+**La réponse en bref.** Le coût de l'audio d'un spot dépend de ce qu'il comprend : casting et enregistrement de la voix, recherche de la musique, sound design, mixage et nombre de versions pour les différents canaux. Les variables qui font le plus changer le devis sont les versions et le matériel de départ. Avec les informations sur le projet, le premier devis est aussi le définitif.
+
+</div>
 
 ## Les informations nécessaires
 

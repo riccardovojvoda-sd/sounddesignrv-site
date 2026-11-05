@@ -12,8 +12,25 @@ categoria: Location sound
 per_chi: ["regista-produzione", "montatore"]
 argomento: ["presa-diretta"]
 tags: ["approfondimenti_en", "location sound", "production sound mixer", "drama", "set", "boom", "lavalier microphone", "wireless microphone", "room tone", "audio post-production", "sound report"]
+domande_faq:
+  - d: "What does the location sound mixer do on a drama set?"
+    r: "They mike the actors, hold the boom with the shotgun and listen in headphones to a mix of lavaliers and shotgun. Working alone, they cannot manage a live mix for the camera or fix a preamp problem while rolling; with a crew, a mixer sits at the desk and the boom operator looks after the boom only."
+  - d: "How long does it take to put a microphone on an actor?"
+    r: "About 5 minutes per actor, often a couple is enough. Sometimes I need to test how the microphone holds up when the actor moves, or the outfit has to be changed, which is why miking happens in parallel with dressing."
+  - d: "What should the location sound mixer ask of the production?"
+    r: "Four things: the time to mike every scene and every actor, a tail before cut, a moment of silence before saying Action, and well-organized breaks and hot meals. The tail allows a long fade in post that hides the edits, and the silence lets the reverb of the room decay."
+  - d: "What is room tone and do you need to record it?"
+    r: "It is the silence of a room, recorded to cover gaps in the edit; in theory you record 30-40 seconds for each room. In practice the one recorded separately can rarely be used, and gaps are patched with silence from the same take or neighbouring ones, which is why the seconds of silence before and after each action count."
+  - d: "What should the crew do so as not to ruin the location sound?"
+    r: "Stay silent behind the camera once the action starts, wear soft-soled shoes, avoid fabrics that rustle or jewellery that jingles, leave doors and objects where they are, put the actors' phones in airplane mode and keep the camera microphone always on as a synchronization reference."
 ---
 On a drama set the sound is decided in a few minutes: the ones the production grants the mixer before shooting. What follows comes from my experience as a location sound mixer, often working alone, and describes what I can do on set and what I need from the people organizing it. What can be recovered in post-production, and with which restoration tools, is a separate subject.
+
+<div class="riquadro">
+
+**The short answer.** The location sound mixer mikes the actors, holds the boom with the shotgun and records, alone or with a crew. They need time to mike (about 5 minutes per actor), a tail before cut, a moment of silence before Action is called and a crew that knows what to avoid. A few minutes of attention on set save hours of work afterwards.
+
+</div>
 
 ## The ideal set
 

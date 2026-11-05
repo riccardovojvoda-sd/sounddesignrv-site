@@ -12,8 +12,25 @@ copertina: montaggio-timeline-consegna-audio.jpg
 copertinaAlt: "Video editing timeline with audio tracks on a monitor"
 copertinaCredito: "Photo: Bas Peperzak, Unsplash"
 tags: ["approfondimenti_en", "AAF", "OMF", "handles", "production sound", "audio post-production", "Premiere Pro", "DaVinci Resolve", "Pro Tools", "deliverables sound design"]
+domande_faq:
+  - d: "What should I deliver to the sound designer once the edit is locked?"
+    r: "The reference video with the approved edit, the AAF with embedded audio and handles, the original production sound with the sound report, the music in full quality with its licence, and a short brief with destination, delivery format and deadline."
+  - d: "What are handles in an AAF and how long should they be?"
+    r: "Handles are the working margin of the audio clips before and after every cut. They are used to extend a clip, soften an attack, cover a gap or adjust a crossfade, and should be at least 5 seconds: 120 frames at 24 fps, 125 at 25 fps."
+  - d: "Is AAF or OMF better for audio post-production?"
+    r: "Always AAF. OMF is the old format, it has a 2 GB limit and loses information, while the AAF carries cuts, positions, clip names and levels."
+  - d: "Do I need to deliver the original production sound as well as the AAF?"
+    r: "Yes, if the video was shot with a sound mixer. The original recorder files may contain alternate takes useful for replacing small mistakes, and the sound report with the mixer's notes holds the information about what was recorded."
+  - d: "Which mistakes waste the most time when delivering audio materials?"
+    r: "An edit that changes after the AAF has been sent, which forces a realignment (reconform), an AAF without handles, a different frame rate or start timecode between video and AAF, music as MP3 and audio effects already applied in the AAF."
 ---
 The edit is locked, the client has approved, and now the video has to go "to audio". At this point the same question always comes up: what do I send? Below is the list, with the reason behind each item and the mistakes that waste the most time.
+
+<div class="riquadro">
+
+**The short answer.** Reference video with timecode · embedded AAF with 5-second handles · original production sound with sound report · music in WAV with licence · destination, format, date, any references.
+
+</div>
 
 ## 1. The reference video
 
@@ -58,12 +75,6 @@ These are enough:
 - **Where the video goes**: TV, cinema, website, social, trade show. It changes the delivery format and the loudness level.
 - **The delivery format**: stereo, 5.1, separate stems (dialogue, music, effects), versions in several languages.
 - **Deadline.**
-
-<div class="riquadro">
-
-**The list in short.** Reference video with timecode · embedded AAF with 5-second handles · original production sound with sound report · music in WAV with licence · destination, format, date, any references.
-
-</div>
 
 ## The mistakes that cost the most time
 

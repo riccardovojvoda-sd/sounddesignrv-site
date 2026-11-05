@@ -12,8 +12,25 @@ categoria: Location sound
 per_chi: ["regista-produzione", "montatore"]
 argomento: ["presa-diretta", "consegna-materiali"]
 tags: ["approfondimenti_en", "sound report", "production sound report", "location sound", "production sound mixer", "iXML metadata", "audio post-production", "drama", "wild track", "room tone"]
+domande_faq:
+  - d: "What is a production sound report?"
+    r: "It is the sheet where whoever records notes, take by take, the scene, the slate, the microphone on each track, whether the take is good or no good, and what happened. It travels with the audio files and is mostly for audio post-production, which without it has to listen to everything to find what it needs."
+  - d: "What do you write in a sound report?"
+    r: "The basic columns are: good or no good take (O/X), take number, inputs with microphone and character per track, scene and slate, location, shot, description and comments, file number on the second recorder. At the top go recorder, date, episode, project and shooting day; at the end a legend."
+  - d: "Who fills in the sound report and when?"
+    r: "Whoever records: the production sound mixer, the boom operator or an assistant, one row per take. It can be completed during breaks or at the end of the day, especially when working alone."
+  - d: "Is the sound report the same as the continuity report?"
+    r: "No. The continuity report is written by the script supervisor and links each take to the camera numbering, while the sound report is meant for audio post-production and doesn't have that link. That is why the description has to make clear which shot the take refers to."
+  - d: "How is the sound report delivered?"
+    r: "As a PDF, together with the day's audio files. Professional recorders can also write scene, take and notes into the WAV files as iXML metadata, but it takes time during the shoot, and the written report remains the quickest way."
 ---
 The sound report is the sheet where whoever records production sound notes, take by take, what was recorded: which scene, which slate, which microphone on which track, whether the take is good or no good, what happened. It travels with the audio files and is mostly for the people doing audio post-production, who without it have to listen to everything to find what they need.
+
+<div class="riquadro">
+
+**The short answer.** The sound report notes, take by take, scene, slate, microphone per track, outcome and notes. Whoever records fills it in, one row per take, and it is delivered as a PDF with the day's files. In post-production it makes it possible to find missing tracks, alternative takes, wild tracks and room tone in a few minutes.
+
+</div>
 
 What to deliver to the sound designer in general (the cut, the AAF, production sound) is in the [guide on what to deliver](/en/insights/what-to-deliver-to-your-sound-designer-aaf-handles-production-sound/). This one is only about the sound report.
 

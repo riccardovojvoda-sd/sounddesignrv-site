@@ -12,8 +12,25 @@ categoria: Music and rights
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["musica-diritti"]
 tags: ["approfondimenti_en", "music for corporate video", "royalty free", "production music", "library music", "SIAE", "sync licence", "Epidemic Sound", "Artlist", "Content ID", "paid ads", "audio post-production"]
+domande_faq:
+  - d: "What music should I use for a corporate video?"
+    r: "There are three routes: royalty free music by subscription, library music (production music) and custom music. For corporate videos, social content and branded content royalty free is usually used, with the plan that fits the use; brands that want a sound of their own choose original music."
+  - d: "Does royalty free mean free?"
+    r: "No. It means no royalties are paid per use, because the licence is included in the subscription. The limit is exclusivity: the same track can turn up in other companies' videos."
+  - d: "Does SIAE cover the use of a track in a corporate video?"
+    r: "No. SIAE grants licences for public performance and communication to the public, but it does not grant the synchronisation right, that is, pairing a piece of music with picture. With a protected track you need the publisher's licence and, for the original recording, the record label's."
+  - d: "Can I use a song from Instagram or TikTok in a corporate video or a paid ad?"
+    r: "No. Songs in the Instagram and TikTok music libraries are available in the app, but that does not authorise their use in a corporate video or a paid ad."
+  - d: "What should I check before promoting a video with music on YouTube and Meta?"
+    r: "That the plan covers paid ads and client work, that the client's channel or account is linked to the licence, and that the track's licence is saved together with the project files. Otherwise YouTube (Content ID) and Meta (Rights Manager) may flag the track with a claim."
 ---
 There are three routes to music for a corporate video: royalty free music by subscription, library music (production music) and custom music. They differ in cost, exclusivity and what the licence covers, especially once the video becomes a paid campaign. The conditions below are those in force in September 2026; the collecting society examples refer to Italy (SIAE), but the principle is the same in most countries.
+
+<div class="riquadro">
+
+**The short answer.** For a corporate video, royalty free by subscription is usually the right choice, with the plan that covers client work and paid ads. Library music is licensed track by track, custom music gives an exclusive sound at a higher cost. SIAE does not grant the synchronisation right: with a protected track you need the publisher and, for the recording, the record label.
+
+</div>
 
 ## Royalty free by subscription
 

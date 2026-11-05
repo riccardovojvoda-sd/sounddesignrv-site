@@ -12,8 +12,25 @@ categoria: Mix and loudness
 per_chi: ["montatore", "regista-produzione", "agenzia"]
 argomento: ["mix-loudness"]
 tags: ["approfondimenti_en", "LUFS", "loudness", "EBU R128", "true peak", "YouTube", "Instagram", "TikTok", "Netflix", "TV commercial", "mix for social", "audio post-production"]
+domande_faq:
+  - d: "What LUFS should a video be delivered at for YouTube, Instagram and TikTok?"
+    r: "At -14 LUFS integrated loudness, with peaks at -1 dBTP. YouTube turns down louder videos and does not turn up quieter ones. Meta and TikTok do not publish an official value, but measurements cluster around -14 LUFS."
+  - d: "What LUFS should a commercial be delivered at for Italian TV?"
+    r: "At -24 LUFS integrated loudness, tolerance ±0.5 LU, maximum true peak -2 dBTP, as set by AGCOM resolution 219/09/CSP. The European reference EBU R128 asks for -23 LUFS and -1 dBTP; for commercials the short-term loudness must not exceed -18 LUFS."
+  - d: "How many LKFS does Netflix require?"
+    r: "-27 LKFS ±2 measured on dialogue only, with a maximum true peak of -2 dBTP. Amazon Prime Video asks for -24 LKFS ±2 on the whole programme."
+  - d: "Is there a LUFS level for cinema?"
+    r: "No. In the theatre the file is played at the standard calibration level (85 dB SPL at -20 dBFS per channel), so the mix is judged in a calibrated theatre. Trailers have the Leq(m) 85 dB ceiling."
+  - d: "Is one mix enough for every destination?"
+    r: "You mix once at the level of the most demanding destination, usually TV or streaming, and derive the other versions by changing level and limiter. The opposite does not work: a mix born at -14 LUFS does not become a good mix at -23 by turning it down, because the compression stays printed."
 ---
 LUFS (Loudness Units relative to Full Scale) measures how loud a programme sounds as a whole, not how high its peak is. It is the number platforms and broadcasters use to decide how much to turn a video up or down, and so it is the first thing to know before closing the mix. The values below are those in use in September 2026.
+
+<div class="riquadro">
+
+**The short answer.** YouTube and social -14 LUFS / -1 dBTP · web and trade shows -16 / -14 · European TV -23 LUFS / -1 dBTP with short-term max -18 for ads · Italian TV -24 LUFS / -2 dBTP (AGCOM) · Netflix -27 LKFS on dialogue / -2 dBTP · cinema calibrated theatre, trailers Leq(m) 85.
+
+</div>
 
 ## The table
 
@@ -70,12 +87,6 @@ No: between -14 and -23 LUFS there are 9 LU of difference, almost twice the perc
 3. Deliver each file with a name that says what it is for (`_TV_R128`, `_web_-14`), so nobody uploads the wrong one.
 
 A mix born at -14 LUFS is not brought to -23 simply by turning it down: the compression already printed stays. The opposite does work.
-
-<div class="riquadro">
-
-**In short.** YouTube and social -14 LUFS / -1 dBTP · web and trade shows -16 / -14 · European TV -23 LUFS / -1 dBTP with short-term max -18 for ads · Italian TV -24 LUFS / -2 dBTP (AGCOM) · Netflix -27 LKFS on dialogue / -2 dBTP · cinema calibrated theatre, trailers Leq(m) 85.
-
-</div>
 
 ## What is needed for the check
 

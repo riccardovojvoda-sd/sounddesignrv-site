@@ -12,8 +12,25 @@ categoria: Livraison des éléments
 per_chi: ["montatore", "regista-produzione"]
 argomento: ["consegna-materiali"]
 tags: ["approfondimenti_fr", "AAF", "poignées", "Premiere Pro", "DaVinci Resolve", "Avid Media Composer", "Final Cut Pro", "X2Pro", "Pro Tools", "post-production audio", "livraison éléments sound design"]
+domande_faq:
+  - d: "Comment exporter un AAF pour Pro Tools depuis Premiere Pro ?"
+    r: "Depuis File > Export > AAF, avec Mixdown Video désactivé, Breakout to Mono activé, audio incorporé (Embed Audio), format Broadcast Wave, poignées de 120 images ou plus, 24 bits et 48 kHz. L'option pour rendre les effets de clip doit rester désactivée."
+  - d: "Comment exporter l'AAF pour Pro Tools depuis DaVinci Resolve ?"
+    r: "Depuis la page Deliver, en choisissant le preset Pro Tools et le codec audio Embedded in AAF, avec des poignées de 120 images ou plus, 48 kHz et 24 bits. La commande File > Export > AAF, XML produit un AAF générique qui s'ouvre mal dans Pro Tools."
+  - d: "Final Cut Pro peut-il exporter un AAF ?"
+    r: "Non, Final Cut Pro n'exporte pas d'AAF. La voie standard est d'exporter le XML du projet et de le convertir avec X2Pro Audio Convert, en réglant les rôles, des poignées de 5 secondes et l'audio incorporé. On peut aussi importer le XML dans DaVinci Resolve et utiliser le preset Pro Tools."
+  - d: "Combien de poignées faut-il dans un AAF ?"
+    r: "Au moins 5 secondes, soit 120 images à 24 ips et 125 à 25 ips. Les poignées sont la marge des clips avant et après chaque coupe, utilisée par le sound designer pour allonger, adoucir ou couvrir un trou."
+  - d: "Pourquoi un AAF ne s'ouvre-t-il pas dans Pro Tools ?"
+    r: "La cause la plus fréquente est la présence de caractères spéciaux dans les noms de clips et de pistes (/ < > & @ ® et les lettres accentuées). Comptent aussi les clips imbriqués, multicam ou fusionnés non aplatis, et les changements de vitesse sur les clips audio."
 ---
 Les réglages qui comptent sont les mêmes dans tous les logiciels de montage : audio incorporé dans le fichier, poignées d'au moins 5 secondes, 48 kHz en 24 bits, effets audio non rendus. Seul l'emplacement des options dans les menus change.
+
+<div class="riquadro">
+
+**La réponse en bref.** Copie de la séquence sans nested/multicam · audio incorporé · poignées de 120+ images · Broadcast Wave 48 kHz 24 bits · effets audio non rendus · vidéo de référence avec le même timecode.
+
+</div>
 
 ## Avant d'exporter, dans n'importe quel logiciel
 
@@ -79,12 +96,6 @@ Alternative gratuite : importer le XML dans DaVinci Resolve et utiliser le prese
 - La **vidéo de référence** avec la même cadence d'images et le même timecode de départ (H.264 1080p ou ProRes Proxy), si possible avec le timecode incrusté.
 - Un **mix de référence** en WAV, c'est-à-dire l'audio tel qu'on l'entend au montage : il sert à comprendre l'intention et à vérifier la synchro à l'import.
 - S'il existe, le dossier avec les fichiers du **son direct original** et le rapport son : ce qu'il faut au-delà de l'AAF se trouve dans [Que livrer au sound designer](/fr/guides/que-livrer-au-sound-designer-export-video-aaf-son-direct/).
-
-<div class="riquadro">
-
-**En bref.** Copie de la séquence sans nested/multicam · audio incorporé · poignées de 120+ images · Broadcast Wave 48 kHz 24 bits · effets audio non rendus · vidéo de référence avec le même timecode.
-
-</div>
 
 ## Un test avant la vraie livraison
 

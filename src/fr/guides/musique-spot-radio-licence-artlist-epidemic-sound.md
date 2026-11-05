@@ -12,8 +12,25 @@ categoria: Musique et droits
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["musica-diritti"]
 tags: ["approfondimenti_fr", "musique spot radio", "licence musicale radio", "libre de droits", "Artlist", "Epidemic Sound", "PremiumBeat", "AudioJungle", "licence broadcast", "droit d'auteur", "SIAE", "spot radiophonique"]
+domande_faq:
+  - d: "La licence d'Artlist couvre-t-elle un spot radio ?"
+    r: "Non, dans les formules standard. La licence d'Artlist range la radio parmi les usages qui sortent de la licence standard, et pour la diffusion il faut la formule Max Business ou un accord Enterprise. Pour un spot uniquement sonore, il faut la confirmation écrite d'Artlist."
+  - d: "Peut-on utiliser Epidemic Sound pour un spot radio ?"
+    r: "Pas avec la formule Business, qui exclut expressément la radio, l'affichage et le direct. Il faut la formule Enterprise, sur mesure."
+  - d: "Quelles librairies musicales couvrent la radio ?"
+    r: "Selon les conditions d'octobre 2026, PremiumBeat (avec la licence Premium ou Business), AudioJungle (avec les licences Music Broadcast ou Broadcast & Film) et Pond5 (avec la licence standard). Pour Motion Array, la couverture est à vérifier par une confirmation écrite ; Envato Elements et Uppbeat ne la couvrent pas dans leurs formules."
+  - d: "Si je raccourcis ou remonte le morceau, la licence n'est-elle plus nécessaire ?"
+    r: "Elle reste nécessaire. Un morceau porte deux droits distincts, celui sur la composition et celui sur l'enregistrement, et la loi italienne 633/1941 protège aussi l'adaptation de l'œuvre (art. 18) et la reproduction de l'enregistrement en tout ou en partie (art. 72). Couper, mettre en boucle ou remonter reste une utilisation du morceau."
+  - d: "La SIAE paie-t-elle la musique d'un spot radio ?"
+    r: "Les radios paient déjà la SIAE pour les morceaux qu'elles diffusent, mais cela couvre la diffusion du répertoire, pas l'insertion d'un morceau dans un spot. Celle-ci est autorisée par les ayants droit ou par la licence de la librairie."
 ---
 Un spot radio a besoin d'une licence musicale qui couvre la radio. Beaucoup d'abonnements de musique libre de droits sont pensés pour la vidéo en ligne et excluent la radio, ou la réservent aux formules business et aux contrats sur mesure. Raccourcir ou remonter le morceau ne change rien. Les conditions ci-dessous sont celles publiées par les services en octobre 2026.
+
+<div class="riquadro">
+
+**La réponse en bref.** Beaucoup d'abonnements libres de droits ne couvrent pas la radio : Artlist et Epidemic Sound l'excluent dans leurs formules standard et business. PremiumBeat, AudioJungle et Pond5 la couvrent, avec la licence adaptée. Raccourcir ou remonter le morceau ne dispense pas de la licence.
+
+</div>
 
 Pour la musique d'une vidéo d'entreprise, avec les différences entre libre de droits, musique de librairie et musique sur mesure, il existe un [guide dédié](/fr/guides/musique-video-entreprise-libre-de-droits-librairie-sur-mesure-licences-publicite/). Ici, il n'est question que de la radio.
 

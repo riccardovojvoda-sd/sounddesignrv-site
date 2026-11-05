@@ -12,8 +12,25 @@ copertina: montaggio-timeline-consegna-audio.jpg
 copertinaAlt: "Timeline de montage vidéo avec les pistes audio sur un écran"
 copertinaCredito: "Photo : Bas Peperzak, Unsplash"
 tags: ["approfondimenti_fr", "AAF", "OMF", "poignées", "son direct", "post-production audio", "Premiere Pro", "DaVinci Resolve", "Pro Tools", "livraison éléments sound design"]
+domande_faq:
+  - d: "Que faut-il livrer au sound designer une fois le montage verrouillé ?"
+    r: "La vidéo de référence avec le montage validé, l'AAF avec audio incorporé et poignées, le son direct original avec le rapport son, les musiques en pleine qualité avec leur licence et un court brief avec destination, format de livraison et deadline."
+  - d: "Qu'est-ce que les poignées dans un AAF et quelle durée doivent-elles avoir ?"
+    r: "Les poignées sont la marge de travail des clips audio avant et après chaque coupe. Elles servent à allonger un clip, adoucir une attaque, couvrir un trou ou retravailler un crossfade, et doivent faire au moins 5 secondes : 120 images à 24 ips, 125 à 25 ips."
+  - d: "AAF ou OMF pour la post-production audio ?"
+    r: "Toujours l'AAF. L'OMF est l'ancien format, limité à 2 Go, et il perd des informations, alors que l'AAF transporte les coupes, les positions, les noms des clips et les niveaux."
+  - d: "Faut-il aussi livrer le son direct original, en plus de l'AAF ?"
+    r: "Oui, si la vidéo a été tournée avec un ingénieur du son. Les fichiers originaux de l'enregistreur peuvent contenir des prises alternatives utiles pour remplacer de petites erreurs, et le rapport son avec les notes de l'ingénieur permet de retrouver les informations sur ce qui a été enregistré."
+  - d: "Quelles erreurs font perdre le plus de temps dans la livraison des éléments audio ?"
+    r: "Un montage qui change après l'envoi de l'AAF, ce qui oblige à réaligner le travail (reconform), un AAF sans poignées, une cadence d'images ou un timecode de départ différents entre la vidéo et l'AAF, une musique en MP3 et des effets audio déjà appliqués dans l'AAF."
 ---
 Le montage est verrouillé, le client a validé, et la vidéo doit maintenant passer « en son ». À ce moment-là, la même question revient toujours : qu'est-ce que j'envoie ? Voici la liste, avec la raison de chaque élément et les erreurs qui font perdre le plus de temps.
+
+<div class="riquadro">
+
+**La réponse en bref.** Vidéo de référence avec timecode · AAF incorporé avec poignées de 5 secondes · son direct original avec rapport son · musiques en WAV avec licence · destination, format, date, éventuelles références.
+
+</div>
 
 ## 1. La vidéo de référence
 
@@ -58,12 +75,6 @@ Ces informations suffisent :
 - **Où va la vidéo** : TV, cinéma, site, réseaux sociaux, salon. Cela change le format de livraison et le niveau de loudness.
 - **Le format de livraison** : stéréo, 5.1, stems séparés (dialogues, musique, effets), versions en plusieurs langues.
 - **Deadline.**
-
-<div class="riquadro">
-
-**La liste en bref.** Vidéo de référence avec timecode · AAF incorporé avec poignées de 5 secondes · son direct original avec rapport son · musiques en WAV avec licence · destination, format, date, éventuelles références.
-
-</div>
 
 ## Les erreurs qui coûtent le plus de temps
 

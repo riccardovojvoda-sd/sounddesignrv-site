@@ -12,8 +12,25 @@ categoria: Deliverables
 per_chi: ["montatore", "regista-produzione"]
 argomento: ["consegna-materiali"]
 tags: ["approfondimenti_en", "AAF", "handles", "Premiere Pro", "DaVinci Resolve", "Avid Media Composer", "Final Cut Pro", "X2Pro", "Pro Tools", "audio post-production", "deliverables sound design"]
+domande_faq:
+  - d: "How do I export an AAF for Pro Tools from Premiere Pro?"
+    r: "From File > Export > AAF, with Mixdown Video off, Breakout to Mono on, Embed Audio, Broadcast Wave format, handles of 120 frames or more, 24 bit and 48 kHz. The option to render clip effects must be left off."
+  - d: "How do I export an AAF for Pro Tools from DaVinci Resolve?"
+    r: "From the Deliver page, choosing the Pro Tools preset and the Embedded in AAF audio codec, with handles of 120 frames or more, 48 kHz and 24 bit. The File > Export > AAF, XML command produces a generic AAF that opens badly in Pro Tools."
+  - d: "Can Final Cut Pro export an AAF?"
+    r: "No, Final Cut Pro does not export AAF. The standard route is to export the project XML and convert it with X2Pro Audio Convert, setting roles, 5-second handles and embedded audio. Alternatively, you can import the XML into DaVinci Resolve and use the Pro Tools preset."
+  - d: "How many handles does an AAF need?"
+    r: "At least 5 seconds, that is 120 frames at 24 fps and 125 at 25 fps. Handles are the margin of the clips before and after each cut, used by the sound designer to lengthen, soften or cover a gap."
+  - d: "Why won't my AAF open in Pro Tools?"
+    r: "The most frequent cause is special characters in clip and track names (/ < > & @ ® and accented letters). Nested, multicam or merged clips that were not flattened, and speed changes on audio clips, also matter."
 ---
 The settings that matter are the same in every editing software: audio embedded in the file, handles of at least 5 seconds, 48 kHz at 24 bit, audio effects not rendered. Only the place of the options in the menus changes.
+
+<div class="riquadro">
+
+**The short answer.** Copy of the sequence without nested/multicam · embedded audio · handles of 120+ frames · Broadcast Wave 48 kHz 24 bit · audio effects not rendered · reference video with the same timecode.
+
+</div>
 
 ## Before exporting, in any software
 
@@ -79,12 +96,6 @@ Free alternative: import the XML into DaVinci Resolve and use the Pro Tools pres
 - The **reference video** with the same frame rate and the same start timecode (H.264 1080p or ProRes Proxy), with burnt-in timecode if possible.
 - A **reference mix** in WAV, that is the audio as it sounds in the edit: it shows the intention and is used to check sync on import.
 - If there is one, the folder with the files of the **original production sound** with the sound report: what is needed beyond the AAF is in [What to deliver to your sound designer](/en/insights/what-to-deliver-to-your-sound-designer-aaf-handles-production-sound/).
-
-<div class="riquadro">
-
-**In short.** Copy of the sequence without nested/multicam · embedded audio · handles of 120+ frames · Broadcast Wave 48 kHz 24 bit · audio effects not rendered · reference video with the same timecode.
-
-</div>
 
 ## A test before the real delivery
 

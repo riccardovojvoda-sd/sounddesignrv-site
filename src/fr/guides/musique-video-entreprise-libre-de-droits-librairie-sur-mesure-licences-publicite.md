@@ -12,8 +12,25 @@ categoria: Musique et droits
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["musica-diritti"]
 tags: ["approfondimenti_fr", "musique pour vidéo d'entreprise", "libre de droits", "musique de librairie", "musique d'illustration", "SIAE", "droit de synchronisation", "Epidemic Sound", "Artlist", "Content ID", "publicité sponsorisée", "post-production audio"]
+domande_faq:
+  - d: "Quelle musique utiliser pour une vidéo d'entreprise ?"
+    r: "Il y a trois voies : la musique libre de droits par abonnement, la musique de librairie (production music) et la musique composée sur mesure. Pour les vidéos corporate, les réseaux sociaux et le branded content, on utilise en général le libre de droits avec le plan adapté à l'usage ; les marques qui veulent un son à elles choisissent la musique originale."
+  - d: "Libre de droits, cela veut-il dire gratuit ?"
+    r: "Non. Cela veut dire qu'on ne paie pas de droits à chaque utilisation, parce que la licence est comprise dans l'abonnement. La limite est l'exclusivité : le même morceau peut apparaître dans les vidéos d'autres entreprises."
+  - d: "La SIAE couvre-t-elle l'usage d'un morceau dans une vidéo d'entreprise ?"
+    r: "Non. La SIAE délivre des licences pour l'exécution publique et la communication au public, mais n'accorde pas le droit de synchronisation, c'est-à-dire l'association d'une musique à des images. Avec un morceau protégé, il faut la licence de l'éditeur et, pour l'enregistrement original, celle du producteur phonographique."
+  - d: "Puis-je utiliser une chanson d'Instagram ou de TikTok dans une vidéo d'entreprise ou une publicité sponsorisée ?"
+    r: "Non. Les chansons des bibliothèques musicales d'Instagram et de TikTok sont disponibles dans l'application, mais cela n'en autorise pas l'usage dans une vidéo d'entreprise ou une publicité sponsorisée."
+  - d: "Que vérifier avant de sponsoriser une vidéo avec de la musique sur YouTube et Meta ?"
+    r: "Que le plan couvre les publicités sponsorisées et le travail pour un client, que la chaîne ou le compte du client soit associé à la licence et que la licence du morceau soit enregistrée avec les fichiers du projet. Sinon, YouTube (Content ID) et Meta (Rights Manager) peuvent signaler le morceau par une réclamation."
 ---
 Pour la musique d'une vidéo d'entreprise, il y a trois voies : la musique libre de droits par abonnement, la musique de librairie (production music) et la musique composée sur mesure. Elles diffèrent par le coût, l'exclusivité et ce que couvre la licence, surtout quand la vidéo devient une campagne sponsorisée. Les conditions ci-dessous sont celles en vigueur en septembre 2026 ; les exemples de société de gestion collective concernent l'Italie (SIAE), mais le principe est le même dans la plupart des pays, en France avec la Sacem.
+
+<div class="riquadro">
+
+**La réponse en bref.** Pour une vidéo d'entreprise, le libre de droits par abonnement convient en général, avec le plan adapté aux travaux pour des clients et aux publicités sponsorisées. La musique de librairie se licencie morceau par morceau, la musique sur mesure donne un son exclusif à un coût plus élevé. La SIAE n'accorde pas la synchronisation : avec un morceau protégé, il faut l'éditeur et, pour l'enregistrement, le producteur phonographique.
+
+</div>
 
 ## Libre de droits par abonnement
 

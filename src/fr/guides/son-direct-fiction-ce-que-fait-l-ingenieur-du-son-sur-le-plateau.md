@@ -12,8 +12,25 @@ categoria: Son direct
 per_chi: ["regista-produzione", "montatore"]
 argomento: ["presa-diretta"]
 tags: ["approfondimenti_fr", "son direct", "ingénieur du son tournage", "fiction", "plateau", "perche", "micro cravate", "micro HF", "ambiance", "post-production audio", "rapport son"]
+domande_faq:
+  - d: "Que fait l'ingénieur du son direct sur un plateau de fiction ?"
+    r: "Il équipe les acteurs en micros, tient la perche avec le micro canon et écoute au casque un mélange de cravates et de canon. S'il travaille seul, il ne peut pas gérer en temps réel un mixage pour la caméra ni corriger un problème de préamplification ; avec une équipe, l'ingénieur du son s'installe à la console et le perchman s'occupe uniquement de la perche."
+  - d: "Combien de temps faut-il pour équiper un acteur en micro ?"
+    r: "Environ 5 minutes par acteur, souvent deux suffisent. Parfois il faut tester comment le micro tient en mouvement ou changer la tenue, c'est pourquoi la pose du micro se fait en parallèle de l'habillage."
+  - d: "Que doit demander l'ingénieur du son à la production ?"
+    r: "Quatre choses : le temps d'équiper toutes les scènes et tous les acteurs, une queue avant le coupez, un moment de silence avant de dire Action, et des pauses et des repas chauds bien organisés. La queue permet en post un fondu long qui cache les coupes, le silence laisse s'éteindre la réverbération de la pièce."
+  - d: "Qu'est-ce que l'ambiance (room tone) et faut-il l'enregistrer ?"
+    r: "C'est le silence d'une pièce enregistré pour combler les trous au montage ; en théorie, on enregistre 30 à 40 secondes pour chaque pièce. En pratique, celle enregistrée à part est rarement utilisable, et les trous se bouchent avec des silences pris dans la même prise ou dans des prises voisines : c'est pourquoi les secondes de silence avant et après chaque action comptent."
+  - d: "Quelles précautions l'équipe doit-elle prendre pour ne pas abîmer le son direct ?"
+    r: "Rester silencieux derrière la caméra une fois l'action lancée, porter des chaussures à semelle souple, éviter les tissus qui bruissent et les bijoux qui tintent, laisser les portes et les objets où ils sont, mettre les téléphones des acteurs en mode avion et garder le micro de la caméra toujours actif comme référence de synchronisation."
 ---
 Sur un plateau de fiction, le son se décide en quelques minutes : celles que la production accorde à l'ingénieur du son avant de tourner. Ce qui suit vient de mon expérience d'ingénieur du son direct, souvent seul, et décrit ce que je peux faire sur le plateau et ce dont j'ai besoin de la part de ceux qui l'organisent. Ce qui se rattrape en post-production, avec quels outils de restauration, est un sujet à part.
+
+<div class="riquadro">
+
+**La réponse en bref.** L'ingénieur du son direct équipe les acteurs en micros, tient la perche avec le micro canon et enregistre, seul ou en équipe. Il lui faut du temps pour équiper (environ 5 minutes par acteur), une queue avant le coupez, un moment de silence avant de dire Action et une équipe qui sait ce qu'il faut éviter. Quelques minutes d'attention sur le plateau font gagner des heures de travail après.
+
+</div>
 
 ## Le plateau idéal
 

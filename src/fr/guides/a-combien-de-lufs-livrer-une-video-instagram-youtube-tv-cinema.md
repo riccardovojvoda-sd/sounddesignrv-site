@@ -12,8 +12,25 @@ categoria: Mixage et loudness
 per_chi: ["montatore", "regista-produzione", "agenzia"]
 argomento: ["mix-loudness"]
 tags: ["approfondimenti_fr", "LUFS", "loudness", "EBU R128", "true peak", "YouTube", "Instagram", "TikTok", "Netflix", "spot TV", "mixage pour les réseaux sociaux", "post-production audio"]
+domande_faq:
+  - d: "À combien de LUFS livrer une vidéo pour YouTube, Instagram et TikTok ?"
+    r: "À -14 LUFS de loudness intégrée, avec les pics à -1 dBTP. YouTube baisse les vidéos plus fortes et ne monte pas les plus faibles. Meta et TikTok ne publient pas de valeur officielle, mais les mesures se regroupent autour de -14 LUFS."
+  - d: "À combien de LUFS livrer un spot pour la TV italienne ?"
+    r: "À -24 LUFS de loudness intégrée, tolérance ±0,5 LU, true peak maximum -2 dBTP, comme le prévoit la délibération AGCOM 219/09/CSP. La référence européenne EBU R128 demande -23 LUFS et -1 dBTP ; pour les spots, la loudness à court terme ne doit pas dépasser -18 LUFS."
+  - d: "Combien de LKFS demande Netflix ?"
+    r: "-27 LKFS ±2 mesurés sur les seuls dialogues, avec un true peak maximum de -2 dBTP. Amazon Prime Video demande -24 LKFS ±2 sur le programme entier."
+  - d: "Existe-t-il un niveau en LUFS pour le cinéma ?"
+    r: "Non. En salle, le fichier est lu au niveau de calibration standard (85 dB SPL à -20 dBFS par canal), donc le mix se juge dans une salle calibrée. Pour les bandes-annonces, le plafond est le Leq(m) 85 dB."
+  - d: "Un seul mix suffit-il pour toutes les destinations ?"
+    r: "On mixe une fois au niveau de la destination la plus exigeante, en général la TV ou le streaming, et on dérive les autres versions en changeant le niveau et le limiteur. Le chemin inverse ne fonctionne pas : un mix né à -14 LUFS ne devient pas un bon mix à -23 en le baissant, parce que la compression reste imprimée."
 ---
 Le LUFS (Loudness Unit Full Scale) mesure le niveau sonore perçu d'un programme dans son ensemble, pas la hauteur de son pic. C'est le chiffre que les plateformes et les chaînes utilisent pour décider de combien monter ou baisser une vidéo, et c'est donc la première chose à connaître avant de finaliser le mix. Les valeurs ci-dessous sont celles en vigueur en septembre 2026.
+
+<div class="riquadro">
+
+**La réponse en bref.** YouTube et réseaux sociaux -14 LUFS / -1 dBTP · web et salons -16 / -14 · TV européenne -23 LUFS / -1 dBTP avec short-term maximum -18 pour les spots · TV italienne -24 LUFS / -2 dBTP (AGCOM) · Netflix -27 LKFS sur les dialogues / -2 dBTP · cinéma salle calibrée, bandes-annonces Leq(m) 85.
+
+</div>
 
 ## Le tableau
 
@@ -70,12 +87,6 @@ Non : entre -14 et -23 LUFS il y a 9 LU d'écart, presque le double du volume pe
 3. Livrer chaque fichier avec un nom qui dit à quoi il sert (`_TV_R128`, `_web_-14`), pour que personne ne mette en ligne le mauvais.
 
 Un mix né à -14 LUFS ne se ramène pas à -23 simplement en le baissant : la compression déjà imprimée reste. L'inverse, en revanche, fonctionne.
-
-<div class="riquadro">
-
-**En bref.** YouTube et réseaux sociaux -14 LUFS / -1 dBTP · web et salons -16 / -14 · TV européenne -23 LUFS / -1 dBTP avec short-term maximum -18 pour les spots · TV italienne -24 LUFS / -2 dBTP (AGCOM) · Netflix -27 LKFS sur les dialogues / -2 dBTP · cinéma salle calibrée, bandes-annonces Leq(m) 85.
-
-</div>
 
 ## Ce qu'il faut pour la vérification
 

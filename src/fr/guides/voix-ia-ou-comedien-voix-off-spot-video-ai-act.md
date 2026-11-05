@@ -12,8 +12,25 @@ categoria: Voix
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["voce"]
 tags: ["approfondimenti_fr", "voix IA", "voix de synthèse", "synthèse vocale", "comédien voix off", "voix off", "AI Act", "spot publicitaire", "vidéo d'entreprise", "casting voix"]
+domande_faq:
+  - d: "Voix IA ou comédien voix off pour un spot ?"
+    r: "Pour les spots TV et radio, le brand content, les documentaires et les contenus émotionnels, un comédien s'impose, parce que la compréhension du texte et l'interprétation font la différence. La voix IA est une option concrète pour les réseaux sociaux, les vidéos informatives, l'e-learning et les vidéos internes, surtout en anglais."
+  - d: "Où entend-on la différence entre une voix IA et une voix humaine ?"
+    r: "Sur l'émotion et le sous-texte, l'ironie et le rythme comique, les noms propres et les marques, les dialogues entre deux voix. Sur les offres de base, beaucoup de services n'exportent qu'en MP3, et la compression fait perdre de la présence à la voix dans le mixage final."
+  - d: "Puis-je utiliser une voix IA pour un projet commercial ?"
+    r: "Cela dépend de l'offre du service : avec ElevenLabs, par exemple, les contenus générés avec l'offre gratuite ne peuvent pas être utilisés dans un projet commercial, ceux générés avec une offre payante, si. Il vaut mieux vérifier les conditions avant la livraison."
+  - d: "Que prévoit l'AI Act pour les voix de synthèse ?"
+    r: "À partir du 2 août 2026 s'appliquent les obligations de transparence de l'article 50 : celui qui fournit le service doit marquer les audios générés de manière lisible par une machine, et celui qui l'utilise doit signaler les hypertrucages (deep fakes). Une voix clonée d'une personne existante en fait partie ; pour les systèmes déjà sur le marché, l'échéance est le 2 décembre 2026."
+  - d: "Peut-on cloner la voix d'une personne réelle pour une vidéo ?"
+    r: "Seulement avec son consentement explicite, que les services demandent dans leurs conditions d'utilisation. Cela vaut aussi pour la voix d'un porte-parole ou d'un salarié de l'entreprise."
 ---
 Une voix de synthèse se génère aujourd'hui à partir d'un texte en quelques minutes, et pour beaucoup de vidéos c'est un choix sensé. Pour d'autres, non. La différence tient moins au timbre, que les meilleurs services reproduisent bien, qu'à ce que le texte demande à celui qui le lit : plus il faut d'interprétation, plus l'avantage de la voix IA se réduit.
+
+<div class="riquadro">
+
+**La réponse en bref.** La voix IA fonctionne bien pour les textes informatifs, les contenus pour les réseaux sociaux et l'e-learning, surtout en anglais. Pour les spots TV et radio, le brand content et les contenus émotionnels, un comédien s'impose, parce que plus le texte demande d'interprétation, plus l'avantage de l'IA se réduit. À partir du 2 août 2026, l'AI Act impose des obligations de transparence sur les audios générés.
+
+</div>
 
 ## Les deux voies
 

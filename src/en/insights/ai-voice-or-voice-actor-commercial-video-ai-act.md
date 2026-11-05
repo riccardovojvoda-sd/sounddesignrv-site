@@ -12,8 +12,25 @@ categoria: Voice
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["voce"]
 tags: ["approfondimenti_en", "AI voice", "synthetic voice", "text to speech", "voice actor", "voice over", "AI Act", "commercial", "corporate video", "voice casting"]
+domande_faq:
+  - d: "Is an AI voice or a voice actor better for a commercial?"
+    r: "For TV and radio commercials, branded content, documentaries and emotional content a voice actor is the better choice, because understanding of the script and performance make the difference. An AI voice is a real option for social media, informational videos, e-learning and internal videos, especially in English."
+  - d: "Where can you hear the difference between an AI voice and a human voice?"
+    r: "On emotion and subtext, irony and comic timing, proper names and brands, and dialogue between two voices. On the basic plans many services only export MP3, and the compression makes the voice lose presence in the final mix."
+  - d: "Can I use an AI voice for a commercial project?"
+    r: "It depends on the plan of the service: with ElevenLabs, for example, content generated on the free plan cannot be used in a commercial project, while content generated on a paid plan can. It is worth checking the terms before delivery."
+  - d: "What does the AI Act require for synthetic voices?"
+    r: "From 2 August 2026 the transparency obligations of Article 50 apply: whoever provides the service must mark the generated audio in a machine-readable way, and whoever uses it must disclose deep fakes. A cloned voice of an existing person falls here; for systems already on the market the deadline is 2 December 2026."
+  - d: "Can I clone the voice of a real person for a video?"
+    r: "Only with their explicit consent, which the services require in their terms of use. This also applies to the voice of a spokesperson or of a company employee."
 ---
 A synthetic voice can now be generated from a script in a few minutes, and for many videos it is a sensible choice. For others it is not. The difference lies less in the timbre, which the best services reproduce well, than in what the script asks of whoever reads it: the more interpretation it needs, the smaller the advantage of an AI voice.
+
+<div class="riquadro">
+
+**The short answer.** An AI voice works well for informational scripts, social content and e-learning, especially in English. For TV and radio commercials, branded content and emotional content a voice actor is the better choice, because the more a script calls for interpretation, the smaller the advantage of AI. From 2 August 2026 the AI Act imposes transparency obligations on generated audio.
+
+</div>
 
 ## The two routes
 

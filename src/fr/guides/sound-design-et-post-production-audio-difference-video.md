@@ -12,8 +12,25 @@ categoria: Sound design
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["effetti-sonori", "mix-loudness"]
 tags: ["approfondimenti_fr", "sound design", "post-production audio", "son pour la vidéo", "bruitage", "effets sonores", "montage des dialogues", "mixage audio", "stems", "brief audio", "spot publicitaire", "vidéo d'entreprise"]
+domande_faq:
+  - d: "Quelle est la différence entre sound design et post-production audio ?"
+    r: "Le sound design est la partie créative du son d'une vidéo : effets, ambiances, bruitage, transitions et direction artistique. La post-production audio est la partie technique qui travaille sur le matériel existant : montage des dialogues, nettoyage, mixage, loudness et livraison. Les deux termes sont souvent employés comme synonymes."
+  - d: "Que comprend la post-production audio ?"
+    r: "En général le montage des dialogues, le nettoyage des bruits, ronflements et réverbérations, la postsynchronisation (ADR, le réenregistrement en studio des répliques mal captées sur le tournage), le montage de la musique sur le montage image, le mixage et le bon niveau pour chaque plateforme."
+  - d: "Que reçoit-on à la fin d'un travail de sound design et de post-production audio ?"
+    r: "La livraison de base est le master, c'est-à-dire le mixage fini, dans les versions pour les destinations prévues. Sur demande, aussi les stems divisés en dialogues, musique et effets, la version sans voix (M&E) et des versions alternatives, par exemple sans musique ou avec des coupes différentes."
+  - d: "Que sont les stems et la version M&E ?"
+    r: "Les stems sont le mixage divisé en dialogues, musique et effets : additionnés, ils redonnent le mixage complet. La version M&E, sans voix, contient la musique et les effets et sert à adapter la vidéo dans d'autres langues ou à refaire la voix off."
+  - d: "Que mettre dans le brief quand on demande du sound design ?"
+    r: "Quel matériel audio existe déjà et lequel doit être créé, s'il faut des effets, des ambiances et du bruitage ou seulement le mixage de la voix et de la musique, où sortira la vidéo, quels fichiers sont nécessaires à la fin et un produit de référence s'il en existe un. Les devis reçus pourront ainsi être comparés."
 ---
 Dans le domaine de la vidéo, sound design et post-production audio sont souvent employés comme synonymes, et parfois ils le sont : « sound design » sonne mieux et attire davantage ceux qui ne sont pas du métier, « post-production audio » est le nom technique. Quand les deux termes désignent des choses différentes, la différence se situe entre la partie créative du son d'une vidéo et la partie technique. La comprendre aide à rédiger un brief et à lire un devis.
+
+<div class="riquadro">
+
+**La réponse en bref.** Le sound design est la partie créative du son d'une vidéo (effets, ambiances, bruitage, transitions) ; la post-production audio est la partie technique (montage des dialogues, nettoyage, mixage, loudness et livraison). Si les choix artistiques sur le son sont faits par celui qui travaille l'audio, on achète aussi du sound design ; si l'on répare et mixe du matériel choisi par d'autres, c'est de la post-production.
+
+</div>
 
 Ici, « sound design » a le sens qu'il a dans la vidéo. Il ne faut pas le confondre avec l'autre métier qui porte le même nom : créer des sons à partir de zéro ou d'échantillons, par la synthèse et le traitement, pour des instruments, des jeux vidéo ou des banques de sons.
 

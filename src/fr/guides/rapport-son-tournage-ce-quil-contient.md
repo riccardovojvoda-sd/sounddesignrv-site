@@ -12,8 +12,25 @@ categoria: Son direct
 per_chi: ["regista-produzione", "montatore"]
 argomento: ["presa-diretta", "consegna-materiali"]
 tags: ["approfondimenti_fr", "rapport son", "rapport de son", "son direct", "ingénieur du son tournage", "métadonnées iXML", "post-production audio", "fiction", "son seul", "ambiance"]
+domande_faq:
+  - d: "Qu'est-ce que le rapport son du son direct ?"
+    r: "C'est la feuille où la personne qui enregistre note, prise par prise, la séquence, le clap, le micro sur chaque piste, le résultat de la prise et ce qui s'est passé. Il voyage avec les fichiers audio et sert surtout à la post-production audio qui, sans cette feuille, doit tout réécouter pour retrouver ce qu'elle cherche."
+  - d: "Qu'écrit-on dans un rapport son ?"
+    r: "Les colonnes de base sont : prise bonne ou écartée (O/X), numéro de la prise, entrées avec micro et personnage par piste, séquence et clap, décor, plan, description et commentaires, numéro du fichier sur le second enregistreur. En tête, on met enregistreur, date, épisode, projet et journée de tournage ; à la fin, une légende."
+  - d: "Qui remplit le rapport son et quand ?"
+    r: "C'est la personne qui enregistre : l'ingénieur du son, le perchman ou un assistant, une ligne par prise. On peut le compléter pendant les pauses ou en fin de journée, surtout quand on travaille seul."
+  - d: "Le rapport son est-il la même chose que le rapport de scripte ?"
+    r: "Non. Le rapport de scripte est rempli par la scripte et relie chaque prise à la numérotation de la caméra, alors que le rapport son est pensé pour la post-production audio et n'a pas ce lien. C'est pourquoi la description doit indiquer à quel plan la prise se rapporte."
+  - d: "Comment livre-t-on le rapport son ?"
+    r: "En PDF, avec les fichiers audio de la journée. Les enregistreurs professionnels peuvent aussi écrire séquence, prise et notes dans les fichiers WAV sous forme de métadonnées iXML, mais cela demande du temps pendant le tournage, et le rapport écrit reste le moyen le plus rapide."
 ---
 Le rapport son est la feuille où la personne qui enregistre le son direct note, prise par prise, ce qu'elle a enregistré : quelle séquence, quel clap, quel micro sur quelle piste, si la prise est bonne ou à écarter, ce qui s'est passé. Il voyage avec les fichiers audio et sert surtout à la post-production audio qui, sans cette feuille, doit tout réécouter pour retrouver ce qu'elle cherche.
+
+<div class="riquadro">
+
+**La réponse en bref.** Le rapport son note prise par prise la séquence, le clap, le micro par piste, le résultat et les remarques. Il est rempli par la personne qui enregistre, une ligne par prise, et se livre en PDF avec les fichiers de la journée. En post-production, il permet de retrouver en quelques minutes les pistes manquantes, les prises alternatives, les sons seuls et les ambiances.
+
+</div>
 
 Ce qu'il faut livrer en général au sound designer (montage, AAF, son direct) se trouve dans le [guide sur ce qu'il faut livrer](/fr/guides/que-livrer-au-sound-designer-export-video-aaf-son-direct/). Ici, il n'est question que du rapport son.
 
