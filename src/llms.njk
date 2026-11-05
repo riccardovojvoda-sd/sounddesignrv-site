@@ -23,9 +23,15 @@ eleventyExcludeFromCollections: true
 - [Contatti]({{ sito.url }}/contatti/)
 - [Profilo in PDF]({{ sito.url }}{{ sito.profiloPdf }})
 
+## Guide
+Risposte pratiche per chi produce video, una domanda precisa per pagina. Testo integrale di FAQ e guide in [llms-full.txt]({{ sito.url }}/llms-full.txt).
+{%- for a in collections.approfondimenti %}
+- [{{ a.data.titolo | safe }}]({{ sito.url }}{{ a.url }}): {{ a.data.descrizione_seo | safe }}
+{%- endfor %}
+
 ## Progetti
 {%- for p in collections.progetti %}
-- [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria }}. Ruolo: {{ p.data.ruolo }}
+- [{{ p.data.brand | safe }} - {{ p.data.titolo | safe }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria | safe }}. Ruolo: {{ p.data.ruolo | safe }}
 {%- endfor %}
 
 ## English version
@@ -36,8 +42,11 @@ Every page also exists in English, same structure, with hreflang links between t
 - [About]({{ sito.url }}/en/about/)
 - [FAQ]({{ sito.url }}/en/faq/): what audio post-production includes, what to deliver (AAF, handles, sound report), turnaround by format, revisions, formats, quotes, voice over, AI voices
 - [Contact]({{ sito.url }}/en/contact/)
+{%- for a in collections.approfondimenti_en %}
+- [{{ a.data.titolo | safe }}]({{ sito.url }}{{ a.url }}): {{ a.data.descrizione_seo | safe }}
+{%- endfor %}
 {%- for p in collections.progetti_en %}
-- [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria }}. Role: {{ p.data.ruolo }}
+- [{{ p.data.brand | safe }} - {{ p.data.titolo | safe }}]({{ sito.url }}{{ p.url }}): {{ p.data.categoria | safe }}. Role: {{ p.data.ruolo | safe }}
 {%- endfor %}
 
 ## Version française
@@ -48,8 +57,11 @@ Chaque page existe aussi en français, même structure, avec des liens hreflang 
 - [À propos]({{ sito.url }}/fr/a-propos/)
 - [FAQ]({{ sito.url }}/fr/faq/) : ce que comprend la post-production audio, quoi livrer (AAF, poignées, rapport son), délais par format, corrections, formats, devis, voix off, voix IA
 - [Contact]({{ sito.url }}/fr/contact/)
+{%- for a in collections.approfondimenti_fr %}
+- [{{ a.data.titolo | safe }}]({{ sito.url }}{{ a.url }}) : {{ a.data.descrizione_seo | safe }}
+{%- endfor %}
 {%- for p in collections.progetti_fr %}
-- [{{ p.data.brand }} - {{ p.data.titolo }}]({{ sito.url }}{{ p.url }}) : {{ p.data.categoria }}. Rôle : {{ p.data.ruolo }}
+- [{{ p.data.brand | safe }} - {{ p.data.titolo | safe }}]({{ sito.url }}{{ p.url }}) : {{ p.data.categoria | safe }}. Rôle : {{ p.data.ruolo | safe }}
 {%- endfor %}
 
 ## Clienti
