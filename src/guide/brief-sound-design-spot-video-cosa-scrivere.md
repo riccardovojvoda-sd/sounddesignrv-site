@@ -12,8 +12,25 @@ categoria: Brief
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["consegna-materiali", "effetti-sonori"]
 tags: ["approfondimenti", "brief audio", "brief sound design", "sound design", "post-produzione audio", "spot", "video aziendale", "riferimenti", "revisioni", "conform"]
+domande_faq:
+  - d: "Cosa scrivere nel brief per il sound design di uno spot o di un video?"
+    r: "Dieci cose: stile del suono, dove verrà diffuso, riferimenti, montato finale, musica, voce, durata e versioni, file da consegnare, scadenza, revisioni e approvazione. Anche una mail di poche righe basta, ma più informazioni ci sono, più il preventivo corrisponde al lavoro reale."
+  - d: "Come si danno i riferimenti a chi fa il sound design?"
+    r: "Con link a YouTube, titoli di film o spot, link ai brani negli archivi musicali o file mandati con un servizio di trasferimento. Accanto a ogni riferimento conviene scrivere cosa piace, per esempio il ritmo dei suoni o l'ambiente, e aggiungere due aggettivi come più caldo, più asciutto, più potente."
+  - d: "Quando coinvolgere chi fa l'audio in un progetto video?"
+    r: "A montaggio chiuso. Con un montaggio ancora in lavorazione si può ragionare su direzione e riferimenti, ma il lavoro nella sessione audio parte quando il montaggio è fermo. Se il montaggio cambia dopo, la sessione va riallineata (conform) e le ore necessarie si contano spesso a parte."
+  - d: "Quanti giri di revisione sono previsti per il sound design?"
+    r: "Due o tre giri sono la norma e il numero si concorda all'inizio. Il feedback più utile è scritto, per punti, con il minutaggio di ogni punto e raccolto da una sola persona che riunisce i commenti di tutti."
+  - d: "Quanto tempo serve per il sound design di uno spot?"
+    r: "Per uno spot o un video breve conviene considerare almeno una settimana piena, per esempio materiale il lunedì e consegna il venerdì. Un intervento in giornata si può fare, ma l'urgenza ha un costo in più."
 ---
 Un brief per il sound design può essere anche una mail di poche righe: chi lavora all'audio è abituato a interpretare le intenzioni di chi fa il video, e pochi elementi bastano per partire nella direzione giusta. Più informazioni ci sono, però, meno resta da interpretare e più il preventivo corrisponde al lavoro reale.
+
+<div class="riquadro">
+
+**La risposta in breve.** Il brief per il sound design comprende dieci voci: stile del suono, destinazioni, riferimenti, montato finale, musica, voce, durata e versioni, file da consegnare, scadenza, revisioni e approvazione. Può essere una mail di poche righe, da mandare con il montaggio chiuso.
+
+</div>
 
 Cosa comprende il sound design e cosa la post-produzione audio è spiegato nella [guida sulla differenza tra i due](/guide/sound-design-e-post-produzione-audio-differenza/). Qui la lista delle cose da scrivere.
 

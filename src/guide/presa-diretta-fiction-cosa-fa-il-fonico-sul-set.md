@@ -12,8 +12,25 @@ categoria: Presa diretta
 per_chi: ["regista-produzione", "montatore"]
 argomento: ["presa-diretta"]
 tags: ["approfondimenti", "presa diretta", "fonico di presa diretta", "fiction", "set", "boom", "microfono lavalier", "radiomicrofono", "room tone", "post-produzione audio", "bollettino sonoro"]
+domande_faq:
+  - d: "Cosa fa il fonico di presa diretta sul set di una fiction?"
+    r: "Registra e microfona gli attori, tiene il boom con lo shotgun e ascolta in cuffia un mix di lavalier e shotgun. Se lavora da solo non può gestire in tempo reale un mix per la camera o correggere problemi di preamplificazione; con una squadra il fonico siede al mixer e il microfonista si occupa solo del boom."
+  - d: "Quanto tempo serve per microfonare un attore?"
+    r: "Circa 5 minuti ad attore, spesso ne bastano un paio. A volte occorre provare come tiene il microfono in movimento o sostituire l'abbigliamento, per questo la microfonatura avviene in parallelo alla vestizione."
+  - d: "Cosa deve chiedere il fonico alla produzione?"
+    r: "Quattro cose: il tempo di microfonare tutte le scene e gli attori, una coda prima dello stop, un momento di silenzio prima di dire Azione e pause e pasti caldi ben organizzati. La coda permette in post una dissolvenza lunga che nasconde i tagli, il silenzio fa decadere il riverbero della stanza."
+  - d: "Cos'è il room tone e serve registrarlo?"
+    r: "È il silenzio di una stanza registrato per coprire i buchi in montaggio; in teoria si registrano 30-40 secondi per ogni stanza. In pratica quello registrato a parte raramente si usa, e i buchi si tappano con silenzi presi dalla stessa take o da quelle vicine, per questo contano i secondi di silenzio prima e dopo ogni azione."
+  - d: "Quali accortezze deve avere la troupe per non rovinare la presa diretta?"
+    r: "Silenzio dietro la camera a azione partita, scarpe con suola morbida, niente tessuti che frusciano o gioielli che tintinnano, porte e oggetti lasciati dove sono, cellulari degli attori in modalità aereo e microfono della camera sempre attivo come riferimento di sincronizzazione."
 ---
 Su un set di fiction il suono si decide in pochi minuti: quelli che la produzione concede al fonico prima di girare. Quello che segue viene dalla mia esperienza di fonico di presa diretta, spesso da solo, e descrive cosa posso fare sul set e cosa mi serve da chi lo organizza. Cosa si recupera in post-produzione, con quali strumenti di restauro, è un argomento a parte.
+
+<div class="riquadro">
+
+**La risposta in breve.** Il fonico di presa diretta microfona gli attori, tiene il boom con lo shotgun e registra, da solo o con una squadra. Gli serve tempo per microfonare (circa 5 minuti ad attore), una coda prima dello stop, un momento di silenzio prima di dire Azione e una troupe che sa cosa evitare. Pochi minuti di attenzione sul set fanno risparmiare ore di lavoro dopo.
+
+</div>
 
 ## Il set ideale
 

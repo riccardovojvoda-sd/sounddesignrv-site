@@ -12,8 +12,25 @@ categoria: Sound design
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["effetti-sonori"]
 tags: ["approfondimenti", "foley", "sound design", "effetti sonori", "audio per video", "spot", "video aziendale", "brief audio", "post-produzione audio"]
+domande_faq:
+  - d: "Cos'è il foley nel sound design?"
+    r: "È l'insieme dei suoni di scena rifatti a tempo con le immagini: passi, vestiti che si muovono, mani che toccano un oggetto, una tazza appoggiata sul tavolo. Il nome viene da Jack Foley, tecnico degli Universal Studios che alla fine degli anni Venti registrava gli effetti dal vivo mentre il film scorreva sullo schermo."
+  - d: "Qual è la differenza tra foley, effetti da libreria e presa diretta?"
+    r: "La presa diretta sono i suoni registrati sul set con le immagini, naturali ma spesso sporchi o scarni. Gli effetti da libreria sono suoni già registrati in archivi come Soundly o Freesound, veloci ma dalle timbriche eterogenee. Il foley è registrato o costruito apposta per quel video, oggetto per oggetto, a tempo con l'azione."
+  - d: "Il foley serve in uno spot?"
+    r: "Negli spot il suono di un prodotto è quasi sempre un effetto sonoro più che un foley: parte dal timbro naturale ma è ingrandito, più nitido e più presente. Il lavoro è spesso un misto di effetti da libreria, suoni costruiti da zero e qualche foley mirato."
+  - d: "Il foley serve in un video aziendale?"
+    r: "Serve meno quando il video è fatto solo di interviste e immagini di repertorio, e di più quando ci sono persone al lavoro, macchinari, prodotti maneggiati o riprese di dettaglio. Sono i suoni che fanno sentire l'azienda come un posto vero."
+  - d: "Cosa scrivere nel brief per chiedere il foley?"
+    r: "Se il video è stato girato senza audio o con una presa diretta poco utilizzabile, se ci sono primi piani di prodotto, gesti o azioni che devono suonare, se lo stile deve essere realistico o esagerato, e uno o più video di riferimento. Il foley non va chiesto per nome: spetta a chi lavora all'audio capire se serve e preventivarlo."
 ---
 Il foley è l'insieme dei suoni di scena rifatti a tempo con le immagini: passi, vestiti che si muovono, mani che toccano un oggetto, una tazza appoggiata sul tavolo. Nei video girati senza presa diretta, o con una presa diretta inutilizzabile, questi suoni mancano del tutto, e un video senza di essi suona vuoto anche quando la musica e la voce sono perfette.
+
+<div class="riquadro">
+
+**La risposta in breve.** Il foley è l'insieme dei suoni di scena rifatti a tempo con le immagini: passi, vestiti, oggetti. Serve quando la presa diretta manca o è inutilizzabile, e di più nei video con persone, gesti e oggetti in primo piano. Negli spot prevalgono gli effetti sonori ingranditi, con qualche foley mirato.
+
+</div>
 
 Il nome viene da Jack Foley, tecnico degli Universal Studios che alla fine degli anni Venti, con l'arrivo del sonoro, registrava gli effetti dal vivo mentre il film scorreva sullo schermo. Il principio non è cambiato: si guarda l'immagine e si rifà il suono in sincrono.
 

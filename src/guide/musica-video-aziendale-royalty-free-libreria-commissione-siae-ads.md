@@ -12,8 +12,25 @@ categoria: Musica e diritti
 per_chi: ["agenzia", "regista-produzione", "montatore"]
 argomento: ["musica-diritti"]
 tags: ["approfondimenti", "musica per video aziendali", "royalty free", "production music", "musica di libreria", "SIAE", "sincronizzazione", "Epidemic Sound", "Artlist", "Content ID", "sponsorizzate", "post-produzione audio"]
+domande_faq:
+  - d: "Che musica usare per un video aziendale?"
+    r: "Le strade sono tre: royalty free in abbonamento, musica di libreria (production music) e musica composta su misura. Per video corporate, social e branded content si usa di solito il royalty free con il piano adatto all'uso; i brand che vogliono un suono proprio scelgono la musica originale."
+  - d: "Royalty free vuol dire gratis?"
+    r: "No. Vuol dire che non si pagano diritti per ogni utilizzo, perché la licenza è compresa nell'abbonamento. Il limite è l'esclusività: lo stesso brano può comparire nei video di altre aziende."
+  - d: "La SIAE copre l'uso di un brano in un video aziendale?"
+    r: "No. La SIAE rilascia licenze per l'esecuzione pubblica e la comunicazione al pubblico, ma non concede il diritto di sincronizzazione, cioè l'abbinamento di una musica alle immagini. Con un brano tutelato servono la licenza dell'editore e, per la registrazione originale, quella del produttore discografico."
+  - d: "Posso usare una canzone di Instagram o TikTok in un video aziendale o in una sponsorizzata?"
+    r: "No. Le canzoni delle librerie di Instagram e TikTok sono disponibili nell'app, ma questo non ne autorizza l'uso in un video aziendale o in una sponsorizzata."
+  - d: "Cosa controllare prima di sponsorizzare un video con musica su YouTube e Meta?"
+    r: "Che il piano copra le sponsorizzate e il lavoro per un cliente, che il canale o l'account del cliente sia collegato alla licenza e che la licenza del brano sia salvata insieme ai file del progetto. YouTube (Content ID) e Meta (Rights Manager) possono altrimenti segnalare il brano con un reclamo."
 ---
 Per la musica di un video aziendale le strade sono tre: la musica royalty free in abbonamento, la musica di libreria (production music) e la musica composta su misura. Cambiano il costo, l'esclusività e quello che la licenza copre, soprattutto quando il video diventa una campagna sponsorizzata. Le condizioni riportate qui sotto sono quelle in vigore a settembre 2026.
+
+<div class="riquadro">
+
+**La risposta in breve.** Per un video aziendale conviene di solito il royalty free in abbonamento, con il piano adatto a lavori per clienti e sponsorizzate. La musica di libreria si licenzia brano per brano, quella su misura dà un suono esclusivo a costo più alto. La SIAE non concede la sincronizzazione: con un brano tutelato servono editore e, per la registrazione, produttore discografico.
+
+</div>
 
 ## Royalty free in abbonamento
 

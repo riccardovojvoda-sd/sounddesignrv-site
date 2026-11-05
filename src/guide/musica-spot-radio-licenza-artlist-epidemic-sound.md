@@ -12,8 +12,25 @@ categoria: Musica e diritti
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["musica-diritti"]
 tags: ["approfondimenti", "musica spot radio", "licenza musicale radio", "royalty free", "Artlist", "Epidemic Sound", "PremiumBeat", "AudioJungle", "licenza broadcast", "diritto d'autore", "SIAE", "spot radiofonico"]
+domande_faq:
+  - d: "La licenza di Artlist copre uno spot radio?"
+    r: "No, nei piani standard. La licenza di Artlist tratta la radio tra gli usi che non rientrano nella licenza standard, e per il broadcast servono il piano Max Business o un accordo Enterprise. Per uno spot solo audio serve la conferma scritta di Artlist."
+  - d: "Epidemic Sound si può usare per uno spot radio?"
+    r: "Nel piano Business no, perché esclude espressamente radio, affissioni e dirette. Serve il piano Enterprise, su misura."
+  - d: "Quali librerie musicali coprono la radio?"
+    r: "Secondo le condizioni di ottobre 2026, PremiumBeat (con licenza Premium o Business), AudioJungle (con le licenze Music Broadcast o Broadcast & Film) e Pond5 (con la licenza standard). Per Motion Array la copertura è da verificare con conferma scritta; Envato Elements e Uppbeat nei piani non la coprono."
+  - d: "Se accorcio o rimonto il brano non serve la licenza?"
+    r: "Serve comunque. Un brano ha due diritti distinti, quello sulla composizione e quello sulla registrazione, e la L. 633/1941 tutela anche l'elaborazione dell'opera (art. 18) e la riproduzione della registrazione in tutto o in parte (art. 72). Tagliare, mettere in loop o rimontare resta un uso del brano."
+  - d: "La SIAE paga la musica di uno spot radio?"
+    r: "Le radio pagano già la SIAE per i brani che trasmettono, ma questo copre la messa in onda del repertorio, non l'inserimento di un brano dentro uno spot. Quello lo autorizzano gli aventi diritto oppure la licenza della libreria."
 ---
 Uno spot radio ha bisogno di una licenza musicale che copra la radio. Molti abbonamenti di musica royalty free sono pensati per i video online e la radio la escludono, oppure la riservano ai piani business o ai contratti su misura. Accorciare o rimontare il brano non cambia niente. Le condizioni qui sotto sono quelle pubblicate dai servizi a ottobre 2026.
+
+<div class="riquadro">
+
+**La risposta in breve.** Molti abbonamenti royalty free non coprono la radio: Artlist e Epidemic Sound la escludono nei piani standard e business. Coprono la radio PremiumBeat, AudioJungle e Pond5, con la licenza adatta. Accorciare o rimontare il brano non toglie l'obbligo della licenza.
+
+</div>
 
 Per la musica di un video aziendale, con le differenze tra royalty free, libreria e musica su commissione, c'è la [guida dedicata](/guide/musica-video-aziendale-royalty-free-libreria-commissione-siae-ads/). Qui si parla solo di radio.
 

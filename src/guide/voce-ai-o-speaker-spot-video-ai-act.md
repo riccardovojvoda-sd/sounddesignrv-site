@@ -12,8 +12,25 @@ categoria: Voce
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["voce"]
 tags: ["approfondimenti", "voce AI", "voce sintetica", "speaker", "voice over", "voice actor", "AI Act", "spot", "video aziendale", "casting voce"]
+domande_faq:
+  - d: "Meglio una voce AI o uno speaker per uno spot?"
+    r: "Per spot TV e radio, branded content, documentari e contenuti emozionali conviene uno speaker, perché comprensione del testo e interpretazione fanno la differenza. La voce AI è un'opzione concreta per social, video informativi, e-learning e video interni, soprattutto in inglese."
+  - d: "Dove si sente la differenza tra voce AI e voce umana?"
+    r: "Su emozione e sottotesto, ironia e ritmo comico, nomi propri e marchi, dialoghi tra due voci. Sui piani base molti servizi esportano solo MP3, e la compressione fa perdere presenza alla voce nel mix finale."
+  - d: "Posso usare una voce AI per un progetto commerciale?"
+    r: "Dipende dal piano del servizio: con ElevenLabs, per esempio, i contenuti generati con il piano gratuito non si possono usare in un progetto commerciale, quelli generati con un piano a pagamento sì. Conviene verificare le condizioni prima della consegna."
+  - d: "Cosa prevede l'AI Act per le voci sintetiche?"
+    r: "Dal 2 agosto 2026 si applicano gli obblighi di trasparenza dell'articolo 50: chi fornisce il servizio deve marcare gli audio generati in modo leggibile da una macchina, e chi lo usa deve dichiarare i deep fake. Una voce clonata di una persona esistente rientra tra questi; per i sistemi già sul mercato la scadenza è il 2 dicembre 2026."
+  - d: "Si può clonare la voce di una persona reale per un video?"
+    r: "Solo con il suo consenso esplicito, che i servizi richiedono nelle loro condizioni d'uso. Vale anche per la voce di un testimonial o di un dipendente dell'azienda."
 ---
 Una voce sintetica oggi si genera in pochi minuti da un testo, e per molti video è una scelta sensata. Per altri no. La differenza non sta tanto nel timbro, che i servizi migliori riproducono bene, quanto in quello che il testo chiede a chi lo legge: più serve interpretazione, più il vantaggio della voce AI si riduce.
+
+<div class="riquadro">
+
+**La risposta in breve.** La voce AI funziona bene per testi informativi, contenuti social ed e-learning, soprattutto in inglese. Per spot TV e radio, branded content e contenuti emozionali conviene uno speaker, perché più il testo chiede interpretazione, più il vantaggio dell'AI si riduce. Dal 2 agosto 2026 l'AI Act impone obblighi di trasparenza sugli audio generati.
+
+</div>
 
 ## Le due strade
 

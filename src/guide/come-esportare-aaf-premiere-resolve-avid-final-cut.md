@@ -12,8 +12,25 @@ categoria: Consegna dei materiali
 per_chi: ["montatore", "regista-produzione"]
 argomento: ["consegna-materiali"]
 tags: ["approfondimenti", "AAF", "handles", "Premiere Pro", "DaVinci Resolve", "Avid Media Composer", "Final Cut Pro", "X2Pro", "Pro Tools", "post-produzione audio", "consegna materiali sound design"]
+domande_faq:
+  - d: "Come si esporta un AAF per Pro Tools da Premiere Pro?"
+    r: "Da File > Export > AAF, con Mixdown Video spento, Breakout to Mono attivo, audio incorporato (Embed Audio), formato Broadcast Wave, handles a 120 fotogrammi o più, 24 bit e 48 kHz. L'opzione per renderizzare gli effetti delle clip va lasciata spenta."
+  - d: "Come si esporta l'AAF per Pro Tools da DaVinci Resolve?"
+    r: "Dalla pagina Deliver, scegliendo il preset Pro Tools e il codec audio Embedded in AAF, con handles di 120 fotogrammi o più, 48 kHz e 24 bit. Il comando File > Export > AAF, XML produce un AAF generico che in Pro Tools si apre male."
+  - d: "Final Cut Pro può esportare un AAF?"
+    r: "No, Final Cut Pro non esporta AAF. La strada standard è esportare l'XML del progetto e convertirlo con X2Pro Audio Convert, impostando ruoli, handles di 5 secondi e audio incorporato. In alternativa si può importare l'XML in DaVinci Resolve e usare il preset Pro Tools."
+  - d: "Quanti handles servono in un AAF?"
+    r: "Almeno 5 secondi, cioè 120 fotogrammi a 24 fps e 125 a 25 fps. Gli handles sono il margine delle clip prima e dopo ogni taglio, usato dal sound designer per allungare, ammorbidire o coprire un buco."
+  - d: "Perché un AAF non si apre in Pro Tools?"
+    r: "La causa più frequente sono i caratteri speciali nei nomi di clip e tracce (/ < > & @ ® e le lettere accentate). Contano anche le clip nidificate, multicam o unite non appiattite, e i cambi di velocità sulle clip audio."
 ---
 Le impostazioni che contano sono le stesse in tutti i programmi di montaggio: audio incorporato nel file, handles di almeno 5 secondi, 48 kHz a 24 bit, effetti audio non renderizzati. Cambia solo dove stanno le voci nei menu.
+
+<div class="riquadro">
+
+**La risposta in breve.** Copia della sequenza senza nested/multicam · audio incorporato · handles 120+ fotogrammi · Broadcast Wave 48 kHz 24 bit · effetti audio non renderizzati · video di riferimento con lo stesso timecode.
+
+</div>
 
 ## Prima di esportare, in qualsiasi programma
 
@@ -79,12 +96,6 @@ Alternativa gratuita: importare l'XML in DaVinci Resolve e usare il preset Pro T
 - Il **video di riferimento** con lo stesso frame rate e lo stesso timecode di partenza (H.264 1080p o ProRes Proxy), se possibile, il timecode in sovrimpressione.
 - Un **mix di riferimento** in WAV, cioè l'audio così come si sente in montaggio: serve per capire l'intenzione e per controllare il sincrono all'import.
 - Se c'è, la cartella con i file della **presa diretta originale** con il bollettino sonoro: quello che serve al di là dell'AAF sta in [Cosa consegnare al sound designer](/guide/cosa-consegnare-al-sound-designer-aaf-handles-presa-diretta/).
-
-<div class="riquadro">
-
-**In breve.** Copia della sequenza senza nested/multicam · audio incorporato · handles 120+ fotogrammi · Broadcast Wave 48 kHz 24 bit · effetti audio non renderizzati · video di riferimento con lo stesso timecode.
-
-</div>
 
 ## Un test prima della consegna vera
 

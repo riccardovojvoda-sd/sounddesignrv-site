@@ -12,8 +12,25 @@ categoria: Brief
 per_chi: ["agenzia", "regista-produzione"]
 argomento: ["consegna-materiali", "musica-diritti", "voce"]
 tags: ["approfondimenti", "preventivo audio", "costo sound design", "quanto costa il sound design", "preventivo spot", "audio per spot", "mix spot TV", "spot radio", "voice over", "licenza musicale", "revisioni", "brief audio", "post-produzione audio"]
+domande_faq:
+  - d: "Quanto costa il sound design di uno spot?"
+    r: "Dipende da cosa c'è dentro la voce audio: a volte è solo un mix su voce e musica già pronte, a volte comprende casting e registrazione della voce, ricerca della musica, sound design, mix e versioni per canali diversi. Per questo un preventivo serio arriva dopo alcune informazioni sul progetto."
+  - d: "Quali informazioni servono per avere un preventivo audio preciso?"
+    r: "Il tipo di video, dove va, quante versioni, la durata, il montato o premontato, i riferimenti o il brief, la musica, la voce e il materiale audio disponibile, più le date della prima versione e della consegna dei master. Con queste il preventivo arriva preciso al primo giro."
+  - d: "Cosa fa cambiare un preventivo audio dopo il primo invio?"
+    r: "Soprattutto il numero di versioni e formati, perché ogni versione ha il suo editing della voce, il suo montaggio della musica e il suo mix. Poi il materiale di partenza: una musica scelta dal cliente che diventa da cercare, o un montato che cambia dopo che l'audio è stato prodotto."
+  - d: "La licenza della musica è inclusa nel preventivo audio?"
+    r: "Per la musica di libreria la ricerca e il montaggio sulle versioni sono lavoro, mentre la licenza è un costo a parte. La può comprare chi fa l'audio, che la mette in fattura, oppure direttamente il cliente, su indicazione precisa del brano e del tipo di licenza."
+  - d: "Quante revisioni sono incluse nel preventivo del sound design?"
+    r: "Di solito tre giri di revisione, scritti in una clausola, e oltre quelli una tariffa oraria. Una modifica al testo dopo l'approvazione della voce conta come un giro, mentre le modifiche importanti al montato dopo la consegna dell'audio sono un lavoro nuovo, da valutare a parte."
 ---
 Il costo dell'audio di uno spot dipende da cosa c'è dentro la voce "audio": a volte è solo un mix su voce e musica già pronte, a volte è casting e registrazione della voce, ricerca della musica, sound design, mix e una serie di versioni per canali diversi. Per questo un preventivo serio arriva dopo alcune informazioni sul progetto, e più sono complete, più il primo preventivo è anche quello definitivo.
+
+<div class="riquadro">
+
+**La risposta in breve.** Il costo dell'audio di uno spot dipende da cosa comprende: casting e registrazione della voce, ricerca della musica, sound design, mix e numero di versioni per i diversi canali. Le variabili che più muovono il preventivo sono le versioni e il materiale di partenza. Con le informazioni sul progetto il primo preventivo è anche quello definitivo.
+
+</div>
 
 ## Le informazioni che servono
 

@@ -12,8 +12,25 @@ categoria: Presa diretta
 per_chi: ["regista-produzione", "montatore"]
 argomento: ["presa-diretta", "consegna-materiali"]
 tags: ["approfondimenti", "bollettino sonoro", "sound report", "rapporto audio", "presa diretta", "fonico di presa diretta", "metadati iXML", "post-produzione audio", "fiction", "wild track", "room tone"]
+domande_faq:
+  - d: "Che cos'è il bollettino sonoro della presa diretta?"
+    r: "È il foglio in cui chi registra annota, take per take, scena, ciak, microfono su ogni traccia, esito della take e cosa è successo. Viaggia insieme ai file audio e serve soprattutto alla post-produzione audio, che senza quel foglio deve ascoltare tutto per ritrovare quello che cerca."
+  - d: "Cosa si scrive in un bollettino sonoro?"
+    r: "Le colonne di base sono: take buona o scartata (O/X), numero della take, input con microfono e personaggio per traccia, scena e ciak, location, inquadratura, descrizione e commenti, numero del file sul secondo registratore. In testa vanno registratore, data, episodio, progetto e giornata di riprese; in fondo una legenda."
+  - d: "Chi compila il bollettino sonoro e quando?"
+    r: "Lo compila chi registra: il fonico di presa diretta, il microfonista o un assistente, una riga per take. Si può completare nelle pause o a fine giornata, soprattutto quando si lavora da soli."
+  - d: "Il bollettino sonoro è la stessa cosa del rapporto di edizione?"
+    r: "No. Il rapporto di edizione lo compila la segretaria di edizione e collega ogni take alla numerazione della camera, mentre il bollettino sonoro è pensato per la post-produzione audio e non ha quella corrispondenza. Per questo la descrizione deve indicare a quale inquadratura si riferisce la take."
+  - d: "Come si consegna il bollettino sonoro?"
+    r: "In PDF, insieme ai file audio della giornata. I registratori professionali possono anche scrivere scena, take e note nei file WAV come metadati iXML, ma richiede tempo durante le riprese, e il bollettino scritto resta il modo più rapido."
 ---
 Il bollettino sonoro è il foglio in cui chi registra la presa diretta annota, take per take, cosa ha registrato: quale scena, quale ciak, quale microfono su quale traccia, se la take è buona o da scartare, cosa è successo. Viaggia insieme ai file audio e serve soprattutto a chi fa la post-produzione audio, che senza quel foglio deve ascoltare tutto per ritrovare quello che cerca.
+
+<div class="riquadro">
+
+**La risposta in breve.** Il bollettino sonoro annota take per take scena, ciak, microfono per traccia, esito e note. Lo compila chi registra, una riga per take, e si consegna in PDF con i file della giornata. In post-produzione permette di ritrovare in pochi minuti tracce mancanti, take alternative, wild track e toni d'ambiente.
+
+</div>
 
 Cosa consegnare in generale al sound designer (montato, AAF, presa diretta) è nella [guida su cosa consegnare](/guide/cosa-consegnare-al-sound-designer-aaf-handles-presa-diretta/). Qui si parla solo del bollettino.
 
