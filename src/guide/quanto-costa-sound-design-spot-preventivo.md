@@ -14,7 +14,7 @@ argomento: ["consegna-materiali", "musica-diritti", "voce"]
 tags: ["approfondimenti", "preventivo audio", "costo sound design", "quanto costa il sound design", "preventivo spot", "audio per spot", "mix spot TV", "spot radio", "voice over", "licenza musicale", "revisioni", "brief audio", "post-produzione audio"]
 domande_faq:
   - d: "Quanto costa il sound design di uno spot?"
-    r: "Dipende da cosa c'è dentro la voce audio: a volte è solo un mix su voce e musica già pronte, a volte comprende casting e registrazione della voce, ricerca della musica, sound design, mix e versioni per canali diversi. Per questo un preventivo serio arriva dopo alcune informazioni sul progetto."
+    r: "Dipende da cosa c'è già e cosa manca: a volte è solo un mix su voce e musica già pronte, a volte comprende casting e registrazione della voce, ricerca della musica, sound design, mix e versioni per canali diversi. Per questo un preventivo serio arriva dopo alcune informazioni sul progetto."
   - d: "Quali informazioni servono per avere un preventivo audio preciso?"
     r: "Il tipo di video, dove va, quante versioni, la durata, il montato o premontato, i riferimenti o il brief, la musica, la voce e il materiale audio disponibile, più le date della prima versione e della consegna dei master. Con queste il preventivo arriva preciso al primo giro."
   - d: "Cosa fa cambiare un preventivo audio dopo il primo invio?"
