@@ -1,7 +1,7 @@
 ---
-titolo: "Sound logo e identità sonora per una PMI: cosa serve davvero e quanto costa"
+titolo: "Sound logo per una PMI: quando serve, come si fa e da cosa dipende il prezzo"
 parola_evidenziata: "sound logo"
-titolo_seo: "Sound logo per una PMI: cosa serve, come si fa e cosa muove il costo | Riccardo Vojvoda"
+titolo_seo: "Sound logo per una PMI: quando serve, come si fa e da cosa dipende il prezzo | Riccardo Vojvoda"
 descrizione_seo: "Cos'è un sound logo, quando serve a una piccola azienda, come si lavora dalle proposte ai file finali e cosa determina il costo: lavoro, idea e diritti di utilizzo, con la differenza tra cessione e licenza."
 date: 2026-12-01
 bozza: true
