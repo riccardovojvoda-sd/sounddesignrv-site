@@ -20,7 +20,40 @@
     box.innerHTML = "";
     box.appendChild(f);
     box.classList.add("video-attivo");
+    if (window.tracciaEvento) window.tracciaEvento("video_avvio", { video: f.title });
   }
+
+  // Cartello di fine video (21/10/2026): al posto dei suggerimenti di YouTube, che portano fuori dal sito,
+  // "Parliamo del tuo progetto", il lavoro successivo e "Rivedi". Solo nelle schede (data-fine sull'articolo).
+  function fine(box, f) {
+    var art = box.closest("[data-fine]");
+    if (!art || box.querySelector(".video-fine")) return;
+    var c = document.createElement("div");
+    c.className = "video-fine";
+    var html = '<a class="bottone" href="' + art.getAttribute("data-fine-contatto") + '">' + art.getAttribute("data-fine-contatto-testo") + "</a>";
+    if (art.getAttribute("data-fine-prossimo"))
+      html += '<a class="bottone bottone-secondario" href="' + art.getAttribute("data-fine-prossimo") + '">' + art.getAttribute("data-fine-prossimo-testo") + "</a>";
+    html += '<button type="button" class="video-fine-rivedi">' + art.getAttribute("data-fine-rivedi") + "</button>";
+    c.innerHTML = html;
+    c.querySelector(".video-fine-rivedi").addEventListener("click", function () {
+      c.remove();
+      comanda(f, { event: "command", func: "seekTo", args: [0, true] });
+      comanda(f, { event: "command", func: "playVideo", args: [] });
+    });
+    box.appendChild(c);
+    if (window.tracciaEvento) window.tracciaEvento("video_fine", { video: f.title });
+  }
+
+  window.addEventListener("message", function (e) {
+    if (e.origin !== ORIGINE_YT || typeof e.data !== "string") return;
+    var d; try { d = JSON.parse(e.data); } catch (err) { return; }
+    if (!d) return;
+    var finito = (d.event === "onStateChange" && d.info === 0) || (d.event === "infoDelivery" && d.info && d.info.playerState === 0);
+    if (!finito) return;
+    document.querySelectorAll(".video-attivo iframe").forEach(function (f) {
+      if (f.contentWindow === e.source) fine(f.parentElement, f);
+    });
+  });
 
   function comanda(iframe, msg) {
     try { iframe.contentWindow.postMessage(JSON.stringify(msg), ORIGINE_YT); } catch (e) {}

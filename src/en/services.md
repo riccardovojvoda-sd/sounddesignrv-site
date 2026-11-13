@@ -13,21 +13,25 @@ testaTema: apricot
 ## What I do
 
 <div class="griglia-schede">
-<div class="scheda-box">
+<div class="scheda-box" id="post-produzione">
 <h3>Full audio post-production</h3>
 <p>Dialogue editing, sync and clean-up. Sound design and sound editing, foley, sound FX editing. Stereo, 5.1 and 7.1 mixes delivered to international broadcast and streaming standards. For productions that want one audio pipeline from the set recordings to the final master. ADR available.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="presa-diretta">
 <h3>Location sound</h3>
 <p>Field recording for documentaries, interviews, reportage, branded content, commercials and corporate video. Available for shoots in Italy and abroad, working alone or embedded in the production crew. Full kit, up to 6 simultaneous wireless channels.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="installazioni">
 <h3>Sound design for installations and planetariums</h3>
 <p>Immersive sound design for museum installations, exhibition spaces and planetariums. Multi-layered soundscapes calibrated for a specific room, with a multichannel mix adapted to the acoustics of the space. From timbral research to technical delivery. <a href="/en/projects/arcadia-earth/">See Arcadia Earth</a>.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="voce">
 <h3>Voice: narration, voice over, AI voices</h3>
 <p>A scratch voice on the approved script, casting among 3-4 profiles with a quote, recording, editing and mixing of the final voice. Voice design and prompting of synthetic voices where it makes sense: corporate, e-learning, institutional. Italian, English and French with full command of the text.</p>
+</div>
+<div class="scheda-box" id="musica">
+<h3>Music: composition and music supervision</h3>
+<p>Original music composed to picture, timed to the edit, or a search for library tracks with the right licence for the planned distribution. For commercials, branded content and documentaries.</p>
 </div>
 </div>
 

@@ -13,21 +13,25 @@ testaTema: apricot
 ## Ce que je fais
 
 <div class="griglia-schede">
-<div class="scheda-box">
+<div class="scheda-box" id="post-produzione">
 <h3>Post-production audio complète</h3>
 <p>Montage des dialogues, synchronisation et nettoyage. Sound design et montage son, bruitages, montage des effets. Mixages stéréo, 5.1 et 7.1 livrés aux normes internationales de la diffusion et du streaming. Pour les productions qui veulent une seule chaîne audio, des enregistrements de plateau au master final. ADR sur demande.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="presa-diretta">
 <h3>Prise de son</h3>
 <p>Prise de son en extérieur pour documentaires, interviews, reportages, branded content, publicités et films corporate. Disponible pour des tournages en Italie et à l'étranger, seul ou intégré à l'équipe de production. Équipement complet, jusqu'à 6 canaux HF simultanés.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="installazioni">
 <h3>Sound design pour installations et planétariums</h3>
 <p>Sound design immersif pour installations muséales, espaces d'exposition et planétariums. Des paysages sonores à plusieurs couches calibrés pour une salle précise, avec un mixage multicanal adapté à l'acoustique du lieu. De la recherche de timbres à la livraison technique. <a href="/fr/projets/arcadia-earth/">Voir Arcadia Earth</a>.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="voce">
 <h3>Voix : narration, voix off, voix IA</h3>
 <p>Une voix témoin sur le texte approuvé, un casting parmi 3 à 4 profils avec devis, enregistrement, montage et mixage de la voix définitive. Voice design et prompting de voix de synthèse quand cela a du sens : corporate, e-learning, institutionnel. Italien, anglais et français avec une maîtrise totale du texte.</p>
+</div>
+<div class="scheda-box" id="musica">
+<h3>Musique : composition et recherche musicale</h3>
+<p>Musique originale composée sur le montage, calée sur les images, ou recherche de morceaux de librairie avec la licence adaptée à la diffusion prévue. Pour les spots, le branded content et les documentaires.</p>
 </div>
 </div>
 

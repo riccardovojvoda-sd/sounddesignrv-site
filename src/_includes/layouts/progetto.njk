@@ -2,22 +2,56 @@
 layout: layouts/base.njk
 og_type: article
 ---
+{#- Scheda progetto del portfolio, e pagina di un video completo dei reel (src/video/, fuoriPortfolio: true).
+    Rimandi (21/10/2026): servizi del lavoro e riquadro contatto nella colonna di testo (ferma su desktop),
+    cartello di fine video al posto dei suggerimenti di YouTube, lavori simili, guide scelte per genere. -#}
 {%- set descrizioneBreve = content | testoPiano %}
 {%- set multi = video.length > 1 %}
-{%- set t = testi[lang or "it"] %}
-{%- set lista = collections["progetti_" + (lang or "it")] %}
-<article class="scheda {{ tema | slugTema }}">
-  <header class="scheda-testa">
-    <div class="contenitore">
-      {%- set genereScheda = false %}{% for gg in portfolio.generi %}{% if (portfolio.progetti[page.fileSlug] or {}).genere == gg.chiave %}{% set genereScheda = gg %}{% endif %}{% endfor %}
-      <p class="briciole"><a href="{{ t.url.portfolio }}">{{ t.scheda.portfolio }}</a>{% if genereScheda %} / <a href="{{ t.url.portfolio }}{{ genereScheda[lang or "it"].slug }}/">{{ genereScheda[lang or "it"].nome }}</a>{% endif %}{% if not genereScheda or categoria != genereScheda[lang or "it"].nome %} / {{ categoria }}{% endif %}</p>
+{%- set l = lang or "it" %}
+{%- set t = testi[l] %}
+{%- set tr = t.rimandi %}
+{%- set lista = collections["progetti_" + l] %}
+{%- set infoP = portfolio.progetti[page.fileSlug] or {} %}
+{%- set gen = genere or infoP.genere %}
+{%- set rg = rimandi.generi[gen] %}
+{%- set serv = ["post-produzione"] %}
+{%- for r in (ruoli_portfolio or infoP.ruoli or []) %}{% if rimandi.ruoloServizio[r] and not (rimandi.ruoloServizio[r] in serv) %}{% set _x = serv.push(rimandi.ruoloServizio[r]) %}{% endif %}{% endfor %}
+{%- if rimandi.progettoServizio[page.fileSlug] %}{% set _x = serv.push(rimandi.progettoServizio[page.fileSlug]) %}{% endif %}
+{%- set simili = lista | simili(page.url, gen, portfolio.progetti, 3) %}
+{%- set puntate = collections.video_reel | perSerie(serie) %}
+{%- if fuoriPortfolio %}
+  {%- set prossimo = (puntate | vicini(page.url)).succ if puntate.length > 1 else simili[0] %}
+{%- else %}
+  {%- set vic = lista | vicini(page.url) %}
+  {%- set prossimo = vic.succ %}
+{%- endif %}
+<article class="scheda {{ tema | slugTema }}" data-fine data-fine-contatto="#parliamone" data-fine-contatto-testo="{{ tr.fineContatto }}"
+  {%- if prossimo %} data-fine-prossimo="{{ prossimo.url }}" data-fine-prossimo-testo="{{ tr.fineProssimo }}: {{ prossimo.data.brand }}"{% endif %} data-fine-rivedi="{{ tr.fineRivedi }}" data-origine="{{ brand }} - {{ titolo }}">
+  {#- Testata: con un solo video sta dentro la griglia del corpo, così la colonna di destra (contatto compreso)
+      parte all'altezza del sottotitolo e il riquadro "Scrivimi" entra nella prima schermata (Riccardo, 21/10/2026) -#}
+  {%- set testata %}
+      {%- if fuoriPortfolio %}
+      <p class="briciole"><a href="/video/">{{ tr.video }}</a> / {{ categoria }}</p>
+      {%- else %}
+      {%- set genereScheda = false %}{% for gg in portfolio.generi %}{% if infoP.genere == gg.chiave %}{% set genereScheda = gg %}{% endif %}{% endfor %}
+      <p class="briciole"><a href="{{ t.url.portfolio }}">{{ t.scheda.portfolio }}</a>{% if genereScheda %} / <a href="{{ t.url.portfolio }}{{ genereScheda[l].slug }}/">{{ genereScheda[l].nome }}</a>{% endif %}{% if not genereScheda or categoria != genereScheda[l].nome %} / {{ categoria }}{% endif %}</p>
+      {%- endif %}
       <h1 class="scheda-brand">{{ brand }}</h1>
+  {%- endset %}
+  {%- set sottotitolo %}
       <p class="scheda-titolo">{{ titolo }}</p>
       <p class="scheda-frase">{{ frase }}</p>
+  {%- endset %}
+  {%- if multi %}
+  <header class="scheda-testa">
+    <div class="contenitore">{{ testata | safe }}{{ sottotitolo | safe }}
     </div>
   </header>
-  <div class="contenitore scheda-corpo{% if multi %} scheda-corpo-serie{% endif %}">
+  {%- endif %}
+  <div class="contenitore scheda-corpo{% if multi %} scheda-corpo-serie{% else %} scheda-corpo-alta{% endif %}">
     {%- if not multi %}
+    <header class="scheda-capo">{{ testata | safe }}</header>
+    <div class="scheda-sotto">{{ sottotitolo | safe }}</div>
     <div class="scheda-media">
       {%- set poster = "progetti/" + immagine %}
       {%- set eager = true %}
@@ -33,6 +67,23 @@ og_type: article
         <div><dt>{{ t.scheda.categoria }}</dt><dd>{{ categoria }}</dd></div>
         <div><dt>{{ t.scheda.ruolo }}</dt><dd>{{ ruolo }}</dd></div>
       </dl>
+      <div class="scheda-servizi">
+        <p class="scheda-servizi-titolo">{{ tr.servizi }}</p>
+        <ul>
+          {%- for s in serv %}
+          <li><a href="{{ t.url.servizi }}#{{ s }}">{{ rimandi.servizi[s][l] }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="scheda-cta" id="parliamone">
+        <p class="scheda-cta-titolo">{{ rg[l] if rg else t.colonna.ctaTitolo }}</p>
+        <p>{{ tr.ctaTesto }}</p>
+        <p class="scheda-cta-azioni">
+          <a class="bottone" href="mailto:{{ sito.email }}">{{ tr.scrivimi }}</a>
+          <a class="bottone bottone-secondario" href="https://wa.me/{{ sito.telefonoHref | replace('+', '') }}" data-whatsapp="{{ t.contatto.whatsappTesto }}">WhatsApp</a>
+        </p>
+        <a class="scheda-cta-link" href="{{ t.url.contatti }}">{{ tr.contatti }}</a>
+      </div>
     </div>
   </div>
   {%- if multi %}
@@ -40,7 +91,7 @@ og_type: article
     <h2 id="episodi-titolo" class="etichetta">{{ t.scheda.episodi }}</h2>
     <div class="episodi-lista">
       {%- asyncEach ep in video %}
-      <article class="episodio">
+      <article class="episodio" id="v-{{ ep.youtube }}">
         {%- set v = ep %}
         {%- set eager = loop.first %}
         {% include "parti/video.njk" %}
@@ -52,15 +103,49 @@ og_type: article
     </div>
   </section>
   {%- endif %}
-  {%- for p in lista %}{% if p.url == page.url %}{% set idx = loop.index0 %}
-    {%- set prec = lista[idx - 1] if idx > 0 else lista[lista.length - 1] %}
-    {%- set succ = lista[idx + 1] if idx < lista.length - 1 else lista[0] %}
+  {%- if puntate.length > 1 %}
+  <section class="rimandi contenitore" aria-labelledby="puntate-titolo">
+    <h2 id="puntate-titolo" class="etichetta">{{ tr.puntate }}</h2>
+    <ul class="griglia-progetti">
+      {%- asyncEach p in puntate %}{% if p.url != page.url %}
+      <li>{% include "parti/carta-progetto.njk" %}</li>
+      {%- endif %}{% endeach %}
+    </ul>
+  </section>
+  {%- endif %}
+  <section class="rimandi contenitore" aria-labelledby="simili-titolo">
+    <div class="rimandi-testa">
+      <h2 id="simili-titolo" class="etichetta">{{ tr.simili }}</h2>
+      <a class="link-freccia" href="{{ t.url.portfolio }}">{{ t.scheda.tutti }}</a>
+    </div>
+    <ul class="griglia-progetti">
+      {%- asyncEach p in simili %}
+      <li>{% include "parti/carta-progetto.njk" %}</li>
+      {%- endeach %}
+    </ul>
+  </section>
+  {%- set guide = collections["approfondimenti" + ("" if l == "it" else "_" + l)] | correlati("", 2, rg.guide if rg else {}) %}
+  {%- if guide.length %}
+  <section class="rimandi contenitore" aria-labelledby="guide-titolo">
+    <div class="rimandi-testa">
+      <h2 id="guide-titolo" class="etichetta">{{ tr.guide }}</h2>
+      <a class="link-freccia" href="{{ t.url.approfondimenti }}">{{ tr.tutteGuide }}</a>
+    </div>
+    <ul class="elenco-approfondimenti rimandi-guide">
+      {%- for a in guide %}
+      {%- set senza_data = true %}
+      {% include "parti/voce-articolo.njk" %}
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endif %}
+  {%- if vic and vic.prec %}
   <nav class="scheda-nav contenitore" aria-label="{{ t.scheda.altri }}">
-    <a rel="prev" href="{{ prec.url }}"><small>{{ t.scheda.precedente }}</small> {{ prec.data.brand }}</a>
+    <a rel="prev" href="{{ vic.prec.url }}"><small>{{ t.scheda.precedente }}</small> {{ vic.prec.data.brand }}</a>
     <a class="scheda-nav-tutti" href="{{ t.url.portfolio }}">{{ t.scheda.tutti }}</a>
-    <a rel="next" href="{{ succ.url }}"><small>{{ t.scheda.successivo }}</small> {{ succ.data.brand }}</a>
+    <a rel="next" href="{{ vic.succ.url }}"><small>{{ t.scheda.successivo }}</small> {{ vic.succ.data.brand }}</a>
   </nav>
-  {%- endif %}{% endfor %}
+  {%- endif %}
 </article>
 <script type="application/ld+json">{{ {
   "@context": "https://schema.org",
@@ -73,7 +158,7 @@ og_type: article
   "embedUrl": "https://www.youtube-nocookie.com/embed/" + video[0].youtube,
   "contentUrl": "https://www.youtube.com/watch?v=" + video[0].youtube,
   "genre": categoria,
-  "inLanguage": lang or "it",
+  "inLanguage": l,
   "contributor": { "@type": "Person", "name": sito.titolare, "jobTitle": "Sound Designer", "url": sito.url },
   "about": ruolo
 } | json | safe }}</script>

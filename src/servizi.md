@@ -13,21 +13,25 @@ testaTema: apricot
 ## Cosa faccio
 
 <div class="griglia-schede">
-<div class="scheda-box">
+<div class="scheda-box" id="post-produzione">
 <h3>Post-produzione audio completa</h3>
 <p>Dialogue editing, sincronizzazione e pulizia del parlato. Sound design e montaggio sonoro, foley, sound FX editing. Mix stereo, 5.1 e 7.1 con consegne conformi agli standard internazionali di broadcast e streaming. Per produzioni che cercano una pipeline audio completa: dal girato di set al master finale. Disponibile anche per ADR.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="presa-diretta">
 <h3>Fonica di presa diretta</h3>
 <p>Registrazione audio sul campo per documentari, interviste, reportage, branded content, spot e corporate. Disponibile per riprese in Italia e all'estero, in autonomia o integrato nel team di produzione. Kit completo, fino a 6 canali wireless simultanei.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="installazioni">
 <h3>Sound design per installazioni e planetari</h3>
 <p>Sound design immersivo per installazioni museali, spazi espositivi e planetari. Paesaggi sonori multistrato calibrati per ambienti specifici, con mix multicanale adattato alle caratteristiche acustiche dello spazio. Dalla ricerca timbrica al delivery tecnico. <a href="/progetti/arcadia-earth/">Vedi Arcadia Earth</a>.</p>
 </div>
-<div class="scheda-box">
+<div class="scheda-box" id="voce">
 <h3>Voce: speakeraggio, voice over, voci AI</h3>
 <p>Voce provvisoria sul testo approvato, casting tra 3-4 profili con preventivo, registrazione, montaggio e mix della voce definitiva. Voice design e prompting di voci sintetiche dove ha senso: corporate, e-learning, istituzionale. Italiano, inglese e francese con piena padronanza del testo.</p>
+</div>
+<div class="scheda-box" id="musica">
+<h3>Musica: composizione e ricerca musicale</h3>
+<p>Musica originale composta sul montato, a tempo con le immagini, oppure ricerca di brani di libreria con la licenza adatta alla diffusione prevista. Per spot, branded content e documentari.</p>
 </div>
 </div>
 

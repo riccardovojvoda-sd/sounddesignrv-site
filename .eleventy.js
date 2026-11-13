@@ -28,6 +28,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("progetti", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
   eleventyConfig.addCollection("progetti_it", (api) => api.getFilteredByTag("progetti").sort(perOrdine));
   for (const l of ["en", "fr", "es"]) eleventyConfig.addCollection("progetti_" + l, (api) => api.getFilteredByTag("progetti_" + l).sort(perOrdine));
+  // Pagine dei video completi dei reel (src/video/, fuori dal portfolio): in ordine di serie e puntata
+  eleventyConfig.addCollection("video_reel", (api) => api.getFilteredByTag("video_reel").sort(perOrdine));
   // Approfondimenti (it) e Insights (en), dal più recente. Bozze e date future restano fuori: vedi lib/articoli.js
   const perData = (a, b) => b.date - a.date;
   eleventyConfig.addCollection("approfondimenti", (api) => api.getFilteredByTag("approfondimenti").filter(pubblicato).sort(perData));
@@ -141,6 +143,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("dataOraIso", (d) => (d instanceof Date ? d : new Date(d)).toISOString());
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
   eleventyConfig.addFilter("correlati", require("./lib/correlati").correlati);
+  // Rimandi nelle schede (21/10/2026). vicini: precedente e successivo in una lista, in giro.
+  // simili: n progetti dello stesso genere (poi gli altri, nell'ordine del portfolio), mai la pagina stessa.
+  eleventyConfig.addFilter("vicini", (lista, url) => {
+    const i = (lista || []).findIndex((p) => p.url === url);
+    if (i < 0) return {};
+    return { prec: lista[(i - 1 + lista.length) % lista.length], succ: lista[(i + 1) % lista.length] };
+  });
+  // Indice /video/: i reel con data di uscita raggiunta, dal più recente (ANTEPRIMA=1 in locale: tutti)
+  eleventyConfig.addFilter("uscitiEntro", (uscite) => {
+    const oggi = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Rome" });
+    return (uscite || []).filter((u) => u.pagina && (process.env.ANTEPRIMA || u.data <= oggi)).sort((a, b) => (a.data < b.data ? 1 : -1));
+  });
+  eleventyConfig.addFilter("perSerie", (lista, serie) => (lista || []).filter((p) => serie && p.data.serie === serie));
+  eleventyConfig.addFilter("simili", (lista, url, genere, info, n = 3) => {
+    const altri = (lista || []).filter((p) => p.url !== url);
+    const stesso = altri.filter((p) => (info[p.fileSlug] || {}).genere === genere);
+    return [...stesso, ...altri.filter((p) => !stesso.includes(p))].slice(0, n);
+  });
   // Data per esteso nella lingua della pagina: "22 settembre 2026" / "22 September 2026"
   const MESI = { it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
                  en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
