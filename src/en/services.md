@@ -12,7 +12,7 @@ testaTema: apricot
 ---
 ## What I do
 
-<div class="griglia-schede">
+<div class="griglia-schede griglia-servizi">
 <div class="scheda-box" id="post-produzione">
 <h3>Full audio post-production</h3>
 <p>Dialogue editing, sync and clean-up. Sound design and sound editing, foley, sound FX editing. Stereo, 5.1 and 7.1 mixes delivered to international broadcast and streaming standards. For productions that want one audio pipeline from the set recordings to the final master. ADR available.</p>

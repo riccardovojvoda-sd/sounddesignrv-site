@@ -12,7 +12,7 @@ testaTema: apricot
 ---
 ## Ce que je fais
 
-<div class="griglia-schede">
+<div class="griglia-schede griglia-servizi">
 <div class="scheda-box" id="post-produzione">
 <h3>Post-production audio complète</h3>
 <p>Montage des dialogues, synchronisation et nettoyage. Sound design et montage son, bruitages, montage des effets. Mixages stéréo, 5.1 et 7.1 livrés aux normes internationales de la diffusion et du streaming. Pour les productions qui veulent une seule chaîne audio, des enregistrements de plateau au master final. ADR sur demande.</p>

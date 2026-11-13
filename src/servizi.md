@@ -12,7 +12,7 @@ testaTema: apricot
 ---
 ## Cosa faccio
 
-<div class="griglia-schede">
+<div class="griglia-schede griglia-servizi">
 <div class="scheda-box" id="post-produzione">
 <h3>Post-produzione audio completa</h3>
 <p>Dialogue editing, sincronizzazione e pulizia del parlato. Sound design e montaggio sonoro, foley, sound FX editing. Mix stereo, 5.1 e 7.1 con consegne conformi agli standard internazionali di broadcast e streaming. Per produzioni che cercano una pipeline audio completa: dal girato di set al master finale. Disponibile anche per ADR.</p>
