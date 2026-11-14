@@ -628,7 +628,7 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 :root{--fondo-base:var(--snow)}
 html.scuro{--fondo-base:#2F302C}
 /* bande: testate delle pagine, fasce della home, pagine progetto colorate */
-.pagina-testa[class*=tema-]:not(.tema-snow),main>section[class*=tema-]:not(.tema-snow),article.scheda[class*=tema-]:not(.tema-snow){
+.pagina-testa[class*=tema-]:not(.tema-snow),main>section[class*=tema-]:not(.tema-snow),article.scheda[class*=tema-]:not(.tema-snow),article.pagina[class*=tema-]:not(.tema-snow){
   background:linear-gradient(180deg,var(--fondo) 0%,color-mix(in srgb,var(--fondo) 74%,var(--fondo-base)) 100%)}
 .dietro.tema-jet,article.scheda.tema-jet{background:linear-gradient(180deg,var(--fondo) 0%,color-mix(in srgb,var(--fondo) 88%,var(--snow)) 100%)}
 .scuro .dietro.tema-jet,.scuro article.scheda.tema-jet{background:linear-gradient(180deg,var(--fondo) 0%,color-mix(in srgb,var(--fondo) 80%,#2F302C) 100%)}
@@ -660,7 +660,8 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:100vh;height:
 /* pagine di lettura (guide): stessa luce, ma attorno al color carta */
 body.lettura::before{background:linear-gradient(180deg,color-mix(in srgb,var(--carta) 40%,#FFFFFF) 0%,var(--carta) 35%,#DDD3C4 100%)}
 html.scuro body::before{background:linear-gradient(180deg,#43443F 0%,#2F302C 35%,#20211E 100%)}
-main>section.tema-snow,.pagina-testa.tema-snow{background:transparent}
+/* le superfici senza colore lasciano vedere il fondo sfumato: sezioni della home, testate, il riquadro che contiene le pagine interne e le guide, le pagine progetto bianche */
+main>section.tema-snow,.pagina-testa.tema-snow,article.pagina.tema-snow,article.scheda.tema-snow{background:transparent}
 /* "Scrivimi" chiude la pagina e sta sempre nella parte alta dello schermo, dove lo sfondo è più chiaro: ha una sua sfumatura, dal chiaro al tono del fondo pagina */
 .contatto,.lettura .contatto{background:linear-gradient(180deg,#FFFFFF 0%,var(--snow) 25%,#E3DACD 100%)}
 .lettura .contatto{background:linear-gradient(180deg,color-mix(in srgb,var(--carta) 40%,#FFFFFF) 0%,var(--carta) 25%,#DDD3C4 100%)}
