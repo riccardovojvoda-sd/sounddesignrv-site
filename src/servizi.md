@@ -97,6 +97,16 @@ Se le immagini non le avete ancora, possiamo farle insieme: un'unica squadra, da
 
 Lavoro in Pro Tools e DaVinci Resolve, con iZotope RX per restauro e pulizia audio, Soundly per la gestione delle librerie e SoundFlow per l'automazione del workflow. Sistema di monitoring stereo, 5.1 e 7.1 calibrato con SoundID Reference Multichannel, ottimizzato per mix immersivo e sound design.
 
-**Kit di presa diretta:** Sound Devices MixPre-6 II · Sennheiser MKH 416 e Rode NTG3 (boom) · 3x Sennheiser EW100 G3 (6 canali wireless) · DPA 4060 e Rode Lavalier · Zoom F2 BT per plant mic · asta Gitzo 3,5 m · Rycote Blimp · Sony MDR-7506 e Sennheiser HD-25 (monitoring).
+<p><strong>Kit di presa diretta</strong></p>
+<ul class="kit">
+<li>Sound Devices MixPre-6 II</li>
+<li>Sennheiser MKH 416 e Rode NTG3 (boom)</li>
+<li>3x Sennheiser EW100 G3 (6 canali wireless)</li>
+<li>DPA 4060 e Rode Lavalier</li>
+<li>Zoom F2 BT per plant mic</li>
+<li>asta Gitzo 3,5 m</li>
+<li>Rycote Blimp</li>
+<li>Sony MDR-7506 e Sennheiser HD-25 (monitoring)</li>
+</ul>
 
 Hai domande sul processo, sui materiali da consegnare o sui formati? [Consulta le FAQ](/faq/), oppure [scrivimi direttamente](/contatti/). Il profilo completo è [scaricabile in PDF]({{ sito.profiloPdf }}).

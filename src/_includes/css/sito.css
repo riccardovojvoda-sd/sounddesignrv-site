@@ -563,3 +563,110 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 
 /* Riga sull'AI in fondo agli articoli (04/11/2026) */
 .prosa .nota-ai,.nota-ai{margin-top:2.5rem;padding-top:1rem;border-top:1px solid currentColor;border-top-color:color-mix(in srgb,currentColor 20%,transparent);font-size:.85rem;font-style:italic;opacity:.7}
+
+/* Decoro (approvato da Riccardo il 14/11/2026, riferimento output.com): riquadri con luce dall'alto, ombra morbida e la riga
+   colorata in cima; icone dei servizi in un tondo della tinta; puntini colorati negli elenchi; kit come etichette;
+   entrata in sequenza mentre si scorre (assets/js/movimento.js). Niente librerie: circa 2 KB compressi.
+   Tinta per servizio, uguale in home e in Servizi: post-produzione verde acqua, presa diretta albicocca, installazioni giallo, voce nero, musica verde acqua. */
+.griglia-schede{gap:1.25rem}
+.griglia-schede>.scheda-box,.anteprima-servizi li{--tinta:123,181,178;--riga:var(--verdigris);border:1px solid rgba(255,255,255,.85);border-top:5px solid var(--riga);border-radius:1.25rem;
+  background:linear-gradient(180deg,rgba(var(--tinta),.30) 0%,rgba(var(--tinta),.10) 100%),var(--snow);
+  box-shadow:inset 0 1px 0 #fff,0 1.2rem 2.4rem -1.6rem rgba(45,45,42,.35);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,opacity .8s cubic-bezier(.2,.7,.2,1)}
+.griglia-schede>.scheda-box{padding:1.5rem 1.5rem 1.6rem}
+.anteprima-servizi{gap:1.25rem}
+.anteprima-servizi li{padding:1.4rem 1.35rem 1.5rem}
+.griglia-schede>.scheda-box:nth-child(4n+2),.anteprima-servizi li:nth-child(4n+2){--tinta:246,201,172;--riga:var(--apricot);background:linear-gradient(180deg,rgba(246,201,172,.42) 0%,rgba(246,201,172,.14) 100%),var(--snow)}
+.griglia-schede>.scheda-box:nth-child(4n+3),.anteprima-servizi li:nth-child(4n+3){--tinta:237,210,134;--riga:var(--flax);background:linear-gradient(180deg,rgba(237,210,134,.42) 0%,rgba(237,210,134,.14) 100%),var(--snow)}
+.griglia-schede>.scheda-box:nth-child(4n+4),.anteprima-servizi li:nth-child(4n+4){--tinta:45,45,42;--riga:var(--jet);background:linear-gradient(180deg,rgba(45,45,42,.08) 0%,rgba(45,45,42,.02) 100%),var(--snow)}
+/* sulla fascia albicocca della home la riga albicocca si perderebbe: tono più carico */
+.tema-apricot .anteprima-servizi li:nth-child(4n+2){--riga:#E7A47E}
+.griglia-schede>.scheda-box:hover,.anteprima-servizi li:hover{transform:translateY(-5px);box-shadow:inset 0 1px 0 #fff,0 1.8rem 3rem -1.6rem rgba(45,45,42,.45)}
+/* icone dei servizi in un tondo della tinta */
+.griglia-servizi>.scheda-box,.anteprima-servizi li{position:relative}
+.griglia-servizi>.scheda-box{padding-top:5.2rem}
+.anteprima-servizi li{padding-top:4.9rem}
+.griglia-servizi>.scheda-box::before,.anteprima-servizi li::before{content:"";position:absolute;left:1.4rem;top:1.3rem;width:3rem;height:3rem;border-radius:50%;background:rgba(var(--tinta),.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.griglia-servizi>.scheda-box:nth-child(4n+4)::before,.anteprima-servizi li:nth-child(4n+4)::before{background:rgba(45,45,42,.12)}
+.griglia-servizi>.scheda-box::after,.anteprima-servizi li::after{content:"";position:absolute;left:2.05rem;top:1.95rem;width:1.7rem;height:1.7rem;background:var(--jet);
+  -webkit-mask:var(--icona) center/contain no-repeat;mask:var(--icona) center/contain no-repeat;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.griglia-servizi>.scheda-box:hover::after,.anteprima-servizi li:hover::after{transform:scale(1.15) rotate(-6deg)}
+.griglia-servizi #post-produzione,.anteprima-servizi li:nth-child(1){--icona:url(/assets/img/icone-servizi/cuffie.svg)}
+.griglia-servizi #presa-diretta,.anteprima-servizi li:nth-child(2){--icona:url(/assets/img/icone-servizi/asta.svg)}
+.griglia-servizi #installazioni,.anteprima-servizi li:nth-child(3){--icona:url(/assets/img/icone-servizi/cupola.svg)}
+.griglia-servizi #voce,.anteprima-servizi li:nth-child(4){--icona:url(/assets/img/icone-servizi/microfono.svg)}
+.griglia-servizi #musica,.anteprima-servizi li:nth-child(5){--icona:url(/assets/img/icone-servizi/nota.svg)}
+/* elenchi nei riquadri: puntino nella tinta */
+.griglia-schede>.scheda-box ul{list-style:none;padding-left:0}
+.griglia-schede>.scheda-box li{position:relative;padding-left:1.1rem;margin-bottom:.45rem}
+.griglia-schede>.scheda-box li::before{content:"";position:absolute;left:0;top:.62em;width:.45rem;height:.45rem;border-radius:50%;background:rgb(var(--tinta));box-shadow:0 0 0 3px rgba(var(--tinta),.22)}
+.griglia-schede>.scheda-box:nth-child(4n+4) li::before{background:var(--jet)}
+/* kit di presa diretta come etichette */
+.prosa ul.kit,.kit{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:.6rem 0 1.4rem}
+.kit li{font-size:.88rem;padding:.42em .95em;border-radius:999px;background:linear-gradient(180deg,#fff,rgba(255,251,250,.6));border:1px solid var(--jet-15);box-shadow:0 .4rem .8rem -.6rem rgba(45,45,42,.4);margin:0}
+/* tema scuro */
+.scuro .griglia-schede>.scheda-box,.scuro .anteprima-servizi li{border-color:rgba(230,226,220,.10);border-top-color:var(--riga);
+  background:linear-gradient(180deg,rgba(var(--tinta),.20) 0%,rgba(var(--tinta),.05) 100%),#2F302C;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1.2rem 2.4rem -1.6rem rgba(0,0,0,.7)}
+.scuro .griglia-schede>.scheda-box:nth-child(4n+4),.scuro .anteprima-servizi li:nth-child(4n+4){--tinta:230,226,220;--riga:#E6E2DC;background:linear-gradient(180deg,rgba(230,226,220,.08) 0%,rgba(230,226,220,.02) 100%),#2F302C}
+.scuro .tema-apricot .anteprima-servizi li{background:linear-gradient(180deg,rgba(var(--tinta),.20) 0%,rgba(var(--tinta),.05) 100%),#3E2C20}
+.scuro .tema-apricot .anteprima-servizi li:nth-child(4n+2){--riga:var(--apricot)}
+.scuro .griglia-schede>.scheda-box:hover,.scuro .anteprima-servizi li:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 1.8rem 3rem -1.4rem rgba(0,0,0,.8)}
+.scuro .griglia-servizi>.scheda-box::before,.scuro .anteprima-servizi li::before{background:rgba(var(--tinta),.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.scuro .griglia-servizi>.scheda-box:nth-child(4n+4)::before,.scuro .anteprima-servizi li:nth-child(4n+4)::before{background:rgba(230,226,220,.14)}
+.scuro .griglia-servizi>.scheda-box::after,.scuro .anteprima-servizi li::after{background:#E6E2DC}
+.scuro .griglia-schede>.scheda-box:nth-child(4n+4) li::before{background:#E6E2DC}
+.scuro .kit li{background:rgba(230,226,220,.06);border-color:rgba(230,226,220,.16);box-shadow:none}
+/* entrata mentre si scorre: la classe js-movimento la mette lo script in testa a base.njk (non se il sistema chiede meno animazioni),
+   "visibile" la mette assets/js/movimento.js. Specificità zero (:where) così gli effetti al passaggio del mouse restano dei componenti. */
+:where(.js-movimento) :where(.prosa h2,.anteprima-testa,.griglia-schede>*,.anteprima-servizi>*,.griglia-progetti>*,.elenco-approfondimenti>*,.kit>*){opacity:0;transform:translateY(24px)}
+:where(.js-movimento) :where(.prosa h2.visibile,.anteprima-testa.visibile,.visibile>*){opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+/* Coerenza (14/11/2026): una sola luce, dall'alto.
+   1) Ogni superficie colorata è piena in alto e si schiarisce verso il basso, con la stessa misura: bande, card dei servizi, card dei progetti, riquadro contatto.
+   2) Il fondo della pagina resta piatto: è il piano su cui sta tutto.
+   3) Due livelli: le bande sono pavimento (niente ombra, niente riga); le card sono oggetti (angoli 1.25rem, riga colorata in cima, ombra morbida, si sollevano al mouse). */
+:root{--fondo-base:var(--snow)}
+html.scuro{--fondo-base:#2F302C}
+/* bande: testate delle pagine, fasce della home, pagine progetto colorate */
+.pagina-testa[class*=tema-]:not(.tema-snow),main>section[class*=tema-]:not(.tema-snow),article.scheda[class*=tema-]:not(.tema-snow){
+  background:linear-gradient(180deg,var(--fondo) 0%,color-mix(in srgb,var(--fondo) 74%,var(--fondo-base)) 100%)}
+.dietro.tema-jet,article.scheda.tema-jet{background:linear-gradient(180deg,var(--fondo) 0%,color-mix(in srgb,var(--fondo) 88%,var(--snow)) 100%)}
+.scuro .dietro.tema-jet,.scuro article.scheda.tema-jet{background:linear-gradient(180deg,var(--fondo) 0%,color-mix(in srgb,var(--fondo) 80%,#2F302C) 100%)}
+/* card dei progetti: stessa forma delle altre card; la riga in cima è la tinta della card */
+.carta-progetto{--riga:var(--fondo);border-radius:1.25rem;border:1px solid rgba(255,255,255,.85);border-top:5px solid var(--riga);
+  background:linear-gradient(180deg,var(--fondo) 55%,color-mix(in srgb,var(--fondo) 68%,var(--fondo-base)) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 1.2rem 2.4rem -1.6rem rgba(45,45,42,.35);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.carta-progetto.tema-verdigris{--riga:var(--verdigris)}
+.carta-progetto.tema-apricot{--riga:var(--apricot)}
+.carta-progetto.tema-flax{--riga:var(--flax)}
+.carta-progetto.tema-jet{--riga:var(--jet)}
+.carta-progetto.tema-snow{--riga:var(--verdigris);background:linear-gradient(180deg,rgba(123,181,178,.16) 40%,rgba(123,181,178,.04) 100%),var(--snow)}
+.carta-progetto:hover{transform:translateY(-5px);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 1.8rem 3rem -1.6rem rgba(45,45,42,.45)}
+.scuro .carta-progetto{border-color:rgba(230,226,220,.10);border-top-color:var(--riga);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1.2rem 2.4rem -1.6rem rgba(0,0,0,.7)}
+.scuro .carta-progetto.tema-snow{background:linear-gradient(180deg,rgba(123,181,178,.18) 40%,rgba(123,181,178,.05) 100%),#2F302C}
+.scuro .carta-progetto.tema-jet{--riga:#E6E2DC}
+.scuro .carta-progetto:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 1.8rem 3rem -1.4rem rgba(0,0,0,.8)}
+/* riquadro contatto nelle pagine progetto: è una card come le altre */
+.scheda-cta{border-radius:1.25rem;border:1px solid rgba(255,255,255,.85);border-top:5px solid var(--verdigris);
+  background:linear-gradient(180deg,rgba(123,181,178,.30) 0%,rgba(123,181,178,.10) 100%),var(--snow);
+  box-shadow:inset 0 1px 0 #fff,0 1.2rem 2.4rem -1.6rem rgba(45,45,42,.35)}
+.scuro .scheda-cta{border-color:rgba(230,226,220,.10);border-top-color:var(--verdigris);background:linear-gradient(180deg,rgba(123,181,178,.20) 0%,rgba(123,181,178,.05) 100%),#2F302C;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1.2rem 2.4rem -1.6rem rgba(0,0,0,.7)}
+/* Sfondo (14/11/2026): anche il fondo segue la luce dall'alto. La sfumatura è agganciata allo schermo:
+   in ogni momento la parte alta è più chiara e quella bassa più scura, in tutte le zone senza colore. */
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:100vh;height:100lvh;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,#FFFFFF 0%,var(--snow) 30%,#E9E2D7 100%)}
+/* pagine di lettura (guide): stessa luce, ma attorno al color carta */
+body.lettura::before{background:linear-gradient(180deg,color-mix(in srgb,var(--carta) 40%,#FFFFFF) 0%,var(--carta) 35%,#DDD3C4 100%)}
+html.scuro body::before{background:linear-gradient(180deg,#43443F 0%,#2F302C 35%,#20211E 100%)}
+main>section.tema-snow,.pagina-testa.tema-snow{background:transparent}
+/* "Scrivimi" chiude la pagina e sta sempre nella parte alta dello schermo, dove lo sfondo è più chiaro: ha una sua sfumatura, dal chiaro al tono del fondo pagina */
+.contatto,.lettura .contatto{background:linear-gradient(180deg,#FFFFFF 0%,var(--snow) 25%,#E3DACD 100%)}
+.lettura .contatto{background:linear-gradient(180deg,color-mix(in srgb,var(--carta) 40%,#FFFFFF) 0%,var(--carta) 25%,#DDD3C4 100%)}
+.scuro .contatto,.scuro .lettura .contatto{background:linear-gradient(180deg,#43443F 0%,#2F302C 30%,#1F201D 100%)}
+/* fascia nera: sfumatura più decisa, come le altre fasce */
+.dietro.tema-jet,article.scheda.tema-jet{background:linear-gradient(180deg,var(--jet) 0%,color-mix(in srgb,var(--jet) 76%,var(--snow)) 100%)}
+.scuro .dietro.tema-jet,.scuro article.scheda.tema-jet{background:linear-gradient(180deg,#1E1F1C 0%,color-mix(in srgb,#2D2D2A 80%,#E6E2DC) 100%)}
+/* in chiaro, le card colorate dentro una pagina nera (Lavori simili) ereditavano il testo chiaro della pagina: testo scuro come altrove */
+html:not(.scuro) :is(.tema-apricot,.tema-flax,.tema-verdigris,.tema-snow){--testo:var(--jet);--jet-15:rgba(45,45,42,.15)}

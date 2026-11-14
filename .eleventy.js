@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
   // File copiati tali e quali
   eleventyConfig.addPassthroughCopy({ "src/assets/font": "assets/font" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/img/icone-servizi": "assets/img/icone-servizi" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img/loghi": "assets/img/loghi" });
   // Anteprime delle opzioni di copertina degli articoli, linkate nei Google Doc di revisione (approfondimenti/ non si copia tal quale)
   eleventyConfig.addPassthroughCopy({ "src/assets/img/opzioni-copertina": "assets/img/opzioni-copertina" });

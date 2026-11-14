@@ -97,6 +97,16 @@ Si vous n'avez pas encore les images, nous pouvons les faire ensemble : une seul
 
 Je travaille sur Pro Tools et DaVinci Resolve, avec iZotope RX pour la restauration et le nettoyage, Soundly pour la gestion des banques de sons et SoundFlow pour l'automatisation du workflow. Écoute stéréo, 5.1 et 7.1 calibrée avec SoundID Reference Multichannel, optimisée pour le mixage immersif et le sound design.
 
-**Équipement de prise de son :** Sound Devices MixPre-6 II · Sennheiser MKH 416 et Rode NTG3 (perche) · 3x Sennheiser EW100 G3 (6 canaux HF) · DPA 4060 et Rode Lavalier · Zoom F2 BT en micro d'appoint · perche Gitzo 3,5 m · Rycote Blimp · Sony MDR-7506 et Sennheiser HD-25 (écoute).
+<p><strong>Équipement de prise de son</strong></p>
+<ul class="kit">
+<li>Sound Devices MixPre-6 II</li>
+<li>Sennheiser MKH 416 et Rode NTG3 (perche)</li>
+<li>3x Sennheiser EW100 G3 (6 canaux HF)</li>
+<li>DPA 4060 et Rode Lavalier</li>
+<li>Zoom F2 BT en micro d'appoint</li>
+<li>perche Gitzo 3,5 m</li>
+<li>Rycote Blimp</li>
+<li>Sony MDR-7506 et Sennheiser HD-25 (écoute)</li>
+</ul>
 
 Des questions sur le processus, les éléments à livrer ou les formats ? [Consultez la FAQ](/fr/faq/), ou [écrivez-moi directement](/fr/contact/). Le profil complet est [disponible en PDF]({{ sito.profiloPdf }}).

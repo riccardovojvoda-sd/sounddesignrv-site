@@ -97,6 +97,16 @@ If you don't have the footage yet, we can make it together: one team, from the s
 
 I work in Pro Tools and DaVinci Resolve, with iZotope RX for restoration and clean-up, Soundly for library management and SoundFlow for workflow automation. Stereo, 5.1 and 7.1 monitoring calibrated with SoundID Reference Multichannel, optimised for immersive mixing and sound design.
 
-**Location sound kit:** Sound Devices MixPre-6 II · Sennheiser MKH 416 and Rode NTG3 (boom) · 3x Sennheiser EW100 G3 (6 wireless channels) · DPA 4060 and Rode Lavalier · Zoom F2 BT as plant mic · Gitzo 3.5 m boom pole · Rycote Blimp · Sony MDR-7506 and Sennheiser HD-25 (monitoring).
+<p><strong>Location sound kit</strong></p>
+<ul class="kit">
+<li>Sound Devices MixPre-6 II</li>
+<li>Sennheiser MKH 416 and Rode NTG3 (boom)</li>
+<li>3x Sennheiser EW100 G3 (6 wireless channels)</li>
+<li>DPA 4060 and Rode Lavalier</li>
+<li>Zoom F2 BT as plant mic</li>
+<li>Gitzo 3.5 m boom pole</li>
+<li>Rycote Blimp</li>
+<li>Sony MDR-7506 and Sennheiser HD-25 (monitoring)</li>
+</ul>
 
 Questions about the process, the materials to deliver or the formats? [Read the FAQ](/en/faq/), or [write to me directly](/en/contact/). The full profile is [available as a PDF]({{ sito.profiloPdf }}).
