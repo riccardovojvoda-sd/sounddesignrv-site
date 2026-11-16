@@ -25,7 +25,7 @@ domande_faq:
   - d: "Il sound logo è di chi lo paga?"
     r: "Dipende dal contratto. Con la cessione dei diritti di utilizzazione economica l'azienda ne diventa titolare; con una licenza lo usa nei limiti concordati e i diritti restano all'autore. In Italia il trasferimento dei diritti va provato per iscritto, quindi l'accordo va sempre messo nero su bianco."
 ---
-Il sound logo è per l'orecchio quello che il logo grafico è per l'occhio: un suono breve, sempre uguale, che chi lo sente associa al marchio anche senza guardare lo schermo. Per una piccola azienda ha senso in alcuni casi precisi, e il suo costo dipende più dai diritti che dai secondi di musica.
+Il sound logo è per l'orecchio quello che il logo grafico è per l'occhio: un suono breve o una melodia, sempre uguali, che chi li sente associa al marchio anche senza guardare lo schermo. Per una piccola azienda ha senso in alcuni casi precisi, e il suo costo dipende più dai diritti che dai secondi di musica.
 
 <div class="riquadro">
 
@@ -45,7 +45,7 @@ Un suono diventa riconoscibile solo se lo si sente tante volte.
 
 - Ha senso per un marchio che vende al pubblico e fa pubblicità o campagne social con una certa frequenza.
 - A un piccolo marchio che vuole farsi conoscere dà riconoscibilità, e lo distingue da chi usa la stessa musica di libreria di tutti.
-- A un'azienda che fa un video all'anno basta un logo sonorizzato dentro il video.
+- Per un'azienda che fa un video all'anno un sound logo è superfluo.
 
 ## Cosa deve fare un buon sound logo
 
@@ -54,7 +54,7 @@ Un suono diventa riconoscibile solo se lo si sente tante volte.
 - **Funzionare senza immagine**: alla radio, o in un video guardato con la coda dell'occhio.
 - **Funzionare su un telefono**: gli altoparlanti piccoli non riproducono i bassi, e un logo costruito su un colpo di basso quasi sparisce.
 - **Stare sotto musiche e voci diverse**, a ogni spot.
-- **Essere coerente con il marchio**: un suono metallico e veloce racconta un'azienda diversa da un pianoforte caldo.
+- **Essere coerente con il marchio**: un suono metallico e veloce racconta un'azienda diversa rispetto a un timbro caldo di pianoforte.
 
 ## Come si lavora
 
@@ -92,7 +92,9 @@ In Italia l'autore ha i diritti sull'opera dal momento in cui la crea (legge 633
 - che tipo di diritti vi servono: cessione completa o licenza, per quanto tempo, su quali canali;
 - le date: quando servono le proposte e quando i file finali.
 
-Per un sound logo o per sonorizzare il logo animato del tuo prossimo video, [scrivimi](/contatti/) con il logo e due righe sul marchio.
+Non serve avere già una risposta per ogni punto: se ti sembra complicato, basta una telefonata e ne parliamo a voce.
+
+Per un sound logo o per sonorizzare il logo animato del tuo prossimo video, [scrivimi](/contatti/).
 
 ## Fonti
 
