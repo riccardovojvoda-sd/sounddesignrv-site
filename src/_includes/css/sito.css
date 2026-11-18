@@ -625,7 +625,7 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 /* entrata mentre si scorre: la classe js-movimento la mette lo script in testa a base.njk (non se il sistema chiede meno animazioni),
    "visibile" la mette assets/js/movimento.js. Specificità zero (:where) così gli effetti al passaggio del mouse restano dei componenti. */
 :where(.js-movimento) :where(.prosa h2,.anteprima-testa,.griglia-schede>*,.anteprima-servizi>*,.griglia-progetti>*,.elenco-approfondimenti>*,.kit>*){opacity:0;transform:translateY(24px)}
-:where(.js-movimento) :where(.prosa h2.visibile,.anteprima-testa.visibile,.visibile>*){opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+:where(.js-movimento) :where(.prosa h2,.anteprima-testa,.griglia-schede>*,.anteprima-servizi>*,.griglia-progetti>*,.elenco-approfondimenti>*,.kit>*):where(.visibile){opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 /* Coerenza (14/11/2026): una sola luce, dall'alto.
    1) Ogni superficie colorata è piena in alto e si schiarisce verso il basso, con la stessa misura: bande, card dei servizi, card dei progetti, riquadro contatto.
    2) Il fondo della pagina resta piatto: è il piano su cui sta tutto.
