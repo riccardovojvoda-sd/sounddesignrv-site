@@ -62,6 +62,22 @@ body::before{display:none}
 .cop-b .cover-nome{position:absolute;left:0;bottom:calc(34% + 2.5rem);font-size:7.5rem;color:var(--flax)}
 .cop-b .cover-ruolo{position:absolute;left:0;top:calc(66% + 2.5rem);font-size:2rem}
 .cop-b .cover-strisce{display:none}
+/* B1-B3 (20/11, Riccardo: "la B con tutta la palette e il logo più grande"). Base comune: banda alta, nome in flax, riga dei quattro colori sotto la banda */
+[class*="cop-b"] .cover::before{content:"";position:absolute;left:0;right:0;top:0;height:64%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
+[class*="cop-b"] .cover-testo{position:absolute;left:8rem;right:8rem;top:0;height:100%}
+[class*="cop-b"] .cover-nome{position:absolute;left:0;bottom:calc(36% + 2.75rem);font-size:7.5rem;color:var(--flax)}
+[class*="cop-b"] .cover-ruolo{position:absolute;left:0;top:calc(64% + 3.25rem);font-size:2.1rem}
+[class*="cop-b"] .cover-strisce{position:absolute;left:0;right:0;top:64%;height:1rem}
+[class*="cop-b"] .cover-strisce i{flex:1}
+[class*="cop-b"] .cover-ruolo .r2{color:var(--apricot)}
+/* B1: logo grande a destra dentro la banda */
+.cop-b1 .cover-logo{position:absolute;right:8rem;top:calc(32% - 9.5rem);width:19rem}
+/* B2: la banda è fatta delle quattro tinte scure del sito, una striscia per colore con la sua riga accesa in cima; logo nell'ultima */
+.cop-b2 .cover::before{background:linear-gradient(90deg,#223F3D 0 25%,#4D3626 25% 50%,#443629 50% 75%,#1F201D 75% 100%)}
+.cop-b2 .cover-strisce{top:0;height:.7rem}
+.cop-b2 .cover-logo{position:absolute;left:calc(87.5% - 9rem);top:calc(32% - 9rem);width:18rem}
+/* B3: logo molto grande che esce dal bordo destro e scavalca la riga dei colori; ruolo nei due colori */
+.cop-b3 .cover-logo{position:absolute;z-index:1;right:-6rem;top:calc(64% - 17rem);width:34rem}
 /* C. Titolo grande: nome su due righe a sinistra in basso, logo in alto, riga dei quattro colori sul bordo */
 .cop-c .cover-logo{position:absolute;left:8rem;top:5rem;width:7rem}
 .cop-c .cover-testo{position:absolute;left:8rem;bottom:7rem}
@@ -137,7 +153,7 @@ body::before{display:none}
   <div class="cover-logo-box"><img class="cover-logo" src="/assets/img/logo-sdrv.png" alt="Sound Design RV"></div>
   <div class="cover-testo">
     <h1 class="cover-nome"><span>RICCARDO</span> <span>VOJVODA</span></h1>
-    <p class="cover-ruolo">{{ p.copertina.ruoli | join(" | ") }}</p>
+    <p class="cover-ruolo"><span class="r1">{{ p.copertina.ruoli[0] }}</span> | <span class="r2">{{ p.copertina.ruoli[1] }}</span></p>
   </div>
   <span class="cover-strisce" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
 </section>
