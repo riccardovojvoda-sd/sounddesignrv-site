@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 ---
 {#- Profilo in PDF come estratto del sito (deciso il 20/11/2026): stessi componenti e stesso CSS di sounddesignrv.com,
     una pagina 16:9 (1920x1080 px = 1440x810 pt, come i vecchi PDF Canva) per ogni "schermata".
-    Chiaro di base, scuro con ?tema=scuro (stesse regole html.scuro del sito).
+    Scuro di base (scelto da Riccardo il 20/11), chiaro con ?tema=chiaro (stesse regole html.scuro del sito).
     Si costruisce solo con PROFILO=1 (vedi .eleventy.js) e si esporta con scripts/profilo-pdf.js.
     Testi in _data/profilo.js (italiano approvato il 15/10/2026).
     Niente box-shadow: Anteprima del Mac le disegna come riquadri grigi. -#}
@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <title>{{ p.titoloPagina }}</title>
-<script>(function(){var q=new URLSearchParams(location.search),h=document.documentElement;if(q.get("tema")==="scuro")h.classList.add("scuro");h.classList.add("cop-"+(q.get("copertina")||"a"));if(q.get("solo")==="copertina")h.classList.add("solo-copertina")})();</script>
+<script>(function(){var q=new URLSearchParams(location.search),h=document.documentElement;if(q.get("tema")!=="chiaro")h.classList.add("scuro");if(q.get("solo")==="copertina")h.classList.add("solo-copertina")})();</script>
 <style>{% include "css/sito.css" %}</style>
 <style>
 /* Il sito a 125%: 1rem = 20px su una pagina larga 1920 */
@@ -40,57 +40,22 @@ body::before{display:none}
 .foglio-piede{position:absolute;left:var(--gutter);right:var(--gutter);bottom:1.4rem;display:flex;justify-content:space-between;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
 .foglio-piede a{text-decoration:none}
 
-/* 1. Copertina: solo logo, nome e ruolo (richiesta del 20/11). Quattro versioni da indirizzo, ?copertina=a|b|c|d */
+/* 1. Copertina: logo, nome e ruolo. Versione B1 scelta da Riccardo il 20/11 tra A, B, C, D e gli sviluppi B1-B3:
+   banda sabbia nei due terzi alti col nome in flax, logo grande a destra, riga dei quattro colori sotto la banda, ruolo in due colori */
 .solo-copertina .foglio:not(.cover){display:none}
 .cover{color:var(--testo)}
-.cover-nome{margin:0;font-weight:700;letter-spacing:.03em;line-height:.95}
-.cover-ruolo{margin:0;font-weight:500;color:var(--verdigris)}
-.cover-logo{display:block;height:auto}
-.cover-strisce{display:flex}
+.cover::before{content:"";position:absolute;left:0;right:0;top:0;height:64%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
+html:not(.scuro) .cover::before{background:linear-gradient(180deg,var(--flax) 0%,color-mix(in srgb,var(--flax) 74%,var(--snow)) 100%)}
+.cover-testo{position:absolute;left:8rem;right:8rem;top:0;height:100%}
+.cover-nome{position:absolute;left:0;bottom:calc(36% + 2.75rem);margin:0;font-size:7.5rem;font-weight:700;letter-spacing:.03em;line-height:.95;color:var(--flax)}
+html:not(.scuro) .cover-nome{color:var(--jet)}
+.cover-ruolo{position:absolute;left:0;top:calc(64% + 3.25rem);margin:0;font-size:2.1rem;font-weight:500;color:var(--verdigris)}
+.cover-ruolo .r2{color:var(--apricot)}
+.cover-logo{position:absolute;right:8rem;top:calc(32% - 9.5rem);width:19rem;height:auto}
+.cover-strisce{position:absolute;left:0;right:0;top:64%;height:1rem;display:flex}
+.cover-strisce i{flex:1}
 .cover-strisce i:nth-child(1){background:var(--verdigris)}.cover-strisce i:nth-child(2){background:var(--apricot)}
 .cover-strisce i:nth-child(3){background:var(--flax)}.cover-strisce i:nth-child(4){background:var(--testo)}
-/* A. Centrata: logo, nome su una riga, ruolo, i quattro quadratini dei titoli del sito */
-.cop-a .cover{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.cop-a .cover-logo{width:11rem;margin-bottom:2.5rem}
-.cop-a .cover-nome{font-size:4.6rem;letter-spacing:.06em}
-.cop-a .cover-ruolo{font-size:1.7rem;margin-top:1rem}
-.cop-a .cover-strisce{gap:.6rem;margin-top:2.5rem}.cop-a .cover-strisce i{width:.8rem;height:.8rem;border-radius:3px}
-/* B. Banda: la banda colorata delle pagine del sito occupa i due terzi alti, il nome ci sta dentro in fondo */
-.cop-b .cover::before{content:"";position:absolute;left:0;right:0;top:0;height:66%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
-.cop-b .cover-logo{position:absolute;left:8rem;top:5rem;width:7rem}
-.cop-b .cover-testo{position:absolute;left:8rem;right:8rem;top:0;height:100%}
-.cop-b .cover-nome{position:absolute;left:0;bottom:calc(34% + 2.5rem);font-size:7.5rem;color:var(--flax)}
-.cop-b .cover-ruolo{position:absolute;left:0;top:calc(66% + 2.5rem);font-size:2rem}
-.cop-b .cover-strisce{display:none}
-/* B1-B3 (20/11, Riccardo: "la B con tutta la palette e il logo più grande"). Base comune: banda alta, nome in flax, riga dei quattro colori sotto la banda */
-[class*="cop-b"] .cover::before{content:"";position:absolute;left:0;right:0;top:0;height:64%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
-[class*="cop-b"] .cover-testo{position:absolute;left:8rem;right:8rem;top:0;height:100%}
-[class*="cop-b"] .cover-nome{position:absolute;left:0;bottom:calc(36% + 2.75rem);font-size:7.5rem;color:var(--flax)}
-[class*="cop-b"] .cover-ruolo{position:absolute;left:0;top:calc(64% + 3.25rem);font-size:2.1rem}
-[class*="cop-b"] .cover-strisce{position:absolute;left:0;right:0;top:64%;height:1rem}
-[class*="cop-b"] .cover-strisce i{flex:1}
-[class*="cop-b"] .cover-ruolo .r2{color:var(--apricot)}
-/* B1: logo grande a destra dentro la banda */
-.cop-b1 .cover-logo{position:absolute;right:8rem;top:calc(32% - 9.5rem);width:19rem}
-/* B2: la banda è fatta delle quattro tinte scure del sito, una striscia per colore con la sua riga accesa in cima; logo nell'ultima */
-.cop-b2 .cover::before{background:linear-gradient(90deg,#223F3D 0 25%,#4D3626 25% 50%,#443629 50% 75%,#1F201D 75% 100%)}
-.cop-b2 .cover-strisce{top:0;height:.7rem}
-.cop-b2 .cover-logo{position:absolute;left:calc(87.5% - 9rem);top:calc(32% - 9rem);width:18rem}
-/* B3: logo molto grande che esce dal bordo destro e scavalca la riga dei colori; ruolo nei due colori */
-.cop-b3 .cover-logo{position:absolute;z-index:1;right:-6rem;top:calc(64% - 17rem);width:34rem}
-/* C. Titolo grande: nome su due righe a sinistra in basso, logo in alto, riga dei quattro colori sul bordo */
-.cop-c .cover-logo{position:absolute;left:8rem;top:5rem;width:7rem}
-.cop-c .cover-testo{position:absolute;left:8rem;bottom:7rem}
-.cop-c .cover-nome{font-size:10.5rem}.cop-c .cover-nome span{display:block}
-.cop-c .cover-ruolo{font-size:2.1rem;margin-top:2rem}
-.cop-c .cover-strisce{position:absolute;left:0;right:0;bottom:0;height:.9rem}.cop-c .cover-strisce i{flex:1}
-/* D. Logo protagonista: il logo dentro una card del sito (riga colorata in cima), nome e ruolo accanto */
-.cop-d .cover{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:6rem;padding:0 8rem}
-.cop-d .cover-logo-box{width:30rem;height:30rem;display:grid;place-items:center;border-radius:1.25rem;border:1px solid rgba(230,226,220,.10);border-top:6px solid var(--verdigris);background:linear-gradient(180deg,#223F3D 55%,color-mix(in srgb,#223F3D 68%,#2F302C) 100%)}
-.cop-d .cover-logo{width:20rem}
-.cop-d .cover-nome{font-size:7rem}.cop-d .cover-nome span{display:block}
-.cop-d .cover-ruolo{font-size:2rem;margin-top:1.75rem}
-.cop-d .cover-strisce{display:none}
 
 /* 2. La home: eroe con lo showreel e la fascia dei loghi */
 .copertina .eroe{padding-block:7rem 2.5rem}
@@ -131,6 +96,73 @@ body::before{display:none}
 .servizi .carta-progetto-brand{font-size:1.1rem;letter-spacing:.01em;line-height:1.25;margin-bottom:.35rem}
 .servizi .carta-progetto-testo p{font-size:.86rem;line-height:1.55;margin:0}
 .servizi .numero{position:absolute;left:.7rem;top:.7rem;padding:.15em .55em;border-radius:.3rem;background:rgba(45,45,42,.85);color:var(--snow);font-size:.75rem;font-weight:600;letter-spacing:.06em}
+
+/* 5. Competenze e setup: banda verdigris, tre card del sito (riga colorata in cima) e due riquadri con foto */
+.competenze .pagina-testa{padding-block:6.5rem 2rem;margin-bottom:2rem}
+.competenze .gruppi{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.competenze .attrezzi{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.25rem}
+.scheda-box ul{margin:0;padding-left:1.1rem}
+.scheda-box li{margin-bottom:.35em;font-size:.95rem;line-height:1.5}
+.scheda-box h3{font-size:1.15rem;margin:0 0 .7rem}
+.box-1{border-top-color:var(--verdigris);background:rgba(123,181,178,.14)}
+.box-2{border-top-color:var(--apricot);background:rgba(246,201,172,.16)}
+.box-3{border-top-color:var(--flax);background:rgba(237,210,134,.16)}
+.box-4{border-top-color:var(--testo);background:rgba(230,226,220,.06)}
+html:not(.scuro) .box-4{background:rgba(45,45,42,.05)}
+.scheda-box.con-foto{display:grid;grid-template-columns:16rem 1fr;gap:1.5rem;align-items:start}
+.scheda-box.con-foto img{width:16rem;height:11rem;object-fit:cover;border-radius:.6rem}
+.scheda-box.con-foto p{font-size:.95rem;line-height:1.55;margin:0}
+
+/* 6. Progetti: otto card dei progetti del sito, come nel portfolio */
+.progetti .testa-sezione{padding-top:5.6rem;margin-bottom:1.2rem}
+.testa-sezione h1{font-size:2.6rem;font-weight:700;margin:0}
+.testa-sezione .etichetta{margin-bottom:.6rem}
+.progetti .griglia{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.progetti .carta-progetto-img{aspect-ratio:2/1}
+.progetti .carta-progetto-testo{padding:.75rem 1rem .9rem;gap:.15rem}
+.progetti .carta-progetto-brand{font-size:.98rem;letter-spacing:.01em;line-height:1.25}
+.progetti .carta-progetto-frase{font-size:.78rem;line-height:1.45;font-style:normal;opacity:.85}
+.progetti .carta-progetto-cat{font-size:.66rem;padding-top:.4rem}
+
+/* 7. In squadra: banda apricot e tre card; CROMO larga, col logo */
+.squadra .pagina-testa{padding-block:6.5rem 2.5rem;margin-bottom:2.5rem}
+.squadra .griglia{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1.25rem}
+.squadra .scheda-box{padding:1.6rem 1.7rem}
+.squadra h3{font-size:1.9rem;margin:0;letter-spacing:.02em}
+.squadra .tipo{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.75;margin:.2rem 0 1rem}
+.squadra .scheda-box p:last-child{font-size:.95rem;line-height:1.6}
+.squadra .logo-partner{height:3.2rem;width:auto;margin-bottom:1rem}
+.scuro .squadra .logo-partner{filter:grayscale(1) invert(1);opacity:.8}
+
+/* 8. Clienti: loghi per settore, in sei riquadri */
+.clienti-pag .testa-sezione{padding-top:6.5rem;margin-bottom:1.4rem}
+.settori{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.settore{padding:1.1rem 1.3rem 1.2rem}
+.settore h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.8;margin:0 0 .8rem}
+.settore .loghi{grid-template-columns:repeat(5,1fr);gap:1rem 1.1rem}
+.settore .loghi img{height:3.3rem}
+.scuro .settore .loghi img{opacity:.85}
+.settore .senza-logo{font-size:.8rem;opacity:.75;margin:.7rem 0 0}
+.clienti-pag .altri{margin-top:1rem;font-size:.9rem;opacity:.75}
+
+/* 9. Contatti: chiude come la copertina, banda sabbia col titolo, riga dei colori, recapiti sotto */
+.contatti::before{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
+html:not(.scuro) .contatti::before{background:linear-gradient(180deg,var(--flax) 0%,color-mix(in srgb,var(--flax) 74%,var(--snow)) 100%)}
+.contatti .cover-strisce{top:46%}
+.contatti-titolo{position:absolute;left:8rem;bottom:calc(54% + 2.75rem);margin:0;font-size:5rem;font-weight:700;line-height:1;color:var(--flax)}
+html:not(.scuro) .contatti-titolo{color:var(--jet)}
+.contatti .logo-grande{position:absolute;right:8rem;top:calc(23% - 6rem);width:12rem;height:auto}
+.contatti-corpo{position:absolute;left:8rem;right:8rem;top:calc(46% + 4rem);display:grid;grid-template-columns:1fr 1fr auto;gap:4rem;align-items:start}
+.contatti-corpo .nome{font-size:1.6rem;font-weight:700;letter-spacing:.03em;margin:0 0 .6rem}
+.contatti-corpo .recapiti{font-size:1.3rem;line-height:1.7;margin:0}
+.contatti-corpo a{text-decoration:none;border-bottom:2px solid var(--verdigris)}
+.contatti-corpo .vetrina{font-size:1.05rem;margin:0 0 1.1rem;opacity:.9}
+.contatti-corpo .social{font-size:1rem;margin:1.4rem 0 0}
+.contatti-corpo .social a{border-bottom-color:var(--apricot)}
+.qr-box{display:flex;flex-direction:column;align-items:center;gap:.8rem;font-size:.8rem;opacity:.95}
+.qr{width:11rem;background:var(--snow);border-radius:.9rem;padding:.8rem}
+.qr svg{width:100%;height:auto;display:block}
+.qr svg path{fill:var(--jet)}
 </style>
 </head>
 <body>
@@ -245,6 +277,109 @@ body::before{display:none}
     {%- endfor %}
   </div>
   {{ piede("04") }}
+</section>
+{#- 5. Competenze e setup -#}
+<section class="foglio competenze" id="competenze">
+  {{ testata("competenze") }}
+  <header class="pagina-testa tema-verdigris">
+    <div class="contenitore"><h1>{{ p.pagine[2] | join("") }}</h1></div>
+  </header>
+  <div class="contenitore">
+    <div class="gruppi">
+      {%- for g in p.competenze.gruppi %}
+      <div class="scheda-box box-{{ loop.index }}"><h3>{{ g[0] }}</h3><ul>{% for v in g[1] %}<li>{{ v }}</li>{% endfor %}</ul></div>
+      {%- endfor %}
+    </div>
+    <div class="attrezzi">
+      <div class="scheda-box box-4 con-foto"><img src="{% imgUrl 'profilo/regia-offlmts-vista-ampia.jpg', 800 %}" alt=""><div><h3>{{ p.competenze.setupTitolo }}</h3><p>{{ p.competenze.setup }}</p></div></div>
+      <div class="scheda-box box-4 con-foto"><img src="{% imgUrl 'profilo/riccardo-boom-sul-set.jpg', 800 %}" alt="" style="object-position:30% 50%"><div><h3>{{ p.competenze.kitTitolo }}</h3><p>{{ p.competenze.kit }}</p></div></div>
+    </div>
+  </div>
+  {{ piede("05") }}
+</section>
+
+{#- 6. Progetti selezionati -#}
+<section class="foglio progetti" id="progetti">
+  {{ testata("progetti") }}
+  <div class="contenitore">
+    <div class="testa-sezione"><p class="etichetta">{{ p.progetti.occhiello }}</p><h1>{{ p.pagine[3] | join("") }}</h1></div>
+    <div class="griglia">
+      {%- set temi = ["tema-verdigris", "tema-apricot", "tema-flax", "tema-jet"] %}
+      {%- for v in p.progetti.voci %}
+      <a class="carta-progetto {{ temi[loop.index0 % 4] }}" href="{{ link }}/progetti/{{ v.slug }}/{{ q }}">
+        <span class="carta-progetto-img"><img src="{% imgUrl v.img, 800 %}" alt=""></span>
+        <span class="carta-progetto-testo">
+          <strong class="carta-progetto-brand">{{ v.titolo }}</strong>
+          <span class="carta-progetto-frase">{{ v.testo }}</span>
+          <small class="carta-progetto-cat">{{ v.categoria }}</small>
+        </span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+  {{ piede("06") }}
+</section>
+
+{#- 7. In squadra -#}
+<section class="foglio squadra" id="squadra">
+  {{ testata("squadra") }}
+  <header class="pagina-testa tema-apricot">
+    <div class="contenitore">
+      <p class="etichetta">{{ p.squadra.occhiello }}</p>
+      <h1>{{ p.pagine[4] | join("") }}</h1>
+      <p class="pagina-sottotitolo">{{ p.squadra.intro }}</p>
+    </div>
+  </header>
+  <div class="contenitore griglia">
+    {%- for v in p.squadra.voci %}
+    <div class="scheda-box box-{{ loop.index }}">
+      <h3>{{ v[0] }}</h3><p class="tipo">{{ v[1] }}</p><p>{{ v[2] }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+  {{ piede("07") }}
+</section>
+
+{#- 8. Clienti -#}
+<section class="foglio clienti-pag" id="clienti">
+  {{ testata("clienti") }}
+  <div class="contenitore">
+    <div class="testa-sezione"><p class="etichetta">{{ p.copertina.brand }}</p><h1>{{ p.pagine[5] | join("") }}</h1></div>
+    <div class="settori">
+      {%- for st in p.clienti.settori %}
+      <div class="scheda-box settore box-{{ (loop.index0 % 4) + 1 }}">
+        <h3>{{ st.nome }}</h3>
+        <ul class="loghi">{% for l in st.loghi %}<li><img src="/assets/img/loghi/{{ l[0] }}" alt="{{ l[1] }}"></li>{% endfor %}</ul>
+        {%- if st.senzaLogo %}<p class="senza-logo">{{ st.senzaLogo }}</p>{% endif %}
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="altri">{{ p.clienti.altri }}</p>
+  </div>
+  {{ piede("08") }}
+</section>
+
+{#- 9. Contatti -#}
+<section class="foglio contatti" id="contatti">
+  
+  <h1 class="contatti-titolo">{{ p.contatti.titolo }}</h1>
+  <img class="logo-grande" src="/assets/img/logo-sdrv.png" alt="">
+  <span class="cover-strisce" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <div class="contatti-corpo">
+    <div>
+      <p class="nome">RICCARDO VOJVODA</p>
+      <p class="recapiti"><a href="mailto:{{ sito.email }}">{{ sito.email }}</a><br>
+      <a href="tel:{{ sito.telefonoHref }}">{{ sito.telefono }}</a><br>
+      <a href="{{ link }}/{{ q }}">sounddesignrv.com</a></p>
+    </div>
+    <div>
+      <p class="vetrina">{{ p.contatti.vetrina }}: <a href="{{ link }}/{{ q }}">sounddesignrv.com</a></p>
+      <a class="bottone" href="{{ link }}/{{ q }}&utm_content=showreel">{{ p.contatti.showreel }}</a>
+      <p class="social">Instagram <a href="{{ sito.social.instagram }}">sound_design_rv</a> · <a href="{{ sito.social.linkedin }}">LinkedIn</a> · <a href="{{ sito.social.imdb }}">IMDb</a></p>
+    </div>
+    <div class="qr-box"><div class="qr">{% include "parti/profilo-qr-" + p.lang + ".svg" %}</div><span>{{ p.contatti.qr }}</span></div>
+  </div>
+  {{ piede("09") }}
 </section>
 </body>
 </html>

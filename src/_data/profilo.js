@@ -83,6 +83,7 @@ module.exports = {
       kit: "Sound Devices MixPre-6 II, Sennheiser MKH 416 e Rode NTG3 (boom), 3 Sennheiser EW100 G3 (6 canali wireless), DPA 4060 e Rode Lavalier, Zoom F2 BT, asta Gitzo 3,5 m, Rycote Blimp.",
     },
     progetti: {
+      occhiello: "Portfolio",
       voci: [
         { slug: "maserati-mc20", img: "progetti/maserati-mc20.jpg", titolo: "Maserati MC20. How It's Made", categoria: "Branded content", testo: "Sound design, composizione musicale, mix web. Il suono come narrazione." },
         { slug: "jw-anderson-diadora-equipe", img: "progetti/jw-anderson-diadora-equipe.png", titolo: "Diadora x JW Anderson, Equipe", categoria: "Fashion film", testo: "Sound design e foley costruiti da zero su immagini mute, selezione musicale d'archivio, mix web." },
@@ -95,6 +96,7 @@ module.exports = {
       ],
     },
     squadra: {
+      occhiello: "Partner",
       intro: "Per i progetti più grandi lavoro dentro squadre più ampie, con case di produzione e colleghi del suono.",
       voci: [
         ["CROMO", "casa di produzione video", "Guidata da mio fratello Edoardo Vojvoda: racconto cinematografico per branded content e documentari. Lui il video, io il suono, dalla presa diretta al mix. Insieme dal 2015: Maserati MC20, JW Anderson x Diadora, Diadora Run Valley, The Missing Head, FITT Industrial, Weldan, Pitars."],
