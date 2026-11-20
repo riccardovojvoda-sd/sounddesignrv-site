@@ -65,10 +65,12 @@ async function main() {
     ws.close();
     console.log(uscita);
   } finally {
+    // aspetta che Chrome sia davvero chiuso: prima scrive ancora nel profilo e la cancellazione fallisce
+    const chiuso = new Promise((r) => c.once("exit", r));
     c.kill();
+    await Promise.race([chiuso, attesa(5000)]);
     server.close();
-    await attesa(300);
-    fs.rmSync(profilo, { recursive: true, force: true });
+    fs.rmSync(profilo, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 });
   }
 }
 main().catch((e) => { console.error(e.message); process.exit(1); });

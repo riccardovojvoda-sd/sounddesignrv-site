@@ -21,8 +21,6 @@ module.exports = {
     titoloPagina: "Riccardo Vojvoda - Sound Designer | Audio Post-Producer - Profilo",
     // titoli delle pagine: [parte normale, parola col tratto di evidenziatore]
     pagine: [["Chi ", "sono"], ["", "Servizi"], ["Competenze e ", "setup"], ["Progetti ", "selezionati"], ["In ", "squadra"], ["", "Clienti"], ["", "Contatti"]],
-    // voci della testata (ancore alle pagine del PDF), con le parole del menu del sito
-    menu: [["chi-sono", "Chi sono"], ["servizi", "Servizi"], ["competenze", "Competenze"], ["progetti", "Progetti"], ["squadra", "In squadra"], ["clienti", "Clienti"]],
     copertina: {
       ascolta: "Ascolta",
       brand: "Brand e produzioni",
