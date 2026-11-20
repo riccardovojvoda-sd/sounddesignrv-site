@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
     Niente box-shadow: Anteprima del Mac le disegna come riquadri grigi. -#}
 {%- set p = profilo[lingua] %}{%- set t = testi[lingua] %}
 {%- set link = sito.url %}{%- set q = "?" + p.utm %}
-{%- set totale = "09" %}
+{%- set totale = "08" %}
 <!doctype html>
 <html lang="{{ p.lang }}">
 <head>
@@ -100,7 +100,7 @@ html:not(.scuro) .cover-nome{color:var(--jet)}
 /* 5. Competenze e setup: banda verdigris, tre card del sito (riga colorata in cima) e due riquadri con foto */
 .competenze .pagina-testa{padding-block:6.5rem 2rem;margin-bottom:2rem}
 .competenze .gruppi{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.competenze .attrezzi{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.25rem}
+.competenze .attrezzi{margin-top:1.25rem}
 .scheda-box ul{margin:0;padding-left:1.1rem}
 .scheda-box li{margin-bottom:.35em;font-size:.95rem;line-height:1.5}
 .scheda-box h3{font-size:1.15rem;margin:0 0 .7rem}
@@ -109,7 +109,7 @@ html:not(.scuro) .cover-nome{color:var(--jet)}
 .box-3{border-top-color:var(--flax);background:rgba(237,210,134,.16)}
 .box-4{border-top-color:var(--testo);background:rgba(230,226,220,.06)}
 html:not(.scuro) .box-4{background:rgba(45,45,42,.05)}
-.scheda-box.con-foto{display:grid;grid-template-columns:16rem 1fr;gap:1.5rem;align-items:start}
+.scheda-box.con-foto{display:grid;grid-template-columns:16rem 1fr 1fr;gap:2.25rem;align-items:start}
 .scheda-box.con-foto img{width:16rem;height:11rem;object-fit:cover;border-radius:.6rem}
 .scheda-box.con-foto p{font-size:.95rem;line-height:1.55;margin:0}
 
@@ -124,17 +124,7 @@ html:not(.scuro) .box-4{background:rgba(45,45,42,.05)}
 .progetti .carta-progetto-frase{font-size:.78rem;line-height:1.45;font-style:normal;opacity:.85}
 .progetti .carta-progetto-cat{font-size:.66rem;padding-top:.4rem}
 
-/* 7. In squadra: banda apricot e tre card; CROMO larga, col logo */
-.squadra .pagina-testa{padding-block:6.5rem 2.5rem;margin-bottom:2.5rem}
-.squadra .griglia{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1.25rem}
-.squadra .scheda-box{padding:1.6rem 1.7rem}
-.squadra h3{font-size:1.9rem;margin:0;letter-spacing:.02em}
-.squadra .tipo{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.75;margin:.2rem 0 1rem}
-.squadra .scheda-box p:last-child{font-size:.95rem;line-height:1.6}
-.squadra .logo-partner{height:3.2rem;width:auto;margin-bottom:1rem}
-.scuro .squadra .logo-partner{filter:grayscale(1) invert(1);opacity:.8}
-
-/* 8. Clienti: loghi per settore, in sei riquadri */
+/* 7. Clienti: loghi per settore, in sei riquadri */
 .clienti-pag .testa-sezione{padding-top:6.5rem;margin-bottom:1.4rem}
 .settori{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
 .settore{padding:1.1rem 1.3rem 1.2rem}
@@ -145,7 +135,7 @@ html:not(.scuro) .box-4{background:rgba(45,45,42,.05)}
 .settore .senza-logo{font-size:.8rem;opacity:.75;margin:.7rem 0 0}
 .clienti-pag .altri{margin-top:1rem;font-size:.9rem;opacity:.75}
 
-/* 9. Contatti: chiude come la copertina, banda sabbia col titolo, riga dei colori, recapiti sotto */
+/* 8. Contatti: chiude come la copertina, banda sabbia col titolo, riga dei colori, recapiti sotto */
 .contatti::before{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
 html:not(.scuro) .contatti::before{background:linear-gradient(180deg,var(--flax) 0%,color-mix(in srgb,var(--flax) 74%,var(--snow)) 100%)}
 .contatti .cover-strisce{top:46%}
@@ -291,8 +281,10 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
       {%- endfor %}
     </div>
     <div class="attrezzi">
-      <div class="scheda-box box-4 con-foto"><img src="{% imgUrl 'profilo/regia-offlmts-vista-ampia.jpg', 800 %}" alt=""><div><h3>{{ p.competenze.setupTitolo }}</h3><p>{{ p.competenze.setup }}</p></div></div>
-      <div class="scheda-box box-4 con-foto"><img src="{% imgUrl 'profilo/riccardo-boom-sul-set.jpg', 800 %}" alt="" style="object-position:30% 50%"><div><h3>{{ p.competenze.kitTitolo }}</h3><p>{{ p.competenze.kit }}</p></div></div>
+      <div class="scheda-box box-4 con-foto"><img src="{% imgUrl 'profilo/regia-offlmts-vista-ampia.jpg', 800 %}" alt="">
+        <div><h3>{{ p.competenze.setupTitolo }}</h3><p>{{ p.competenze.setup }}</p></div>
+        <div><h3>{{ p.competenze.kitTitolo }}</h3><p>{{ p.competenze.kit }}</p></div>
+      </div>
     </div>
   </div>
   {{ piede("05") }}
@@ -320,27 +312,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
   {{ piede("06") }}
 </section>
 
-{#- 7. In squadra -#}
-<section class="foglio squadra" id="squadra">
-  {{ testata("squadra") }}
-  <header class="pagina-testa tema-apricot">
-    <div class="contenitore">
-      <p class="etichetta">{{ p.squadra.occhiello }}</p>
-      <h1>{{ p.pagine[4] | join("") }}</h1>
-      <p class="pagina-sottotitolo">{{ p.squadra.intro }}</p>
-    </div>
-  </header>
-  <div class="contenitore griglia">
-    {%- for v in p.squadra.voci %}
-    <div class="scheda-box box-{{ loop.index }}">
-      <h3>{{ v[0] }}</h3><p class="tipo">{{ v[1] }}</p><p>{{ v[2] }}</p>
-    </div>
-    {%- endfor %}
-  </div>
-  {{ piede("07") }}
-</section>
-
-{#- 8. Clienti -#}
+{#- 7. Clienti -#}
 <section class="foglio clienti-pag" id="clienti">
   {{ testata("clienti") }}
   <div class="contenitore">
@@ -356,10 +328,10 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
     </div>
     <p class="altri">{{ p.clienti.altri }}</p>
   </div>
-  {{ piede("08") }}
+  {{ piede("07") }}
 </section>
 
-{#- 9. Contatti -#}
+{#- 8. Contatti -#}
 <section class="foglio contatti" id="contatti">
   
   <h1 class="contatti-titolo">{{ p.contatti.titolo }}</h1>
@@ -379,7 +351,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
     </div>
     <div class="qr-box"><div class="qr">{% include "parti/profilo-qr-" + p.lang + ".svg" %}</div><span>{{ p.contatti.qr }}</span></div>
   </div>
-  {{ piede("09") }}
+  {{ piede("08") }}
 </section>
 </body>
 </html>
