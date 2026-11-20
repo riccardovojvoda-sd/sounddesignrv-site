@@ -70,7 +70,8 @@ async function main() {
     c.kill();
     await Promise.race([chiuso, attesa(5000)]);
     server.close();
-    fs.rmSync(profilo, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 });
+    // i processi figli di Chrome a volte scrivono ancora: la cartella sta nei temporanei del Mac, se resta pazienza
+    try { fs.rmSync(profilo, { recursive: true, force: true, maxRetries: 10, retryDelay: 300 }); } catch {}
   }
 }
 main().catch((e) => { console.error(e.message); process.exit(1); });

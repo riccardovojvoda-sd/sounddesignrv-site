@@ -14,14 +14,14 @@ eleventyExcludeFromCollections: true
     Niente box-shadow: Anteprima del Mac le disegna come riquadri grigi. -#}
 {%- set p = profilo[lingua] %}{%- set t = testi[lingua] %}
 {%- set link = sito.url %}{%- set q = "?" + p.utm %}
-{%- set totale = "08" %}
+{%- set totale = "09" %}
 <!doctype html>
 <html lang="{{ p.lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <title>{{ p.titoloPagina }}</title>
-<script>(function(){if(new URLSearchParams(location.search).get("tema")==="scuro")document.documentElement.classList.add("scuro")})();</script>
+<script>(function(){var q=new URLSearchParams(location.search),h=document.documentElement;if(q.get("tema")==="scuro")h.classList.add("scuro");h.classList.add("cop-"+(q.get("copertina")||"a"));if(q.get("solo")==="copertina")h.classList.add("solo-copertina")})();</script>
 <style>{% include "css/sito.css" %}</style>
 <style>
 /* Il sito a 125%: 1rem = 20px su una pagina larga 1920 */
@@ -40,7 +40,43 @@ body::before{display:none}
 .foglio-piede{position:absolute;left:var(--gutter);right:var(--gutter);bottom:1.4rem;display:flex;justify-content:space-between;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
 .foglio-piede a{text-decoration:none}
 
-/* 1. Copertina = la home: eroe con lo showreel e la fascia dei loghi */
+/* 1. Copertina: solo logo, nome e ruolo (richiesta del 20/11). Quattro versioni da indirizzo, ?copertina=a|b|c|d */
+.solo-copertina .foglio:not(.cover){display:none}
+.cover{color:var(--testo)}
+.cover-nome{margin:0;font-weight:700;letter-spacing:.03em;line-height:.95}
+.cover-ruolo{margin:0;font-weight:500;color:var(--verdigris)}
+.cover-logo{display:block;height:auto}
+.cover-strisce{display:flex}
+.cover-strisce i:nth-child(1){background:var(--verdigris)}.cover-strisce i:nth-child(2){background:var(--apricot)}
+.cover-strisce i:nth-child(3){background:var(--flax)}.cover-strisce i:nth-child(4){background:var(--testo)}
+/* A. Centrata: logo, nome su una riga, ruolo, i quattro quadratini dei titoli del sito */
+.cop-a .cover{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.cop-a .cover-logo{width:11rem;margin-bottom:2.5rem}
+.cop-a .cover-nome{font-size:4.6rem;letter-spacing:.06em}
+.cop-a .cover-ruolo{font-size:1.7rem;margin-top:1rem}
+.cop-a .cover-strisce{gap:.6rem;margin-top:2.5rem}.cop-a .cover-strisce i{width:.8rem;height:.8rem;border-radius:3px}
+/* B. Banda: la banda colorata delle pagine del sito occupa i due terzi alti, il nome ci sta dentro in fondo */
+.cop-b .cover::before{content:"";position:absolute;left:0;right:0;top:0;height:66%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
+.cop-b .cover-logo{position:absolute;left:8rem;top:5rem;width:7rem}
+.cop-b .cover-testo{position:absolute;left:8rem;right:8rem;top:0;height:100%}
+.cop-b .cover-nome{position:absolute;left:0;bottom:calc(34% + 2.5rem);font-size:7.5rem;color:var(--flax)}
+.cop-b .cover-ruolo{position:absolute;left:0;top:calc(66% + 2.5rem);font-size:2rem}
+.cop-b .cover-strisce{display:none}
+/* C. Titolo grande: nome su due righe a sinistra in basso, logo in alto, riga dei quattro colori sul bordo */
+.cop-c .cover-logo{position:absolute;left:8rem;top:5rem;width:7rem}
+.cop-c .cover-testo{position:absolute;left:8rem;bottom:7rem}
+.cop-c .cover-nome{font-size:10.5rem}.cop-c .cover-nome span{display:block}
+.cop-c .cover-ruolo{font-size:2.1rem;margin-top:2rem}
+.cop-c .cover-strisce{position:absolute;left:0;right:0;bottom:0;height:.9rem}.cop-c .cover-strisce i{flex:1}
+/* D. Logo protagonista: il logo dentro una card del sito (riga colorata in cima), nome e ruolo accanto */
+.cop-d .cover{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:6rem;padding:0 8rem}
+.cop-d .cover-logo-box{width:30rem;height:30rem;display:grid;place-items:center;border-radius:1.25rem;border:1px solid rgba(230,226,220,.10);border-top:6px solid var(--verdigris);background:linear-gradient(180deg,#223F3D 55%,color-mix(in srgb,#223F3D 68%,#2F302C) 100%)}
+.cop-d .cover-logo{width:20rem}
+.cop-d .cover-nome{font-size:7rem}.cop-d .cover-nome span{display:block}
+.cop-d .cover-ruolo{font-size:2rem;margin-top:1.75rem}
+.cop-d .cover-strisce{display:none}
+
+/* 2. La home: eroe con lo showreel e la fascia dei loghi */
 .copertina .eroe{padding-block:7rem 2.5rem}
 .copertina .eroe h1{font-size:5rem}
 .copertina .eroe-intro{font-size:1.2rem;max-width:30rem}
@@ -96,7 +132,17 @@ body::before{display:none}
 {%- endmacro %}
 {%- macro piede(n) %}<div class="foglio-piede"><a href="{{ link }}/{{ q }}">sounddesignrv.com</a><span>{{ n }} / {{ totale }}</span></div>{% endmacro %}
 
-{#- 1. Copertina -#}
+{#- 1. Copertina: logo, nome e ruolo -#}
+<section class="foglio cover" id="inizio">
+  <div class="cover-logo-box"><img class="cover-logo" src="/assets/img/logo-sdrv.png" alt="Sound Design RV"></div>
+  <div class="cover-testo">
+    <h1 class="cover-nome"><span>RICCARDO</span> <span>VOJVODA</span></h1>
+    <p class="cover-ruolo">{{ p.copertina.ruoli | join(" | ") }}</p>
+  </div>
+  <span class="cover-strisce" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+</section>
+
+{#- 2. La home: showreel e loghi -#}
 <section class="foglio copertina" id="copertina">
   {{ testata("") }}
   <div class="eroe">
@@ -132,7 +178,7 @@ body::before{display:none}
       </ul>
     </div>
   </section>
-  {{ piede("01") }}
+  {{ piede("02") }}
 </section>
 
 {#- 2. Chi sono -#}
@@ -157,7 +203,7 @@ body::before{display:none}
       <ul>{% for v in p.chiSono.inBreve %}<li><strong>{{ v[0] }}</strong>{{ v[1] }}</li>{% endfor %}</ul>
     </div>
   </div>
-  {{ piede("02") }}
+  {{ piede("03") }}
 </section>
 
 {#- 3. Servizi -#}
@@ -182,7 +228,7 @@ body::before{display:none}
     </div>
     {%- endfor %}
   </div>
-  {{ piede("03") }}
+  {{ piede("04") }}
 </section>
 </body>
 </html>
