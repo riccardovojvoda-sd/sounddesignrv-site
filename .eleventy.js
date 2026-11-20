@@ -8,6 +8,8 @@ const { pubblicato } = require("./lib/articoli");
 const LARGHEZZE = [480, 800, 1200, 1600];
 
 module.exports = function (eleventyConfig) {
+  // Profilo PDF (/profilo-pdf/<lingua>/): si costruisce solo con PROFILO=1 (scripts/profilo-pdf.js), mai nel sito pubblicato
+  if (!process.env.PROFILO) eleventyConfig.ignores.add("src/profilo-pdf.njk");
   // File copiati tali e quali
   eleventyConfig.addPassthroughCopy({ "src/assets/font": "assets/font" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
