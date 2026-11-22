@@ -5,14 +5,16 @@
 const utm = (lingua) => `utm_source=profilo-pdf&utm_medium=pdf&utm_campaign=profilo-2026-${lingua}`;
 
 // Loghi per settore: file in assets/img/loghi; "senzaLogo" = nomi scritti per esteso accanto ai loghi
+// Nella pagina Clienti del PDF si stampano solo i nomi (22/11, Riccardo: "o solo loghi o solo testo", loghi già a pagina 2)
+const conNomi = (s) => ({ ...s, nomi: [...s.loghi.map((l) => l[1]), ...s.senzaLogo.split(", ")].filter(Boolean) });
 const settori = (nomi) => [
   { nome: nomi[0], loghi: [["maserati.png", "Maserati"], ["alfa-romeo.png", "Alfa Romeo"], ["fiat.png", "Fiat"], ["lancia.png", "Lancia"], ["abarth.png", "Abarth"]], senzaLogo: "Azimut Yachts, Renault Trucks, Adria" },
   { nome: nomi[1], loghi: [["diadora.png", "Diadora"], ["the-north-face.png", "The North Face"], ["cmp.png", "CMP"], ["roxa.webp", "Roxa"]], senzaLogo: "Ballantyne" },
   { nome: nomi[2], loghi: [["alpi-wood.png", "Alpi Wood"], ["valcucine.png", "Valcucine"], ["arrital.png", "Arrital"], ["copatlife.png", "Copat Life"], ["dvo-sitland.webp", "DVO Sitland"], ["oasis.png", "Oasis"], ["mediaprofili.png", "Mediaprofili"], ["federlegno.png", "Federlegno"]], senzaLogo: "Calligaris, Connubia" },
   { nome: nomi[3], loghi: [["lainox.webp", "Lainox"], ["fitt-industrial.webp", "FITT Industrial"], ["savio.png", "Savio"], ["goriziane.png", "Goriziane"], ["beninca.png", "Benincà"], ["biasi.png", "Biasi"], ["gefran.png", "Gefran"], ["everli.png", "Everli"], ["carinzia.png", "Carinzia"]], senzaLogo: "" },
   { nome: nomi[4], loghi: [["hausbrandt.png", "Hausbrandt"], ["ponte.webp", "Ponte 1948"], ["pitars.webp", "Pitars"], ["lamarca.png", "LaMarca"], ["sacchetto.webp", "Sacchetto Vini"], ["farnese.png", "Farnese"], ["weldan.png", "Weldan"]], senzaLogo: "Fantini Wines" },
-  { nome: nomi[5], loghi: [["arcadia-earth.png", "Arcadia Earth"], ["hfarm.png", "H-Farm"], ["iuav.png", "IUAV"]], senzaLogo: "SOS Chirurgia (RealTime)" },
-];
+  { nome: nomi[5], loghi: [["arcadia-earth.png", "Arcadia Earth"], ["hfarm.png", "H-Farm College"], ["iuav.png", "Università Iuav di Venezia"]], senzaLogo: "SOS Chirurgia (Real Time)" },
+].map(conNomi);
 
 module.exports = {
   it: {
@@ -75,6 +77,7 @@ module.exports = {
         ["AI e innovazione audio", [
           "Voice design e prompting di voci sintetiche",
           "Strumenti AI per restauro, editing, upmix e downmix, integrati nel flusso tradizionale",
+          "Gestione dei processi: automazioni e strumenti su misura, costruiti con l'AI, che organizzano e ottimizzano il lavoro tecnico e quello organizzativo, dalle revisioni con il cliente alle consegne",
         ]],
       ],
       setupTitolo: "Setup",

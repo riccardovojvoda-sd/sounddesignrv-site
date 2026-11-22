@@ -95,7 +95,9 @@ html:not(.scuro) .cover-nome{color:var(--jet)}
 .servizi .carta-progetto-testo{padding:1.1rem 1.25rem 1.3rem}
 .servizi .carta-progetto-brand{font-size:1.1rem;letter-spacing:.01em;line-height:1.25;margin-bottom:.35rem}
 .servizi .carta-progetto-testo p{font-size:.86rem;line-height:1.55;margin:0}
-.servizi .numero{position:absolute;left:.7rem;top:.7rem;padding:.15em .55em;border-radius:.3rem;background:rgba(45,45,42,.85);color:var(--snow);font-size:.75rem;font-weight:600;letter-spacing:.06em}
+/* Angoli delle card ritagliati con clip-path: con border-radius + overflow Anteprima del Mac disegnava una riga verticale
+   a metà della quarta card (22/11, provato col motore del Mac via sips) */
+.carta-progetto{border-radius:0;clip-path:inset(0 round 1.25rem)}
 
 /* 5. Competenze e setup: banda verdigris, tre card del sito (riga colorata in cima) e due riquadri con foto */
 .competenze .pagina-testa{padding-block:6.5rem 2rem;margin-bottom:2rem}
@@ -124,16 +126,14 @@ html:not(.scuro) .box-4{background:rgba(45,45,42,.05)}
 .progetti .carta-progetto-frase{font-size:.78rem;line-height:1.45;font-style:normal;opacity:.85}
 .progetti .carta-progetto-cat{font-size:.66rem;padding-top:.4rem}
 
-/* 7. Clienti: loghi per settore, in sei riquadri */
-.clienti-pag .testa-sezione{padding-top:6.5rem;margin-bottom:1.4rem}
-.settori{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-.settore{padding:1.1rem 1.3rem 1.2rem}
-.settore h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.8;margin:0 0 .8rem}
-.settore .loghi{grid-template-columns:repeat(5,1fr);gap:1rem 1.1rem}
-.settore .loghi img{height:3.3rem}
-.scuro .settore .loghi img{opacity:.85}
-.settore .senza-logo{font-size:.8rem;opacity:.75;margin:.7rem 0 0}
-.clienti-pag .altri{margin-top:1rem;font-size:.9rem;opacity:.75}
+/* 7. Clienti: solo nomi, per settore, in sei riquadri uguali (22/11: i loghi misti ai nomi non reggevano; i loghi sono già a pagina 2) */
+.clienti-pag .testa-sezione{padding-top:6.5rem;margin-bottom:1.6rem}
+.settori{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:1.25rem}
+.settore{padding:1.3rem 1.5rem 1.4rem}
+.settore h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.8;margin:0 0 1rem}
+.settore .nomi{list-style:none;margin:0;padding:0;columns:2;column-gap:1.5rem}
+.settore .nomi li{font-size:1.05rem;font-weight:500;line-height:1.3;margin:0 0 .55rem;break-inside:avoid}
+.clienti-pag .altri{margin-top:1.1rem;font-size:.9rem;opacity:.75}
 
 /* 8. Contatti: chiude come la copertina, banda sabbia col titolo, riga dei colori, recapiti sotto */
 .contatti::before{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,#443629 0%,color-mix(in srgb,#443629 74%,#2F302C) 100%)}
@@ -258,7 +258,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
     {%- set temi = ["tema-verdigris", "tema-apricot", "tema-flax", "tema-snow"] %}
     {%- for v in p.servizi.voci %}
     <div class="carta-progetto {{ temi[loop.index0] }}">
-      <span class="carta-progetto-img"><img src="{% imgUrl v[1], 800 %}" alt="" style="object-position:{{ v[3] or '50% 50%' }}"><span class="numero">0{{ loop.index }}</span></span>
+      <span class="carta-progetto-img"><img src="{% imgUrl v[1], 800 %}" alt="" style="object-position:{{ v[3] or '50% 50%' }}"></span>
       <span class="carta-progetto-testo">
         <strong class="carta-progetto-brand">{{ v[0] }}</strong>
         <p>{{ v[2] }}</p>
@@ -321,8 +321,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
       {%- for st in p.clienti.settori %}
       <div class="scheda-box settore box-{{ (loop.index0 % 4) + 1 }}">
         <h3>{{ st.nome }}</h3>
-        <ul class="loghi">{% for l in st.loghi %}<li><img src="/assets/img/loghi/{{ l[0] }}" alt="{{ l[1] }}"></li>{% endfor %}</ul>
-        {%- if st.senzaLogo %}<p class="senza-logo">{{ st.senzaLogo }}</p>{% endif %}
+        <ul class="nomi">{% for n in st.nomi %}<li>{{ n }}</li>{% endfor %}</ul>
       </div>
       {%- endfor %}
     </div>
