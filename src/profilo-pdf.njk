@@ -12,9 +12,10 @@ eleventyExcludeFromCollections: true
     Si costruisce solo con PROFILO=1 (vedi .eleventy.js) e si esporta con scripts/profilo-pdf.js.
     Testi in _data/profilo.js (italiano approvato il 15/10/2026).
     Niente box-shadow: Anteprima del Mac le disegna come riquadri grigi. -#}
-{%- set p = profilo[lingua] %}{%- set t = testi[lingua] %}
+{%- set p = profilo[lingua] %}{%- set t = testi[p.lang] %}
 {%- set link = sito.url %}{%- set q = "?" + p.utm %}
-{%- set totale = "08" %}
+{#- v3 Parini (lingua "it-parini", 24/11/2026): sei pagine al posto di otto, vedi _data/profilo.js -#}
+{%- set totale = "06" if p.parini else "08" %}
 <!doctype html>
 <html lang="{{ p.lang }}">
 <head>
@@ -128,6 +129,21 @@ html:not(.scuro) .box-4{background:rgba(45,45,42,.05)}
 .progetti .carta-progetto-frase{font-size:.78rem;line-height:1.45;font-style:normal;opacity:.85}
 .progetti .carta-progetto-cat{font-size:.66rem;padding-top:.4rem}
 
+/* v3 Parini: Interviste ed eventi (4 card con i link ai video) e Lavori nei vostri settori (5 card) */
+.esempi .testa-sezione{padding-top:6.5rem;margin-bottom:1.6rem}
+.interviste .griglia{grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.interviste .carta-progetto{height:auto}
+.interviste .carta-progetto-img{display:block;aspect-ratio:16/10}
+.interviste .carta-progetto-testo{padding:1.1rem 1.25rem 1.3rem;gap:.4rem}
+.interviste .carta-progetto-brand{font-size:1.1rem;line-height:1.25}
+.interviste .carta-progetto-frase{font-size:.86rem;line-height:1.55;font-style:normal;opacity:.9}
+.carta-link{display:flex;flex-wrap:wrap;gap:.4rem .9rem;margin-top:.5rem;font-size:.86rem;font-weight:600}
+.carta-link a{text-decoration:none;border-bottom:2px solid var(--verdigris)}
+.lavori .griglia{grid-template-columns:repeat(5,1fr);gap:1.1rem}
+.lavori .carta-progetto-img{aspect-ratio:4/5}
+.lavori .carta-progetto-brand{font-size:.95rem}
+.lavori .carta-progetto-frase{font-size:.82rem}
+
 /* 7. Clienti: solo nomi, per settore, in sei riquadri uguali (22/11: i loghi misti ai nomi non reggevano; i loghi sono già a pagina 2) */
 .clienti-pag .testa-sezione{padding-top:6.5rem;margin-bottom:1.6rem}
 .settori{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:1.25rem}
@@ -172,7 +188,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
 {%- endmacro %}
 {#- Versione del profilo (24/11/2026, Riccardo: "così si riconosce"): stampata in piccolo solo nell'ultima pagina.
     v1 = i PDF Canva di dicembre 2025, v2 = questo estratto del sito. Alzare il numero a ogni versione nuova pubblicata. -#}
-{%- set versionePdf = ({ it: "Profilo", en: "Profile", fr: "Profil" }[p.lang] or "Profilo") + " v2 · 11/2026" %}
+{%- set versionePdf = p.versione or (({ it: "Profilo", en: "Profile", fr: "Profil" }[p.lang] or "Profilo") + " v2 · 11/2026") %}
 {%- macro piede(n, versione) %}<div class="foglio-piede"><a href="{{ link }}/{{ q }}">sounddesignrv.com</a><span>{% if versione %}{{ versione }} · {% endif %}{{ n }} / {{ totale }}</span></div>{% endmacro %}
 
 {#- 1. Copertina: logo, nome e ruolo -#}
@@ -185,7 +201,8 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
   <span class="cover-strisce" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
 </section>
 
-{#- 2. La home: showreel e loghi -#}
+{#- 2. La home: showreel e loghi (non nella v3 Parini) -#}
+{%- if not p.parini %}
 <section class="foglio copertina" id="copertina">
   {{ testata("") }}
   <div class="eroe">
@@ -223,6 +240,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
   </section>
   {{ piede("02") }}
 </section>
+{%- endif %}
 
 {#- 2. Chi sono -#}
 <section class="foglio chi" id="chi-sono">
@@ -246,8 +264,79 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
       <ul>{% for v in p.chiSono.inBreve %}<li><strong>{{ v[0] }}</strong>{{ v[1] }}</li>{% endfor %}</ul>
     </div>
   </div>
+  {{ piede("02" if p.parini else "03") }}
+</section>
+
+{%- if p.parini %}
+{#- v3 Parini, 3. Servizi per voi: stesse card della pagina Servizi -#}
+<section class="foglio servizi" id="servizi">
+  {{ testata("servizi") }}
+  <header class="pagina-testa tema-apricot">
+    <div class="contenitore">
+      <p class="etichetta">{{ p.parini.servizi.occhiello }}</p>
+      <h1>{{ p.parini.servizi.h1 }}</h1>
+      <p class="pagina-sottotitolo">{{ p.parini.servizi.intro }}</p>
+    </div>
+  </header>
+  <div class="contenitore griglia">
+    {%- set temi = ["tema-verdigris", "tema-apricot", "tema-flax", "tema-snow"] %}
+    {%- for v in p.parini.servizi.voci %}
+    <div class="carta-progetto {{ temi[loop.index0] }}">
+      <span class="carta-progetto-img"><img src="{% imgUrl v[1], 800 %}" alt="" style="object-position:{{ v[3] or '50% 50%' }}"></span>
+      <span class="carta-progetto-testo">
+        <strong class="carta-progetto-brand">{{ v[0] }}</strong>
+        <p>{{ v[2] }}</p>
+      </span>
+    </div>
+    {%- endfor %}
+  </div>
   {{ piede("03") }}
 </section>
+
+{#- v3 Parini, 4. Interviste ed eventi: card con uno o due link ai video -#}
+<section class="foglio progetti esempi interviste" id="interviste">
+  {{ testata("progetti") }}
+  <div class="contenitore">
+    <div class="testa-sezione"><p class="etichetta">{{ p.parini.interviste.occhiello }}</p><h1>{{ p.parini.interviste.h1 }}</h1></div>
+    <div class="griglia">
+      {%- set temi = ["tema-verdigris", "tema-apricot", "tema-flax", "tema-jet"] %}
+      {%- for v in p.parini.interviste.voci %}
+      <div class="carta-progetto {{ temi[loop.index0 % 4] }}">
+        <a class="carta-progetto-img" href="{{ v.link[0][1] }}"><img src="{% imgUrl v.img, 800 %}" alt=""></a>
+        <span class="carta-progetto-testo">
+          <strong class="carta-progetto-brand">{{ v.titolo }}</strong>
+          <span class="carta-progetto-frase">{{ v.testo }}</span>
+          <span class="carta-link">{% for l in v.link %}<a href="{{ l[1] }}">▶ {{ l[0] }}</a>{% endfor %}</span>
+        </span>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  {{ piede("04") }}
+</section>
+
+{#- v3 Parini, 5. Lavori nei vostri settori: card dei progetti del sito -#}
+<section class="foglio progetti esempi lavori" id="lavori">
+  {{ testata("progetti") }}
+  <div class="contenitore">
+    <div class="testa-sezione"><p class="etichetta">{{ p.parini.lavori.occhiello }}</p><h1>{{ p.parini.lavori.h1 }}</h1></div>
+    <div class="griglia">
+      {%- set temi = ["tema-verdigris", "tema-apricot", "tema-flax", "tema-jet", "tema-verdigris"] %}
+      {%- for v in p.parini.lavori.voci %}
+      <a class="carta-progetto {{ temi[loop.index0] }}" href="{{ link }}/progetti/{{ v.slug }}/{{ q }}">
+        <span class="carta-progetto-img"><img src="{% imgUrl v.img, 800 %}" alt="" style="object-position:{{ v.pos or '50% 50%' }}"></span>
+        <span class="carta-progetto-testo">
+          <strong class="carta-progetto-brand">{{ v.titolo }}</strong>
+          <span class="carta-progetto-frase">{{ v.testo }}</span>
+          <small class="carta-progetto-cat">{{ v.categoria }}</small>
+        </span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+  {{ piede("05") }}
+</section>
+{%- else %}
 
 {#- 3. Servizi -#}
 <section class="foglio servizi" id="servizi">
@@ -334,6 +423,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
   </div>
   {{ piede("07") }}
 </section>
+{%- endif %}
 
 {#- 8. Contatti -#}
 <section class="foglio contatti" id="contatti">
@@ -355,7 +445,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
     </div>
     <div class="qr-box"><div class="qr">{% include "parti/profilo-qr-" + p.lang + ".svg" %}</div><span>{{ p.contatti.qr }}</span></div>
   </div>
-  {{ piede("08", versionePdf) }}
+  {{ piede(totale, versionePdf) }}
 </section>
 </body>
 </html>

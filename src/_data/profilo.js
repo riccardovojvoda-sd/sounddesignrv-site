@@ -119,3 +119,54 @@ module.exports = {
     },
   },
 };
+
+// v3 Parini (24/11/2026): versione semplificata solo per Katia Mercuri e Sara Agostoni (Parini Associati, Milano),
+// non va sul sito. Stessa grafica della v2: copertina, Chi sono, Servizi per voi, Interviste ed eventi, Lavori nei
+// vostri settori, Contatti. Si esporta con `node scripts/profilo-pdf.js it-parini <file.pdf>`.
+module.exports["it-parini"] = {
+  ...module.exports.it,
+  utm: "utm_source=profilo-pdf&utm_medium=pdf&utm_campaign=profilo-parini",
+  versione: "Profilo v3 Parini · 11/2026",
+  parini: {
+    servizi: {
+      occhiello: "Servizi per voi",
+      h1: "Cosa posso fare per voi",
+      intro: "Il suono di video, interviste ed eventi, dalla registrazione alla consegna.",
+      voci: [
+        ["Interviste", "profilo/riccardo-boom-sul-set.jpg", "Registrazione sul posto, con radiomicrofoni e microfono a boom, e montaggio audio: pulizia del parlato, scelta delle risposte, ritmo.", "30% 50%"],
+        ["Musica", "profilo/riccardo-al-banco-di-mix-offlmts.jpg", "Ricerca e scelta della musica, montata sulla durata del video, sfruttando gli stem dove possibile."],
+        ["Voice over", "profilo/microfono-voce-offlmts.jpg", "Voci professionali o generate con l'AI, in italiano e in altre lingue, con regia, montaggio e mix."],
+        ["Sound design e mix", "profilo/schermo-plugin-mix-offlmts.jpg", "Sound design e mix alla loudness giusta per web, social, TV ed eventi."],
+      ],
+    },
+    interviste: {
+      occhiello: "Esempi",
+      h1: "Interviste ed eventi",
+      voci: [
+        { titolo: "FCA Heritage: Piero Pelù e Miki Biasion", img: "profilo/parini/pelu.jpg",
+          testo: "Piero Pelù con la sua Giulietta Sprint, Miki Biasion con la sua Lancia Fulvia Safari. Interviste registrate sul posto, musica originale, montaggio audio e mix.",
+          link: [["Piero Pelù", "https://www.youtube.com/watch?v=kBk28_yrfdo"], ["Miki Biasion", "https://www.youtube.com/watch?v=M2l5S1jOnOQ"]] },
+        { titolo: "CMP Real People (con PM2)", img: "profilo/parini/cmp-ragonese.jpg",
+          testo: "Una serie di ritratti di persone vere nei loro luoghi: Biagio Ragonese e Fausto Menardi, falconiere a Cortina d'Ampezzo. Presa diretta delle interviste, montaggio audio e mix.",
+          link: [["Biagio Ragonese", "https://www.youtube.com/watch?v=hgDpHkFy9Vw"], ["Fausto Menardi", "https://www.youtube.com/watch?v=6m3FBNpND20"]] },
+        { titolo: "Hausbrandt a HostMilano 2021", img: "profilo/parini/hausbrandt-borghese.jpg",
+          testo: "Lo chef Alessandro Borghese cucina con il caffè Hausbrandt in fiera. Post-produzione audio.",
+          link: [["Guarda il video", "https://www.youtube.com/watch?v=wH4SOw9Yuec"]] },
+        { titolo: "Copat Life, Hangar", img: "profilo/parini/copat-hangar.jpg",
+          testo: "Il video che presenta Hangar, lo spazio esperienziale di Copat Life. Musica originale e voci registrate.",
+          link: [["Guarda il video", "https://www.youtube.com/watch?v=TwXkz3BIfG4"]] },
+      ],
+    },
+    lavori: {
+      occhiello: "Esempi",
+      h1: "Lavori nei vostri settori",
+      voci: [
+        { slug: "connubia", titolo: "CONNUBIA · Tavoli da vivere", img: "progetti/connubia.jpg", testo: "Piatti che arrivano, bicchieri che si sfiorano, il tavolo che si allunga.", categoria: "Reel social · con l'agenzia PM2" },
+        { slug: "ponte-1948-fast-food-series", titolo: "PONTE 1948 · Fast Food Series", img: "progetti/ponte-1948-burger.jpg", testo: "Crocca, gusta, stappa… sorpresa!", categoria: "Spot" },
+        { slug: "jw-anderson-diadora-equipe", titolo: "JW Anderson x DIADORA · Equipe", img: "progetti/jw-anderson-diadora-equipe.png", testo: "ASMR artigianale: il 1975 torna a correre.", categoria: "Fashion film" },
+        { slug: "pitars", titolo: "PITARS · Semplicemente straordinario", img: "progetti/pitars.jpg", testo: "Lo scroscio del fiume. Il gorgoglìo di un calice di bianco.", categoria: "Video corporate" },
+        { slug: "ballantyne-raw-diamond", titolo: "BALLANTYNE · Raw Diamond", img: "progetti/ballantyne-raw-diamond.jpg", pos: "8% 50%", testo: "Lana grezza tra le mani, le macchine da maglia che battono, una voce che torna alle origini.", categoria: "Fashion film con voice over" },
+      ],
+    },
+  },
+};
