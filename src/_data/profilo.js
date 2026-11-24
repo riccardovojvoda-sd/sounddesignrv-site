@@ -135,7 +135,7 @@ module.exports["it-parini"] = {
       voci: [
         ["Interviste", "profilo/riccardo-boom-sul-set.jpg", "Registrazione sul posto, con radiomicrofoni e microfono a boom, e montaggio audio: pulizia del parlato, mix.", "30% 50%"],
         ["Musica", "profilo/riccardo-al-banco-di-mix-offlmts.jpg", "Ricerca e scelta della musica, montata sulla durata del video, sfruttando gli stem dove possibile. Composizione ad hoc per progetti ambiziosi."],
-        ["Voice over", "profilo/microfono-voce-offlmts.jpg", "Casting di voci professionali o generate con l'AI, in italiano, inglese, francese, spagnolo, tedesco e altre lingue, con il controllo della qualità affidato a madrelingua. Regia, montaggio e mix."],
+        ["Voice over", "profilo/microfono-voce-offlmts.jpg", "Casting di voci professionali o generate con l'AI, in italiano, inglese, francese, spagnolo, tedesco e altre lingue. Regia, montaggio e mix."],
         ["Sound design e mix", "profilo/schermo-plugin-mix-offlmts.jpg", "Sound design, foley ed effetti, dialoghi e ADR, spot radio e podcast, audio per installazioni. Mix stereo, 5.1 e 7.1 alla loudness giusta per web, social, TV, cinema ed eventi."],
       ],
     },
