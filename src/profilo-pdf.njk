@@ -170,7 +170,10 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
   </a>
 </header>
 {%- endmacro %}
-{%- macro piede(n) %}<div class="foglio-piede"><a href="{{ link }}/{{ q }}">sounddesignrv.com</a><span>{{ n }} / {{ totale }}</span></div>{% endmacro %}
+{#- Versione del profilo (24/11/2026, Riccardo: "così si riconosce"): stampata in piccolo solo nell'ultima pagina.
+    v1 = i PDF Canva di dicembre 2025, v2 = questo estratto del sito. Alzare il numero a ogni versione nuova pubblicata. -#}
+{%- set versionePdf = ({ it: "Profilo", en: "Profile", fr: "Profil" }[p.lang] or "Profilo") + " v2 · 11/2026" %}
+{%- macro piede(n, versione) %}<div class="foglio-piede"><a href="{{ link }}/{{ q }}">sounddesignrv.com</a><span>{% if versione %}{{ versione }} · {% endif %}{{ n }} / {{ totale }}</span></div>{% endmacro %}
 
 {#- 1. Copertina: logo, nome e ruolo -#}
 <section class="foglio cover" id="inizio">
@@ -352,7 +355,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
     </div>
     <div class="qr-box"><div class="qr">{% include "parti/profilo-qr-" + p.lang + ".svg" %}</div><span>{{ p.contatti.qr }}</span></div>
   </div>
-  {{ piede("08") }}
+  {{ piede("08", versionePdf) }}
 </section>
 </body>
 </html>
