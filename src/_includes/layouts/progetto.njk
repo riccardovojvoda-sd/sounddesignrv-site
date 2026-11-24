@@ -47,6 +47,22 @@ og_type: article
     <div class="contenitore">{{ testata | safe }}{{ sottotitolo | safe }}
     </div>
   </header>
+  {#- Più video (serie): prima gli episodi, poi i testi (Riccardo, 24/11/2026) -#}
+  <section class="episodi contenitore" aria-labelledby="episodi-titolo">
+    <h2 id="episodi-titolo" class="etichetta">{{ t.scheda.episodi }}</h2>
+    <div class="episodi-lista">
+      {%- asyncEach ep in video %}
+      <article class="episodio" id="v-{{ ep.youtube }}">
+        {%- set v = ep %}
+        {%- set eager = loop.first %}
+        {% include "parti/video.njk" %}
+        <h3>{{ ep.titolo }}</h3>
+        {%- if ep.descrizione %}<p>{{ ep.descrizione }}</p>{% endif %}
+        {%- if ep.ruolo %}<p class="scheda-ruolo-ep">{{ ep.ruolo }}</p>{% endif %}
+      </article>
+      {%- endeach %}
+    </div>
+  </section>
   {%- endif %}
   <div class="contenitore scheda-corpo{% if multi %} scheda-corpo-serie{% else %} scheda-corpo-alta{% endif %}">
     {%- if not multi %}
@@ -86,23 +102,6 @@ og_type: article
       </div>
     </div>
   </div>
-  {%- if multi %}
-  <section class="episodi contenitore" aria-labelledby="episodi-titolo">
-    <h2 id="episodi-titolo" class="etichetta">{{ t.scheda.episodi }}</h2>
-    <div class="episodi-lista">
-      {%- asyncEach ep in video %}
-      <article class="episodio" id="v-{{ ep.youtube }}">
-        {%- set v = ep %}
-        {%- set eager = loop.first %}
-        {% include "parti/video.njk" %}
-        <h3>{{ ep.titolo }}</h3>
-        {%- if ep.descrizione %}<p>{{ ep.descrizione }}</p>{% endif %}
-        {%- if ep.ruolo %}<p class="scheda-ruolo-ep">{{ ep.ruolo }}</p>{% endif %}
-      </article>
-      {%- endeach %}
-    </div>
-  </section>
-  {%- endif %}
   {%- if puntate.length > 1 %}
   <section class="rimandi contenitore" aria-labelledby="puntate-titolo">
     <h2 id="puntate-titolo" class="etichetta">{{ tr.puntate }}</h2>
