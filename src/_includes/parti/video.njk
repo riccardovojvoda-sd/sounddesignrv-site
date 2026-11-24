@@ -4,7 +4,8 @@
 {%- set caricamento = "eager" if eager else "lazy" -%}
 {%- set tv = testi[lang or "it"].video -%}
 {%- if v.youtube -%}
-<div class="video" data-yt="{{ v.youtube }}" data-titolo="{{ v.titolo }}">
+{#- formato della scheda (24/11/2026): "verticale" (reel 9:16) o "4:3"; il riquadro prende la forma del video, così YouTube non mette bande nere -#}
+<div class="video{% if formato == 'verticale' %} video-verticale{% elif formato == '4:3' %} video-43{% endif %}" data-yt="{{ v.youtube }}" data-titolo="{{ v.titolo }}">
   {% img posterPath, tv.anteprima + ": " + v.titolo, "(min-width: 60em) 55vw, 100vw", caricamento, "video-poster" %}
   <button class="video-play" type="button" aria-label="{{ tv.ascolta }}: {{ v.titolo }}">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>

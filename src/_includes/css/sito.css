@@ -294,6 +294,10 @@ p{margin:0 0 1em}
 @media(min-width:48em){.episodi-lista{grid-template-columns:1fr 1fr}}
 @media(min-width:80em){.episodi-lista{grid-template-columns:repeat(3,1fr)}}
 .episodio .video{box-shadow:var(--ombra)}
+.video-verticale{aspect-ratio:9/16}
+.video-43{aspect-ratio:4/3}
+.episodi-verticali .episodi-lista{grid-template-columns:1fr 1fr;gap:2rem 1rem}
+@media(min-width:60em){.episodi-verticali .episodi-lista{grid-template-columns:repeat(4,1fr);gap:2rem 1.75rem}}
 .episodio h3{font-size:1.1rem;margin:1rem 0 .35rem}
 .episodio p{font-size:.95rem;margin-bottom:.4em}
 .scheda-ruolo-ep{font-size:.86rem;opacity:.8}

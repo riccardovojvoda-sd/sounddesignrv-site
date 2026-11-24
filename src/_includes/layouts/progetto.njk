@@ -48,7 +48,7 @@ og_type: article
     </div>
   </header>
   {#- Più video (serie): prima gli episodi, poi i testi (Riccardo, 24/11/2026) -#}
-  <section class="episodi contenitore" aria-labelledby="episodi-titolo">
+  <section class="episodi contenitore{% if formato == 'verticale' %} episodi-verticali{% endif %}" aria-labelledby="episodi-titolo">
     <h2 id="episodi-titolo" class="etichetta">{{ t.scheda.episodi }}</h2>
     <div class="episodi-lista">
       {%- asyncEach ep in video %}
