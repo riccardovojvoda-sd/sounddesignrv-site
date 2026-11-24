@@ -87,18 +87,26 @@ p{margin:0 0 1em}
 @media(max-width:36em){.menu-lungo{display:none}.menu-corto{display:inline}}
 .menu-cta{padding:.52em 1em .38em!important;position:relative;top:-.14em;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
-/* Desktop (24/11/2026): barra petrolio, cioè il verdigris scurito delle fasce verdi in scuro; colore pieno, uguale in chiaro e in scuro
-   (prima era Snow traslucido, tutto troppo grigio). Logo doppio, 104 px. */
+/* Desktop (24/11/2026, prima era Snow traslucido, tutto troppo grigio): barra a colore pieno.
+   Chiaro: verdigris con testi jet. Scuro: petrolio, cioè il verdigris scurito delle fasce verdi in scuro, con riga verdigris e Contatti flax.
+   Logo doppio, 104 px. */
 @media(min-width:48.01em){
-  .testata{background:#24504D;color:var(--snow);border-bottom:3px solid var(--verdigris);-webkit-backdrop-filter:none;backdrop-filter:none}
-  .testata a{color:var(--snow)}
-  .menu a:hover,.menu a[aria-current=page]{border-bottom-color:var(--flax)}
-  .testata .menu-cta{background:var(--flax);color:var(--jet)}
-  .testata .menu-cta:hover{background:var(--snow)}
-  .testata .lingue-tendina summary{border-color:rgba(255,251,250,.4)}
-  .testata .lingue-tendina[open] summary{background:var(--snow);color:var(--jet);border-color:var(--snow)}
+  .testata{background:var(--verdigris);color:var(--jet);border-bottom:1px solid rgba(45,45,42,.2);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .testata a{color:var(--jet)}
+  .menu a:hover,.menu a[aria-current=page]{border-bottom-color:var(--jet)}
+  .testata .menu-cta{background:var(--jet);color:var(--snow)}
+  .testata .menu-cta:hover{background:#1b1b19}
+  .testata .lingue-tendina summary{border-color:rgba(45,45,42,.35)}
+  .testata .lingue-tendina[open] summary{background:var(--jet);color:var(--snow);border-color:var(--jet)}
   .testata .lingue-lista a{color:var(--jet)}
   .testata .lingue-lista a[aria-current=true]{color:var(--snow)}
+  .scuro .testata{background:#24504D;color:var(--snow);border-bottom:3px solid var(--verdigris)}
+  .scuro .testata a{color:var(--snow)}
+  .scuro .menu a:hover,.scuro .menu a[aria-current=page]{border-bottom-color:var(--flax)}
+  .scuro .testata .menu-cta{background:var(--flax);color:var(--jet)}
+  .scuro .testata .menu-cta:hover{background:var(--snow)}
+  .scuro .testata .lingue-tendina summary{border-color:rgba(255,251,250,.4)}
+  .scuro .testata .lingue-tendina[open] summary{background:var(--snow);color:var(--jet);border-color:var(--snow)}
   .marchio{column-gap:.9rem}
   .marchio-logo{width:6.5rem;height:6.5rem}
   .marchio-nome{align-self:end;font-size:1.5rem}
