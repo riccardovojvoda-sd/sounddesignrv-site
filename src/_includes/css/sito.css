@@ -87,6 +87,23 @@ p{margin:0 0 1em}
 @media(max-width:36em){.menu-lungo{display:none}.menu-corto{display:inline}}
 .menu-cta{padding:.52em 1em .38em!important;position:relative;top:-.14em;border-radius:999px;background:var(--jet);color:var(--snow);border-bottom:0!important}
 .menu-cta:hover{background:#1b1b19}
+/* Desktop (24/11/2026): barra petrolio, cioè il verdigris scurito delle fasce verdi in scuro; colore pieno, uguale in chiaro e in scuro
+   (prima era Snow traslucido, tutto troppo grigio). Logo doppio, 104 px. */
+@media(min-width:48.01em){
+  .testata{background:#24504D;color:var(--snow);border-bottom:3px solid var(--verdigris);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .testata a{color:var(--snow)}
+  .menu a:hover,.menu a[aria-current=page]{border-bottom-color:var(--flax)}
+  .testata .menu-cta{background:var(--flax);color:var(--jet)}
+  .testata .menu-cta:hover{background:var(--snow)}
+  .testata .lingue-tendina summary{border-color:rgba(255,251,250,.4)}
+  .testata .lingue-tendina[open] summary{background:var(--snow);color:var(--jet);border-color:var(--snow)}
+  .testata .lingue-lista a{color:var(--jet)}
+  .testata .lingue-lista a[aria-current=true]{color:var(--snow)}
+  .marchio{column-gap:.9rem}
+  .marchio-logo{width:6.5rem;height:6.5rem}
+  .marchio-nome{align-self:end;font-size:1.15rem}
+  .marchio-ruolo{align-self:start;margin-top:.35rem;font-size:.78rem}
+}
 @media(max-width:48em){.marchio-ruolo{display:none}.marchio-nome{font-size:.9rem}.marchio-logo{width:2.6rem;height:2.6rem}.menu{flex-wrap:nowrap;gap:.75rem}.menu a{font-size:.85rem}.menu-cta{padding:.47em .85em .33em!important}}
 /* Sotto i 48em la testata diventa una barra fissa IN FONDO allo schermo (raggiungibile col pollice), stessa altezza di prima.
    --testata-h = altezza della barra: serve al pie' (spazio sotto), al torna-in-alto (che sale sopra la barra) e alle ancore. */
@@ -153,11 +170,11 @@ p{margin:0 0 1em}
 .clienti-testa .etichetta{margin:0}
 @media(max-width:36em){.loghi-home li:nth-child(n+7){display:none}}
 .prosa>.loghi{max-width:none;margin:1.5rem 0 2rem}
-.prosa h2[id]{scroll-margin-top:5.5rem}
+.prosa h2[id]{scroll-margin-top:9.2rem}
 @media(max-width:48em){.prosa h2[id]{scroll-margin-top:1rem}}
 
 /* Progetti in home */
-.progetto{padding-block:clamp(3rem,7vw,6rem);scroll-margin-top:4.7rem} /* ancora /#slug: atterra sotto la testata fissa */
+.progetto{padding-block:clamp(3rem,7vw,6rem);scroll-margin-top:8.4rem} /* ancora /#slug: atterra sotto la testata fissa */
 @media(max-width:48em){.progetto{scroll-margin-top:.5rem}} /* barra in fondo: niente da scavalcare */
 .progetto-griglia{display:grid;gap:clamp(1.5rem,4vw,4rem);align-items:center}
 @media(min-width:60em){
@@ -335,7 +352,7 @@ p{margin:0 0 1em}
 .tema-jet .scheda-box{background:rgba(255,251,250,.06)}
 .scheda-box h3{margin-top:0;font-size:1.05rem}
 .scheda-box p,.scheda-box ul{font-size:.95rem;margin-bottom:0}
-.prosa details{border-top:1px solid var(--jet-15);padding:.9rem 0;scroll-margin-top:5.5rem}
+.prosa details{border-top:1px solid var(--jet-15);padding:.9rem 0;scroll-margin-top:9.2rem}
 @media(max-width:48em){.prosa details{scroll-margin-top:1rem}}
 .prosa details:last-of-type{border-bottom:1px solid var(--jet-15)}
 .prosa summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem}
@@ -437,7 +454,6 @@ p{margin:0 0 1em}
 /* Guide e articoli (body.lettura): sfondo Carta invece di Snow, meno abbagliante (scelta dell'8/10/2026). */
 .lettura,.lettura .tema-snow{--fondo:var(--carta)}
 .lettura .contatto{background:var(--carta)}
-@media(min-width:48.01em){.lettura .testata{background:rgba(238,233,225,.88)}}
 
 /* Tema scuro su tutto il sito, variante "Bande tinte" (decisa l'8/10/2026).
    html.scuro la mette lo script in testa a base.njk: segue il sistema, o la scelta fatta col pulsante luna (assets/js/tema.js).
@@ -463,12 +479,6 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 .scuro .lingue-lista a{color:var(--testo)}
 .scuro .lingue-lista a:hover{background:var(--flax);color:var(--jet)}
 .scuro .lingue-lista a[aria-current=true]{background:var(--testo);color:var(--jet)}
-@media(min-width:48.01em){
-  .scuro .testata{background:rgba(47,48,44,.9);color:var(--testo)}
-  .scuro .menu-cta{background:var(--verdigris);color:var(--jet)}
-  .scuro .menu-cta:hover{background:var(--flax)}
-  .scuro .lingue-tendina[open] summary{background:var(--testo);color:var(--jet);border-color:var(--testo)}
-}
 .scuro .scheda-box{background:rgba(123,181,178,.15)}
 .scuro .griglia-schede>.scheda-box:nth-child(4n+2){background:rgba(246,201,172,.13)}
 .scuro .griglia-schede>.scheda-box:nth-child(4n+3){background:rgba(237,210,134,.09)}
@@ -535,7 +545,7 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 .colonna-reel span{display:flex;align-items:center;gap:.35rem;margin-top:.45rem;font-size:.85rem;font-weight:500}
 .colonna-reel svg{width:1rem;height:1rem;fill:currentColor}
 .scuro .colonna-cta{background:rgba(123,181,178,.15)}
-.articolo-corpo h2{scroll-margin-top:6rem}
+.articolo-corpo h2{scroll-margin-top:9.7rem}
 @media(max-width:48em){.articolo-corpo h2{scroll-margin-top:1rem}}
 @media(prefers-reduced-motion:reduce){.colonna-reel img{transition:none}}
 /* Rimandi nelle schede (21/10/2026): servizi, riquadro contatto, cartello di fine video, simili, guide */
@@ -543,7 +553,7 @@ html.scuro{color-scheme:dark;--testo:#E6E2DC;--fondo:#2F302C;--jet-15:rgba(230,2
 .scheda-servizi-titolo{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.7;margin-bottom:.4rem}
 .scheda-servizi ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.3rem;font-size:.92rem}
 .scheda-servizi a{text-decoration:none;border-bottom:2px solid var(--accento)}
-.scheda-cta{background:rgba(255,251,250,.55);border:1px solid var(--jet-15);border-top:5px solid var(--accento);border-radius:var(--raggio);padding:1.1rem 1.2rem 1.2rem;margin-top:1.5rem;scroll-margin-top:6.5rem}
+.scheda-cta{background:rgba(255,251,250,.55);border:1px solid var(--jet-15);border-top:5px solid var(--accento);border-radius:var(--raggio);padding:1.1rem 1.2rem 1.2rem;margin-top:1.5rem;scroll-margin-top:10.2rem}
 .scheda-cta p{margin:0 0 .75rem;font-size:.95rem}
 .scheda-cta .scheda-cta-titolo{font-weight:600;font-size:1.05rem;line-height:1.3;margin-bottom:.4rem}
 .scheda-cta-azioni{display:flex;flex-wrap:wrap;gap:.5rem}
