@@ -143,6 +143,14 @@ html:not(.scuro) .box-4{background:rgba(45,45,42,.05)}
 .lavori .carta-progetto-img{aspect-ratio:4/5}
 .lavori .carta-progetto-brand{font-size:.95rem}
 .lavori .carta-progetto-frase{font-size:.82rem}
+.lavoro{display:flex;flex-direction:column;gap:.55rem}
+.lavoro .carta-progetto{flex:1}
+.lavoro-settore{margin:0;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--apricot)}
+/* v3 Parini: "In breve" più in evidenza (Riccardo, 24/11): riquadro pieno, titolo e voci più grandi */
+.parini .chi .in-breve{margin-top:4.5rem;padding:1.5rem 1.6rem 1.6rem;border-radius:1rem;background:rgba(237,210,134,.14);border-top:5px solid var(--flax)}
+.parini .chi .in-breve h2{font-size:1.75rem}
+.parini .chi .in-breve li{font-size:1rem;padding:.3rem 0 .3rem 1rem}
+.parini .chi .in-breve strong{font-size:1.15rem}
 
 /* 7. Clienti: solo nomi, per settore, in sei riquadri uguali (22/11: i loghi misti ai nomi non reggevano; i loghi sono già a pagina 2) */
 .clienti-pag .testa-sezione{padding-top:6.5rem;margin-bottom:1.6rem}
@@ -173,7 +181,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
 .qr svg path{fill:var(--jet)}
 </style>
 </head>
-<body>
+<body{% if p.parini %} class="parini"{% endif %}>
 {#- Intestazione: il marchio del sito; in copertina solo il logo, il nome c'è già nel titolo -#}
 {%- macro testata(attiva) %}
 <header class="foglio-testa">
@@ -323,6 +331,8 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
     <div class="griglia">
       {%- set temi = ["tema-verdigris", "tema-apricot", "tema-flax", "tema-jet", "tema-verdigris"] %}
       {%- for v in p.parini.lavori.voci %}
+      <div class="lavoro">
+      <p class="lavoro-settore">{{ v.settore }}</p>
       <a class="carta-progetto {{ temi[loop.index0] }}" href="{{ link }}/progetti/{{ v.slug }}/{{ q }}">
         <span class="carta-progetto-img"><img src="{% imgUrl v.img, 800 %}" alt="" style="object-position:{{ v.pos or '50% 50%' }}"></span>
         <span class="carta-progetto-testo">
@@ -331,6 +341,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
           <small class="carta-progetto-cat">{{ v.categoria }}</small>
         </span>
       </a>
+      </div>
       {%- endfor %}
     </div>
   </div>
