@@ -1,5 +1,5 @@
 ---
-ordine: 16
+ordine: 6
 brand: CONNUBIA
 titolo: "Tavoli da vivere"
 frase: "Piatti che arrivano, bicchieri che si sfiorano, il tavolo che si allunga."

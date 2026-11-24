@@ -1,5 +1,5 @@
 ---
-ordine: 17
+ordine: 16
 brand: OASIS
 titolo: "Waiting for Plissé"
 frase: "Pieghe di stoffa, carta che scorre, un respiro prima del Salone."

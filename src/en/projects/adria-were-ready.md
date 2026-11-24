@@ -1,5 +1,5 @@
 ---
-ordine: 6
+ordine: 17
 brand: ADRIA
 titolo: "We're ready"
 frase: "Silence and stillness make room for thoughts and desires."

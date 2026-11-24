@@ -1,5 +1,5 @@
 ---
-ordine: 16
+ordine: 6
 brand: CONNUBIA
 titolo: "Des tables à vivre"
 frase: "Des assiettes qui arrivent, des verres qui se frôlent, la table qui s'allonge."

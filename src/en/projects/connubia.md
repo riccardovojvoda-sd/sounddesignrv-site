@@ -1,5 +1,5 @@
 ---
-ordine: 16
+ordine: 6
 brand: CONNUBIA
 titolo: "Tables for living"
 frase: "Plates arriving, glasses touching, the table growing longer."

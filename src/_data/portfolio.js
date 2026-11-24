@@ -34,6 +34,7 @@ module.exports = {
     "alpi-wood": { genere: "spot", ruoli: [] },
     "ponte-1948-fast-food-series": { genere: "spot", ruoli: ["selezione"] },
     "alfa-romeo-quadrifoglio": { genere: "branded", ruoli: ["composizione"] },
+    "ballantyne-raw-diamond": { genere: "branded", ruoli: ["foley", "voce"] },
     "connubia": { genere: "branded", ruoli: ["selezione"] },
     "oasis-waiting-for-plisse": { genere: "branded", ruoli: ["composizione"] },
     "diadora-run-valley": { genere: "branded", ruoli: ["selezione", "foley"] },

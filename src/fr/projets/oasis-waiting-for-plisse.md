@@ -1,5 +1,5 @@
 ---
-ordine: 17
+ordine: 16
 brand: OASIS
 titolo: "Waiting for Plissé"
 frase: "Des plis de tissu, du papier qui glisse, un souffle avant le Salone."
