@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
     Testi in _data/profilo.js (italiano approvato il 15/10/2026).
     Niente box-shadow: Anteprima del Mac le disegna come riquadri grigi. -#}
 {%- set p = profilo[lingua] %}{%- set t = testi[p.lang] %}
-{%- set link = sito.url %}{%- set q = "?" + p.utm %}
+{%- set link = sito.url %}{%- set casa = link + (p.home or "/") %}{%- set progettiUrl = link + (p.progettiUrl or "/progetti/") %}{%- set q = "?" + p.utm %}
 {#- v3 Parini (lingua "it-parini", 24/11/2026): sei pagine al posto di otto, vedi _data/profilo.js -#}
 {%- set totale = "06" if p.parini else "08" %}
 <!doctype html>
@@ -185,7 +185,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
 {#- Intestazione: il marchio del sito; in copertina solo il logo, il nome c'è già nel titolo -#}
 {%- macro testata(attiva) %}
 <header class="foglio-testa">
-  <a class="marchio" href="{{ link }}/{{ q }}">
+  <a class="marchio" href="{{ casa }}{{ q }}">
     <img class="marchio-logo" src="/assets/img/logo-sdrv-dado-incavato-208.png" alt="Sound Design RV" width="52" height="52">
     {%- if attiva %}
     <span class="marchio-nome">RICCARDO VOJVODA</span>
@@ -197,7 +197,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
 {#- Versione del profilo (24/11/2026, Riccardo: "così si riconosce"): stampata in piccolo solo nell'ultima pagina.
     v1 = i PDF Canva di dicembre 2025, v2 = questo estratto del sito. Alzare il numero a ogni versione nuova pubblicata. -#}
 {%- set versionePdf = p.versione or (({ it: "Profilo", en: "Profile", fr: "Profil" }[p.lang] or "Profilo") + " v2 · 11/2026") %}
-{%- macro piede(n, versione) %}<div class="foglio-piede"><a href="{{ link }}/{{ q }}">sounddesignrv.com</a><span>{% if versione %}{{ versione }} · {% endif %}{{ n }} / {{ totale }}</span></div>{% endmacro %}
+{%- macro piede(n, versione) %}<div class="foglio-piede"><a href="{{ casa }}{{ q }}">sounddesignrv.com</a><span>{% if versione %}{{ versione }} · {% endif %}{{ n }} / {{ totale }}</span></div>{% endmacro %}
 
 {#- 1. Copertina: logo, nome e ruolo -#}
 <section class="foglio cover" id="inizio">
@@ -220,12 +220,12 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
         <p class="eroe-ruolo">{{ p.copertina.ruoli | join(" | ") }}</p>
         <p class="eroe-intro">{{ p.copertina.frase }}</p>
         <div class="eroe-azioni">
-          <a class="bottone" href="{{ link }}/{{ q }}&utm_content=showreel">{{ p.copertina.showreel }}</a>
-          <a class="bottone bottone-secondario" href="{{ link }}/{{ q }}">sounddesignrv.com</a>
+          <a class="bottone" href="{{ casa }}{{ q }}&utm_content=showreel">{{ p.copertina.showreel }}</a>
+          <a class="bottone bottone-secondario" href="{{ casa }}{{ q }}">sounddesignrv.com</a>
         </div>
       </div>
       <div class="eroe-reel">
-        <a class="video" href="{{ link }}/{{ q }}&utm_content=showreel">
+        <a class="video" href="{{ casa }}{{ q }}&utm_content=showreel">
           <img class="video-poster" src="{% imgUrl sito.showreel.poster, 1600 %}" alt="Showreel 2026">
           <span class="video-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>{{ p.copertina.ascolta }}</span>
           <span class="video-durata">{{ sito.showreel.durata | tempo }}</span>
@@ -333,7 +333,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
       {%- for v in p.parini.lavori.voci %}
       <div class="lavoro">
       <p class="lavoro-settore">{{ v.settore }}</p>
-      <a class="carta-progetto {{ temi[loop.index0] }}" href="{{ link }}/progetti/{{ v.slug }}/{{ q }}">
+      <a class="carta-progetto {{ temi[loop.index0] }}" href="{{ progettiUrl }}{{ v.slug }}/{{ q }}">
         <span class="carta-progetto-img"><img src="{% imgUrl v.img, 800 %}" alt="" style="object-position:{{ v.pos or '50% 50%' }}"></span>
         <span class="carta-progetto-testo">
           <strong class="carta-progetto-brand">{{ v.titolo }}</strong>
@@ -403,7 +403,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
     <div class="griglia">
       {%- set temi = ["tema-verdigris", "tema-apricot", "tema-flax", "tema-jet"] %}
       {%- for v in p.progetti.voci %}
-      <a class="carta-progetto {{ temi[loop.index0 % 4] }}" href="{{ link }}/progetti/{{ v.slug }}/{{ q }}">
+      <a class="carta-progetto {{ temi[loop.index0 % 4] }}" href="{{ progettiUrl }}{{ v.slug }}/{{ q }}">
         <span class="carta-progetto-img"><img src="{% imgUrl v.img, 800 %}" alt=""></span>
         <span class="carta-progetto-testo">
           <strong class="carta-progetto-brand">{{ v.titolo }}</strong>
@@ -439,7 +439,7 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
 {#- 8. Contatti -#}
 <section class="foglio contatti" id="contatti">
   
-  <h1 class="contatti-titolo">{{ p.contatti.titolo }}</h1>
+  <h1 class="contatti-titolo">{{ p.contatti.titolo | safe }}</h1>
   <img class="logo-grande" src="/assets/img/logo-sdrv-dado-incavato.png" alt="">
   <span class="cover-strisce" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
   <div class="contatti-corpo">
@@ -447,11 +447,11 @@ html:not(.scuro) .contatti-titolo{color:var(--jet)}
       <p class="nome">RICCARDO VOJVODA</p>
       <p class="recapiti"><a href="mailto:{{ sito.email }}">{{ sito.email }}</a><br>
       <a href="tel:{{ sito.telefonoHref }}">{{ sito.telefono }}</a><br>
-      <a href="{{ link }}/{{ q }}">sounddesignrv.com</a></p>
+      <a href="{{ casa }}{{ q }}">sounddesignrv.com</a></p>
     </div>
     <div>
-      <p class="vetrina">{{ p.contatti.vetrina }}: <a href="{{ link }}/{{ q }}">sounddesignrv.com</a></p>
-      <a class="bottone" href="{{ link }}/{{ q }}&utm_content=showreel">{{ p.contatti.showreel }}</a>
+      <p class="vetrina">{{ p.contatti.vetrina }}: <a href="{{ casa }}{{ q }}">sounddesignrv.com</a></p>
+      <a class="bottone" href="{{ casa }}{{ q }}&utm_content=showreel">{{ p.contatti.showreel }}</a>
       <p class="social">Instagram <a href="{{ sito.social.instagram }}">sound_design_rv</a> · <a href="{{ sito.social.linkedin }}">LinkedIn</a> · <a href="{{ sito.social.imdb }}">IMDb</a></p>
     </div>
     <div class="qr-box"><div class="qr">{% include "parti/profilo-qr-" + p.lang + ".svg" %}</div><span>{{ p.contatti.qr }}</span></div>
