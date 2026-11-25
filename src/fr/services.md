@@ -109,4 +109,4 @@ Je travaille sur Pro Tools et DaVinci Resolve, avec iZotope RX pour la restaurat
 <li>Sony MDR-7506 et Sennheiser HD-25 (écoute)</li>
 </ul>
 
-Des questions sur le processus, les éléments à livrer ou les formats ? [Consultez la FAQ](/fr/faq/), ou [écrivez-moi directement](/fr/contact/). Le profil complet est [disponible en PDF]({{ sito.profiloPdf }}).
+Des questions sur le processus, les éléments à livrer ou les formats ? [Consultez la FAQ](/fr/faq/), ou [écrivez-moi directement](/fr/contact/). Le profil complet est [disponible en PDF]({{ sito.profiloPdfFr }}).

@@ -19,7 +19,7 @@ For a quote I need the material (or a preview), a brief and, if you have them, a
 
 Are you a studio, an agency or a production company looking for an ongoing collaboration? Head to the [Partners](/en/partners/#proponi) page.
 
-<p><a class="bottone" href="{{ sito.profiloPdf }}" download>Download the profile (PDF)</a></p>
+<p><a class="bottone" href="{{ sito.profiloPdfEn }}" download>Download the profile (PDF)</a></p>
 
 **Profiles:** [Instagram]({{ sito.social.instagram }}) · [LinkedIn]({{ sito.social.linkedin }}) · [IMDb]({{ sito.social.imdb }}) · [CROMO (video)]({{ sito.social.cromo }})
 

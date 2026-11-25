@@ -19,7 +19,7 @@ Pour un devis, j'ai besoin du matériel (ou d'un aperçu), d'un brief et, si vou
 
 Vous êtes un studio, une agence ou une société de production et vous souhaitez proposer une collaboration suivie ? Passez par la page [Partenaires](/fr/partenaires/#proponi).
 
-<p><a class="bottone" href="{{ sito.profiloPdf }}" download>Télécharger le profil (PDF)</a></p>
+<p><a class="bottone" href="{{ sito.profiloPdfFr }}" download>Télécharger le profil (PDF)</a></p>
 
 **Profils :** [Instagram]({{ sito.social.instagram }}) · [LinkedIn]({{ sito.social.linkedin }}) · [IMDb]({{ sito.social.imdb }}) · [CROMO (vidéo)]({{ sito.social.cromo }})
 

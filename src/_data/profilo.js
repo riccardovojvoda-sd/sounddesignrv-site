@@ -123,7 +123,7 @@ module.exports = {
 
 
 // Inglese e francese della v2 (25/11/2026): stesso contenuto dell'italiano, con le formule già usate nelle pagine EN e FR del sito.
-// Da far vedere a Riccardo prima di metterli online.
+// Approvati da Riccardo il 25/11/2026 e online (assets ..._ENG.pdf e ..._FRA.pdf).
 const it = module.exports.it;
 const progettiIn = (testi) => it.progetti.voci.map((v, i) => ({ ...v, ...testi[i] }));
 const serviziIn = (testi) => it.servizi.voci.map((v, i) => [testi[i][0], v[1], testi[i][1], v[3]]);

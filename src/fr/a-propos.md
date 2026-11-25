@@ -50,4 +50,4 @@ Je travaille de façon collaborative avec les réalisateurs, les monteurs et les
 
 Les sociétés de production et les agences avec qui je collabore le plus souvent, et les projets réalisés ensemble, sont sur la page [Partenaires](/fr/partenaires/).
 
-Le profil complet est [disponible en PDF]({{ sito.profiloPdf }}).
+Le profil complet est [disponible en PDF]({{ sito.profiloPdfFr }}).

@@ -50,4 +50,4 @@ I work collaboratively with directors, editors and content creators, but I am al
 
 The production companies and agencies I work with most often, and the work we did together, are on the [Partners](/en/partners/) page.
 
-The full profile is [available as a PDF]({{ sito.profiloPdf }}).
+The full profile is [available as a PDF]({{ sito.profiloPdfEn }}).
