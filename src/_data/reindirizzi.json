@@ -216,5 +216,13 @@
   {
     "da": "/reel/jw-anderson-diadora/",
     "a": "/progetti/jw-anderson-diadora-equipe/?utm_source=linkedin&utm_medium=social&utm_campaign=reel-jw-anderson-diadora-equipe"
+  },
+  {
+    "da": "/biglietto/",
+    "a": "/?utm_source=biglietto&utm_medium=qr&utm_campaign=biglietto-digitale"
+  },
+  {
+    "da": "/biglietto/portfolio/",
+    "a": "/portfolio/?utm_source=biglietto&utm_medium=qr&utm_campaign=biglietto-digitale"
   }
 ]
