@@ -42,6 +42,7 @@
     if (stato.chi) p.set("chi", stato.chi);
     if (stato.argomento) p.set("argomento", stato.argomento);
     if (q) p.set("q", stato.q.trim());
+    new URLSearchParams(location.search).forEach(function (v, k) { if (k.indexOf("utm_") === 0) p.set(k, v); });
     var url = location.pathname + (p.toString() ? "?" + p.toString() : "");
     history.replaceState(null, "", url);
   }

@@ -48,7 +48,11 @@
 
     var chipGenere = box.querySelector("[data-gruppo=genere] .chip[data-v='" + stato.genere + "']");
     var url = chipGenere.getAttribute("href") + (stato.ruolo ? "?ruolo=" + stato.ruolo : "");
-    history.replaceState(null, "", url);
+    // Le etichette delle visite (utm_) restano nell'indirizzo: Analytics le legge dopo
+    var etichette = new URLSearchParams(location.search);
+    Array.from(etichette.keys()).forEach(function (k) { if (k.indexOf("utm_") !== 0) etichette.delete(k); });
+    var coda = etichette.toString();
+    history.replaceState(null, "", url + (coda ? (url.indexOf("?") < 0 ? "?" : "&") + coda : ""));
     if (cambiaGenere) {
       document.title = chipGenere.dataset.titolo;
       if (descrizione) descrizione.textContent = chipGenere.dataset.descrizione;
